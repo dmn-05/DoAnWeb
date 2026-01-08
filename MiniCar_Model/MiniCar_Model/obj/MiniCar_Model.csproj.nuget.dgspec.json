@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\BT_Do_An_Mon_Hoc_Nhom\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj": {}
+    "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj": {}
   },
   "projects": {
-    "D:\\BT_Do_An_Mon_Hoc_Nhom\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj": {
+    "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\BT_Do_An_Mon_Hoc_Nhom\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
+        "projectUniqueName": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
         "projectName": "MiniCar_Model",
-        "projectPath": "D:\\BT_Do_An_Mon_Hoc_Nhom\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
-        "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\BT_Do_An_Mon_Hoc_Nhom\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\obj\\",
+        "projectPath": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
+        "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
+        "outputPath": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "D:\\Visual_studio\\Shared\\NuGetPackages"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Peter\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "9.0.200"
       },
       "frameworks": {
         "net8.0": {
@@ -68,7 +68,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
