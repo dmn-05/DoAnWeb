@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\MiniCar_Model.props" />
+</Project>

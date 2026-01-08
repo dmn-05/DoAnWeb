@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Peter\\Downloads\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
+      "projectUniqueName": "D:\\DoAn\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
       "projectName": "MiniCar_Model",
-      "projectPath": "C:\\Users\\Peter\\Downloads\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
+      "projectPath": "D:\\DoAn\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
       "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Peter\\Downloads\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\obj\\",
+      "outputPath": "D:\\DoAn\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
