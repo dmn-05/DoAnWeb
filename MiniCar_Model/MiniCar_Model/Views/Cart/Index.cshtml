@@ -3,7 +3,7 @@
 }
 <!--================Cart Area =================-->
 <section class="cart_area">
-  <div class="container">
+  <div class="container" style="margin-top: 50px">
     <div class="cart_inner">
       <div class="table-responsive">
         <table class="table">
@@ -13,73 +13,10 @@
               <th scope="col">Giá</th>
               <th scope="col">Số lượng</th>
               <th scope="col">Tổng</th>
+              <th scope="col">Thao tác</th>
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <div class="media">
-                  <div class="d-flex">
-                    <img src="img/product/Nam/Boots/b1.1.png" alt="">
-                  </div>
-                  <div class="media-body">
-                    <p>Giày Boot Nam Đế Cao Màu Vàng PALA GN400</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <h5>550.000đ</h5>
-              </td>
-              <td>
-                <div class="product_count">
-                  <input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:"
-                         class="input-text qty">
-                  <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                          class="increase items-count" type="button">
-                    <i class="lnr lnr-chevron-up"></i>
-                  </button>
-                  <button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                          class="reduced items-count" type="button">
-                    <i class="lnr lnr-chevron-down"></i>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <h5>550.000đ</h5>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <div class="media">
-                  <div class="d-flex">
-                    <img src="img/product/Nam/Boots/b2.1.png" alt="">
-                  </div>
-                  <div class="media-body">
-                    <p>Giày boot nam màu trơn Không có dây kéo</p>
-                  </div>
-                </div>
-              </td>
-              <td>
-                <h5>806.000đ</h5>
-              </td>
-              <td>
-                <div class="product_count">
-                  <input type="text" name="qty" id="sst2" maxlength="12" value="1" title="Quantity:"
-                         class="input-text qty">
-                  <button onclick="var result = document.getElementById('sst2'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
-                          class="increase items-count" type="button">
-                    <i class="lnr lnr-chevron-up"></i>
-                  </button>
-                  <button onclick="var result = document.getElementById('sst2'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
-                          class="reduced items-count" type="button">
-                    <i class="lnr lnr-chevron-down"></i>
-                  </button>
-                </div>
-              </td>
-              <td>
-                <h5>806.000đ</h5>
-              </td>
-            </tr>
             <tr>
               <td>
                 <div class="media">
@@ -98,11 +35,11 @@
                 <div class="product_count">
                   <input type="text" name="qty" id="sst3" maxlength="12" value="1" title="Quantity:"
                          class="input-text qty">
-                  <button onclick="var result = document.getElementById('sst3'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+                  <button onclick="var result = document.getElementById('sst3'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst < 100) result.value++;return false;"
                           class="increase items-count" type="button">
                     <i class="lnr lnr-chevron-up"></i>
                   </button>
-                  <button onclick="var result = document.getElementById('sst3'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+                  <button onclick="var result = document.getElementById('sst3'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 1 ) result.value--;return false;"
                           class="reduced items-count" type="button">
                     <i class="lnr lnr-chevron-down"></i>
                   </button>
@@ -111,23 +48,13 @@
               <td>
                 <h5>623.000đ</h5>
               </td>
-            </tr>
-            <tr class="bottom_button">
               <td>
-                <a class="gray_btn" href="#">Cập nhật giỏ hàng</a>
-              </td>
-              <td>
-              </td>
-              <td>
-              </td>
-              <td>
-                <div class="cupon_text d-flex align-items-center">
-                  <input type="text" placeholder="Mã giảm giá">
-                  <a class="primary-btn" href="#">Áp dụng</a>
-                </div>
+                <a href="#">Xóa</a>
               </td>
             </tr>
             <tr class="shipping_area">
+              <td>
+              </td>
               <td>
               </td>
               <td>
@@ -141,6 +68,8 @@
             </tr>
 
             <tr>
+              <td>
+              </td>
               <td>
               </td>
               <td>
@@ -161,9 +90,11 @@
               <td>
               </td>
               <td>
+              </td>
+              <td>
                 <div class="checkout_btn_inner d-flex align-items-center">
-                  <a class="gray_btn" href="index.html"><h5 style="padding-top: 10px">Tiếp tục mua sắm</h5></a>
-                  <a class="primary-btn" href="checkout.html">Đến trang thanh toán</a>
+                  <a class="gray_btn" asp-controller="Home" asp-action="Index"><h5 style="padding-top: 10px">Tiếp tục mua sắm</h5></a>
+                  <a class="primary-btn" asp-controller="Checkout" asp-action="Index">Đến trang thanh toán</a>
                 </div>
               </td>
             </tr>

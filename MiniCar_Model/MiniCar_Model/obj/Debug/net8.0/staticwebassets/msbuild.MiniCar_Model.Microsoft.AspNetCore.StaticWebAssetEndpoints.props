@@ -2235,14 +2235,14 @@
     <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/login.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\login.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-8SyFkXC9Yz9w0Ll6XID31luIDZ/\u002B2cFv2l303WEEyU8="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"205003"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00228SyFkXC9Yz9w0Ll6XID31luIDZ/\u002B2cFv2l303WEEyU8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 Jan 2026 02:45:39 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-82LbNDEiU4wEGBDYqq6AsuDvnO\u002BMrvGyPjsJ5jFisBc="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"790679"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u002282LbNDEiU4wEGBDYqq6AsuDvnO\u002BMrvGyPjsJ5jFisBc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 09 Jan 2026 05:25:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/login.paz9mn8smy.jpg">
+    <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/login.vxzgx24om5.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\login.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"paz9mn8smy"},{"Name":"integrity","Value":"sha256-8SyFkXC9Yz9w0Ll6XID31luIDZ/\u002B2cFv2l303WEEyU8="},{"Name":"label","Value":"_content/MiniCar_Model/img/login.jpg"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"205003"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u00228SyFkXC9Yz9w0Ll6XID31luIDZ/\u002B2cFv2l303WEEyU8=\u0022"},{"Name":"Last-Modified","Value":"Thu, 08 Jan 2026 02:45:39 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"vxzgx24om5"},{"Name":"integrity","Value":"sha256-82LbNDEiU4wEGBDYqq6AsuDvnO\u002BMrvGyPjsJ5jFisBc="},{"Name":"label","Value":"_content/MiniCar_Model/img/login.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"790679"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u002282LbNDEiU4wEGBDYqq6AsuDvnO\u002BMrvGyPjsJ5jFisBc=\u0022"},{"Name":"Last-Modified","Value":"Fri, 09 Jan 2026 05:25:03 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/logo.m6th02ptga.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\logo.png'))</AssetFile>
