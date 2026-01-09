@@ -1,0 +1,120 @@
+﻿@{
+    ViewData["Title"] = "Thanh toán";
+}
+<section class="banner-area organic-breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+            <div class="col-first">
+                <h1>Thanh toán</h1>
+                <nav class="d-flex align-items-center">
+                    <a href="index.html">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+                    <a href="checkout.html">Thanh toán</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="checkout_area section_gap">
+    <div class="container">
+        <!--        <div class="check_title">-->
+        <!--            <h2>Returning Customer? <a href="login.html">Click here to login</a></h2>-->
+        <!--        </div>-->
+        <!--        <div class="cupon_area">-->
+        <!--            <div class="check_title">-->
+        <!--                <h2>Have a coupon? <a href="#">Click here to enter your code</a></h2>-->
+        <!--            </div>-->
+        <!--            <input type="text" placeholder="Enter coupon code">-->
+        <!--            <a class="tp_btn" href="#">Apply Coupon</a>-->
+        <!--        </div>-->
+        <div class="billing_details">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h3>Chi tiết hóa đơn</h3>
+                    <form class="row contact_form" action="#" method="post" novalidate="novalidate" id="checkoutForm">
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="first" name="name" placeholder="Họ*">
+                            <p class="form-message"></p>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="last" name="name" placeholder="Tên*">
+                            <p class="form-message"></p>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại*">
+                            <p class="form-message"></p>
+                        </div>
+                        <div class="col-md-6 form-group p_star">
+                            <input type="text" class="form-control" id="email" name="email" placeholder="Email*">
+                            <p class="form-message"></p>
+                        </div>
+
+                        <div class="col-md-12 form-group p_star">
+                            <input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ*">
+                            <p class="form-message"></p>
+                        </div>
+
+                        <!--                        <div class="col-md-12 form-group">-->
+                        <!--                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">-->
+                        <!--                        </div>-->
+                        <!--                        <div class="col-md-12 form-group">-->
+                        <!--                            <div class="creat_account">-->
+                        <!--                                <input type="checkbox" id="f-option2" name="selector">-->
+                        <!--                                <label for="f-option2">Create an account?</label>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <div class="col-md-12 form-group">
+                            <div class="creat_account">
+                                <h3>Ghi chú đơn hàng</h3>
+                                <!--                                <input type="checkbox" id="f-option3" name="selector">-->
+                                <!--                                <label for="f-option3">Ship to a different address?</label>-->
+                            </div>
+                            <textarea class="form-control" name="message" id="message" rows="1" placeholder="Ghi chú"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-lg-4">
+                    <div class="order_box">
+                        <h2>Đơn hàng của bạn</h2>
+                        <ul class="list">
+                            <li><a href="#">Sản phẩm <span>Giá</span></a></li>
+                            <li><a href="#">Giày Boot Nam Đế Cao Màu Vàng PALA GN400 <span class="middle">x 01</span> <span class="last">550.000đ</span></a></li>
+                            <li><a href="#">Giày boot nam màu trơn Không có dây kéo<span class="middle">x 01</span> <span class="last">806.000đ</span></a></li>
+                            <li><a href="#">Nam Giày ống Chelsea Suedette Mặc vào <span class="middle">x 01</span> <span class="last">623.000đ</span></a></li>
+                        </ul>
+                        <ul class="list list_2">
+                            <li><a href="#">Tổng cộng <span>1.979.000đ</span></a></li>
+                            <li><a href="#">Phí Ship <span>20.000đ</span></a></li>
+                            <li><a href="#">Tổng cộng <span>1.999.000đ</span></a></li>
+                        </ul>
+                        <div class="payment_item">
+                            <div class="radion_btn">
+                                <input type="radio" id="f-option5" name="selector">
+                                <label for="f-option5">Trả tiền mặt</label>
+                                <div class="check"></div>
+                            </div>
+                            <!--                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County,-->
+                            <!--                                Store Postcode.</p>-->
+                        </div>
+                        <div class="payment_item active">
+                            <div class="radion_btn">
+                                <input type="radio" id="f-option6" name="selector">
+                                <label for="f-option6">Trả thẻ </label>
+                                <img src="img/product/card.jpg" alt="">
+                                <div class="check"></div>
+                            </div>
+                            <!--                            <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal-->
+                            <!--                                account.</p>-->
+                        </div>
+                        <div class="creat_account">
+                            <input type="checkbox" id="f-option4" name="selector">
+                            <label for="f-option4">Tôi đã đọc và chấp nhận </label>
+                            <a href="#">mọi điều khoản*</a>
+                        </div>
+                        <a class="primary-btn" href="#">Xác nhận</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
