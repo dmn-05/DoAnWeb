@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "G9V8rpMm7hDKtmko/AVJWPt79BtLSN7YsBeapHhOqzY=",
+  "Hash": "sKKJqY1qjAq93RQK/2ATU0CPpDWZLczE1l1rTeo/nIs=",
   "Source": "MiniCar_Model",
   "BasePath": "_content/MiniCar_Model",
   "Mode": "Default",
@@ -3020,6 +3020,27 @@
       "OriginalItemSpec": "wwwroot\\css\\owl.carousel.css"
     },
     {
+      "Identity": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\site.css",
+      "SourceId": "MiniCar_Model",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\",
+      "BasePath": "_content/MiniCar_Model",
+      "RelativePath": "css/site#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qzl1oh9pbi",
+      "Integrity": "lvF7/XnWaRwbfPNpruT+ZjWlOwAiBUU6AMFDnC1M2eQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
       "Identity": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\themify-icons.css",
       "SourceId": "MiniCar_Model",
       "SourceType": "Discovered",
@@ -3965,12 +3986,12 @@
       "OriginalItemSpec": "wwwroot\\img\\features\\f-icon4.png"
     },
     {
-      "Identity": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo.png",
+      "Identity": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo_team.png",
       "SourceId": "MiniCar_Model",
       "SourceType": "Discovered",
       "ContentRoot": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\",
       "BasePath": "_content/MiniCar_Model",
-      "RelativePath": "img/logo#[.{fingerprint}]?.png",
+      "RelativePath": "img/logo_team#[.{fingerprint}]?.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -3979,11 +4000,11 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "m6th02ptga",
-      "Integrity": "/sVvVV7OuVxhXfBQGwc1u4a9PGmJaTcbIVEYoa0M2MI=",
+      "Fingerprint": "noxab8a40j",
+      "Integrity": "+YsNH3g3h+P+8wyuL8us+ngWtdY1Y0PLUBwXwZRWOMk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\img\\logo.png"
+      "OriginalItemSpec": "wwwroot\\img\\logo_team.png"
     },
     {
       "Identity": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\login.jpg",
@@ -4000,8 +4021,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vxzgx24om5",
-      "Integrity": "82LbNDEiU4wEGBDYqq6AsuDvnO+MrvGyPjsJ5jFisBc=",
+      "Fingerprint": "kl251aqphi",
+      "Integrity": "aIU8lQGFZ7YoNGj/5sb1FDuKGRZ1NhG8tx1d/M8/jJA=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\login.jpg"
@@ -20191,6 +20212,88 @@
       ]
     },
     {
+      "Route": "css/site.css",
+      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lvF7/XnWaRwbfPNpruT+ZjWlOwAiBUU6AMFDnC1M2eQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 Jan 2026 13:56:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lvF7/XnWaRwbfPNpruT+ZjWlOwAiBUU6AMFDnC1M2eQ="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.qzl1oh9pbi.css",
+      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1104"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lvF7/XnWaRwbfPNpruT+ZjWlOwAiBUU6AMFDnC1M2eQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 11 Jan 2026 13:56:32 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qzl1oh9pbi"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lvF7/XnWaRwbfPNpruT+ZjWlOwAiBUU6AMFDnC1M2eQ="
+        }
+      ]
+    },
+    {
       "Route": "css/themify-icons.aj01b88g2b.css",
       "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\themify-icons.css",
       "Selectors": [],
@@ -23881,8 +23984,8 @@
       ]
     },
     {
-      "Route": "img/logo.m6th02ptga.png",
-      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo.png",
+      "Route": "img/logo_team.noxab8a40j.png",
+      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo_team.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -23891,7 +23994,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "40713"
+          "Value": "54336"
         },
         {
           "Name": "Content-Type",
@@ -23899,11 +24002,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/sVvVV7OuVxhXfBQGwc1u4a9PGmJaTcbIVEYoa0M2MI=\""
+          "Value": "\"+YsNH3g3h+P+8wyuL8us+ngWtdY1Y0PLUBwXwZRWOMk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 Jan 2026 02:45:39 GMT"
+          "Value": "Sun, 11 Jan 2026 13:56:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23913,21 +24016,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "m6th02ptga"
+          "Value": "noxab8a40j"
         },
         {
           "Name": "label",
-          "Value": "img/logo.png"
+          "Value": "img/logo_team.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-/sVvVV7OuVxhXfBQGwc1u4a9PGmJaTcbIVEYoa0M2MI="
+          "Value": "sha256-+YsNH3g3h+P+8wyuL8us+ngWtdY1Y0PLUBwXwZRWOMk="
         }
       ]
     },
     {
-      "Route": "img/logo.png",
-      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo.png",
+      "Route": "img/logo_team.png",
+      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo_team.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -23936,7 +24039,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "40713"
+          "Value": "54336"
         },
         {
           "Name": "Content-Type",
@@ -23944,11 +24047,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"/sVvVV7OuVxhXfBQGwc1u4a9PGmJaTcbIVEYoa0M2MI=\""
+          "Value": "\"+YsNH3g3h+P+8wyuL8us+ngWtdY1Y0PLUBwXwZRWOMk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 Jan 2026 02:45:39 GMT"
+          "Value": "Sun, 11 Jan 2026 13:56:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23958,7 +24061,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-/sVvVV7OuVxhXfBQGwc1u4a9PGmJaTcbIVEYoa0M2MI="
+          "Value": "sha256-+YsNH3g3h+P+8wyuL8us+ngWtdY1Y0PLUBwXwZRWOMk="
         }
       ]
     },
@@ -23973,7 +24076,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "790679"
+          "Value": "680650"
         },
         {
           "Name": "Content-Type",
@@ -23981,11 +24084,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"82LbNDEiU4wEGBDYqq6AsuDvnO+MrvGyPjsJ5jFisBc=\""
+          "Value": "\"aIU8lQGFZ7YoNGj/5sb1FDuKGRZ1NhG8tx1d/M8/jJA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 Jan 2026 05:25:03 GMT"
+          "Value": "Sun, 11 Jan 2026 13:56:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -23995,12 +24098,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-82LbNDEiU4wEGBDYqq6AsuDvnO+MrvGyPjsJ5jFisBc="
+          "Value": "sha256-aIU8lQGFZ7YoNGj/5sb1FDuKGRZ1NhG8tx1d/M8/jJA="
         }
       ]
     },
     {
-      "Route": "img/login.vxzgx24om5.jpg",
+      "Route": "img/login.kl251aqphi.jpg",
       "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\login.jpg",
       "Selectors": [],
       "ResponseHeaders": [
@@ -24010,7 +24113,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "790679"
+          "Value": "680650"
         },
         {
           "Name": "Content-Type",
@@ -24018,11 +24121,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"82LbNDEiU4wEGBDYqq6AsuDvnO+MrvGyPjsJ5jFisBc=\""
+          "Value": "\"aIU8lQGFZ7YoNGj/5sb1FDuKGRZ1NhG8tx1d/M8/jJA=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 09 Jan 2026 05:25:03 GMT"
+          "Value": "Sun, 11 Jan 2026 13:56:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -24032,7 +24135,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vxzgx24om5"
+          "Value": "kl251aqphi"
         },
         {
           "Name": "label",
@@ -24040,7 +24143,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-82LbNDEiU4wEGBDYqq6AsuDvnO+MrvGyPjsJ5jFisBc="
+          "Value": "sha256-aIU8lQGFZ7YoNGj/5sb1FDuKGRZ1NhG8tx1d/M8/jJA="
         }
       ]
     },
@@ -40959,7 +41062,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 Jan 2026 02:46:24 GMT"
+          "Value": "Sun, 11 Jan 2026 14:03:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -40996,7 +41099,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 Jan 2026 02:46:24 GMT"
+          "Value": "Sun, 11 Jan 2026 14:03:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -41033,7 +41136,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 Jan 2026 02:46:24 GMT"
+          "Value": "Sun, 11 Jan 2026 14:03:22 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -41078,7 +41181,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 Jan 2026 02:46:24 GMT"
+          "Value": "Sun, 11 Jan 2026 14:03:22 GMT"
         },
         {
           "Name": "Cache-Control",

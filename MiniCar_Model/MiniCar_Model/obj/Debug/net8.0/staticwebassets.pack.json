@@ -569,6 +569,10 @@
       "PackagePath": "staticwebassets\\css\\owl.carousel.css"
     },
     {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
       "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\themify-icons.css",
       "PackagePath": "staticwebassets\\css\\themify-icons.css"
     },
@@ -753,8 +757,8 @@
       "PackagePath": "staticwebassets\\img\\login.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo.png",
-      "PackagePath": "staticwebassets\\img\\logo.png"
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo_team.png",
+      "PackagePath": "staticwebassets\\img\\logo_team.png"
     },
     {
       "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\Nam\\Boots\\b1.1.png",

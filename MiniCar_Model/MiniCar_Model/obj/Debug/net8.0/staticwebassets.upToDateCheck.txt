@@ -139,6 +139,7 @@ wwwroot\css\main.map
 wwwroot\css\nice-select.css
 wwwroot\css\nouislider.min.css
 wwwroot\css\owl.carousel.css
+wwwroot\css\site.css
 wwwroot\css\themify-icons.css
 wwwroot\favicon.ico
 wwwroot\fonts\FontAwesome.otf
@@ -184,7 +185,7 @@ wwwroot\img\features\f-icon1.png
 wwwroot\img\features\f-icon2.png
 wwwroot\img\features\f-icon3.png
 wwwroot\img\features\f-icon4.png
-wwwroot\img\logo.png
+wwwroot\img\logo_team.png
 wwwroot\img\login.jpg
 wwwroot\img\product\card.jpg
 wwwroot\img\product\e-p1.png
