@@ -127,6 +127,7 @@ wwwroot\category\Nu\SportShoes\SportShoe-02.html
 wwwroot\css\availability-calendar.css
 wwwroot\css\bootstrap.css
 wwwroot\css\bootstrap.map
+wwwroot\css\DonHang.css
 wwwroot\css\font-awesome.min.css
 wwwroot\css\ion.rangeSlider.css
 wwwroot\css\ion.rangeSlider.skinFlat.css
@@ -139,6 +140,8 @@ wwwroot\css\main.map
 wwwroot\css\nice-select.css
 wwwroot\css\nouislider.min.css
 wwwroot\css\owl.carousel.css
+wwwroot\css\profile.css
+wwwroot\css\style_wishlist.css
 wwwroot\css\themify-icons.css
 wwwroot\favicon.ico
 wwwroot\fonts\FontAwesome.otf
@@ -184,8 +187,8 @@ wwwroot\img\features\f-icon1.png
 wwwroot\img\features\f-icon2.png
 wwwroot\img\features\f-icon3.png
 wwwroot\img\features\f-icon4.png
-wwwroot\img\logo.png
 wwwroot\img\login.jpg
+wwwroot\img\logo.png
 wwwroot\img\product\card.jpg
 wwwroot\img\product\e-p1.png
 wwwroot\img\product\Nam\Boots\b1.1.png
@@ -258,14 +261,14 @@ wwwroot\img\product\next.png
 wwwroot\img\product\Nu\Boots\3k.png
 wwwroot\img\product\Nu\Boots\cgbd.png
 wwwroot\img\product\Nu\Boots\cgct.png
+wwwroot\img\product\Nu\Boots\chelsea boots.png
 wwwroot\img\product\Nu\Boots\clmv.png
 wwwroot\img\product\Nu\Boots\cloc.png
 wwwroot\img\product\Nu\Boots\cndbmn.png
 wwwroot\img\product\Nu\Boots\cndt.png
 wwwroot\img\product\Nu\Boots\cndtkk.png
-wwwroot\img\product\Nu\Boots\cnmn.png
 wwwroot\img\product\Nu\Boots\cngn.png
-wwwroot\img\product\Nu\Boots\chelsea boots.png
+wwwroot\img\product\Nu\Boots\cnmn.png
 wwwroot\img\product\Nu\Boots\martin.png
 wwwroot\img\product\Nu\RunningShoes\rs1.png
 wwwroot\img\product\Nu\RunningShoes\rs10.png

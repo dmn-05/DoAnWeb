@@ -1,0 +1,87 @@
+﻿
+<div class="container profile-container">
+	<!-- AVATAR -->
+	
+	<div class="floating-btn add-btn"
+		 onclick="addAddress()"
+		 style="position:fixed; top:20px; right:15px;">
+		+
+	</div>
+	<div class="floating-btn back-btn"
+		 onclick="goBack()"
+		 style="position:fixed; top:20px; left:15px;">
+		←
+	</div>
+
+	<div class="profile-header text-center">
+		<div class="avatar">
+			<img src="xe1.jpg" alt="avatar">
+		</div>
+		<button class="btn btn-link edit-btn">✏️ Sửa</button>
+	</div>
+	<div class="row mt-3 g-2">
+		<div class="col-4">
+			<button class="btn profile-btn w-100">
+				🧾<br>Đơn hàng
+			</button>
+		</div>
+		<div class="col-4">
+			<button class="btn profile-btn w-100">
+				🛒<br>Giỏ hàng
+			</button>
+		</div>
+		<div class="col-4">
+			<button class="btn profile-btn w-100">
+				❤️<br>Yêu thích
+			</button>
+		</div>
+	</div>
+</div>
+<!-- INFO LIST -->
+<div class="profile-card">
+
+	<div class="profile-item">
+		<span class="label">Tên</span>
+		<span class="value">Nguyễn Văn A</span>
+	</div>
+
+	<div class="profile-item">
+		<span class="label">Giới tính</span>
+		<span class="action">Nam</span>
+	</div>
+
+	<div class="profile-item">
+		<span class="label">Email</span>
+		<span class="action">example@gmail.com</span>
+	</div>
+
+	<div class="profile-item">
+		<span class="label">Số điện thoại</span>
+		<span class="value">********83</span>
+	</div>
+
+	<div class="profile-item">
+		<span class="label">Địa chỉ</span>
+
+		<details class="address-dropdown">
+			<summary>Thiết lập ngay</summary>
+			<div class="address-list">
+				<p>📍 123 Lê Lợi, Q1, TP.HCM</p>
+				<p>📍 45 Nguyễn Trãi, Q5, TP.HCM</p>
+				<p>📍 89 Trần Hưng Đạo, Hà Nội</p>
+			</div>
+		</details>
+	</div>
+
+</div>
+
+
+<script>
+	function goBack() {
+		window.history.back();
+	}
+
+	function addAddress() {
+		alert("Mở form thêm địa chỉ mới");
+	}
+</script>
