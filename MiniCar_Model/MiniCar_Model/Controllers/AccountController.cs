@@ -24,5 +24,25 @@ namespace MiniCar_Model.Controllers {
     public IActionResult Register() {
       return View();
     }
+
+    public IActionResult ForgotPassword() {
+      return View();
+    }
+
+    public IActionResult Profile() {
+      return View();
+    }
+
+    public IActionResult Logout() { 
+      return RedirectToAction("Index", "Home");
+    }
+
+    public IActionResult Order() {
+      return View();
+    }
+
+    public IActionResult Wishlist() {
+      return View();
+    }
   }
 }
