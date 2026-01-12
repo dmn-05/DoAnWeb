@@ -116,7 +116,7 @@
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Product\\List.cshtml",
               "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\Views\\Product\\List.cshtml",
               "RelativeToolTip": "MiniCar_Model\\Views\\Product\\List.cshtml",
-              "ViewState": "AgIAABYAAAAAAAAAAAAawDMAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-11T19:10:41.674Z",
               "EditorCaption": ""
@@ -131,8 +131,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Product\\Detail.cshtml",
               "ViewState": "AgIAAEgAAAAAAAAAAAAswFEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-11T19:06:33.491Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-11T19:06:33.491Z"
             },
             {
               "$type": "Document",
@@ -144,8 +143,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Account\\Order.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-11T19:04:10.791Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-11T19:04:10.791Z"
             },
             {
               "$type": "Document",
@@ -157,8 +155,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Account\\Wishlist.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-11T17:24:18.917Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-11T17:24:18.917Z"
             },
             {
               "$type": "Document",
@@ -206,8 +203,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Shared\\_Header.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABNAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-08T15:57:00.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-08T15:57:00.226Z"
             },
             {
               "$type": "Document",
@@ -219,8 +215,7 @@
               "RelativeToolTip": "MiniCar_Model\\wwwroot\\css\\main.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-01-08T14:48:57.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-08T14:48:57.79Z"
             },
             {
               "$type": "Document",
@@ -232,8 +227,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Account\\Profile.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-11T17:24:22.472Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-11T17:24:22.472Z"
             },
             {
               "$type": "Document",
@@ -245,8 +239,7 @@
               "RelativeToolTip": "MiniCar_Model\\Controllers\\HomeController.cs",
               "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T15:14:22.452Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-11T15:14:22.452Z"
             },
             {
               "$type": "Document",
@@ -258,8 +251,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
               "ViewState": "AgIAABUAAAAAAAAAAAAmwCEAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-08T02:53:37.05Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-08T02:53:37.05Z"
             },
             {
               "$type": "Document",
@@ -271,8 +263,7 @@
               "RelativeToolTip": "MiniCar_Model\\Controllers\\AccountController.cs",
               "ViewState": "AgIAAAcAAAAAAAAAAAAQwCwAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-11T15:14:29.244Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-11T15:14:29.244Z"
             },
             {
               "$type": "Document",

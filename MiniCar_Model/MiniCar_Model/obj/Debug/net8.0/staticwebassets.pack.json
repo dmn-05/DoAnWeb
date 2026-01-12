@@ -5,6 +5,350 @@
       "PackagePath": "staticwebassets\\MiniCar_Model.yp4pelebwt.bundle.scp.css"
     },
     {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\admin\\css\\bootstrap.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\style-responsive.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style-responsive.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\style.css",
+      "PackagePath": "staticwebassets\\admin\\css\\style.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\table-responsive.css",
+      "PackagePath": "staticwebassets\\admin\\css\\table-responsive.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\to-do.css",
+      "PackagePath": "staticwebassets\\admin\\css\\to-do.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\zabuto_calendar.css",
+      "PackagePath": "staticwebassets\\admin\\css\\zabuto_calendar.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\css\\font-awesome.css",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\css\\font-awesome.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\FontAwesome.otf",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\FontAwesome.otf"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont.eot"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont.svg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont.ttf"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont.woff"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.eot",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.eot"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.svg",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.svg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.ttf",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.ttf"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.woff",
+      "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.woff"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\Logo.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\Logo.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\blog-bg.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\blog-bg.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\checkbox-gray.png",
+      "PackagePath": "staticwebassets\\admin\\img\\checkbox-gray.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-01.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-01.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-02.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-02.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-03.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-03.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-04.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-04.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-05.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-05.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-06.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-06.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\instagram.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\instagram.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\login-bg.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\login-bg.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\lorde.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\lorde.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\mask.png",
+      "PackagePath": "staticwebassets\\admin\\img\\mask.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ny.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\ny.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\product.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\product.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\product.png",
+      "PackagePath": "staticwebassets\\admin\\img\\product.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\profile-01.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profile-01.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\profile-02.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\profile-02.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\radio-gray.png",
+      "PackagePath": "staticwebassets\\admin\\img\\radio-gray.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-danro.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\ui-danro.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-divya.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\ui-divya.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-sam.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\ui-sam.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-sherman.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\ui-sherman.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-zac.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\ui-zac.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\weather.jpg",
+      "PackagePath": "staticwebassets\\admin\\img\\weather.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\zoom.png",
+      "PackagePath": "staticwebassets\\admin\\img\\zoom.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap-inputmask\\bootstrap-inputmask.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\bootstrap-inputmask\\bootstrap-inputmask.min.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap-switch.js",
+      "PackagePath": "staticwebassets\\admin\\js\\bootstrap-switch.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\calendar-conf-events.js",
+      "PackagePath": "staticwebassets\\admin\\js\\calendar-conf-events.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\chart-master\\Chart.js",
+      "PackagePath": "staticwebassets\\admin\\js\\chart-master\\Chart.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\chartjs-conf.js",
+      "PackagePath": "staticwebassets\\admin\\js\\chartjs-conf.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\common-scripts.js",
+      "PackagePath": "staticwebassets\\admin\\js\\common-scripts.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\easy-pie-chart.js",
+      "PackagePath": "staticwebassets\\admin\\js\\easy-pie-chart.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fancybox\\jquery.fancybox.css",
+      "PackagePath": "staticwebassets\\admin\\js\\fancybox\\jquery.fancybox.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fancybox\\jquery.fancybox.js",
+      "PackagePath": "staticwebassets\\admin\\js\\fancybox\\jquery.fancybox.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\form-component.js",
+      "PackagePath": "staticwebassets\\admin\\js\\form-component.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fullcalendar\\bootstrap-fullcalendar.css",
+      "PackagePath": "staticwebassets\\admin\\js\\fullcalendar\\bootstrap-fullcalendar.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fullcalendar\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\fullcalendar\\fullcalendar.min.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter-conf.js",
+      "PackagePath": "staticwebassets\\admin\\js\\gritter-conf.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\css\\jquery.gritter.css",
+      "PackagePath": "staticwebassets\\admin\\js\\gritter\\css\\jquery.gritter.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\css\\jquery.gritter0.css",
+      "PackagePath": "staticwebassets\\admin\\js\\gritter\\css\\jquery.gritter0.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter-light.png",
+      "PackagePath": "staticwebassets\\admin\\js\\gritter\\images\\gritter-light.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter-long.png",
+      "PackagePath": "staticwebassets\\admin\\js\\gritter\\images\\gritter-long.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter.png",
+      "PackagePath": "staticwebassets\\admin\\js\\gritter\\images\\gritter.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\ie-spacer.gif",
+      "PackagePath": "staticwebassets\\admin\\js\\gritter\\images\\ie-spacer.gif"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\js\\jquery.gritter.js",
+      "PackagePath": "staticwebassets\\admin\\js\\gritter\\js\\jquery.gritter.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-1.8.3.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery-1.8.3.min.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.css",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.css"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-ui-1.9.2.custom.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery-ui-1.9.2.custom.min.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.backstretch.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery.backstretch.min.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.dcjqaccordion.2.7.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery.dcjqaccordion.2.7.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.nicescroll.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery.nicescroll.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.scrollTo.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery.scrollTo.min.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.sparkline.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery.sparkline.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.tagsinput.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery.tagsinput.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.ui.touch-punch.min.js",
+      "PackagePath": "staticwebassets\\admin\\js\\jquery.ui.touch-punch.min.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\morris-conf.js",
+      "PackagePath": "staticwebassets\\admin\\js\\morris-conf.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\sparkline-chart.js",
+      "PackagePath": "staticwebassets\\admin\\js\\sparkline-chart.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\tasks.js",
+      "PackagePath": "staticwebassets\\admin\\js\\tasks.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\zabuto_calendar.js",
+      "PackagePath": "staticwebassets\\admin\\js\\zabuto_calendar.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.eot",
+      "PackagePath": "staticwebassets\\admin\\lineicons\\fonts\\linecons.eot"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.svg",
+      "PackagePath": "staticwebassets\\admin\\lineicons\\fonts\\linecons.svg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.ttf",
+      "PackagePath": "staticwebassets\\admin\\lineicons\\fonts\\linecons.ttf"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.woff",
+      "PackagePath": "staticwebassets\\admin\\lineicons\\fonts\\linecons.woff"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\index.html",
+      "PackagePath": "staticwebassets\\admin\\lineicons\\index.html"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\lte-ie7.js",
+      "PackagePath": "staticwebassets\\admin\\lineicons\\lte-ie7.js"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\style.css",
+      "PackagePath": "staticwebassets\\admin\\lineicons\\style.css"
+    },
+    {
       "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\Boots-02.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\Boots-02.html"
     },

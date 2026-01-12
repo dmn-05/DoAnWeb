@@ -8,6 +8,12 @@ namespace MiniCar_Model.Areas.Admin.Controllers
         public IActionResult Index()
         {
             return View();
+        }    
+        public IActionResult Create()
+        {
+            return View();
         }
     }
+
+
 }
