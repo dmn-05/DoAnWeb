@@ -2,6 +2,215 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["title"] = "Admin";
+	ViewData["title"] = "Admin";
 }
-<h1>hello world 1</h1>
+<section id="main-content">
+	<section class="wrapper">
+		<h3><i class="fa fa-angle-right"></i> Sản phẩm</h3>
+
+		<div class="row mt">
+			<div class="col-md-12">
+				<div class="content-panel">
+					<div style="padding: 15px;">
+						<div class="row">
+							<div class="col-md-4 col-sm-12">
+								<h4 style="margin-bottom: 15px;"><i class="fa fa-angle-right"></i> Danh sách</h4>
+							</div>
+							<div class="col-md-8 col-sm-12 text-right">
+								<div class="form-group" style="display: flex; gap: 5px; flex-wrap: wrap;">
+									<input type="text" class="form-control" placeholder="Tìm kiếm..." style="flex: 1; min-width: 200px;" />
+
+									<button class="btn btn-primary">
+										<i class="fa fa-search"></i>
+									</button>
+
+									<a asp-area="Admin" asp-controller="product" asp-action="create" class="btn btn-success">
+										<i class="fa fa-plus"></i> <span class="hidden-xs">Thêm sản phẩm</span>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<hr style="margin: 0;" />
+
+					<div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th class="text-center">#</th>
+									<th>Mã sản phẩm</th>
+									<th>Tên sản phẩm</th>
+									<th>Loại</th>
+									<th>Giá</th>
+									<th>Size</th>
+									<th>Màu</th>
+									<th>Hình ảnh</th>
+									<th class="text-center">Trạng thái</th>
+									<th class="text-center">Hành động</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="text-center">1</td>
+									<td><small>GbtsNam-Do-37</small></td>
+									<td><strong>Boots Chealsea</strong></td>
+									<td>Giày Boots</td>
+									<td>450.000đ</td>
+									<td>30</td>
+									<td>Đỏ</td>
+									<td style="vertical-align: middle; width: 100px;">
+										<div style="display: flex; justify-content: center; gap: 4px;">
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+										</div>
+									</td>
+
+									<td class="text-center" style="vertical-align: middle;">
+										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
+									</td>
+
+									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+										<a class="btn btn-primary btn-xs" asp-area="Admin" asp-controller="product" asp-action="create"><i class="fa fa-pencil"></i> Sửa</a>
+										<a class="btn btn-danger btn-xs" onclick="showConfirmDelete('GbtsNam-Do-37', 'Boots Chelsea')"><i class="fa fa-trash-o"></i> Xóa</a>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">2</td>
+									<td><small>GbtsNam-Do-37</small></td>
+									<td><strong>Boots Chealsea</strong></td>
+									<td>Giày Boots</td>
+									<td>450.000đ</td>
+									<td>30</td>
+									<td>Đỏ</td>
+									<td style="vertical-align: middle; width: 100px;">
+										<div style="display: flex; justify-content: center; gap: 4px;">
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+										</div>
+									</td>
+
+									<td class="text-center" style="vertical-align: middle;">
+										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
+									</td>
+
+									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
+										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">3</td>
+									<td><small>GbtsNam-Do-37</small></td>
+									<td><strong>Boots Chealsea</strong></td>
+									<td>Giày Boots</td>
+									<td>450.000đ</td>
+									<td>30</td>
+									<td>Đỏ</td>
+									<td style="vertical-align: middle; width: 100px;">
+										<div style="display: flex; justify-content: center; gap: 4px;">
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+										</div>
+									</td>
+
+									<td class="text-center" style="vertical-align: middle;">
+										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
+									</td>
+
+									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
+										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">4</td>
+									<td><small>GbtsNam-Do-37</small></td>
+									<td><strong>Boots Chealsea</strong></td>
+									<td>Giày Boots</td>
+									<td>450.000đ</td>
+									<td>30</td>
+									<td>Đỏ</td>
+									<td style="vertical-align: middle; width: 100px;">
+										<div style="display: flex; justify-content: center; gap: 4px;">
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+										</div>
+									</td>
+
+									<td class="text-center" style="vertical-align: middle;">
+										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
+									</td>
+
+									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
+										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">5</td>
+									<td><small>GbtsNam-Do-37</small></td>
+									<td><strong>Boots Chealsea</strong></td>
+									<td>Giày Boots</td>
+									<td>450.000đ</td>
+									<td>30</td>
+									<td>Đỏ</td>
+									<td style="vertical-align: middle; width: 100px;">
+										<div style="display: flex; justify-content: center; gap: 4px;">
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+										</div>
+									</td>
+
+									<td class="text-center" style="vertical-align: middle;">
+										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
+									</td>
+
+									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
+										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">2</td>
+									<td><small>GbtsNam-Do-37</small></td>
+									<td><strong>Boots Chealsea</strong></td>
+									<td>Giày Boots</td>
+									<td>450.000đ</td>
+									<td>30</td>
+									<td>Đỏ</td>
+									<td style="vertical-align: middle; width: 100px;">
+										<div style="display: flex; justify-content: center; gap: 4px;">
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
+										</div>
+									</td>
+
+									<td class="text-center" style="vertical-align: middle;">
+										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
+									</td>
+
+									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
+										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
+									</td>
+								</tr>
+
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="text-center" style="margin-top: 20px;">
+					<ul class="pagination">
+						<li class="page-item disabled"><a class="page-link" href="#">«</a></li>
+						<li class="page-item active"><a class="page-link" href="#">1</a></li>
+						<li><a href="#">2</a></li>
+						<li><a href="#">3</a></li>
+						<li><a href="#">»</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+@await Html.PartialAsync("_ConfirmDeleteModal")

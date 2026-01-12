@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MiniCar_Model")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3dce0ad8b321b2a5ced90a2fba4591302eef286")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+479da4cbc1380a4bb28cd6a2140bcc16b175aba2")]
 [assembly: System.Reflection.AssemblyProductAttribute("MiniCar_Model")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MiniCar_Model")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

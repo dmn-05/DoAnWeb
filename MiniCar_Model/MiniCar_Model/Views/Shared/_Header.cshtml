@@ -1,56 +1,56 @@
-﻿  <!-- Start Header Area -->
+﻿	<!-- Start Header Area -->
 <header class="header_area sticky-header">
-  <div class="main_menu">
-    <nav class="navbar navbar-expand-lg navbar-light main_box">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-                <a class="navbar-brand logo_h logo"
-                   asp-controller="Home"
-                   asp-action="Index">
-                    <img src="~/img/logo_team.png" alt="Logo" style="width:100px; height:auto;">
-                </a>
+	<div class="main_menu">
+		<nav class="navbar navbar-expand-lg navbar-light main_box">
+			<div class="container">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<a class="navbar-brand logo_h logo"
+					 asp-controller="Home"
+					 asp-action="Index">
+					<img src="~/img/logo_team.png" alt="Logo" style="width:100px; height:auto;">
+				</a>
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-          <ul class="nav navbar-nav menu_nav ml-auto">
-            <li class="nav-item active"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
-            <li class="nav-item"><a class="nav-link" asp-controller="Product" asp-action="List">Sản phẩm</a></li>
-            <li class="nav-item submenu dropdown">
-              <a asp-controller="Home" asp-action="Promotion" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                 aria-expanded="false">Khuyến mãi</a>
-            </li>
-            <li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
-          </ul>
-          <ul class="nav navbar-nav navbar-right">
-            <!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
-            <li><a class="nav-link" asp-controller="Cart" asp-action="Index" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+								aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+					<ul class="nav navbar-nav menu_nav ml-auto">
+						<li class="nav-item active"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
+						<li class="nav-item"><a class="nav-link" asp-controller="Product" asp-action="List">Sản phẩm</a></li>
+						<li class="nav-item submenu dropdown">
+							<a asp-controller="Home" asp-action="Promotion" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+								 aria-expanded="false">Khuyến mãi</a>
+						</li>
+						<li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
+						<li><a class="nav-link" asp-controller="Cart" asp-action="Index" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>
 
 
-            <li class="nav-item"><a asp-controller="Account" asp-action="Login" class="cart"><span class="ti-user"></span></a></li>
-            <li class="nav-item">
-              <button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  </div>
+						<li class="nav-item"><a asp-controller="Account" asp-action="Login" class="cart"><span class="ti-user"></span></a></li>
+						<li class="nav-item">
+							<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</nav>
+	</div>
 
-  <div class="search_input" id="search_input_box">
-    <div class="container">
-      <form class="d-flex justify-content-between">
-        <input type="text" class="form-control" id="search_input" placeholder="Tìm kiếm">
-        <button type="submit" class="btn"></button>
-        <span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
-      </form>
-    </div>
-  </div>
+	<div class="search_input" id="search_input_box">
+		<div class="container">
+			<form class="d-flex justify-content-between">
+				<input type="text" class="form-control" id="search_input" placeholder="Tìm kiếm">
+				<button type="submit" class="btn"></button>
+				<span class="lnr lnr-cross" id="close_search" title="Close Search"></span>
+			</form>
+		</div>
+	</div>
 
 </header>
 <!-- End Header Area -->

@@ -10,8 +10,9 @@
 .no-padding {
   padding: 0;
 }
-.pt-100px{
-  padding-top: 100px !important ;
+
+.pt-100px {
+  padding-top: 100px !important;
 }
 
 
@@ -8537,7 +8538,7 @@ li {
 }
 
   .logo img {
-     height: 80px;
+    height: 80px;
     transition: transform 0.35s ease-in-out;
   }
 
