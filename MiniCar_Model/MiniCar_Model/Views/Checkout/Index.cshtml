@@ -1,14 +1,15 @@
 @{
 	ViewData["Title"] = "Thanh toán";
 }
+
 <section class="banner-area organic-breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 			<div class="col-first">
 				<h1>Thanh toán</h1>
 				<nav class="d-flex align-items-center">
-					<a href="index.html">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-					<a href="checkout.html">Thanh toán</a>
+					<a href="/">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+					<span>Thanh toán</span>
 				</nav>
 			</div>
 		</div>
@@ -17,103 +18,123 @@
 
 <section class="checkout_area section_gap">
 	<div class="container">
-		<!--        <div class="check_title">-->
-		<!--            <h2>Returning Customer? <a href="login.html">Click here to login</a></h2>-->
-		<!--        </div>-->
-		<!--        <div class="cupon_area">-->
-		<!--            <div class="check_title">-->
-		<!--                <h2>Have a coupon? <a href="#">Click here to enter your code</a></h2>-->
-		<!--            </div>-->
-		<!--            <input type="text" placeholder="Enter coupon code">-->
-		<!--            <a class="tp_btn" href="#">Apply Coupon</a>-->
-		<!--        </div>-->
 		<div class="billing_details">
 			<div class="row">
-				<div class="col-lg-8">
+
+				<!-- LEFT: FORM -->
+				<div class="col-lg-7">
 					<h3>Chi tiết hóa đơn</h3>
-					<form class="row contact_form" action="#" method="post" novalidate="novalidate" id="checkoutForm">
+					<form class="row contact_form" id="checkoutForm">
+
 						<div class="col-md-6 form-group p_star">
-							<input type="text" class="form-control" id="first" name="name" placeholder="Họ*">
-							<p class="form-message"></p>
+							<input type="text" class="form-control" placeholder="Họ*" required>
 						</div>
+
 						<div class="col-md-6 form-group p_star">
-							<input type="text" class="form-control" id="last" name="name" placeholder="Tên*">
-							<p class="form-message"></p>
+							<input type="text" class="form-control" placeholder="Tên*" required>
 						</div>
+
 						<div class="col-md-6 form-group p_star">
-							<input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại*">
-							<p class="form-message"></p>
+							<input type="text" class="form-control" placeholder="Số điện thoại*" required>
 						</div>
+
 						<div class="col-md-6 form-group p_star">
-							<input type="text" class="form-control" id="email" name="email" placeholder="Email*">
-							<p class="form-message"></p>
+							<input type="email" class="form-control" placeholder="Email*" required>
 						</div>
 
 						<div class="col-md-12 form-group p_star">
-							<input type="text" class="form-control" id="address" name="address" placeholder="Địa chỉ*">
-							<p class="form-message"></p>
+							<input type="text" class="form-control" placeholder="Địa chỉ*" required>
 						</div>
 
-						<!--                        <div class="col-md-12 form-group">-->
-						<!--                            <input type="text" class="form-control" id="zip" name="zip" placeholder="Postcode/ZIP">-->
-						<!--                        </div>-->
-						<!--                        <div class="col-md-12 form-group">-->
-						<!--                            <div class="creat_account">-->
-						<!--                                <input type="checkbox" id="f-option2" name="selector">-->
-						<!--                                <label for="f-option2">Create an account?</label>-->
-						<!--                            </div>-->
-						<!--                        </div>-->
 						<div class="col-md-12 form-group">
-							<div class="creat_account">
-								<h3>Ghi chú đơn hàng</h3>
-								<!--                                <input type="checkbox" id="f-option3" name="selector">-->
-								<!--                                <label for="f-option3">Ship to a different address?</label>-->
-							</div>
-							<textarea class="form-control" name="message" id="message" rows="1" placeholder="Ghi chú"></textarea>
+							<h3>Ghi chú đơn hàng</h3>
+							<textarea class="form-control" rows="2" placeholder="Ghi chú"></textarea>
 						</div>
+
 					</form>
 				</div>
-				<div class="col-lg-4">
+
+				<!-- RIGHT: ORDER BOX -->
+				<div class="col-lg-5">
 					<div class="order_box">
-						<h2>Đơn hàng của bạn</h2>
-						<ul class="list">
-							<li><a href="#">Sản phẩm <span>Giá</span></a></li>
-							<li><a href="#">Giày Boot Nam Đế Cao Màu Vàng PALA GN400 <span class="middle">x 01</span> <span class="last">550.000đ</span></a></li>
-							<li><a href="#">Giày boot nam màu trơn Không có dây kéo<span class="middle">x 01</span> <span class="last">806.000đ</span></a></li>
-							<li><a href="#">Nam Giày ống Chelsea Suedette Mặc vào <span class="middle">x 01</span> <span class="last">623.000đ</span></a></li>
-						</ul>
-						<ul class="list list_2">
-							<li><a href="#">Tổng cộng <span>1.979.000đ</span></a></li>
-							<li><a href="#">Phí Ship <span>20.000đ</span></a></li>
-							<li><a href="#">Tổng cộng <span>1.999.000đ</span></a></li>
-						</ul>
-						<div class="payment_item">
-							<div class="radion_btn">
-								<input type="radio" id="f-option5" name="selector">
-								<label for="f-option5">Trả tiền mặt</label>
-								<div class="check"></div>
+						<h4 class="mb-3">Đơn hàng của bạn</h4>
+
+						<div class="order-header d-flex fw-bold border-bottom pb-2 mb-2">
+							<div class="flex-grow-1">Sản phẩm</div>
+							<div class="text-center" style="width:60px;">SL</div>
+							<div class="text-end" style="width:120px;">Giá</div>
+						</div>
+
+						<div class="order-item d-flex mb-2">
+							<div class="flex-grow-1 product-name">
+								Giày Boot Nam Đế Cao Màu Vàng PALA GN400
 							</div>
-							<!--                            <p>Please send a check to Store Name, Store Street, Store Town, Store State / County,-->
-							<!--                                Store Postcode.</p>-->
+							<div class="text-center" style="width:60px;">x01</div>
+							<div class="text-end" style="width:120px;">550.000đ</div>
 						</div>
-						<div class="payment_item active">
-							<div class="radion_btn">
-								<input type="radio" id="f-option6" name="selector">
-								<label for="f-option6">Trả thẻ </label>
-								<img src="img/product/card.jpg" alt="">
-								<div class="check"></div>
+
+						<div class="order-item d-flex mb-2">
+							<div class="flex-grow-1 product-name">
+								Giày boot nam màu trơn không có dây kéo
 							</div>
-							<!--                            <p>Pay via PayPal; you can pay with your credit card if you don’t have a PayPal-->
-							<!--                                account.</p>-->
+							<div class="text-center" style="width:60px;">x01</div>
+							<div class="text-end" style="width:120px;">806.000đ</div>
 						</div>
-						<div class="creat_account">
-							<input type="checkbox" id="f-option4" name="selector">
-							<label for="f-option4">Tôi đã đọc và chấp nhận </label>
-							<a href="#">mọi điều khoản*</a>
+
+						<div class="order-item d-flex mb-3">
+							<div class="flex-grow-1 product-name">
+								Nam Giày ống Chelsea Suedette Mặc vào
+							</div>
+							<div class="text-center" style="width:60px;">x01</div>
+							<div class="text-end" style="width:120px;">623.000đ</div>
 						</div>
-						<a class="primary-btn" href="#">Xác nhận</a>
+
+						<hr>
+
+						<div class="d-flex justify-content-between mb-2">
+							<span>Tạm tính</span>
+							<strong>1.979.000đ</strong>
+						</div>
+
+						<div class="d-flex justify-content-between mb-2">
+							<span>Phí ship</span>
+							<strong>20.000đ</strong>
+						</div>
+
+						<div class="d-flex justify-content-between fs-5 fw-bold text-danger">
+							<span>Tổng cộng</span>
+							<span>1.999.000đ</span>
+						</div>
+
+						<hr>
+
+						<div class="form-check mb-2">
+							<input class="form-check-input" type="radio" name="payment" checked>
+							<label class="form-check-label">
+								Trả tiền mặt khi nhận hàng
+							</label>
+						</div>
+
+						<div class="form-check mb-3">
+							<input class="form-check-input" type="radio" name="payment">
+							<label class="form-check-label">
+								Thanh toán bằng thẻ
+							</label>
+						</div>
+
+						<div class="form-check mb-3">
+							<input class="form-check-input" type="checkbox" required>
+							<label class="form-check-label">
+								Tôi đã đọc và chấp nhận <a href="#">điều khoản</a>
+							</label>
+						</div>
+
+						<button class="btn btn-warning w-100 fw-bold">
+							XÁC NHẬN ĐƠN HÀNG
+						</button>
 					</div>
 				</div>
+
 			</div>
 		</div>
 	</div>
