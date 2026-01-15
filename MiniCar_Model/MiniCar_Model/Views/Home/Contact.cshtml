@@ -24,7 +24,7 @@
 <section class="contact_area section_gap_bottom">
 	<div class="map">
 		<div class="container">
-			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4208.543965246699!2d106.78964328809995!3d10.871330361471784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276398969f7b%3A0x9672b7efd0893fc4!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOw7RuZyBMw6JtIFRwLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1640000731261!5m2!1svi!2s"
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4039.8705560272992!2d106.69766422016625!3d10.77211434018894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f40a3b49e59%3A0xa1bd14e483a602db!2zVHLGsOG7nW5nIENhbyDEkeG6s25nIEvhu7kgdGh14bqtdCBDYW8gVGjhuq9uZw!5e0!3m2!1svi!2sus!4v1768402495946!5m2!1svi!2sus"
 							height="585" style="border:0;" allowfullscreen=""></iframe>
 		</div>
 	</div>
@@ -32,15 +32,19 @@
 		<!--			<div id="mapBox" class="mapBox" data-lat="40.701083" data-lon="-74.1522848" data-zoom="13" data-info="PO Box CT16122 Collins Street West, Victoria 8007, Australia."-->
 		<!--			 data-mlat="40.701083" data-mlon="-74.1522848">-->
 		<!--			</div>-->
+		@if (ViewBag.Success != null)
+		{
+			<div class="alert alert-success">@ViewBag.Success</div>
+		}
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="contact_info">
 					<div class="info_item">
 						<i class="lnr lnr-home"></i>
-						<h6>Thủ Đức, Việt Nam</h6>
+						<h6>Quận 1, Việt Nam</h6>
 						<p>
-							Khu phố 6, phường Linh Trung,
-							thành phố Hồ Chí Minh
+							65 Huỳnh Thúc Kháng, Phường Sài Gòn,
+							Quận 1,Thành Phố Hồ Chí Minh, Việt Nam
 						</p>
 					</div>
 					<div class="info_item">
@@ -56,7 +60,7 @@
 				</div>
 			</div>
 			<div class="col-lg-9">
-				<form class="row contact_form " method="post" id="contactForm" novalidate="novalidate">
+				<form asp-controller="Home" asp-action="Contact" class="row contact_form " method="post" id="contactForm" novalidate="novalidate">
 					<div class="col-md-6">
 						<div class="form-group">
 							<input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nhập tên của bạn">

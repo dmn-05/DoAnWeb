@@ -55,7 +55,6 @@ D:\BT_Do_An_Mon_Hoc_Nhom\DoAnWeb\MiniCar_Model\MiniCar_Model\obj\Debug\net8.0\Mi
 D:\BT_Do_An_Mon_Hoc_Nhom\DoAnWeb\MiniCar_Model\MiniCar_Model\obj\Debug\net8.0\rjimswa.dswa.cache.json
 D:\BT_Do_An_Mon_Hoc_Nhom\DoAnWeb\MiniCar_Model\MiniCar_Model\obj\Debug\net8.0\rjsmrazor.dswa.cache.json
 D:\BT_Do_An_Mon_Hoc_Nhom\DoAnWeb\MiniCar_Model\MiniCar_Model\obj\Debug\net8.0\rjsmcshtml.dswa.cache.json
-D:\BT_Do_An_Mon_Hoc_Nhom\DoAnWeb\MiniCar_Model\MiniCar_Model\obj\Debug\net8.0\scopedcss\Areas\Admin\Views\Shared\_AdminLayout.cshtml.rz.scp.css
 D:\BT_Do_An_Mon_Hoc_Nhom\DoAnWeb\MiniCar_Model\MiniCar_Model\obj\Debug\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 D:\BT_Do_An_Mon_Hoc_Nhom\DoAnWeb\MiniCar_Model\MiniCar_Model\obj\Debug\net8.0\scopedcss\bundle\MiniCar_Model.styles.css
 D:\BT_Do_An_Mon_Hoc_Nhom\DoAnWeb\MiniCar_Model\MiniCar_Model\obj\Debug\net8.0\scopedcss\projectbundle\MiniCar_Model.bundle.scp.css

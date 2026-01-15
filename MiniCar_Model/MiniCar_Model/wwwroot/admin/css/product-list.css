@@ -1,0 +1,45 @@
+﻿body {
+}
+/* Product List Page */
+
+.content-panel {
+    background: #ffffff;
+    padding: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+    .content-panel hr {
+        margin: 0;
+    }
+
+.form-group {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+    .form-group input[type="text"] {
+        flex: 1;
+        min-width: 200px;
+    }
+
+.table img.img-thumbnail {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+}
+
+.table td,
+.table th {
+    vertical-align: middle !important;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.label {
+    display: inline-block;
+    padding: 5px 8px;
+}

@@ -1,0 +1,93 @@
+﻿body {
+}
+.content-panel {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin: 0 15px;
+}
+
+.form-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.input-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 40px;
+    background-color: #fff;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+
+.status-group {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+    .status-group label {
+        cursor: pointer;
+        margin-bottom: 0;
+    }
+
+.status-active {
+    color: green;
+    margin-right: 25px;
+}
+
+.status-inactive {
+    color: red;
+}
+
+.form-footer {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+.btn-save {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.back-link {
+    margin-left: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.input-row {
+    display: flex;
+    gap: 20px;
+}
+

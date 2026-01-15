@@ -1,88 +1,95 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Sản phẩm";
 }
 
+<!-- Link CSS -->
+@* <link href="~/admin/css/admin-product.css" rel="stylesheet" asp-append-version="true" /> *@
+
 <section id="main-content">
-	<section class="wrapper">
-		<h3><i class="fa fa-angle-right"></i>Sản phẩm</h3>
+    <section class="wrapper">
+        <h3><i class="fa fa-angle-right"></i>Sản phẩm</h3>
 
-		<div class="row mt">
-			<div class="col-md-12">
-				<div class="content-panel" style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin: 0 15px;">
-					<form action="" method="POST" enctype="multipart/form-data">
+        <div class="row mt">
+            <div class="col-md-12">
+                <div class="content-panel">
+                    <form action="" method="POST" enctype="multipart/form-data">
 
-						<div style="display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start;">
+                        <div class="form-flex">
 
-							<div style="flex: 1; min-width: 300px;">
-								<div style="margin-bottom: 20px;">
-									<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Mã sản phẩm</label>
-									<input type="text" placeholder="Nhập mã sản phẩm..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-								</div>
+                            <div style="flex:1; min-width:300px;">
+                                <div class="input-row">
+                                    <div class="input-group" style="flex:1;">
+                                        <label>Mã sản phẩm</label>
+                                        <input type="text" placeholder="Nhập mã sản phẩm..." class="input-control">
+                                    </div>
+                                </div>
 
-								<div style="margin-bottom: 20px;">
-									<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Tên sản phẩm</label>
-									<input type="text" placeholder="Nhập tên sản phẩm..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-								</div>
+                                <div class="input-row">
+                                    <div class="input-group" style="flex:1;">
+                                        <label>Tên sản phẩm</label>
+                                        <input type="text" placeholder="Nhập tên sản phẩm..." class="input-control">
+                                    </div>
+                                </div>
 
-								<div style="display: flex; gap: 20px;">
-									<div style="flex: 1;">
-										<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Giá (VNĐ)</label>
-										<input type="number" placeholder="0" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-									</div>
-									<div style="flex: 1;">
-										<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Loại sản phẩm</label>
-										<select style="width: 100%; padding: 0 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px; background-color: #fff;">
-											<option>Giày Boots</option>
-											<option>Giày Thể Thao</option>
-										</select>
-									</div>
-								</div>
-							</div>
+                                <div class="input-row">
+                                    <div class="input-group" style="flex:1;">
+                                        <label>Giá (VNĐ)</label>
+                                        <input type="number" placeholder="0" class="input-control">
+                                    </div>
+                                    <div class="input-group" style="flex:1;">
+                                        <label>Loại sản phẩm</label>
+                                        <select class="input-control">
+                                            <option>Giày Boots</option>
+                                            <option>Giày Thể Thao</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
 
-							<div style="flex: 1; min-width: 300px;">
-								<div style="display: flex; gap: 20px; margin-bottom: 20px;">
-									<div style="flex: 1;">
-										<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Size</label>
-										<input type="text" placeholder="30" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-									</div>
-									<div style="flex: 1;">
-										<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Màu sắc</label>
-										<input type="text" placeholder="Đỏ" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-									</div>
-								</div>
+                            <div style="flex:1; min-width:300px;">
+                                <div class="input-row input-group">
+                                    <div style="flex:1;">
+                                        <label>Size</label>
+                                        <input type="text" placeholder="30" class="input-control">
+                                    </div>
+                                    <div style="flex:1;">
+                                        <label>Màu sắc</label>
+                                        <input type="text" placeholder="Đỏ" class="input-control">
+                                    </div>
+                                </div>
 
-								<div style="margin-bottom: 20px;">
-									<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Hình ảnh sản phẩm</label>
-									<input type="file" multiple style="width: 100%; padding: 7px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px; background: #fdfdfd;">
-									<small style="color: #999; font-style: italic;">* Có thể chọn nhiều ảnh cùng lúc</small>
-								</div>
+                                <div class="input-group">
+                                    <label>Hình ảnh sản phẩm</label>
+                                    <input type="file" multiple class="input-control">
+                                    <small style="color: #999; font-style: italic;">* Có thể chọn nhiều ảnh cùng lúc</small>
+                                </div>
 
-								<div style="margin-bottom: 20px;">
-									<label style="display: block; font-weight: 600; margin-bottom: 12px; color: #555;">Trạng thái</label>
-									<div style="display: flex; align-items: center; height: 40px;">
-										<input type="radio" name="status" id="active" checked style="margin-right: 5px;">
-										<label for="active" style="color: green; margin-right: 25px; cursor: pointer; margin-bottom: 0;">Active</label>
+                                <div class="input-group">
+                                    <label>Trạng thái</label>
+                                    <div class="status-group">
+                                        <input type="radio" name="status" id="active" checked>
+                                        <label for="active" class="status-active">Active</label>
 
-										<input type="radio" name="status" id="inactive" style="margin-right: 5px;">
-										<label for="inactive" style="color: red; cursor: pointer; margin-bottom: 0;">Inactive</label>
-									</div>
-								</div>
-							</div>
+                                        <input type="radio" name="status" id="inactive">
+                                        <label for="inactive" class="status-inactive">Inactive</label>
+                                    </div>
+                                </div>
+                            </div>
 
-						</div>
+                        </div>
 
-						<div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 25px;">
-							<button type="submit" style="background-color: #5cb85c; color: white; border: none; padding: 10px 25px; border-radius: 4px; cursor: pointer; font-size: 15px; font-weight: bold; transition: 0.3s;">
-								<i class="fa fa-save"></i> Lưu sản phẩm
-							</button>
-							<a asp-area="Admin" asp-controller="product" asp-action="index" style="margin-left: 20px; color: #007bff; text-decoration: none; font-size: 14px;">Quay lại danh sách</a>
-						</div>
+                        <div class="form-footer">
+                            <button type="submit" class="btn-save">
+                                <i class="fa fa-save"></i> Lưu sản phẩm
+                            </button>
+                            <a asp-area="Admin" asp-controller="product" asp-action="index" class="back-link">
+                                Quay lại danh sách
+                            </a>
+                        </div>
 
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </section>

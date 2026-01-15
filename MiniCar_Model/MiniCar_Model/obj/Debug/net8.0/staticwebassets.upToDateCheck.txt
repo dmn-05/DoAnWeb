@@ -1,4 +1,6 @@
+wwwroot\admin\css\admin-product.css
 wwwroot\admin\css\bootstrap.css
+wwwroot\admin\css\product-list.css
 wwwroot\admin\css\style-responsive.css
 wwwroot\admin\css\style.css
 wwwroot\admin\css\table-responsive.css
