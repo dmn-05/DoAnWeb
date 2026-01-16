@@ -10,9 +10,24 @@
 .no-padding {
   padding: 0;
 }
-.pt-100px{
-  padding-top: 100px !important ;
+@media(min-width: 991px) {
+  .mt-25px {
+    margin-top: 25px !important;
+  }
+
+  .mt-50px{
+    margin-top: 50px !important;
+  }
+
+  .height-75px {
+    height: 75px !important;
+  }
+
+  .pt-100px {
+    padding-top: 100px !important;
+  }
 }
+
 
 
 /* back to top */
@@ -8544,3 +8559,39 @@ li {
     .logo img:hover {
       transform: scale(1.25);
     }
+
+.nav-link.dropdown-toggle::after {
+  display: none;
+}
+
+/* Popup Account*/
+/* Center + spacing dropdown account */
+#accountDropdown + .dropdown-menu {
+  left: 50% !important;
+  right: auto !important;
+  transform: translateX(-50%);
+  margin-top: 17px;
+}
+
+  /* Arrow */
+  #accountDropdown + .dropdown-menu::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+  }
+
+  #accountDropdown + .dropdown-menu::after {
+    content: "";
+    position: absolute;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 0 9px 9px 9px;
+    border-style: solid;
+    border-color: transparent transparent rgba(0,0,0,0.08) transparent;
+  }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9tsOLjH2/QczUFODzNpFDxGgny1X9G1lsGqBe20ChGU=",
+  "Hash": "/Xw9krNMrA+TjiaNzQ0FDspXjmGHvrJsXCUUBpiEnY4=",
   "Source": "MiniCar_Model",
   "BasePath": "_content/MiniCar_Model",
   "Mode": "Default",
@@ -4714,8 +4714,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "mbs0dkz1u0",
-      "Integrity": "YvytYpz4Bep4tidyC+L2ys2TbVz38BSAHHlUgoME01k=",
+      "Fingerprint": "6ill9j4z5g",
+      "Integrity": "HjWUEWaB2q9e4IsiEfTKOD6BHpceYbQAoCi48z9GO6E=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
@@ -28623,6 +28623,51 @@
       ]
     },
     {
+      "Route": "css/main.6ill9j4z5g.css",
+      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "185309"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"HjWUEWaB2q9e4IsiEfTKOD6BHpceYbQAoCi48z9GO6E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 15 Jan 2026 19:44:06 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6ill9j4z5g"
+        },
+        {
+          "Name": "label",
+          "Value": "css/main.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-HjWUEWaB2q9e4IsiEfTKOD6BHpceYbQAoCi48z9GO6E="
+        }
+      ]
+    },
+    {
       "Route": "css/main.css",
       "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.css",
       "Selectors": [],
@@ -28633,7 +28678,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "184245"
+          "Value": "185309"
         },
         {
           "Name": "Content-Type",
@@ -28641,11 +28686,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"YvytYpz4Bep4tidyC+L2ys2TbVz38BSAHHlUgoME01k=\""
+          "Value": "\"HjWUEWaB2q9e4IsiEfTKOD6BHpceYbQAoCi48z9GO6E=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 11 Jan 2026 18:48:19 GMT"
+          "Value": "Thu, 15 Jan 2026 19:44:06 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28655,7 +28700,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-YvytYpz4Bep4tidyC+L2ys2TbVz38BSAHHlUgoME01k="
+          "Value": "sha256-HjWUEWaB2q9e4IsiEfTKOD6BHpceYbQAoCi48z9GO6E="
         }
       ]
     },
@@ -28775,51 +28820,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-dOk7NyoytG2GHidzaXvtTh/04f3LYGp2keRuP4+31pg="
-        }
-      ]
-    },
-    {
-      "Route": "css/main.mbs0dkz1u0.css",
-      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "184245"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"YvytYpz4Bep4tidyC+L2ys2TbVz38BSAHHlUgoME01k=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 11 Jan 2026 18:48:19 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "mbs0dkz1u0"
-        },
-        {
-          "Name": "label",
-          "Value": "css/main.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-YvytYpz4Bep4tidyC+L2ys2TbVz38BSAHHlUgoME01k="
         }
       ]
     },

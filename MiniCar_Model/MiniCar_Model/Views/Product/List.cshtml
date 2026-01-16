@@ -1,5 +1,5 @@
 ﻿@{
-  ViewData["Title"] = "Danh Sách";
+  ViewData["Title"] = "Danh sách sản phẩm";
 }
 
 <!-- back to top Button-->
@@ -10,11 +10,10 @@
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
 			<div class="col-first">
-				<h1>Giày nam</h1>
+				<h1>Danh sách sản phẩm</h1>
 				<nav class="d-flex align-items-center">
 					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-					<a asp-controller="Home" asp-action="Index">Nam<span class="lnr lnr-arrow-right"></span></a>
-					<a asp-controller="Home" asp-action="Index">Boots</a>
+					<a asp-controller="Product" asp-action="Index">Danh sách sản phẩm</a>
 				</nav>
 			</div>
 		</div>
@@ -39,14 +38,14 @@
 					</form>
 				</div>
 				<div class="common-filter">
-					<div class="head">Thương hiệu</div>
+					<div class="head">Kích thước</div>
 					<form action="#">
 						<ul>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Louis Vuitton<span>(29)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Nike<span>(29)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Adidas<span>(19)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label for="micromax">Gucci<span>(19)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Puma<span>(19)</span></label></li>
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-s" name="brand"><label for="size-s">Nhỏ<span>(29)</span></label></li>
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-m" name="brand"><label for="size-m">Trung bình<span>(29)</span></label></li>
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-l" name="brand"><label for="size-l">Lớn<span>(19)</span></label></li>
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-xl" name="brand"><label for="size-xl">Rất lớn<span>(19)</span></label></li>
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-xxl" name="brand"><label for="size-xxl">Rất rất lớn<span>(19)</span></label></li>
 						</ul>
 					</form>
 				</div>
@@ -101,16 +100,6 @@
 						<option value="1">Mới nhất</option>
 					</select>
 				</div>
-				<div class="sorting mr-auto">
-					<select>
-						<option value="1">Size 37</option>
-						<option value="1">Size 38</option>
-						<option value="1">Size 39</option>
-						<option value="1">Size 40</option>
-						<option value="1">Size 41</option>
-						<option value="1">Size 42</option>
-					</select>
-				</div>
 			</div>
 			<!-- End Filter Bar -->
 			<!-- Start Best Seller -->
@@ -130,6 +119,93 @@
 
 									<a href="" class="social-info add-to-cart"
 										 data-name="Giày Boot Nam Đế Cao Màu Vàng PALA GN400" data-price="550">
+										<span class="ti-bag"></span>
+										<p class="hover-text">thêm vào giỏ</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Yêu thích</p>
+									</a>
+
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">Xem thêm</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-4 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b2.1.png" alt="">
+							<div class="product-details">
+								<a href="single-product-b2.html"><h6>Giày boot nam màu trơn Không có dây kéo</h6></a>
+								<div class="price">
+									<h6>806.000đ</h6>
+									<h6 class="l-through">900.000đ</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">thêm vào giỏ</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Yêu thích</p>
+									</a>
+
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">Xem thêm</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-4 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b2.1.png" alt="">
+							<div class="product-details">
+								<a href="single-product-b2.html"><h6>Giày boot nam màu trơn Không có dây kéo</h6></a>
+								<div class="price">
+									<h6>806.000đ</h6>
+									<h6 class="l-through">900.000đ</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
+										<span class="ti-bag"></span>
+										<p class="hover-text">thêm vào giỏ</p>
+									</a>
+									<a href="" class="social-info">
+										<span class="lnr lnr-heart"></span>
+										<p class="hover-text">Yêu thích</p>
+									</a>
+
+									<a href="" class="social-info">
+										<span class="lnr lnr-move"></span>
+										<p class="hover-text">Xem thêm</p>
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- single product -->
+					<div class="col-lg-4 col-md-6">
+						<div class="single-product">
+							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b2.1.png" alt="">
+							<div class="product-details">
+								<a href="single-product-b2.html"><h6>Giày boot nam màu trơn Không có dây kéo</h6></a>
+								<div class="price">
+									<h6>806.000đ</h6>
+									<h6 class="l-through">900.000đ</h6>
+								</div>
+								<div class="prd-bottom">
+
+									<a href="" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">thêm vào giỏ</p>
 									</a>
@@ -297,11 +373,16 @@
 			<!-- Start Filter Bar -->
 			<div class="filter-bar d-flex flex-wrap align-items-center">
 
-				<div class="pagination">
-					<a href="Boots.html" class="active">1</a>
-					<a href="Boots-02.html">2</a>
-
+				<div class="text-center" style="margin-top: 10px;">
+					<div class="btn-group">
+						<button class="btn btn-default btn-sm" disabled>«</button>
+						<button class="btn btn-primary btn-sm">1</button>
+						<button class="btn btn-default btn-sm">2</button>
+						<button class="btn btn-default btn-sm">3</button>
+						<button class="btn btn-default btn-sm">»</button>
+					</div>
 				</div>
+
 			</div>
 			<!-- End Filter Bar -->
 		</div>

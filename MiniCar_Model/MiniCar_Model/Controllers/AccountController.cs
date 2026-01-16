@@ -44,5 +44,13 @@ namespace MiniCar_Model.Controllers {
     public IActionResult Wishlist() {
       return View();
     }
+
+    public ActionResult EditAccount() {
+      return View();
+    }
+
+    public IActionResult ChangePassword() {
+      return View();
+    }
   }
 }

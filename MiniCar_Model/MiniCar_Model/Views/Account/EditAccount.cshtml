@@ -1,0 +1,80 @@
+﻿@{
+	ViewData["Title"] = "Chỉnh sửa tài khoản";
+}
+
+
+<!-- back to top Button-->
+<a href="#" class="cd-top">Back To Top</a>
+<!--End Back to top Button-->
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+	<div class="container">
+		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+			<div class="col-first">
+				<h1>Danh sách đơn hàng</h1>
+				<nav class="d-flex align-items-center">
+					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+					<a asp-controller="Account" asp-action="Profile">Tài khoản<span class="lnr lnr-arrow-right"></span></a>
+					<a asp-controller="Account" asp-action="EditAccount">Chỉnh sửa tài khoản</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Banner Area -->
+
+<div class="container my-5">
+	<div class="card shadow-sm rounded-4 mx-auto" style="max-width: 600px;">
+		<div class="card-body p-4">
+
+			<h5 class="mb-4 fw-semibold text-center">
+				✏️ Chỉnh sửa thông tin tài khoản
+			</h5>
+
+			<form>
+
+				<!-- TÊN ĐĂNG NHẬP -->
+				<div class="mb-3">
+					<label class="form-label text-muted">Tên đăng nhập</label>
+					<input type="text" class="form-control" value="User123" disabled>
+				</div>
+
+				<!-- TÊN -->
+				<div class="mb-3">
+					<label class="form-label">Họ và tên</label>
+					<input type="text" class="form-control" value="Nguyễn Văn A">
+				</div>
+
+				<!-- EMAIL -->
+				<div class="mb-3">
+					<label class="form-label">Email</label>
+					<input type="email" class="form-control" value="example@gmail.com">
+				</div>
+
+				<!-- SỐ ĐIỆN THOẠI -->
+				<div class="mb-3">
+					<label class="form-label">Số điện thoại</label>
+					<input type="text" class="form-control" value="098*****83">
+				</div>
+
+				<!-- ĐỊA CHỈ -->
+				<div class="mb-4">
+					<label class="form-label">Địa chỉ</label>
+					<textarea class="form-control" rows="3">89 Trần Hưng Đạo, Hà Nội</textarea>
+				</div>
+
+				<!-- NÚT -->
+				<div class="d-flex justify-content-center gap-3">
+					<button type="submit" class="btn btn-primary px-4 rounded-pill">
+						<i class="fa fa-floppy-o" aria-hidden="true"></i> Lưu thay đổi
+					</button>
+					<a href="#" class="btn btn-outline-secondary px-4 rounded-pill">
+						Hủy
+					</a>
+				</div>
+
+			</form>
+
+		</div>
+	</div>
+</div>
