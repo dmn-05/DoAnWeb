@@ -1,18 +1,20 @@
 ﻿@{
-    ViewData["Title"] = "Sản phẩm";
+    ViewData["Title"] = "Cập nhật sản phẩm";
 }
-
-<!-- Link CSS -->
-@* <link href="~/admin/css/admin-product.css" rel="stylesheet" asp-append-version="true" /> *@
 
 <section id="main-content">
     <section class="wrapper">
-        <h3><i class="fa fa-angle-right"></i> Sản phẩm</h3>
+        <h3><i class="fa fa-angle-right"></i> Cập nhật sản phẩm</h3>
 
+        ```
         <div class="row mt">
             <div class="col-md-12">
                 <div class="content-panel">
-                    <form action="" method="POST" enctype="multipart/form-data">
+                    <form asp-action="Edit" method="POST" enctype="multipart/form-data">
+
+                        <!-- Hidden Id (rất quan trọng khi submit update) -->
+                        <input type="hidden" name="ProductId" value="" />
+
                         <div class="form-flex">
                             <div class="form-column">
                                 <div class="input-row">
@@ -62,6 +64,7 @@
                                     </div>
                                 </div>
 
+                                <!-- hộp upload hình sản phẩm -->
                                 <input type="hidden" name="hf_num_ful" id="hf_num_ful" value="1" />
                                 <div id="ful_container">
                                     <div class="input-group">
@@ -76,15 +79,17 @@
                                             </button>
                                         </div>
 
-                                        <div class="preview mt-2 d-flex flex-wrap gap-2"></div>
-
+                                        <!-- Preview ảnh đã có sau này load lên -->
+                                        <div class="preview mt-2 d-flex flex-wrap gap-2">
+                                            @* Hình cũ sẽ load tại đây *@
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="input-group">
                                     <label>Trạng thái</label>
                                     <div class="status-group">
-                                        <input type="radio" name="status" id="active" checked>
+                                        <input type="radio" name="status" id="active">
                                         <label for="active" class="status-active">Active</label>
 
                                         <input type="radio" name="status" id="inactive">
@@ -96,9 +101,9 @@
 
                         <div class="form-footer">
                             <button type="submit" class="btn-save">
-                                <i class="fa fa-save"></i> Lưu sản phẩm
+                                <i class="fa fa-save"></i> Cập nhật sản phẩm
                             </button>
-                            <a asp-area="Admin" asp-controller="product" asp-action="index" class="back-link">
+                            <a asp-area="Admin" asp-controller="Product" asp-action="Index" class="back-link">
                                 Quay lại danh sách
                             </a>
                         </div>
@@ -107,4 +112,6 @@
             </div>
         </div>
     </section>
+    ```
+
 </section>

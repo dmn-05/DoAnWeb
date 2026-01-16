@@ -1,3 +1,4 @@
+wwwroot\admin\css\admin-index.css
 wwwroot\admin\css\admin-product.css
 wwwroot\admin\css\bootstrap.css
 wwwroot\admin\css\product-list.css
@@ -76,6 +77,7 @@ wwwroot\admin\js\jquery.sparkline.js
 wwwroot\admin\js\jquery.tagsinput.js
 wwwroot\admin\js\jquery.ui.touch-punch.min.js
 wwwroot\admin\js\morris-conf.js
+wwwroot\admin\js\product-image-upload.js
 wwwroot\admin\js\sparkline-chart.js
 wwwroot\admin\js\tasks.js
 wwwroot\admin\js\zabuto_calendar.js

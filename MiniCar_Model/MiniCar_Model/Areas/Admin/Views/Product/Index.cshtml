@@ -16,18 +16,27 @@
 							<div class="col-md-4 col-sm-12">
 								<h4 style="margin-bottom: 15px;"><i class="fa fa-angle-right"></i> Danh sách</h4>
 							</div>
-							<div class="col-md-8 col-sm-12 text-right">
-								<div class="form-group" style="display: flex; gap: 5px; flex-wrap: wrap;">
-									<input type="text" class="form-control" placeholder="Tìm kiếm..." style="flex: 1; min-width: 200px;" />
+							<div class="col-md-8 col-sm-12 text-right search-area">
+
+								<form asp-action="Index" method="get" class="search-bar">
+									<input type="text"
+										   name="search"
+										   value="@ViewBag.Search"
+										   class="form-control search-input"
+										   placeholder="Tìm kiếm sản phẩm..." />
 
 									<button class="btn btn-primary">
 										<i class="fa fa-search"></i>
 									</button>
+								</form>
 
-									<a asp-area="Admin" asp-controller="product" asp-action="create" class="btn btn-success">
-										<i class="fa fa-plus"></i> <span class="hidden-xs">Thêm sản phẩm</span>
-									</a>
-								</div>
+								<a asp-area="Admin"
+								   asp-controller="product"
+								   asp-action="create"
+								   class="btn btn-success add-btn">
+									<i class="fa fa-plus"></i> <span class="hidden-xs">Thêm sản phẩm</span>
+								</a>
+
 							</div>
 						</div>
 					</div>
@@ -35,7 +44,7 @@
 					<hr style="margin: 0;" />
 
 					<div class="table-responsive">
-						<table class="table table-hover">
+						<table class="table table-hover table-sm">
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
@@ -45,7 +54,6 @@
 									<th>Giá</th>
 									<th>Size</th>
 									<th>Màu</th>
-									<th>Hình ảnh</th>
 									<th class="text-center">Trạng thái</th>
 									<th class="text-center">Hành động</th>
 								</tr>
@@ -59,20 +67,14 @@
 									<td>450.000đ</td>
 									<td>30</td>
 									<td>Đỏ</td>
-									<td style="vertical-align: middle; width: 100px;">
-										<div style="display: flex; justify-content: center; gap: 4px;">
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-										</div>
-									</td>
+								
 
-									<td class="text-center" style="vertical-align: middle;">
-										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
+									<td class="text-center">
+										<span class="label label-success label-mini">ACTIVE</span>
 									</td>
-
-									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
-										<a class="btn btn-primary btn-xs" asp-area="Admin" asp-controller="product" asp-action="create"><i class="fa fa-pencil"></i> Sửa</a>
-										<a class="btn btn-danger btn-xs" onclick="showConfirmDelete('GbtsNam-Do-37', 'Boots Chelsea')"><i class="fa fa-trash-o"></i> Xóa</a>
+									<td class="text-center" style="white-space: nowrap;">
+										<a asp-area="Admin" asp-controller="Product" asp-action="Edit" class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</a>
+										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
 									</td>
 								</tr>
 								<tr>
@@ -83,18 +85,13 @@
 									<td>450.000đ</td>
 									<td>30</td>
 									<td>Đỏ</td>
-									<td style="vertical-align: middle; width: 100px;">
-										<div style="display: flex; justify-content: center; gap: 4px;">
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-										</div>
+
+
+									<td class="text-center">
+										<span class="label label-success label-mini">ACTIVE</span>
 									</td>
 
-									<td class="text-center" style="vertical-align: middle;">
-										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
-									</td>
-
-									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+									<td class="text-center" style="white-space: nowrap;">
 										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
 										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
 									</td>
@@ -107,18 +104,11 @@
 									<td>450.000đ</td>
 									<td>30</td>
 									<td>Đỏ</td>
-									<td style="vertical-align: middle; width: 100px;">
-										<div style="display: flex; justify-content: center; gap: 4px;">
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-										</div>
-									</td>
 
-									<td class="text-center" style="vertical-align: middle;">
-										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
+									<td class="text-center">
+										<span class="label label-success label-mini">ACTIVE</span>
 									</td>
-
-									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+									<td class="text-center" style="white-space: nowrap;">
 										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
 										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
 									</td>
@@ -131,18 +121,13 @@
 									<td>450.000đ</td>
 									<td>30</td>
 									<td>Đỏ</td>
-									<td style="vertical-align: middle; width: 100px;">
-										<div style="display: flex; justify-content: center; gap: 4px;">
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-										</div>
+
+
+									<td class="text-center">
+										<span class="label label-success label-mini">ACTIVE</span>
 									</td>
 
-									<td class="text-center" style="vertical-align: middle;">
-										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
-									</td>
-
-									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+									<td class="text-center" style="white-space: nowrap;">
 										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
 										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
 									</td>
@@ -155,18 +140,12 @@
 									<td>450.000đ</td>
 									<td>30</td>
 									<td>Đỏ</td>
-									<td style="vertical-align: middle; width: 100px;">
-										<div style="display: flex; justify-content: center; gap: 4px;">
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-										</div>
-									</td>
 
-									<td class="text-center" style="vertical-align: middle;">
-										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
-									</td>
 
-									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+									<td class="text-center">
+										<span class="label label-success label-mini">ACTIVE</span>
+									</td>
+									<td class="text-center" style="white-space: nowrap;">
 										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
 										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
 									</td>
@@ -179,18 +158,13 @@
 									<td>450.000đ</td>
 									<td>30</td>
 									<td>Đỏ</td>
-									<td style="vertical-align: middle; width: 100px;">
-										<div style="display: flex; justify-content: center; gap: 4px;">
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-											<img src="~/admin/img/Logo.jpg" class="img-thumbnail" style="width:35px; height:35px; object-fit: cover;" />
-										</div>
+
+
+									<td class="text-center">
+										<span class="label label-success label-mini">ACTIVE</span>
 									</td>
 
-									<td class="text-center" style="vertical-align: middle;">
-										<span class="label label-success" style="display: inline-block; padding: 5px 8px;">ACTIVE</span>
-									</td>
-
-									<td class="text-center" style="white-space: nowrap; vertical-align: middle;">
+									<td class="text-center" style="white-space: nowrap;">
 										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
 										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
 									</td>
@@ -198,7 +172,7 @@
 
 							</tbody>
 						</table>
-					</div>
+					</div> 
 				</div>
 				<div class="text-center" style="margin-top: 20px;">
 					<ul class="pagination">

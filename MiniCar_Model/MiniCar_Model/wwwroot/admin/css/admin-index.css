@@ -1,0 +1,50 @@
+﻿body {
+}
+/* Flex hàng phải */
+.search-area {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  flex-wrap: nowrap;
+}
+
+/* Form tìm kiếm chiếm hết không gian còn lại */
+.search-bar {
+  display: flex;
+  flex: 1;
+  KEY POINT gap: 5px;
+}
+
+/* Input full width */
+.search-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Nút thêm đứng cuối không đè input */
+.add-btn {
+  white-space: nowrap;
+}
+
+/* Đảm bảo bảng luôn nằm trong khung và tự động co giãn */
+.table-responsive {
+  overflow-x: auto; /* Tạo thanh cuộn ngang nếu màn hình quá nhỏ */
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  table-layout: auto; /* Hoặc 'fixed' nếu bạn muốn ép cứng độ rộng cột */
+  width: 100% !important;
+}
+
+  /* Ép dữ liệu trong các ô quá dài phải xuống dòng */
+  .table td, .table th {
+    word-break: break-word;
+    vertical-align: middle;
+  }
+
+    /* Giới hạn độ rộng cột địa chỉ hoặc tên nếu cần */
+    .table td:nth-child(6) {
+      max-width: 200px;
+    }
+
