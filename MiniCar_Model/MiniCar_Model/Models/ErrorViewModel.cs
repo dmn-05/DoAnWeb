@@ -1,9 +1,7 @@
-namespace MiniCar_Model.Models
-{
-    public class ErrorViewModel
-    {
-        public string? RequestId { get; set; }
+namespace MiniCar_Model.Models {
+  public class ErrorViewModel {
+    public string? RequestId { get; set; }
 
-        public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-    }
+    public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
+  }
 }

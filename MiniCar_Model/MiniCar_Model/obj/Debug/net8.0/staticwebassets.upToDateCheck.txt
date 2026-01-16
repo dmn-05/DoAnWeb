@@ -275,6 +275,7 @@ wwwroot\img\logo_team.png
 wwwroot\img\login.jpg
 wwwroot\img\product\card.jpg
 wwwroot\img\product\e-p1.png
+wwwroot\img\product\main.jpg
 wwwroot\img\product\Nam\Boots\b1.1.png
 wwwroot\img\product\Nam\Boots\b1.2.png
 wwwroot\img\product\Nam\Boots\b1.3.png

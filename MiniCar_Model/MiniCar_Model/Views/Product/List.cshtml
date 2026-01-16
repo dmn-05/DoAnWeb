@@ -1,5 +1,5 @@
 ﻿@{
-  ViewData["Title"] = "Danh sách sản phẩm";
+	ViewData["Title"] = "Danh sách sản phẩm";
 }
 
 <!-- back to top Button-->
@@ -13,7 +13,7 @@
 				<h1>Danh sách sản phẩm</h1>
 				<nav class="d-flex align-items-center">
 					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-					<a asp-controller="Product" asp-action="Index">Danh sách sản phẩm</a>
+					<a asp-controller="Product" asp-action="List">Danh sách sản phẩm</a>
 				</nav>
 			</div>
 		</div>
@@ -105,268 +105,36 @@
 			<!-- Start Best Seller -->
 			<section class="lattest-product-area pb-40 category-list">
 				<div class="row">
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b1.html"><h6>Giày Boot Nam Đế Cao Màu Vàng PALA GN400</h6></a>
-								<div class="price">
-									<h6>550.000đ</h6>
-									<!--										<h6 class="l-through">210.000đ</h6>-->
-								</div>
-								<div class="prd-bottom">
+					@foreach (var item in Model) {
+						<div class="col-lg-4 col-md-6">
+							<div class="single-product">
+								<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
+								<div class="product-details">
+									<a href="single-product-b1.html"><h6>@item.NameProduct</h6></a>
+									<div class="price">
+										<h6>550.000đ</h6>
+									</div>
+									<div class="prd-bottom">
 
-									<a href="" class="social-info add-to-cart"
-										 data-name="Giày Boot Nam Đế Cao Màu Vàng PALA GN400" data-price="550">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
+										<a href="" class="social-info add-to-cart"
+											 data-name="@item.NameProduct" data-price="550">
+											<span class="ti-bag"></span>
+											<p class="hover-text">thêm vào giỏ</p>
+										</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-heart"></span>
+											<p class="hover-text">Yêu thích</p>
+										</a>
 
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b2.1.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b2.html"><h6>Giày boot nam màu trơn Không có dây kéo</h6></a>
-								<div class="price">
-									<h6>806.000đ</h6>
-									<h6 class="l-through">900.000đ</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
-
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
+										<a href="" class="social-info">
+											<span class="lnr lnr-move"></span>
+											<p class="hover-text">Xem thêm</p>
+										</a>
+									</div>
 								</div>
 							</div>
 						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b2.1.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b2.html"><h6>Giày boot nam màu trơn Không có dây kéo</h6></a>
-								<div class="price">
-									<h6>806.000đ</h6>
-									<h6 class="l-through">900.000đ</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
-
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b2.1.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b2.html"><h6>Giày boot nam màu trơn Không có dây kéo</h6></a>
-								<div class="price">
-									<h6>806.000đ</h6>
-									<h6 class="l-through">900.000đ</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
-
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b2.1.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b2.html"><h6>Giày boot nam màu trơn Không có dây kéo</h6></a>
-								<div class="price">
-									<h6>806.000đ</h6>
-									<h6 class="l-through">900.000đ</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
-
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b3.1.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b3.html"><h6>Nam Giày ống Chelsea Suedette Mặc vào</h6></a>
-								<div class="price">
-									<h6>623.000đ</h6>
-									<!--										<h6 class="l-through">210.000đ</h6>-->
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
-
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b4.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b4.html"><h6>Giày boot nam màu trơn Dây kéo bên</h6></a>
-								<div class="price">
-									<h6>750.000đ</h6>
-									<!--										<h6 class="l-through">210.000đ</h6>-->
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
-
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b5.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b5.html"><h6>Nam Giày ống Tây Combat Suedette Mặt trước thắt dây</h6></a>
-								<div class="price">
-									<h6>189.000đ</h6>
-									<h6 class="l-through">210.000đ</h6>
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
-
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- single product -->
-					<div class="col-lg-4 col-md-6">
-						<div class="single-product">
-							<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b6.png" alt="">
-							<div class="product-details">
-								<a href="single-product-b6.html"><h6>Giày boot nam Tương phản lông thú giả màu trơn Không có dây kéo</h6></a>
-								<div class="price">
-									<h6>420.000đ</h6>
-									<!--										<h6 class="l-through">210.000đ</h6>-->
-								</div>
-								<div class="prd-bottom">
-
-									<a href="" class="social-info">
-										<span class="ti-bag"></span>
-										<p class="hover-text">thêm vào giỏ</p>
-									</a>
-									<a href="" class="social-info">
-										<span class="lnr lnr-heart"></span>
-										<p class="hover-text">Yêu thích</p>
-									</a>
-
-									<a href="" class="social-info">
-										<span class="lnr lnr-move"></span>
-										<p class="hover-text">Xem thêm</p>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
+					}
 				</div>
 			</section>
 			<!-- End Best Seller -->
