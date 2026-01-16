@@ -13,12 +13,13 @@ namespace MiniCar_Model.Areas.Admin.Controllers
         //    _context = context;
         //}
         //------
+
+
+        [HttpGet]
         public IActionResult Index()
         {
             return View();
-        }
-
-        [HttpGet]
+        }    
         public IActionResult Create()
         {
             return View();
@@ -153,4 +154,5 @@ namespace MiniCar_Model.Areas.Admin.Controllers
         //}
         //------
     }
+
 }

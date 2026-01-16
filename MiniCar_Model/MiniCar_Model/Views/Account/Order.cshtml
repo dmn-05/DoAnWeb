@@ -5,111 +5,131 @@
 	<div class="pt-5 mt-5">
 		<div class="container my-4">
 
-			<!-- NÚT QUAY LẠI -->
-			<div class="row align-items-center mb-3">
-				<div class="col-6">
-					<button class="btn btn-outline-secondary btn-sm"
-									onclick="history.back()">
-						← Quay lại
-					</button>
+
+
+<!-- back to top Button-->
+<a href="#" class="cd-top">Back To Top</a>
+<!--End Back to top Button-->
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+	<div class="container">
+		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+			<div class="col-first">
+				<h1>Danh sách đơn hàng</h1>
+				<nav class="d-flex align-items-center">
+					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+					<a asp-controller="Account" asp-action="Profile">Tài khoản<span class="lnr lnr-arrow-right"></span></a>
+					<a asp-controller="Account" asp-action="Order">Đơn hàng</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Banner Area -->
+<div class="container my-4">
+
+	<!-- NÚT QUAY LẠI -->
+	<div class="row align-items-center mb-3">
+		<div class="col-6">
+			<button class="btn btn-outline-secondary btn-sm"
+							onclick="history.back()">
+				← Quay lại
+			</button>
+		</div>
+	</div>
+
+	<!-- NAV TABS -->
+	<ul class="nav nav-tabs mb-4 flex-nowrap overflow-auto">
+		<li class="nav-item">
+			<a class="nav-link active" href="#">Tất cả</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Chưa thanh toán</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Đã thanh toán</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Chờ vận chuyển</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="#">Cần đánh giá</a>
+		</li>
+	</ul>
+
+	<!-- ĐƠN HÀNG -->
+	<div class="card shadow-sm rounded-4 mb-4">
+		<div class="card-body">
+
+			<div class="d-flex justify-content-between mb-2">
+				<span class="text-success fw-semibold">Đã giao</span>
+			</div>
+
+			<div class="row align-items-center g-3">
+				<div class="col-3 col-md-2">
+					<img src="~/img/logo.png"
+							 class="img-fluid rounded"
+							 alt="">
+				</div>
+
+				<div class="col-9 col-md-6">
+					<h6 class="mb-1">Xe Đen</h6>
+					<small class="text-muted">x1</small>
+				</div>
+
+				<div class="col-md-4 text-md-end">
+					<div class="text-muted small">01/01/2025</div>
+					<div class="fw-semibold text-danger">15.500₫</div>
+					<div class="small">Tổng: <strong>15.500₫</strong></div>
 				</div>
 			</div>
 
-			<!-- NAV TABS -->
-			<ul class="nav nav-tabs mb-4 flex-nowrap overflow-auto">
-				<li class="nav-item">
-					<a class="nav-link active" href="#">Tất cả</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Chưa thanh toán</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Đã thanh toán</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Chờ vận chuyển</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Cần đánh giá</a>
-				</li>
-			</ul>
+			<div class="d-flex justify-content-end mt-3 gap-2">
+				<button class="btn btn-outline-secondary btn-sm">
+					Mua lại
+				</button>
+				<button class="btn btn-danger btn-sm">
+					Viết đánh giá
+				</button>
+			</div>
 
-			<!-- ĐƠN HÀNG -->
-			<div class="card shadow-sm rounded-4 mb-4">
-				<div class="card-body">
+		</div>
+	</div>
 
-					<div class="d-flex justify-content-between mb-2">
-						<span class="text-success fw-semibold">Đã giao</span>
-					</div>
+	<!-- ĐƠN HÀNG 2 -->
+	<div class="card shadow-sm rounded-4">
+		<div class="card-body">
 
-					<div class="row align-items-center g-3">
-						<div class="col-3 col-md-2">
-							<img src="~/img/logo.png"
-									 class="img-fluid rounded"
-									 alt="">
-						</div>
+			<div class="d-flex justify-content-between mb-2">
+				<span class="text-success fw-semibold">Đã giao</span>
+			</div>
 
-						<div class="col-9 col-md-6">
-							<h6 class="mb-1">Xe Đen</h6>
-							<small class="text-muted">x1</small>
-						</div>
+			<div class="row align-items-center g-3">
+				<div class="col-3 col-md-2">
+					<img src="~/img/logo.png"
+							 class="img-fluid rounded"
+							 alt="">
+				</div>
 
-						<div class="col-md-4 text-md-end">
-							<div class="text-muted small">01/01/2025</div>
-							<div class="fw-semibold text-danger">15.500₫</div>
-							<div class="small">Tổng: <strong>15.500₫</strong></div>
-						</div>
-					</div>
+				<div class="col-9 col-md-6">
+					<h6 class="mb-1">Xe Vàng</h6>
+					<small class="text-muted">x1</small>
+				</div>
 
-					<div class="d-flex justify-content-end mt-3 gap-2">
-						<button class="btn btn-outline-secondary btn-sm">
-							Mua lại
-						</button>
-						<button class="btn btn-danger btn-sm">
-							Viết đánh giá
-						</button>
-					</div>
-
+				<div class="col-md-4 text-md-end">
+					<div class="text-muted small">01/01/2025</div>
+					<div class="fw-semibold text-danger">25.000₫</div>
+					<div class="small">Tổng: <strong>25.000₫</strong></div>
 				</div>
 			</div>
 
-			<!-- ĐƠN HÀNG 2 -->
-			<div class="card shadow-sm rounded-4">
-				<div class="card-body">
-
-					<div class="d-flex justify-content-between mb-2">
-						<span class="text-success fw-semibold">Đã giao</span>
-					</div>
-
-					<div class="row align-items-center g-3">
-						<div class="col-3 col-md-2">
-							<img src="~/img/logo.png"
-									 class="img-fluid rounded"
-									 alt="">
-						</div>
-
-						<div class="col-9 col-md-6">
-							<h6 class="mb-1">Xe Vàng</h6>
-							<small class="text-muted">x1</small>
-						</div>
-
-						<div class="col-md-4 text-md-end">
-							<div class="text-muted small">01/01/2025</div>
-							<div class="fw-semibold text-danger">25.000₫</div>
-							<div class="small">Tổng: <strong>25.000₫</strong></div>
-						</div>
-					</div>
-
-					<div class="d-flex justify-content-end mt-3 gap-2">
-						<button class="btn btn-outline-secondary btn-sm">
-							Mua lại
-						</button>
-						<button class="btn btn-danger btn-sm">
-							Viết đánh giá
-						</button>
-					</div>
-
-				</div>
+			<div class="d-flex justify-content-end mt-3 gap-2">
+				<button class="btn btn-outline-secondary btn-sm">
+					Mua lại
+				</button>
+				<button class="btn btn-danger btn-sm">
+					Viết đánh giá
+				</button>
 			</div>
 
 		</div>

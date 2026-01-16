@@ -11,8 +11,8 @@
       <div class="col-first">
         <h1>Đăng kí</h1>
         <nav class="d-flex align-items-center">
-          <a href="index.html">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-          <a href="registration.html">Đăng kí</a>
+          <a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+          <a asp-controller="Account" asp-action="Register">Đăng kí</a>
         </nav>
       </div>
     </div>
@@ -102,7 +102,7 @@
             </div>
 
             <div class="col-md-12 form-group">
-              <a href="login.html" class="hover-text">Đã có tài khoản?/Đăng nhập</a>
+              <a asp-controller="Account" asp-action="Login" class="hover-text">Đã có tài khoản?/Đăng nhập</a>
               <button class="form-submit">Đăng ký</button>
             </div>
           </form>

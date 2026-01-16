@@ -19,86 +19,128 @@
            width="110"
            height="110">
 
-      <div>
-        <button class="btn btn-link text-decoration-none fw-semibold">
-          Sửa
-        </button>
-      </div>
-    </div>
 
-    <!-- NÚT CHỨC NĂNG -->
-    <div class="row g-3 text-center mb-4">
-      <div class="col-4">
-        <button class="btn btn-light w-100 py-3 shadow-sm rounded-4">
-          <i class="fa fa-file-text-o"></i>
-          <br><small>
-            Đơn hàng
-          </small>
-        </button>
-      </div>
-      <div class="col-4">
-        <button class="btn btn-light w-100 py-3 shadow-sm rounded-4">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          <br><small>Giỏ hàng</small>
-        </button>
-      </div>
-      <div class="col-4">
-        <button class="btn btn-light w-100 py-3 shadow-sm rounded-4">
-          <i class="fa fa-heart" aria-hidden="true"></i>
-          <br><small>Yêu thích</small>
-        </button>
-      </div>
-    </div>
 
-    <!-- THÔNG TIN CÁ NHÂN -->
-    <div class="card shadow-sm rounded-4 mx-auto" style="max-width: 600px;">
-      <div class="card-body">
+<!-- back to top Button-->
+<a href="#" class="cd-top">Back To Top</a>
+<!--End Back to top Button-->
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+	<div class="container">
+		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+			<div class="col-first">
+				<h1>Thông tin tài khoản</h1>
+				<nav class="d-flex align-items-center">
+					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+					<a asp-controller="Account" asp-action="Profile">Tài khoản</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Banner Area -->
+<div class="container profile-container my-4">
+	<!-- NÚT QUAY LẠI -->
+	<div class="row align-items-center mb-3">
+		<div class="col-6">
+			<button class="btn btn-outline-secondary btn-sm"
+							onclick="history.back()">
+				← Quay lại
+			</button>
+		</div>
+	</div>
+	<!-- HEADER PROFILE -->
+	<div class="text-center mb-4">
+		<img src="~/img/logo.png"
+				 class="rounded-circle shadow-sm mb-2"
+				 width="110"
+				 height="110">
 
-        <div class="d-flex justify-content-between border-bottom py-2">
-          <span class="text-muted">Tên</span>
-          <span>Nguyễn Văn A</span>
-        </div>
+		<div>
+			<button class="btn btn-link text-decoration-none fw-semibold">
+				Sửa
+			</button>
+		</div>
+	</div>
 
-        <div class="d-flex justify-content-between border-bottom py-2">
-          <span class="text-muted">Giới tính</span>
-          <span>Nam</span>
-        </div>
+	<!-- NÚT CHỨC NĂNG -->
+	<div class="row g-3 text-center mb-4">
+		<div class="col-4">
+			<a asp-controller="Account" asp-action="Order" class="btn btn-light w-100 py-3 shadow-sm rounded-4">
+				<i class="fa fa-file" aria-hidden="true"></i>
+				<br><small>
+					Đơn hàng
+				</small>
+			</a>
+		</div>
 
-        <div class="d-flex justify-content-between border-bottom py-2">
-          <span class="text-muted">Email</span>
-          <span>example@gmail.com</span>
-        </div>
+		<div class="col-4">
+			<a asp-controller="Account" asp-action="Wishhlist" class="btn btn-light w-100 py-3 shadow-sm rounded-4">
+				<i class="fa fa-heart" aria-hidden="true"></i>
+				<br><small>Yêu thích</small>
+			</a>
+		</div>
 
-        <div class="d-flex justify-content-between border-bottom py-2">
-          <span class="text-muted">Số điện thoại</span>
-          <span>********83</span>
-        </div>
+		<div class="col-4">
+			<a asp-controller="Account" asp-action="ChangePassword" class="btn btn-light w-100 py-3 shadow-sm rounded-4">
+				<i class="fa fa-key" aria-hidden="true"></i>
+				<br><small>
+					Đổi mật khẩu
+				</small>
+			</a>
+		</div>
+	</div>
 
-        <!-- ĐỊA CHỈ -->
-        <div class="d-flex justify-content-between align-items-center py-2">
-          <div>
-            <span class="text-muted d-block">Địa chỉ</span>
-            <span>89 Trần Hưng Đạo, Hà Nội</span>
-          </div>
+	<!-- THÔNG TIN CÁ NHÂN -->
+	<div class="card shadow-sm rounded-4 mx-auto" style="max-width: 600px;">
+		<div class="card-body">
 
-          <button class="btn btn-sm btn-outline-primary"
-                  data-bs-toggle="collapse"
-                  data-bs-target="#addressCollapse">
-            Thiết lập
-          </button>
-        </div>
+			<div class="d-flex justify-content-between border-bottom py-2">
+				<span class="text-muted">Tên đăng nhập</span>
+				<span>User123</span>
+			</div>
 
-        <div class="collapse mt-3" id="addressCollapse">
-          <div class="bg-light rounded-3 p-3">
-            <p class="mb-1">📍 123 Lê Lợi, Q1, TP.HCM</p>
-            <p class="mb-1">📍 45 Nguyễn Trãi, Q5, TP.HCM</p>
-            <p class="mb-0">📍 89 Trần Hưng Đạo, Hà Nội</p>
-          </div>
-        </div>
+			<div class="d-flex justify-content-between border-bottom py-2">
+				<span class="text-muted">Tên</span>
+				<span>Nguyễn Văn A</span>
+			</div>
 
-      </div>
-    </div>
-  </div>
+			<div class="d-flex justify-content-between border-bottom py-2">
+				<span class="text-muted">Email</span>
+				<span>example@gmail.com</span>
+			</div>
+
+			<div class="d-flex justify-content-between border-bottom py-2">
+				<span class="text-muted">Số điện thoại</span>
+				<span>********83</span>
+			</div>
+
+			<!-- ĐỊA CHỈ -->
+			<div class="d-flex justify-content-between align-items-center py-2">
+				<div>
+					<span class="text-muted d-block">Địa chỉ</span>
+					<span>89 Trần Hưng Đạo, Hà Nội</span>
+				</div>
+			</div>
+
+			<div class="collapse mt-3" id="addressCollapse">
+				<div class="bg-light rounded-3 p-3">
+					<p class="mb-1">📍 123 Lê Lợi, Q1, TP.HCM</p>
+					<p class="mb-1">📍 45 Nguyễn Trãi, Q5, TP.HCM</p>
+					<p class="mb-0">📍 89 Trần Hưng Đạo, Hà Nội</p>
+				</div>
+			</div>
+
+			<!-- NÚT CHỈNH SỬA -->
+			<div class="text-center mt-4">
+				<a asp-controller="Account" asp-action="EditAccount" class="btn btn-primary px-4 rounded-pill">
+					<i class="fa fa-pencil" aria-hidden="true"></i> Chỉnh sửa thông tin tài khoản
+				</a>
+			</div>
+
+		</div>
+	</div>
 
 </div>
+
 
