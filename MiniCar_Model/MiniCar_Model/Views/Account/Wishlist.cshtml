@@ -1,63 +1,84 @@
-﻿<div class="pt-100px">
-  <div class="pt-5 mt-5">
-    <div class="container my-4">
+﻿@{
+	ViewData["Title"] = "Danh sách yêu thích";
+}
 
-      <!-- NÚT QUAY LẠI -->
-      <div class="row align-items-center mb-3">
-        <div class="col-6">
-          <button class="btn btn-outline-secondary btn-sm"
-                  onclick="history.back()">
-            ← Quay lại
-          </button>
-        </div>
-      </div>
 
-      <div class="table-responsive">
-        <table class="table table-bordered table-hover align-middle text-center">
-          <thead class="table-light">
-            <tr>
-              <th>Hình ảnh</th>
-              <th>Tên</th>
-              <th class="d-none d-md-table-cell">Giá</th>
-              <th>Thêm</th>
-              <th>Xóa</th>
-            </tr>
-          </thead>
+<!-- back to top Button-->
+<a href="#" class="cd-top">Back To Top</a>
+<!--End Back to top Button-->
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+	<div class="container">
+		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+			<div class="col-first">
+				<h1>Danh sách yêu thích</h1>
+				<nav class="d-flex align-items-center">
+					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+					<a asp-controller="Account" asp-action="Profile">Tài khoản<span class="lnr lnr-arrow-right"></span></a>
+					<a asp-controller="Account" asp-action="Wishlist">Danh sách yêu thích</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Banner Area -->
+<div class="container my-4">
 
-          <tbody>
-            <tr>
-              <td>
-                <img src="~/img/logo.png"
-                     class="img-fluid rounded"
-                     style="max-width: 80px;">
-              </td>
+	<!-- NÚT QUAY LẠI -->
+	<div class="row align-items-center mb-3">
+		<div class="col-6">
+			<button class="btn btn-outline-secondary btn-sm"
+							onclick="history.back()">
+				← Quay lại
+			</button>
+		</div>
+	</div>
 
-              <td class="fw-semibold">
-                Lorem ipsum
-              </td>
+	<div class="table-responsive">
+		<table class="table table-bordered table-hover align-middle text-center">
+			<thead class="table-light">
+				<tr>
+					<th>Hình ảnh</th>
+					<th>Tên</th>
+					<th class="d-none d-md-table-cell">Giá</th>
+					<th>Thêm</th>
+					<th>Xóa</th>
+				</tr>
+			</thead>
 
-              <td class="d-none d-md-table-cell text-success fw-semibold">
-                $80
-              </td>
+			<tbody>
+				<tr>
+					<td>
+						<img src="~/img/logo.png"
+								 class="img-fluid rounded"
+								 style="max-width: 80px;">
+					</td>
 
-              <td>
-                <button class="btn btn-sm btn-success rounded-circle px-2">
-                  +
-                </button>
-              </td>
+					<td class="fw-semibold">
+						Lorem ipsum
+					</td>
 
-              <td>
-                <button class="btn btn-sm btn-outline-danger rounded-circle px-2">
-                  <i class="fa fa-trash" aria-hidden="true"></i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
+					<td class="d-none d-md-table-cell text-success fw-semibold">
+						$80
+					</td>
 
-        </table>
-      </div>
+					<td>
+						<button class="btn btn-sm btn-success rounded-circle px-2">
+							+
+						</button>
+					</td>
 
-    </div>
-  </div>
+					<td>
+						<button class="btn btn-sm btn-outline-danger rounded-circle px-2">
+							<i class="fa-solid fa-trash"></i>
+						</button>
+					</td>
+				</tr>
+			</tbody>
+
+		</table>
+	</div>
 
 </div>
+
+

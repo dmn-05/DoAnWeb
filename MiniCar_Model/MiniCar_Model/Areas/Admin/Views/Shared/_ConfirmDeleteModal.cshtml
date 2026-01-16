@@ -6,35 +6,35 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 <script>
-	/**
-	 * Hàm xác nhận xóa dùng chung
-	 * id: Mã định danh của dữ liệu (ví dụ ID sản phẩm)
-	 * name: Tên hiển thị của dữ liệu
-	 * deleteUrl: Đường dẫn xử lý xóa (sau này dùng)
-	 */
-	function showConfirmDelete(id, name, deleteUrl = "#") {
-			Swal.fire({
-					title: 'Xác nhận xóa?',
-					text: `Bạn có chắc muốn xóa "${name}" (Mã: ${id})?`,
-					icon: 'error', // Hiện icon cảnh báo màu đỏ
-					showCancelButton: true,
-					confirmButtonColor: '#d33',
-					cancelButtonColor: '#3085d6',
-					confirmButtonText: 'Đồng ý xóa',
-					cancelButtonText: 'Hủy bỏ',
-					reverseButtons: true
-			}).then((result) => {
-					if (result.isConfirmed) {
-							// CHỖ NÀY LÀ DỮ LIỆU MẪU: Thông báo giả lập thành công
-							Swal.fire(
-									'Đã xóa thành công!',
-									`Dữ liệu mẫu cho ${name} đã được xử lý.`,
-									'success'
-							);
+    /**
+     * Hàm xác nhận xóa dùng chung
+     * id: Mã định danh của dữ liệu (ví dụ ID sản phẩm)
+     * name: Tên hiển thị của dữ liệu
+     * deleteUrl: Đường dẫn xử lý xóa (sau này dùng)
+     */
+    function showConfirmDelete(id, name, deleteUrl = "#") {
+        Swal.fire({
+            title: 'Xác nhận xóa?',
+            text: `Bạn có chắc muốn xóa "${name}" (Mã: ${id})?`,
+            icon: 'error', // Hiện icon cảnh báo màu đỏ
+            showCancelButton: true,
+            confirmButtonColor: '#d33',
+            cancelButtonColor: '#3085d6',
+            confirmButtonText: 'Đồng ý xóa',
+            cancelButtonText: 'Hủy bỏ',
+            reverseButtons: true
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // CHỖ NÀY LÀ DỮ LIỆU MẪU: Thông báo giả lập thành công
+                Swal.fire(
+                    'Đã xóa thành công!',
+                    `Dữ liệu mẫu cho ${name} đã được xử lý.`,
+                    'success'
+                );
 
-							// SAU NÀY CÓ DỮ LIỆU THẬT: Điều hướng tới URL xóa
-							// window.location.href = deleteUrl + "?id=" + id;
-					}
-			});
-	}
+                // SAU NÀY CÓ DỮ LIỆU THẬT: Điều hướng tới URL xóa
+                // window.location.href = deleteUrl + "?id=" + id;
+            }
+        });
+    }
 </script>

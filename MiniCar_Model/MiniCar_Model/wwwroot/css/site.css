@@ -1,55 +1,58 @@
 ﻿.login-wrapper {
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
-  background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+    background: #fff;
 }
 
 /* ảnh full khung */
 .login_box_img {
-  position: relative;
-  height: 100%;
+    position: relative;
+    height: 100%;
 }
 
-  .login_box_img img {
-    object-fit: cover;
-  }
+    .login_box_img img {
+        object-fit: cover;
+    }
 
-  /* overlay */
-  .login_box_img .hover {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.55);
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 30px;
-  }
-
+    /* overlay */
+    .login_box_img .hover {
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.55);
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+    }
 .login-wrapper {
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
 
-  .login-wrapper:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
-  }
+    .login-wrapper:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    }
 
 .cart-item {
-  transition: all 0.2s ease;
+    transition: all 0.2s ease;
 }
 
-  .cart-item.active {
-    background-color: #fff4f4;
-    box-shadow: inset 4px 0 0 #d70018;
-  }
+    .cart-item.active {
+        background-color: #fff4f4;
+        box-shadow: inset 4px 0 0 #d70018;
+    }
 
 
 .cart_inner h4 {
-  display: block !important;
-  color: #000 !important;
-  position: relative;
-  z-index: 10;
+    display: block !important;
+    color: #000 !important;
+    position: relative;
+    z-index: 10;
 }
+
+
+
+

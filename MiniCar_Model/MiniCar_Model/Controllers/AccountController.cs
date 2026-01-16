@@ -12,7 +12,7 @@ namespace MiniCar_Model.Controllers {
     [HttpPost]
     public IActionResult Login(string username, string password) {
       //Xử lý login ở đây
-      if (username == "user" && password == "123") {
+      if(username == "user" && password == "123") {
         return RedirectToAction("Index", "Home");
       }
 
@@ -33,7 +33,7 @@ namespace MiniCar_Model.Controllers {
       return View();
     }
 
-    public IActionResult Logout() {
+    public IActionResult Logout() { 
       return RedirectToAction("Index", "Home");
     }
 
@@ -42,6 +42,14 @@ namespace MiniCar_Model.Controllers {
     }
 
     public IActionResult Wishlist() {
+      return View();
+    }
+
+    public ActionResult EditAccount() {
+      return View();
+    }
+
+    public IActionResult ChangePassword() {
       return View();
     }
   }
