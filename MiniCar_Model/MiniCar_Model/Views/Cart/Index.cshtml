@@ -1,171 +1,202 @@
 ﻿@{
-  ViewData["Title"] = "Giỏ Hàng";
+	ViewData["Title"] = "Giỏ Hàng";
 }
 
 <style>
-  .cart-item {
-    transition: background-color 0.2s ease;
-  }
+	.cart-item {
+		transition: background-color 0.2s ease;
+	}
 
-    .cart-item.active {
-      background-color: #fff4f4;
-      box-shadow: inset 4px 0 0 #d70018;
-    }
+		.cart-item.active {
+			background-color: #fff4f4;
+			box-shadow: inset 4px 0 0 #d70018;
+		}
 </style>
 <section class="banner-area organic-breadcrumb">
-  <div class="container">
-    <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-      <div class="col-first">
-        <h1>Giỏ hàng</h1>
-        <nav class="d-flex align-items-center">
-          <a href="index.html">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-          <a href="cart.html">Giỏ hàng</a>
-        </nav>
-      </div>
-    </div>
-  </div>
+	<div class="container">
+		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+			<div class="col-first">
+				<h1>Giỏ hàng</h1>
+				<nav class="d-flex align-items-center">
+					<a href="index.html">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+					<a href="cart.html">Giỏ hàng</a>
+				</nav>
+			</div>
+		</div>
+	</div>
 </section>
 
 <section class="cart_area mt-5">
-  <div class="container">
-    <div class="cart_inner">
+	<div class="container">
+		<div class="cart_inner">
 
-      <!-- TIÊU ĐỀ GIỎ HÀNG -->
-      <div class="cart-title">
-        <h1 class="cart-heading mb-3">GIỎ HÀNG CỦA TÔI</h1>
+			<!-- TIÊU ĐỀ GIỎ HÀNG -->
+			<div class="cart-title">
+				<h1 class="cart-heading mb-3">GIỎ HÀNG CỦA TÔI</h1>
 
-        <label class="fw-semibold text-muted d-inline-block mt-2">
-          <input type="checkbox" id="toggleSelect" class="form-check-input me-2">
-          Chọn nhiều sản phẩm
-        </label>
-      </div>
-
-
-      <div class="table-responsive">
-        <table class="table cart-table">
-
-          <thead>
-            <tr class="text-muted border-bottom">
-              <th style="width:50%">Sản phẩm</th>
-              <th class="text-center">Giá</th>
-              <th class="text-center">Số lượng</th>
-              <th class="text-center">Tổng tiền</th>
-              <th class="text-center">Thao tác</th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr class="cart-item">
-              <td>
-                <div class="d-flex align-items-start ml-3">
-                  <!-- CHECKBOX ẨN -->
-                  <input type="checkbox"
-                         class="form-check-input product-check d-none me-2 mt-2">
-
-                  <img src="img/test.webp"
-                       width="80" class="img-thumbnail me-3">
-
-                  <div>
-                    <h6 class="mb-1">Ferrari F8 Green 1:32</h6>
-                    <small class="text-muted">Màu sắc: Xanh</small>
-                  </div>
-                </div>
-              </td>
+				<label class="fw-semibold text-muted d-inline-block mt-2">
+					<input type="checkbox" id="toggleSelect" class="form-check-input me-2">
+					Chọn nhiều sản phẩm
+				</label>
+			</div>
 
 
-              <td class="text-center">550.000đ</td>
+			<div class="table-responsive">
+				<table class="table cart-table">
 
-              <td class="text-center">
-                <input type="number" value="1"
-                       class="form-control text-center mx-auto"
-                       style="width:80px">
-              </td>
+					<thead>
+						<tr class="text-muted border-bottom">
+							<th style="width:50%">Sản phẩm</th>
+							<th class="text-center">Giá</th>
+							<th class="text-center">Số lượng</th>
+							<th class="text-center">Tổng tiền</th>
+							<th class="text-center">Thao tác</th>
+						</tr>
+					</thead>
 
-              <td class="text-center text-danger fw-semibold">550.000đ</td>
+					<tbody>
+						<tr class="cart-item">
+							<td>
+								<div class="d-flex align-items-start ml-3">
+									<!-- CHECKBOX ẨN -->
+									<input type="checkbox"
+												 class="form-check-input product-check d-none me-2 mt-2">
 
-              <td class="text-center">
-                <button class="btn btn-outline-danger btn-sm">
-                  <i class="lnr lnr-trash"> Loại bỏ</i>
-                </button>
-              </td>
-            </tr>
-            <tr class="cart-item">
-              <td>
-                <div class="d-flex align-items-start ml-3">
-                  <!-- CHECKBOX ẨN -->
-                  <input type="checkbox"
-                         class="form-check-input product-check d-none me-2 mt-2">
+									<img src="img/test.webp"
+											 width="80" class="img-thumbnail me-3">
 
-                  <img src="img/test.webp"
-                       width="80" class="img-thumbnail me-3">
-
-                  <div>
-                    <h6 class="mb-1">Ferrari F8 Green 1:32</h6>
-                    <small class="text-muted">Màu sắc: Xanh</small>
-                  </div>
-                </div>
-              </td>
+									<div>
+										<h6 class="mb-1">Ferrari F8 Green 1:32</h6>
+										<small class="text-muted">Màu sắc: Xanh</small>
+									</div>
+								</div>
+							</td>
 
 
-              <td class="text-center">550.000đ</td>
+							<td class="text-center align-middle">
+								<div class="d-flex flex-column align-items-center gap-1">
 
-              <td class="text-center">
-                <input type="number" value="1"
-                       class="form-control text-center mx-auto"
-                       style="width:80px">
-              </td>
+									<!-- GIÁ SAU KHUYẾN MÃI -->
+									<div class="fw-bold fs-5 text-danger">
+										300.000đ
+									</div>
 
-              <td class="text-center text-danger fw-semibold">550.000đ</td>
+									<!-- GIÁ GỐC + % -->
+									<div class="d-flex align-items-center gap-2">
 
-              <td class="text-center">
-                <button class="btn btn-outline-danger btn-sm">
-                  <i class="lnr lnr-trash"> Loại bỏ</i>
-                </button>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+										<!-- GIÁ GỐC (GẠCH NGANG + KHUNG) -->
+										<span class="border rounded px-2 py-1 text-muted text-decoration-line-through">
+											500.000đ
+										</span>
 
-      </div>
+										<!-- % KHUYẾN MÃI -->
+										<span class="border border-danger text-danger rounded px-2 py-1 small fw-semibold">
+											-25%
+										</span>
 
-      <!-- TỔNG TIỀN -->
-      <div class="d-flex justify-content-end mt-4">
-        <div class="text-end">
-          <h5>
-            Tổng cộng:
-            <span class="text-danger">1.999.000đ</span>
-          </h5>
+									</div>
+								</div>
+							</td>
 
-          <div class="mt-3">
-            <a class="btn btn-light me-2" href="/">Tiếp tục mua sắm</a>
-            <a class="btn btn-warning text-white" href="/Checkout">
-              Thanh toán
-            </a>
-          </div>
-        </div>
-      </div>
 
-    </div>
-  </div>
+
+
+							<td class="text-center">
+								<input type="number" value="1" min="1" step="1"
+											 class="form-control text-center mx-auto"
+											 style="width:80px">
+							</td>
+
+							<td class="text-center text-danger fw-semibold">300.000đ</td>
+
+							<td class="text-center">
+								<button class="btn btn-outline-danger btn-sm">
+									<i class="lnr lnr-trash"> Loại bỏ</i>
+								</button>
+							</td>
+						</tr>
+						<tr class="cart-item">
+							<td>
+								<div class="d-flex align-items-start ml-3">
+									<!-- CHECKBOX ẨN -->
+									<input type="checkbox"
+												 class="form-check-input product-check d-none me-2 mt-2">
+
+									<img src="img/test.webp"
+											 width="80" class="img-thumbnail me-3">
+
+									<div>
+										<h6 class="mb-1">Ferrari F8 Green 1:32</h6>
+										<small class="text-muted">Màu sắc: Xanh</small>
+									</div>
+								</div>
+							</td>
+
+							<td class="text-center">
+								<span class="price-normal text-danger fw-semibold">
+									550.000đ
+								</span>
+							</td>
+
+
+
+							<td class="text-center">
+								<input type="number" value="1" min="1" step="1" 
+											 class="form-control text-center mx-auto"
+											 style="width:80px">
+							</td>
+
+							<td class="text-center text-danger fw-semibold">500.000đ</td>
+
+							<td class="text-center">
+								<button class="btn btn-outline-danger btn-sm">
+									<i class="lnr lnr-trash"> Loại bỏ</i>
+								</button>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+
+			</div>
+
+			<!-- TỔNG TIỀN -->
+			<div class="d-flex justify-content-end mt-4">
+				<div class="text-end">
+					<h5>
+						Tổng cộng:
+						<span class="text-danger">1.999.000đ</span>
+					</h5>
+
+					<div class="mt-3">
+						<a class="btn btn-light me-2" href="/">Tiếp tục mua sắm</a>
+						<a class="btn btn-warning text-white" href="/Checkout">
+							Thanh toán
+						</a>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
 </section>
 
 <script>
-  const toggleSelect = document.getElementById("toggleSelect");
-  const items = document.querySelectorAll(".cart-item");
+	const toggleSelect = document.getElementById("toggleSelect");
+	const items = document.querySelectorAll(".cart-item");
 
-    toggleSelect.addEventListener("change", function () {
-        items.forEach(item => {
-            const cb = item.querySelector(".product-check");
-            cb.classList.toggle("d-none", !this.checked);
-            cb.checked = false;
-            item.classList.remove("active");
-        });
-    });
+	toggleSelect.addEventListener("change", function () {
+		items.forEach(item => {
+			const cb = item.querySelector(".product-check");
+			cb.classList.toggle("d-none", !this.checked);
+			cb.checked = false;
+			item.classList.remove("active");
+		});
+	});
 
-    document.querySelectorAll(".product-check").forEach(cb => {
-        cb.addEventListener("change", function () {
-            this.closest(".cart-item")
-                .classList.toggle("active", this.checked);
-        });
-    });
+	document.querySelectorAll(".product-check").forEach(cb => {
+		cb.addEventListener("change", function () {
+			this.closest(".cart-item")
+				.classList.toggle("active", this.checked);
+		});
+	});
 </script>

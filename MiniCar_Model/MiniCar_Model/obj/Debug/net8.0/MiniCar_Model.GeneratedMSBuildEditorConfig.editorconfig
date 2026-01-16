@@ -9,169 +9,173 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MiniCar_Model
 build_property.RootNamespace = MiniCar_Model
-build_property.ProjectDir = D:\DoAn\DoAnWeb_Nhat\MiniCar_Model\MiniCar_Model\
+build_property.ProjectDir = D:\DoAn\DoAnWeb_Nhat - Copy\MiniCar_Model\MiniCar_Model\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = D:\DoAn\DoAnWeb_Nhat\MiniCar_Model\MiniCar_Model
+build_property.MSBuildProjectDirectory = D:\DoAn\DoAnWeb_Nhat - Copy\MiniCar_Model\MiniCar_Model
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Advertisement/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Advertisement/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWR2ZXJ0aXNlbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Bill/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Bill/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Cart/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Category/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Comment/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Comment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Customer/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Customer/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ3VzdG9tZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Home/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Product/Create.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Product/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Product/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Product/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Promotion/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Promotion/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvbW90aW9uXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/Error.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_ConfirmDeleteModal.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_ConfirmDeleteModal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9Db25maXJtRGVsZXRlTW9kYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_Header.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_Sidebar.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_Sidebar.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9TaWRlYmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Supplier/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Supplier/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU3VwcGxpZXJcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/_ViewImports.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/_ViewStart.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/ChangePassword.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Account/ChangePassword.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxDaGFuZ2VQYXNzd29yZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/EditAccount.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Account/EditAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0QWNjb3VudC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/Login.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Account/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/Order.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Account/Order.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxPcmRlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/Profile.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Account/Profile.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/Register.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/Wishlist.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Account/Wishlist.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxXaXNobGlzdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Cart/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Cart/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Checkout/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Checkout/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hlY2tvdXRcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Home/Contact.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Comment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Home/Index.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/Detail.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/List.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Product/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/Error.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/_Footer.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Shared/_Footer.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9Gb290ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/_Header.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Shared/_Header.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9IZWFkZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/_ViewImports.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/_ViewStart.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Shared/_AdminLayout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9BZG1pbkxheW91dC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = b-v8c6c5jy7x
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/_Layout.cshtml]
+[D:/DoAn/DoAnWeb_Nhat - Copy/MiniCar_Model/MiniCar_Model/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-id65vzfqx0
