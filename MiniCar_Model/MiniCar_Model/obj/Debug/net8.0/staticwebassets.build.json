@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "gIQurRHVrDYZ8SZjAfOslwEeEN8OaxGCcOZU0M5funo=",
+  "Hash": "jXFdONK8Sh4kaWRe+R3hUeLXJP/1EUlm/Fb+dCoUXss=",
   "Source": "MiniCar_Model",
   "BasePath": "_content/MiniCar_Model",
   "Mode": "Default",
@@ -5316,6 +5316,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\product\\e-p1.png"
+    },
+    {
+      "Identity": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\main.jpg",
+      "SourceId": "MiniCar_Model",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\",
+      "BasePath": "_content/MiniCar_Model",
+      "RelativePath": "img/product/main.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\product\\main.jpg"
     },
     {
       "Identity": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\Nam\\Boots\\b1.1.png",

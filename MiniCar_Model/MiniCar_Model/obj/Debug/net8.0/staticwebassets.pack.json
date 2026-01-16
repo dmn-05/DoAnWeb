@@ -1569,6 +1569,10 @@
       "PackagePath": "staticwebassets\\img\\product\\e-p1.png"
     },
     {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\main.jpg",
+      "PackagePath": "staticwebassets\\img\\product\\main.jpg"
+    },
+    {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\next.png",
       "PackagePath": "staticwebassets\\img\\product\\next.png"
     },
