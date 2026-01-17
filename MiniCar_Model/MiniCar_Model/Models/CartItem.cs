@@ -20,6 +20,8 @@ public partial class CartItem
     [Column("Variant_Id")]
     public int VariantId { get; set; }
 
+    [Column("Price")]  
+    public decimal Price { get; set; }
     public int Quantity { get; set; }
 
     [Column("Created_At", TypeName = "datetime")]

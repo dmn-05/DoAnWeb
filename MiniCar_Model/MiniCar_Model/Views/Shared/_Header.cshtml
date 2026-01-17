@@ -44,7 +44,7 @@
 							<div class="dropdown-menu dropdown-menu-right shadow-sm"
 									 aria-labelledby="accountDropdown"
 									 style="min-width: 180px;">
-								@if (!User.Identity.IsAuthenticated) {
+								@if (Context.Session.GetInt32("AccountId") == null) {
 									<!-- CHƯA ĐĂNG NHẬP -->
 									<a class="dropdown-item" asp-controller="Account" asp-action="Login">
 										Đăng nhập
@@ -61,7 +61,7 @@
 												 height="48"
 												 alt="Avatar">
 										<div class="font-weight-bold">
-											@User.Identity.Name
+											@Context.Session.GetString("FullName")
 										</div>
 									</div>
 
@@ -69,9 +69,6 @@
 
 									<a class="dropdown-item" asp-controller="Account" asp-action="Profile">
 										Thông tin tài khoản
-									</a>
-									<a class="dropdown-item" asp-controller="Account" asp-action="ChangePassword">
-										Đổi mật khẩu
 									</a>
 
 									<div class="dropdown-divider"></div>

@@ -1,5 +1,7 @@
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
+using MiniCar_Model.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +14,16 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 //End Nhat
+builder.Services.AddScoped<CartService>();
+
+builder.Services.AddSession(options => {
+  options.IdleTimeout = TimeSpan.FromHours(2);
+  options.Cookie.HttpOnly = true;
+  options.Cookie.IsEssential = true;
+});
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
@@ -22,8 +32,9 @@ if (!app.Environment.IsDevelopment()) {
 app.UseStaticFiles();
 app.UseStaticFiles();
 app.UseRouting();
-
+app.UseSession();
 app.UseAuthorization();
+
 
 //-------Tri Trong Trang
 
