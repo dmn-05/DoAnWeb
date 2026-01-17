@@ -18,81 +18,103 @@
 				</button>
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
-					<ul class="nav navbar-nav menu_nav ml-auto mt-25px">
-						<li class="nav-item active"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
-						<li class="nav-item"><a class="nav-link" asp-controller="Product" asp-action="List">Sản phẩm</a></li>
-						<li class="nav-item submenu dropdown">
-							<a asp-controller="Home" asp-action="Promotion" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Khuyến mãi</a>
-						</li>
-						<li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right height-75px">
-						<!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
-						<li class="nav-item">
-							@await Component.InvokeAsync("CartHeader")
-						</li>
 
-						@* <li class="nav-item"><a asp-controller="Account" asp-action="Login" class="account"><span title="Tài khoản" class="ti-user"></span></a></li> *@
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle p-0"
-								 href="#"
-								 id="accountDropdown"
-								 role="button"
+					<!-- MENU TRÁI -->
+					<ul class="nav navbar-nav menu_nav ml-auto">
+						<li class="nav-item active">
+							<a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-controller="Product" asp-action="List">Sản phẩm</a>
+						</li>
+						<li class="nav-item submenu dropdown">
+							<a class="nav-link dropdown-toggle"
+								 asp-controller="Home"
+								 asp-action="Promotion"
 								 data-toggle="dropdown"
+								 role="button"
 								 aria-haspopup="true"
 								 aria-expanded="false">
-								<span class="ti-user" title="Tài khoản"></span>
+								Khuyến mãi
 							</a>
-							<div class="dropdown-menu dropdown-menu-right shadow-sm"
-									 aria-labelledby="accountDropdown"
-									 style="min-width: 180px;">
-								@if (!User.Identity.IsAuthenticated) {
-									<!-- CHƯA ĐĂNG NHẬP -->
-									<a class="dropdown-item" asp-controller="Account" asp-action="Login">
-										Đăng nhập
-									</a>
-									<a class="dropdown-item" asp-controller="Account" asp-action="Register">
-										Đăng ký
-									</a>
-								} else {
-									<!-- ĐÃ ĐĂNG NHẬP -->
-									<div class="dropdown-header text-center">
-										<img src="~/img/avatar-default.png"
-												 class="rounded-circle mb-2"
-												 width="48"
-												 height="48"
-												 alt="Avatar">
-										<div class="font-weight-bold">
-											@User.Identity.Name
-										</div>
-									</div>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a>
+						</li>
+					</ul>
 
-									<div class="dropdown-divider"></div>
+					<!-- MENU PHẢI -->
+					<ul class="nav navbar-nav navbar-right">
 
-									<a class="dropdown-item" asp-controller="Account" asp-action="Profile">
+						<!-- GIỎ HÀNG -->
+						<li class="nav-item">
+							<a class="nav-link d-flex align-items-center gap-2"
+								 asp-controller="Cart"
+								 asp-action="Index">
+								<span class="ti-bag mr-2"> </span>
+								<span>Giỏ hàng</span>
+
+								@* Nếu có số lượng *@
+								@* <span class="cart-count">3</span> *@
+							</a>
+						</li>
+
+						@using Microsoft.AspNetCore.Http
+
+						<!-- TÀI KHOẢN -->
+						<li class="nav-item dropdown">
+							@if (Context.Session.GetInt32("AccountId") == null)
+							{
+								<!-- CHƯA ĐĂNG NHẬP -->
+								<a class="nav-link d-flex align-items-center gap-2"
+									 asp-controller="Account"
+									 asp-action="Login">
+									<span class="ti-user mr-2"> </span>
+									<span>Đăng nhập</span>
+								</a>
+							}
+							else
+							{
+								<!-- ĐÃ ĐĂNG NHẬP -->
+								<a class="nav-link dropdown-toggle d-flex align-items-center gap-2"
+									 href="#"
+									 id="accountDropdown"
+									 role="button"
+									 data-toggle="dropdown"
+									 aria-haspopup="true"
+									 aria-expanded="false">
+									<span class="ti-user"></span>
+									<span>@Context.Session.GetString("UserName")</span>
+								</a>
+
+								<div class="dropdown-menu dropdown-menu-right shadow-sm"
+										 aria-labelledby="accountDropdown">
+									<a class="dropdown-item"
+										 asp-controller="Account"
+										 asp-action="Profile">
 										Thông tin tài khoản
 									</a>
-									<a class="dropdown-item" asp-controller="Account" asp-action="ChangePassword">
-										Đổi mật khẩu
-									</a>
-
 									<div class="dropdown-divider"></div>
-
 									<a class="dropdown-item text-danger"
 										 asp-controller="Account"
 										 asp-action="Logout">
 										Đăng xuất
 									</a>
-								}
-							</div>
+								</div>
+							}
 						</li>
 
+						<!-- TÌM KIẾM -->
 						<li class="nav-item">
-							<button class="search"><span title="Tìm kiếm" class="lnr lnr-magnifier" id="search"></span></button>
+							<a class="nav-link d-flex align-items-center"
+								 href="javascript:void(0)">
+								<span class="lnr lnr-magnifier" id="search"></span>
+							</a>
 						</li>
+
 					</ul>
 				</div>
+
 			</div>
 		</nav>
 	</div>
