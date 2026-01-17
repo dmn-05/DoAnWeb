@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
+using MiniCar_Model.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,8 +13,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 //End Nhat
+builder.Services.AddScoped<CartService>();
 
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) {
@@ -24,6 +27,7 @@ app.UseStaticFiles();
 app.UseRouting();
 
 app.UseAuthorization();
+
 
 //-------Tri Trong Trang
 

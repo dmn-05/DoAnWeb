@@ -29,7 +29,10 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right height-75px">
 						<!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
-						<li class="nav-item"><a asp-controller="Cart" asp-action="Index" class="cart"><span title="Giỏ hàng" class="ti-bag" data-toggle="modal" data-target="#cart1"></span></a></li>
+						<li class="nav-item">
+							@await Component.InvokeAsync("CartHeader")
+						</li>
+
 						@* <li class="nav-item"><a asp-controller="Account" asp-action="Login" class="account"><span title="Tài khoản" class="ti-user"></span></a></li> *@
 						<li class="nav-item dropdown">
 							<a class="nav-link dropdown-toggle p-0"

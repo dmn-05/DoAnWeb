@@ -53,3 +53,18 @@
   position: relative;
   z-index: 10;
 }
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 50%;
+}
+
+.cart-total {
+  font-size: 13px;
+  font-weight: 600;
+  color: #d70018;
+}

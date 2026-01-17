@@ -1,0 +1,23 @@
+﻿@model MiniCar_Model.Models.ViewModels.CartHeaderVM
+
+<a asp-controller="Cart"
+   asp-action="Index"
+   class="cart position-relative">
+
+  <span class="ti-bag"></span>
+
+  @if (Model.TotalQuantity > 0)
+  {
+    <span class="badge badge-danger position-absolute"
+          style="top:-6px; right:-6px;">
+      @Model.TotalQuantity
+    </span>
+  }
+</a>
+
+@if (Model.TotalPrice > 0)
+{
+  <span class="ml-2 text-danger font-weight-bold">
+    @Model.TotalPrice.ToString("N0") đ
+  </span>
+}
