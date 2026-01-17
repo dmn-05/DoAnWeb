@@ -41,11 +41,9 @@
 								 aria-expanded="false">
 								<span class="ti-user" title="Tài khoản"></span>
 							</a>
-
 							<div class="dropdown-menu dropdown-menu-right shadow-sm"
 									 aria-labelledby="accountDropdown"
 									 style="min-width: 180px;">
-
 								@if (!User.Identity.IsAuthenticated) {
 									<!-- CHƯA ĐĂNG NHẬP -->
 									<a class="dropdown-item" asp-controller="Account" asp-action="Login">
@@ -95,7 +93,6 @@
 			</div>
 		</nav>
 	</div>
-
 	<div class="search_input" id="search_input_box">
 		<div class="container">
 			<form class="d-flex justify-content-between">
