@@ -1,13 +1,13 @@
 ﻿	<!-- Start Header Area -->
 <header class="header_area sticky-header">
 	<div class="main_menu">
-		<nav class="navbar navbar-expand-lg navbar-light main_box">
+		<nav class="navbar navbar-expand-lg navbar-light main_box align-items-center">
 			<div class="container">
 				<!-- Brand and toggle get grouped for better mobile display -->
 				<a class="navbar-brand logo_h logo"
 					 asp-controller="Home"
 					 asp-action="Index">
-					<img src="~/img/logo_team.png" alt="Logo" style="width:100px; height:auto;">
+					<img src="~/img/logo_team.png" alt="Logo" style="width:70px; height:auto;">
 				</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -17,8 +17,8 @@
 					<span class="icon-bar"></span>
 				</button>
 				<!-- Collect the nav links, forms, and other content for toggling -->
-				<div class="collapse navbar-collapse offset" id="navbarSupportedContent">
-					<ul class="nav navbar-nav menu_nav ml-auto">
+				<div class="collapse navbar-collapse" id="navbarSupportedContent">
+					<ul class="nav navbar-nav menu_nav ml-auto mt-25px">
 						<li class="nav-item active"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
 						<li class="nav-item"><a class="nav-link" asp-controller="Product" asp-action="List">Sản phẩm</a></li>
 						<li class="nav-item submenu dropdown">
@@ -27,21 +27,72 @@
 						</li>
 						<li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
 					</ul>
-					<ul class="nav navbar-nav navbar-right">
+					<ul class="nav navbar-nav navbar-right height-75px">
 						<!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
-						<li><a class="nav-link" asp-controller="Cart" asp-action="Index" id="cart"><i class="ti-bag" data-toggle="modal" data-target="#cart1"></i><span class="badge"><p><span class="total-count"></span></p></span></a></li>
+						<li class="nav-item"><a asp-controller="Cart" asp-action="Index" class="cart"><span title="Giỏ hàng" class="ti-bag" data-toggle="modal" data-target="#cart1"></span></a></li>
+						@* <li class="nav-item"><a asp-controller="Account" asp-action="Login" class="account"><span title="Tài khoản" class="ti-user"></span></a></li> *@
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle p-0"
+								 href="#"
+								 id="accountDropdown"
+								 role="button"
+								 data-toggle="dropdown"
+								 aria-haspopup="true"
+								 aria-expanded="false">
+								<span class="ti-user" title="Tài khoản"></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right shadow-sm"
+									 aria-labelledby="accountDropdown"
+									 style="min-width: 180px;">
+								@if (!User.Identity.IsAuthenticated) {
+									<!-- CHƯA ĐĂNG NHẬP -->
+									<a class="dropdown-item" asp-controller="Account" asp-action="Login">
+										Đăng nhập
+									</a>
+									<a class="dropdown-item" asp-controller="Account" asp-action="Register">
+										Đăng ký
+									</a>
+								} else {
+									<!-- ĐÃ ĐĂNG NHẬP -->
+									<div class="dropdown-header text-center">
+										<img src="~/img/avatar-default.png"
+												 class="rounded-circle mb-2"
+												 width="48"
+												 height="48"
+												 alt="Avatar">
+										<div class="font-weight-bold">
+											@User.Identity.Name
+										</div>
+									</div>
 
+									<div class="dropdown-divider"></div>
 
-						<li class="nav-item"><a asp-controller="Account" asp-action="Login" class="cart"><span class="ti-user"></span></a></li>
+									<a class="dropdown-item" asp-controller="Account" asp-action="Profile">
+										Thông tin tài khoản
+									</a>
+									<a class="dropdown-item" asp-controller="Account" asp-action="ChangePassword">
+										Đổi mật khẩu
+									</a>
+
+									<div class="dropdown-divider"></div>
+
+									<a class="dropdown-item text-danger"
+										 asp-controller="Account"
+										 asp-action="Logout">
+										Đăng xuất
+									</a>
+								}
+							</div>
+						</li>
+
 						<li class="nav-item">
-							<button class="search"><span class="lnr lnr-magnifier" id="search"></span></button>
+							<button class="search"><span title="Tìm kiếm" class="lnr lnr-magnifier" id="search"></span></button>
 						</li>
 					</ul>
 				</div>
 			</div>
 		</nav>
 	</div>
-
 	<div class="search_input" id="search_input_box">
 		<div class="container">
 			<form class="d-flex justify-content-between">

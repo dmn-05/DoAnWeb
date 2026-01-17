@@ -1,7 +1,17 @@
+using Microsoft.EntityFrameworkCore;
+using MiniCar_Model.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Begin Nhat
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
+    options.UseSqlServer(
+        builder.Configuration.GetConnectionString("DefaultConnection")
+    ));
+//End Nhat
 
 var app = builder.Build();
 
