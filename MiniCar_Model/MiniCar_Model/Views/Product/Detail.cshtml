@@ -1,6 +1,10 @@
 ﻿@{
 	ViewData["Title"] = "Chi Tiết Sản Phẩm";
+	var ratingGroups = Model.Comments.GroupBy(c => c.Rating).ToDictionary(g => g.Key, g => g.Count());
 }
+@using MiniCar_Model.Models.ViewModels
+@model ProductDetailVM
+
 <!-- back to top button-->
 <a href="#" class="cd-top">Back To Top</a>
 <!--End Back to top button-->
@@ -26,39 +30,38 @@
 		<div class="row s_product_inner">
 			<div class="col-lg-6">
 				<div class="s_Product_carousel">
-					<div class="single-prd-item">
-						<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
-					</div>
-					<div class="single-prd-item">
-						<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.2.png" alt="">
-					</div>
-					<div class="single-prd-item">
-						<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.3.png" alt="">
-					</div>
+					@foreach (var img in Model.Images)
+					{
+						<div class="single-prd-item">
+							<img class="img-fluid" 
+										src="~/img/product/@img.ImageId"
+										alt="@Model.Product.NameProduct"/>
+						</div>
+					}
 				</div>
 			</div>
 			<div class="col-lg-5 offset-lg-1">
 				<div class="s_product_text">
-					<h3>Giày Boot Nam Đế Cao Màu Vàng PALA GN400</h3>
-					<h2>550.000đ</h2>
+					<h3>@Model.Product.NameProduct</h3>
+					<h2 id="price">@Model.Price.ToString("N0") đ</h2>
 					<ul class="list">
-						<li><a class="active" href="#"><span>Phân loại</span> : Boots</a></li>
-						<li><a href="#"><span>Tình trạng </span> : Còn hàng</a></li>
+						<li><a class="active" href="#"><span>Phân loại</span> : @Model.Product.Category.NameCategory</a></li>
+						<li><a href="#"><span>Tình trạng </span> : @(Model.Quanlity > 0 ? "Còn hàng" : "Hết hàng")</a></li>
 					</ul>
 					<p>
-						Chi Tiết Sản Phẩm: Loại Giày: đi chơi, dạo phố.....
-						Bảo hành keo 12 tháng Giao Hàng Tận Nơi Toàn Quốc Nhận Hàng Trả Tiền Sản phẩm giống hình 100%...
+						@Model.Product.Descriptions
 					</p>
 					<div class="noname align-items-center">
 						<div class="pb-2"><label>Size:</label> </div>
 						<div class="default-select pb-2" id="default-select1">
 
-							<select>
-								<option value="1">38</option>
-								<option value="2">39</option>
-								<option value="3">40</option>
-								<option value="4">41</option>
-								<option value="5">42</option>
+							<select id="variantSeclect">
+								@foreach (var v in Model.Variants)
+								{
+									<option value="@v.VariantId" data-price="@v.Price" data-qty="@v.Quantity">
+										@v.Size.Scale
+									</option>
+								}
 							</select>
 						</div>
 
@@ -183,95 +186,60 @@
 							<div class="col-6">
 								<div class="box_total">
 									<h5>Đánh giá sản phẩm</h5>
-									<h4>4.0</h4>
-									<h6>(03 Nhận xét)</h6>
+									<h4>@Model.AvgRating.ToString("0.0")</h4>
+									<h6>(@Model.Comments.Count Nhận xét)</h6>
 								</div>
 							</div>
 							<div class="col-6">
 								<div class="rating_list">
-									<h3>Dựa trên 3 đánh giá</h3>
+									<h3>Dựa trên @Model.Comments.Count đánh giá</h3>
 									<ul class="list">
-										<li>
-											<a href="#">
-												5 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												4 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												3 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												1 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
+										@for (int i = 5; i > 1; i--)
+										{
+											var count = ratingGroups.ContainsKey(i) ? ratingGroups[i] : 0;
+
+											<li>
+												<a href="#">
+													@i sao
+													@for (int s = 1; s <= 5; s++)
+													{
+														<i class="fa fa-star" style="color:@(s <= i ? "#ffcc00" : "#ccc")"></i>
+													}
+													@count
+												</a>
+											</li>
+										}
 									</ul>
 								</div>
 							</div>
 						</div>
 						<div class="review_list">
-							<div class="review_item">
-								<div class="media">
-									<div class="d-flex">
-										<img src="../../../img/product/review-1.png" alt="">
-									</div>
-									<div class="media-body">
-										<h4>Nhi Nguyễn</h4>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
+							@if (!Model.Comments.Any())
+							{
+								<p>Chưa có bình luận nào</p>
+							}
+							else
+							{
+								foreach (var c in Model.Comments)
+								{
+									<div class="review_item">
+										<div class="media">
+											<div class="d-flex">
+												<img src="~/img/product/default-user.png" alt="" style="width:50px; height:50px;">
+											</div>
+											<div class="media-body">
+												<h4>@c.Account.UserName</h4>
 
+												@for (int i = 1; i <= 5; i++)
+												{
+													<i class="fa fa-star" style="color:@(i <= c.Rating ? "#ffcc00" : "#ccc")"></i>
+												}
+											</div>
+										</div>
+										<p>@c.Content</p>
 									</div>
-								</div>
-								<p>Nay buồn nên cho shop 3 sao</p>
-							</div>
-							<div class="review_item">
-								<div class="media">
-									<div class="d-flex">
-										<img src="../../../img/product/review-2.png" alt="">
-									</div>
-									<div class="media-body">
-										<h4>Ngân Nguyễn</h4>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-								</div>
-								<p>Sản phẩm tuyệt vời, xuất sắc!</p>
-							</div>
-							<div class="review_item">
-								<div class="media">
-									<div class="d-flex">
-										<img src="../../../img/product/review-3.png" alt="">
-									</div>
-									<div class="media-body">
-										<h4>Linh Nhi</h4>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-
-									</div>
-								</div>
-								<p>
-									Cũng rất gì và này nọ. Chưa đi chưa biết có bị vết hằn hay không.
-									Vân giày tạm ổn. Vẫn còn chỉ thừa. Lỗ đục đều.Giày không bị bẩn như một
-									số đôi mà mình mua. 8.5đ nên mua nha mấy ông!
-								</p>
-							</div>
+								}
+							}
 						</div>
 					</div>
 				</div>
@@ -414,3 +382,12 @@
 	</div>
 </section>
 <!-- End related-product Area -->
+<script>
+	document.getElementById("variantSelect").addEventListener("change", function () {
+		let opt = this.selectedOptions[0];
+
+		let price = opt.getAttribute("data-price");
+		document.getElementById("price").innerText =
+			Number(price).toLocaleString() + " đ";
+	});
+</script>

@@ -108,7 +108,9 @@
 					@foreach (var item in Model) {
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
-								<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
+								<a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductId">
+									<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
+								</a>
 								<div class="product-details">
 									<a href="single-product-b1.html"><h6>@item.NameProduct</h6></a>
 									<div class="price">
@@ -126,7 +128,7 @@
 											<p class="hover-text">Yêu thích</p>
 										</a>
 
-										<a href="" class="social-info">
+										<a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductId" class="social-info">
 											<span class="lnr lnr-move"></span>
 											<p class="hover-text">Xem thêm</p>
 										</a>
