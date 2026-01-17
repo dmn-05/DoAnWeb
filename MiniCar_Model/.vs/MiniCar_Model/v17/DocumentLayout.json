@@ -300,7 +300,7 @@
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Comment\\Index.cshtml",
               "ToolTip": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Comment\\Index.cshtml",
               "RelativeToolTip": "MiniCar_Model\\Views\\Comment\\Index.cshtml",
-              "ViewState": "AQIAAFMAAAAAAAAAAAAwwGcAAAAwAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAwwHYAAAAmAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-01-16T13:31:18.652Z",
               "EditorCaption": ""
@@ -375,8 +375,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Checkout\\Index.cshtml",
               "ViewState": "AQIAAAkAAAAAAAAAAAAwwIwAAAAMAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-12T14:55:39.205Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-12T14:55:39.205Z"
             },
             {
               "$type": "Document",
@@ -400,8 +399,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Account\\Order.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-12T14:55:15.109Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-12T14:55:15.109Z"
             },
             {
               "$type": "Document",
@@ -413,8 +411,7 @@
               "RelativeToolTip": "MiniCar_Model\\Views\\Account\\Profile.cshtml",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-12T14:55:19.568Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-12T14:55:19.568Z"
             },
             {
               "$type": "Document",
