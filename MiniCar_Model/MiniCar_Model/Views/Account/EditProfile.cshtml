@@ -1,0 +1,80 @@
+﻿@model Account
+
+<div class="pt-100px">
+	<div class="container profile-container mt-5 pt-5 mb-5">
+
+		<!-- NÚT QUAY LẠI -->
+		<div class="row mb-3">
+			<div class="col-12">
+				<a asp-action="Profile"
+					 class="btn btn-outline-secondary btn-sm">
+					← Quay lại
+				</a>
+			</div>
+		</div>
+
+		<!-- HEADER -->
+		<div class="text-center mb-4">
+			<h1 class="fw-semibold">@Model.NameAccount</h1>
+			<p class="text-muted small">Cập nhật thông tin cá nhân của bạn</p>
+		</div>
+
+		<!-- FORM -->
+		<div class="card shadow-sm rounded-4 mx-auto" style="max-width: 600px;">
+			<div class="card-body p-4">
+
+				<form asp-action="EditProfile" method="post">
+					@Html.AntiForgeryToken()
+
+					<!-- HỌ TÊN -->
+					<div class="mb-3">
+						<label class="form-label fw-semibold">Họ và tên</label>
+						<input asp-for="NameAccount"
+									 class="form-control rounded-3"
+									 placeholder="Nhập họ và tên" />
+					</div>
+
+					<!-- EMAIL -->
+					<div class="mb-3">
+						<label class="form-label fw-semibold">Email</label>
+						<input asp-for="Email"
+									 class="form-control rounded-3"
+									 placeholder="Nhập email" />
+					</div>
+
+					<!-- SỐ ĐIỆN THOẠI -->
+					<div class="mb-3">
+						<label class="form-label fw-semibold">Số điện thoại</label>
+						<input asp-for="PhoneNumber"
+									 class="form-control rounded-3"
+									 placeholder="Nhập số điện thoại" />
+					</div>
+
+					<!-- ĐỊA CHỈ -->
+					<div class="mb-4">
+						<label class="form-label fw-semibold">Địa chỉ</label>
+						<input asp-for="AddressAccount"
+									 class="form-control rounded-3"
+									 placeholder="Nhập địa chỉ" />
+					</div>
+
+					<!-- NÚT -->
+					<div class="d-flex gap-2">
+						<button type="submit"
+										class="btn btn-primary w-100 rounded-3">
+							💾 Lưu thay đổi
+						</button>
+
+						<a asp-action="Profile"
+							 class="btn btn-outline-secondary w-100 rounded-3">
+							Hủy
+						</a>
+					</div>
+
+				</form>
+
+			</div>
+		</div>
+
+	</div>
+</div>

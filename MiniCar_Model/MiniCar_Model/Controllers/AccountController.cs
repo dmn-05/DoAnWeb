@@ -5,9 +5,15 @@ using MiniCar_Model.Models;
 namespace MiniCar_Model.Controllers {
   public class AccountController : Controller {
     private readonly ApplicationDbContext _context;
+    //thuong code
+    private readonly ILogger<AccountController> _logger;
+    //thuong end code
 
-    public AccountController(ApplicationDbContext context) {
+    public AccountController(ApplicationDbContext context, ILogger<AccountController> logger) {
       _context = context;
+      //thuong code
+      _logger = logger;
+      //thuong end code
     }
 
     // GET: /Account/Login
@@ -63,7 +69,61 @@ namespace MiniCar_Model.Controllers {
           .FirstOrDefault(x => x.AccountId == accountId);
       return View(account);
     }
+    //thuong code
+    [HttpGet]
+    public IActionResult EditProfile()
+    {
+      var accountId = HttpContext.Session.GetInt32("AccountId");
 
+      var model = _context.Accounts
+          .Where(a => a.AccountId == accountId)
+          .Select(a => new Account
+          {
+            NameAccount = a.NameAccount,
+            Email = a.Email,
+            PhoneNumber = a.PhoneNumber,
+            AddressAccount = a.AddressAccount
+          })
+          .FirstOrDefault();
+
+      if (model == null)
+        return NotFound();
+
+      return View(model);
+    }
+    //thuong end code
+    //thuong code
+    [HttpPost]
+    [ValidateAntiForgeryToken]
+    public IActionResult EditProfile(Account model)
+    {
+      try
+      {
+        var accountId = HttpContext.Session.GetInt32("AccountId");
+
+        var account = _context.Accounts
+            .FirstOrDefault(a => a.AccountId == accountId);
+
+        if (account == null)
+          return NotFound();
+
+        // Gán dữ liệu mới
+        account.NameAccount = model.NameAccount;
+        account.Email = model.Email;
+        account.PhoneNumber = model.PhoneNumber;
+        account.AddressAccount = model.AddressAccount;
+
+        _context.SaveChanges();
+
+        return RedirectToAction("Profile");
+      }
+      catch (Exception ex)
+      {
+        _logger.LogError(ex, "Lỗi cập nhật profile");
+        return View(model);
+      }
+    }
+    //thuong end code
     public IActionResult Logout() {
       return RedirectToAction("Index", "Home");
     }
@@ -83,5 +143,8 @@ namespace MiniCar_Model.Controllers {
     public IActionResult ChangePassword() {
       return View();
     }
+
+
+
   }
 }

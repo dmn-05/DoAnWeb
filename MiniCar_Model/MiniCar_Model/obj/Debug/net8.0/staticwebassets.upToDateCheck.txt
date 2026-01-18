@@ -23,8 +23,8 @@ wwwroot\admin\img\friends\fr-04.jpg
 wwwroot\admin\img\friends\fr-05.jpg
 wwwroot\admin\img\friends\fr-06.jpg
 wwwroot\admin\img\instagram.jpg
-wwwroot\admin\img\Logo.jpg
 wwwroot\admin\img\login-bg.jpg
+wwwroot\admin\img\Logo.jpg
 wwwroot\admin\img\lorde.jpg
 wwwroot\admin\img\mask.png
 wwwroot\admin\img\ny.jpg
@@ -44,9 +44,9 @@ wwwroot\admin\js\bootstrap.min.js
 wwwroot\admin\js\bootstrap-inputmask\bootstrap-inputmask.min.js
 wwwroot\admin\js\bootstrap-switch.js
 wwwroot\admin\js\calendar-conf-events.js
-wwwroot\admin\js\common-scripts.js
 wwwroot\admin\js\chartjs-conf.js
 wwwroot\admin\js\chart-master\Chart.js
+wwwroot\admin\js\common-scripts.js
 wwwroot\admin\js\easy-pie-chart.js
 wwwroot\admin\js\fancybox\jquery.fancybox.css
 wwwroot\admin\js\fancybox\jquery.fancybox.js
@@ -271,8 +271,8 @@ wwwroot\img\features\f-icon1.png
 wwwroot\img\features\f-icon2.png
 wwwroot\img\features\f-icon3.png
 wwwroot\img\features\f-icon4.png
-wwwroot\img\logo_team.png
 wwwroot\img\login.jpg
+wwwroot\img\logo_team.png
 wwwroot\img\product\card.jpg
 wwwroot\img\product\e-p1.png
 wwwroot\img\product\main.jpg
@@ -346,14 +346,14 @@ wwwroot\img\product\next.png
 wwwroot\img\product\Nu\Boots\3k.png
 wwwroot\img\product\Nu\Boots\cgbd.png
 wwwroot\img\product\Nu\Boots\cgct.png
+wwwroot\img\product\Nu\Boots\chelsea boots.png
 wwwroot\img\product\Nu\Boots\clmv.png
 wwwroot\img\product\Nu\Boots\cloc.png
 wwwroot\img\product\Nu\Boots\cndbmn.png
 wwwroot\img\product\Nu\Boots\cndt.png
 wwwroot\img\product\Nu\Boots\cndtkk.png
-wwwroot\img\product\Nu\Boots\cnmn.png
 wwwroot\img\product\Nu\Boots\cngn.png
-wwwroot\img\product\Nu\Boots\chelsea boots.png
+wwwroot\img\product\Nu\Boots\cnmn.png
 wwwroot\img\product\Nu\Boots\martin.png
 wwwroot\img\product\Nu\RunningShoes\rs1.png
 wwwroot\img\product\Nu\RunningShoes\rs10.png
