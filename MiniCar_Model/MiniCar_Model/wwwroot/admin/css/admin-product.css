@@ -144,3 +144,42 @@
 .ful-group input {
     margin-top: 10px;
 }
+
+/* Container bao quanh Select và Nút bấm */
+.select-with-btn {
+  display: flex;
+  gap: 8px; /* Khoảng cách giữa ô chọn và nút */
+  align-items: center;
+  width: 100%;
+}
+
+  /* Ô Select chiếm tối đa không gian */
+  .select-with-btn .input-control {
+    flex: 1;
+    margin-bottom: 0; /* Ghi đè nếu có margin bottom mặc định */
+  }
+
+/* Nút thêm mới (Dấu cộng) */
+.btn-add-inline {
+  height: 38px; /* Khớp với chiều cao tiêu chuẩn của input */
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 4px;
+  flex-shrink: 0; /* Không cho nút bị co lại khi màn hình nhỏ */
+  transition: all 0.3s ease;
+}
+
+  .btn-add-inline:hover {
+    background-color: #4cae4c;
+    transform: scale(1.05);
+  }
+
+/* Tùy chỉnh cho các row input để cân đối */
+.input-group.form-group-flex {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
