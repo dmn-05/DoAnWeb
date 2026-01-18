@@ -36,6 +36,10 @@
 </head>
 
 <body>
+  @* thuong code *@
+  @await Html.PartialAsync("PopupDN")
+	@* thuong end code *@
+
 	@* Partial View *@
 	@await Html.PartialAsync("_Header")
 
@@ -61,6 +65,28 @@
 	<script src="~/https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="~/js/gmaps.min.js"></script>
 	<script src="~/js/main.js"></script>
+  @* thuong code *@
+  <script>
+    $("#loginForm").submit(function (e) {
+        e.preventDefault(); // ⬅️ DÒNG CỨU MẠNG (BẮT BUỘC)
+
+        $.ajax({
+            url: "/Account/LoginPopup",
+            type: "POST",
+            data: $(this).serialize(),
+            success: function (res) {
+                if (res.success) {
+                    $("#loginPopup").modal("hide");
+                    location.reload(); // reload GET /Cart
+                } else {
+                    $("#loginError").text(res.message);
+                }
+            }
+        });
+    });
+  </script>
+  @* thuong code end *@
+
 </body>
 
 </html>

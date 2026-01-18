@@ -46,7 +46,35 @@ namespace MiniCar_Model.Controllers {
 
       return RedirectToAction("Index", "Home");
     }
+    [HttpPost]
+    public IActionResult LoginPopup(string email, string password)
+    {
+      var account = _context.Accounts.FirstOrDefault(x =>
+          (x.Email == email || x.UserName == email) &&
+          x.PasswordAccount == password &&
+          x.StatusAccount == "ACTIVE"
+      );
 
+      if (account == null)
+      {
+        return Json(new
+        {
+          success = false,
+          message = "Email hoặc mật khẩu không đúng"
+        });
+      }
+
+      // Lưu session đăng nhập
+      HttpContext.Session.SetInt32("AccountId", account.AccountId);
+      HttpContext.Session.SetInt32("RoleId", account.RoleId);
+      HttpContext.Session.SetString("UserName", account.UserName);
+      HttpContext.Session.SetString("FullName", account.NameAccount ?? "");
+
+      return Json(new
+      {
+        success = true
+      });
+    }
 
     [HttpGet]
     public IActionResult Register() {
