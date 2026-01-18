@@ -1,0 +1,69 @@
+﻿@model ProductSearchVM
+@{
+  ViewData["Title"] = "Tìm kiếm";
+}
+
+<!-- Start Banner Area -->
+<section class="banner-area organic-breadcrumb">
+  <div class="container">
+    <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+      <div class="col-first">
+        <h1>Danh sách đơn hàng</h1>
+        <nav class="d-flex align-items-center">
+          <a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+          <a asp-controller="Account" asp-action="Profile">Tài khoản<span class="lnr lnr-arrow-right"></span></a>
+          <a asp-controller="Account" asp-action="Order">Đơn hàng</a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Banner Area -->
+
+<form method="get" asp-action="Search">
+  <input type="text" name="Keyword"
+         value="@Model.Keyword"
+         placeholder="Tên hoặc mô tả sản phẩm" />
+
+  <select name="CategoryId">
+    <option value="">-- Tất cả danh mục --</option>
+    @foreach (var c in ViewBag.Categories) {
+      <option value="@c.CategoryId">
+        @c.NameCategory
+      </option>
+    }
+  </select>
+
+  <input type="number" name="MinPrice"
+         value="@Model.MinPrice"
+         placeholder="Giá từ" />
+
+  <input type="number" name="MaxPrice"
+         value="@Model.MaxPrice"
+         placeholder="Giá đến" />
+
+  <button type="submit">Tìm kiếm</button>
+</form>
+
+<hr />
+
+@if (Model.Results != null && Model.Results.Any()) {
+  @foreach (var v in Model.Results) {
+    <div>
+      <h4>@v.Product.NameProduct</h4>
+      <p>@v.Product.Descriptions</p>
+
+      <p>
+        Size: @v.Size.Scale |
+        Màu: @v.Color.ColorName
+      </p>
+
+      <p>
+        Giá: <strong>@v.Price.ToString("N0") VNĐ</strong>
+      </p>
+    </div>
+    <hr />
+  }
+} else {
+  <p>Không tìm thấy sản phẩm phù hợp</p>
+}

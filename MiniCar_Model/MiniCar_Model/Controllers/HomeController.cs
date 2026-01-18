@@ -1,20 +1,40 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MiniCar_Model.Models;
+using MiniCar_Model.Models.ViewModels;
 
 namespace MiniCar_Model.Controllers {
   public class HomeController : Controller {
-    private readonly ILogger<HomeController> _logger;
+    private readonly ApplicationDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger) {
-      _logger = logger;
+    public HomeController(ApplicationDbContext context) {
+      _context = context;
     }
 
     public IActionResult Index() {
-      return View();
+      var latestProducts = _context.Products
+          .OrderByDescending(p => p.CreateAt)
+          .Take(8)
+          .ToList();
+
+      var discountProducts = _context.Products
+          .Where(p => p.PromotionId != null)
+          .Take(8)
+          .ToList();
+
+      var model = new HomeVM {
+        LatestProducts = latestProducts,
+        DiscountProducts = discountProducts
+      };
+
+      return View(model);
     }
 
     public IActionResult Contact() {
+      return View();
+    }
+
+    public IActionResult Introduction() {
       return View();
     }
 
