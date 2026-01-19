@@ -22,34 +22,69 @@ namespace MiniCar_Model.Areas.Admin.Controllers
     //------
 
 
-    [HttpGet]
-    public async Task<IActionResult> Index(int page = 1, int pageSize = 10)
+    public async Task<IActionResult> Index(string search, int page = 1)
     {
-      if (page <  1) page = 1;
-      var TotalVariants = await _context.ProductVariants.CountAsync();
+      int pageSize = 10;
 
-      var variants = await _context.ProductVariants
-                        .Include(v => v.Product)
-                        .Include(v => v.Size)
-                        .Include(v => v.Color)
-                        .AsNoTracking()
-                        .OrderBy(v => v.VariantId)                       
-                        .Skip((page - 1) * pageSize)                    
-                        .Take(pageSize)
-                        .ToListAsync();
+      var query = _context.ProductVariants
+          .Include(v => v.Product)
+            .ThenInclude(v => v.Category)
+          .Include(v => v.Size)
+          .Include(v => v.Color)
+          .AsQueryable();
+      // Tìm kiếm theo tên sản phẩm
+      if (!string.IsNullOrEmpty(search))
+      {
+        query = query.Where(v => v.Product.NameProduct.Contains(search));
+      }
 
+      int totalItems = await query.CountAsync();
+      int totalPages = (int)Math.Ceiling((double)totalItems / pageSize);
+
+      var result = await query
+          .OrderBy(v => v.VariantId)
+          .Skip((page - 1) * pageSize)
+          .Take(pageSize)
+          .ToListAsync();
+
+      ViewBag.Search = search;
       ViewBag.CurrentPage = page;
-      var totalPages = (int)Math.Ceiling((double)TotalVariants / pageSize);
-      ViewBag.TotalPages = totalPages == 0 ? 1 : totalPages;
-      return View(variants);
+      ViewBag.TotalPages = totalPages;
+
+      if (page < 1) page = 1;
+      if (page > totalPages && totalPages > 0) page = totalPages;
+
+
+      return View(result);
     }
+
     [HttpGet]
     public IActionResult Create()
     {
-      ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "CategoryName");
-      ViewBag.SupplierId = new SelectList(_context.Suppliers, "SupplierId", "SupplierName");
-      ViewBag.TrademarkId = new SelectList(_context.Trademarks, "TrademarkId", "TrademarkName");
-      ViewBag.PromotionId = new SelectList(_context.Promotions, "PromotionId", "PromotionName");
+      ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "NameCategory");
+      ViewBag.SupplierId = new SelectList(_context.Suppliers, "SupplierId", "NameSupplier");
+      ViewBag.TrademarkId = new SelectList(_context.Trademarks, "TrademarkId", "NameTrademark");
+      //ViewBag.PromotionId = new SelectList(_context.Promotions, "PromotionId", "DiscountValue");
+      var promos = _context.Promotions
+        .Select(p => new
+        {
+          p.PromotionId,
+          p.DiscountType,
+          p.DiscountValue
+        })
+        .ToList();
+
+      ViewBag.PromotionId = promos
+          .Select(x => new SelectListItem
+          {
+            Value = x.PromotionId.ToString(),
+            Text = x.DiscountType == "%"
+                     ? $"{x.DiscountValue}%"
+                     : $"{x.DiscountValue:N0} VND"
+          })
+          .ToList();
+
+
       ViewBag.SizeId = new SelectList(_context.Sizes, "SizeId", "Scale");
       ViewBag.ColorId = new SelectList(_context.Colors, "ColorId", "ColorName");
       return View();
@@ -61,10 +96,10 @@ namespace MiniCar_Model.Areas.Admin.Controllers
     {
       if (!ModelState.IsValid)
       {
-        ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "CategoryName");
-        ViewBag.SupplierId = new SelectList(_context.Suppliers, "SupplierId", "SupplierName");
-        ViewBag.TrademarkId = new SelectList(_context.Trademarks, "TrademarkId", "TrademarkName");
-        ViewBag.PromotionId = new SelectList(_context.Promotions, "PromotionId", "PromotionName");
+        ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "NameCategory");
+        ViewBag.SupplierId = new SelectList(_context.Suppliers, "SupplierId", "NameSupplier");
+        ViewBag.TrademarkId = new SelectList(_context.Trademarks, "TrademarkId", "NameTrademark");
+        ViewBag.PromotionId = new SelectList(_context.Promotions, "PromotionId", "DiscountValue");
         ViewBag.SizeId = new SelectList(_context.Sizes, "SizeId", "Scale");
         ViewBag.ColorId = new SelectList(_context.Colors, "ColorId", "ColorName");
         return View(vm);
@@ -144,103 +179,147 @@ namespace MiniCar_Model.Areas.Admin.Controllers
       }
     }
     //------
-    //------Tri Trong Trang
-    //Tim kiem san pham theo ten
-    //public async Task<IActionResult> Search(string nameproduct)
-    //{
-    //    var query = _context.Products.AsQueryable();
 
-    //    if (!string.IsNullOrEmpty(nameproduct)) 
-    //    {
-    //        query = query.Where(p => p.Name.Contains(nameproduct));
-    //    }
-    //    ViewBag.Name = nameproduct;
-    //    var result = await query.ToListAsync();
-    //    return View(result);
-    //}
-    //------
 
     //------Tri Trong Trang
-    //[HttpGet]
-    //public async Task<IActionResult> Edit(int id)
-    //{
-    //    var product = await _context.Products.FindAsync(id);
+    [HttpGet]
+    public async Task<IActionResult> Edit(int id)
+    {
+      var product = await _context.Products
+        .Include(p => p.ProductVariants)
+            .ThenInclude(v => v.ProductImages)
+        .FirstOrDefaultAsync(x => x.ProductId == id);
 
-    //    if (product == null)
-    //    {
-    //        return NotFound();
-    //    }
-    //    return View(product);
-    //}
+      if (product == null)
+        return NotFound();
 
-    //[HttpPost]
-    //public async Task<IActionResult> Edit(Product model, int id, List<IFormFile> Images)
-    //{
-    //    var product = _context.Products.Find(id);
+      // Lấy 1 biến thể mặc định (hoặc bạn tự chọn)
+      var variant = product.ProductVariants.FirstOrDefault();
 
-    //    if (product == null)
-    //    {
-    //        return NotFound();
-    //    }
+      var vm = new ProductEditVM
+      {
+        ProductId = product.ProductId,
+        NameProduct = product.NameProduct,
+        Price = variant?.Price ?? 0,
+        Quantity = variant?.Quantity ?? 0,
+        Descriptions = product.Descriptions,
+        StatusProduct = product.StatusProduct ?? "Active",
 
-    //    product.Id = model.id;
-    //    product.Name = model.Name;
-    //    product.Price = model.Price;
-    //    product.Size = model.Size;
-    //    product.Color = model.Color;
-    //    product.Status = model.Status;
-    //    product.CategoryId = model.CategoryId;
+        CategoryId = product.CategoryId,
+        TrademarkId = product.TrademarkId,
+        SupplierId = product.SupplierId,
+        PromotionId = product.PromotionId,
 
-    //    if (Images != null && Images.Count > 0)
-    //    {
-    //        var savePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+        SizeId = variant?.SizeId ?? 0,
+        ColorId = variant?.ColorId ?? 0,
 
-    //        if (!Directory.Exists(savePath))
-    //        {
-    //            Directory.CreateDirectory(savePath);
-    //        }
+        OldImages = variant?.ProductImages?
+                      .Select(x => "/uploads/" + x.UrlImage)
+                      .ToList()
+            ?? new List<string>()
+      };
 
-    //        var filenames = new List<string>();
+      // Load dropdown
+        ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "NameCategory");
+        ViewBag.SupplierId = new SelectList(_context.Suppliers, "SupplierId", "NameSupplier");
+        ViewBag.TrademarkId = new SelectList(_context.Trademarks, "TrademarkId", "NameTrademark");
+        ViewBag.PromotionId = new SelectList(_context.Promotions, "PromotionId", "DiscountValue");
+        ViewBag.SizeId = new SelectList(_context.Sizes, "SizeId", "Scale");
+        ViewBag.ColorId = new SelectList(_context.Colors, "ColorId", "ColorName");
 
-    //        foreach (var file in Images)
-    //        {
-    //            var filename = Path.GetRandomFileName() + Path.GetExtension(file.FileName);
-    //            var path = Path.Combine(savePath, filename);
+      return View(vm);
+    }
 
-    //            using (var stream = new FileStream(path, FileMode.Create))
-    //            {
-    //                await file.CopyToAsync(stream);
-    //            }
+    [HttpPost]
+    public async Task<IActionResult> Edit(ProductEditVM model)
+    {
+      var product = await _context.Products
+        .Include(p => p.ProductVariants)
+            .ThenInclude(v => v.ProductImages)
+        .FirstOrDefaultAsync(x => x.ProductId == model.ProductId);
 
-    //            product.ImagePaths = string.Join(";", filenames);
+      if (product == null)
+        return NotFound();
 
-    //        }
-    //    }
+      // Update Product
+      product.NameProduct = model.NameProduct;
+      product.Descriptions = model.Descriptions;
+      product.CategoryId = model.CategoryId;
+      product.TrademarkId = model.TrademarkId;
+      product.SupplierId = model.SupplierId;
+      product.PromotionId = model.PromotionId;
+      product.StatusProduct = model.StatusProduct;
+      product.UpdateAt = DateTime.Now;
 
-    //    await _context.SaveChangesAsync();
-    //    return RedirectToAction("Index");
-    //}
+      // Update Variant
+      var variant = product.ProductVariants.FirstOrDefault();
+      if (variant != null)
+      {
+        variant.Price = model.Price;
+        variant.Quantity = model.Quantity;
+        variant.SizeId = model.SizeId;
+        variant.ColorId = model.ColorId;
+        variant.StatusVariant = model.StatusProduct;
+      }
+
+      // Upload ảnh mới
+      if (model.Images != null && model.Images.Count > 0)
+      {
+        var savePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/uploads");
+        if (!Directory.Exists(savePath))
+          Directory.CreateDirectory(savePath);
+
+        foreach (var file in model.Images)
+        {
+          var filename = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+          var path = Path.Combine(savePath, filename);
+
+          using (var stream = new FileStream(path, FileMode.Create))
+          {
+            await file.CopyToAsync(stream);
+          }
+
+          // Lưu ProductImage mới
+          product.ProductVariants.First().ProductImages.Add(new ProductImage
+          {
+            UrlImage = filename,
+            IsMain = false,
+            CreateAt = DateTime.Now
+          });
+        }
+      }
+
+      await _context.SaveChangesAsync();
+      return RedirectToAction("Index");
+    }
     //------
 
     //------Tri Trong Trang
     //Tao chuc nang xoa san pham (cap nhat trang thai)
-    //[HttpPost]
-    //public async IActionResult Delete(int id)
-    //{
-    //    var product = _context.Products.FirstOrDefault(x => x.Id == id);
+    [HttpPost]
+    public async Task<IActionResult> Delete(int id)
+    {
+      var variant = await _context.ProductVariants.FindAsync(id);
+      if (variant == null)
+        return NotFound();
 
-    //    if (product == null)
-    //    {
-    //        return NotFound();
-    //    }
+      variant.StatusVariant = "INACTIVE";
 
-    //    product.Status = "Inactive";
+      bool stillActiveVariants = await _context.ProductVariants
+                                        .AnyAsync(x => x.ProductId == variant.ProductId && x.StatusVariant == "ACTIVE");
 
-    //    await _context.SaveChanges();
+      if (!stillActiveVariants)
+      {
+        var product = await _context.Products.FindAsync(variant.ProductId);
+        if (product != null)
+        {
+          product.StatusProduct = "INACTIVE";
+        }
+      }
 
-    //    TempData["success"] = "Đã xóa sản phẩm";
-    //    return RedirectToAction(nameof(Index));
-    //}
+      await _context.SaveChangesAsync();
+      return RedirectToAction(nameof(Index));
+    }
     //------
   }
 

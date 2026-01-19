@@ -27,8 +27,6 @@ public partial class Trademark
     [StringLength(100)]
     public string? Country { get; set; }
 
-    [StringLength(255)]
-    public string? Logo { get; set; }
 
     [Column("Created_At", TypeName = "datetime")]
     public DateTime? CreatedAt { get; set; }

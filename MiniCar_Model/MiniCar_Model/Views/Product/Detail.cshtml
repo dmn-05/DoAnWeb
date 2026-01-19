@@ -46,7 +46,14 @@
 					<h2 id="price">@Model.Price.ToString("N0") đ</h2>
 					<ul class="list">
 						<li><a class="active" href="#"><span>Phân loại</span> : @Model.Product.Category.NameCategory</a></li>
-						<li><a href="#"><span>Tình trạng </span> : @(Model.Quanlity > 0 ? "Còn hàng" : "Hết hàng")</a></li>
+						<li>
+							<a>
+								<span>Tình trạng</span> :
+								<span id="stock-status">
+									@(Model.Quanlity > 0 ? "Còn hàng" : "Hết hàng")
+								</span>
+							</a>
+						</li>
 					</ul>
 					<p>
 						@Model.Product.Descriptions
@@ -55,12 +62,24 @@
 						<div class="pb-2"><label>Size:</label> </div>
 						<div class="default-select pb-2" id="default-select1">
 
-							<select id="variantSeclect">
+							<select id="variantSelect">
 								@foreach (var v in Model.Variants)
 								{
-									<option value="@v.VariantId" data-price="@v.Price" data-qty="@v.Quantity">
+									<option value="@v.VariantId"
+													data-price="@v.Price"
+													data-qty="@v.Quantity">
 										@v.Size.Scale
 									</option>
+								}
+							</select>
+						</div>
+
+						<div class="pb-2"><label>Màu:</label> </div>
+						<div class="default-select pb-2" id="select-color">
+							<select id="colorSelect">
+								@foreach (var v in Model.Variants)
+								{
+									<option value="@v.ColorId">@v.Color.ColorName</option>
 								}
 							</select>
 						</div>
@@ -194,7 +213,7 @@
 								<div class="rating_list">
 									<h3>Dựa trên @Model.Comments.Count đánh giá</h3>
 									<ul class="list">
-										@for (int i = 5; i > 1; i--)
+										@for (int i = 5; i >= 1; i--)
 										{
 											var count = ratingGroups.ContainsKey(i) ? ratingGroups[i] : 0;
 
@@ -216,7 +235,7 @@
 						<div class="review_list">
 							@if (!Model.Comments.Any())
 							{
-								<p>Chưa có bình luận nào</p>
+								<p class="text-center">Chưa có bình luận nào</p>
 							}
 							else
 							{
@@ -228,7 +247,7 @@
 												<img src="~/img/product/default-user.png" alt="" style="width:50px; height:50px;">
 											</div>
 											<div class="media-body">
-												<h4>@c.Account.UserName</h4>
+												<h4>@c.Account?.UserName ?? "Ẩn danh"</h4>
 
 												@for (int i = 1; i <= 5; i++)
 												{
@@ -254,140 +273,58 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-6 text-center">
 				<div class="section-title">
-					<h1>Giảm giá trong tuần</h1>
+					<h1>Danh sách sản phẩm liên quan</h1>
 				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-lg-9">
-				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/SportShoe/sp2.png" alt=""></a>
-							<div class="desc">
-								<a href="../SportShoe/single-product-sp2.html" class="title">Giày Thể Thao Nam Trung Cấp Biti's DSM074400XNH (Xanh Nhớt)</a>
-								<div class="price">
-									<h6>189.000đ</h6>
-									<h6 class="l-through">210.000đ</h6>
+
+		@if (Model.RelatedProducts.Any())
+		{
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="row">
+						@foreach (var p in Model.RelatedProducts)
+						{
+							var img = p.ProductVariants.SelectMany(v => v.ProductImages)
+							.FirstOrDefault()?.UrlImage ?? "/img/no-image.png";
+
+							<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+								<div class="single-related-product d-flex">
+									<a href="/Product/Detail/@p.ProductId">
+										<img src="@img" alt="" style="height:100px; width:auto;">
+									</a>
+									<div class="desc">
+										<a href="/Product/Detail/@p.ProductId" class="title">@p.NameProduct</a>
+										<div class="price">
+											<h6>@string.Format("{0:N0} đ", p.ProductVariants.Min(v => v.Price))</h6>
+										</div>
+									</div>
 								</div>
 							</div>
-						</div>
+						}
 					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/SportShoe/sp1.png" alt=""></a>
-							<div class="desc">
-								<a href="../SportShoe/single-product-sp1.html" class="title">Giày Thể Thao Nam Trung Cấp Biti's DSM074400DEN (Đen)</a>
-								<div class="price">
-									<h6>359.100đ</h6>
-									<h6 class="l-through">378.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/SportShoe/sp3.png" alt=""></a>
-							<div class="desc">
-								<a href="../SportShoe/single-product-sp3.html" class="title">Giày Thể Thao Nam Biti's DSM074500DEN (Đen)</a>
-								<div class="price">
-									<h6>340.100đ</h6>
-									<h6 class="l-through">358.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b12.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b12.html" class="title">Nam Giày ống Chelsea Suedette Mặc vào</a>
-								<div class="price">
-									<h6>440.000đ</h6>
-									<h6 class="l-through">550.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b11.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b11.html" class="title">Giày Boot Nam Màu Cát IQI GN385</a>
-								<div class="price">
-									<h6>440.000đ</h6>
-									<h6 class="l-through">810.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b10.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b10.html" class="title">Giày Boot Nam Màu Đen IQI GN386</a>
-								<div class="price">
-									<h6>440.000đ</h6>
-									<h6 class="l-through">510.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b8.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b8.html" class="title">Giày Boot Nam - Chelsea Boots Nam RIO GN390</a>
-								<div class="price">
-									<h6>440.000đ</h6>
-									<h6 class="l-through">900.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b5.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b5.html" class="title">Nam Giày ống Tây Combat Suedette Mặt trước thắt dây</a>
-								<div class="price">
-									<h6>189.000đ</h6>
-									<h6 class="l-through">210.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href=""><img src="../../../img/product/Nam/Boots/b2.1.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b2.html" class="title">Giày boot nam màu trơn Không có dây kéo</a>
-								<div class="price">
-									<h6>806.000đ</h6>
-									<h6 class="l-through">900.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
+
 				</div>
 			</div>
-			<div class="col-lg-3">
-				<div class="ctg-right">
-					<a href="#" target="_blank">
-						<img class="img-fluid d-block mx-auto" src="../../../img/categories/c5.jpg" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
+		}
+		else
+		{
+			<p class="text-center">Không có sản phẩm liên quan</p>
+		}
 	</div>
 </section>
 <!-- End related-product Area -->
 <script>
 	document.getElementById("variantSelect").addEventListener("change", function () {
-		let opt = this.selectedOptions[0];
+			let opt = this.selectedOptions[0];
+			let price = opt.getAttribute("data-price");
+			let qty = opt.getAttribute("data-qty");
 
-		let price = opt.getAttribute("data-price");
-		document.getElementById("price").innerText =
-			Number(price).toLocaleString() + " đ";
+			document.getElementById("price").innerText =
+					Number(price).toLocaleString() + " đ";
+
+			let status = Number(qty) > 0 ? "Còn hàng" : "Hết hàng";
+			document.getElementById("stock-status").innerText = status;
 	});
 </script>
+

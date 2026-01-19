@@ -95,7 +95,12 @@
 												<a asp-area="Admin" asp-controller="Product" asp-action="Edit" asp-route-id="@v.VariantId" class="btn btn-primary btn-xs">
 													<i class="fa fa-pencil"></i> Sửa
 												</a>
-												<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
+												<form asp-action="Delete" asp-route-id="@v.VariantId" method="post" style="display:inline;">
+													<button class="btn btn-danger btn-xs" onclick="return confirm('Bạn có chắc muốn xóa không?')">
+														<i class="fa fa-trash-o"></i> Xóa
+													</button>
+												</form>
+
 											</td>
 										</tr>
 
@@ -112,23 +117,42 @@
 				<div class="text-center" style="margin-top: 20px;">
 					<ul class="pagination">
 
-						<!-- Trang trước -->
 						<li class="page-item @(currentPage <= 1 ? "disabled" : "")">
-							<a class="page-link" href="@Url.Action("Index", new { page = currentPage - 1 })">«</a>
+							@if (currentPage > 1)
+							{
+								<a class="page-link" href="@Url.Action("Index", new { page = currentPage - 1, search = ViewBag.Search })">«</a>
+							}
+							else
+							{
+								<span class="page-link">«</span>
+							}
 						</li>
 
-						<!-- Các số trang -->
 						@for (int i = 1; i <= totalPages; i++)
 						{
 							<li class="page-item @(i == currentPage ? "active" : "")">
-								<a class="page-link" href="@Url.Action("Index", new { page = i })">@i</a>
+								@if (i == currentPage)
+								{
+									<span class="page-link">@i</span>
+								}
+								else
+								{
+									<a class="page-link" href="@Url.Action("Index", new { page = i, search = ViewBag.Search })">@i</a>
+								}
 							</li>
 						}
 
-						<!-- Trang sau -->
-						<li class="page-item @(currentPage == totalPages ? "disabled" : "")">
-							<a class="page-link" href="@Url.Action("Index", new { page = currentPage + 1 })">»</a>
+						<li class="page-item @(currentPage >= totalPages ? "disabled" : "")">
+							@if (currentPage < totalPages)
+							{
+								<a class="page-link" href="@Url.Action("Index", new { page = currentPage + 1, search = ViewBag.Search })">»</a>
+							}
+							else
+							{
+								<span class="page-link">»</span>
+							}
 						</li>
+
 
 					</ul>
 				</div>

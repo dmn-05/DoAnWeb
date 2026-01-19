@@ -10,5 +10,7 @@
     public int Quanlity { get; set; }
     public List<Comment> Comments { get; set; }
     public double AvgRating { get; set; }
+
+    public List<Product> RelatedProducts { get; set; }
   }
 }

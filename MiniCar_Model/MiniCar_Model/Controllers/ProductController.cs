@@ -32,48 +32,48 @@ namespace MiniCar_Model.Controllers {
 
     // GET: /Product/Detail/:id
     [HttpGet]
-    public async Task<IActionResult> Detail(int id) {
+    public async Task<IActionResult> Detail(int id)
+    {
+      var vm = await _context.Products
+          .Where(p => p.ProductId == id)
+          .Include(p => p.Category)
+          .Include(p => p.ProductVariants)
+              .ThenInclude(v => v.Size)
+          .Include(p => p.ProductVariants)
+              .ThenInclude(v => v.Color)
+          .Include(p => p.ProductVariants)
+              .ThenInclude(v => v.ProductImages)
+          .Include(p => p.ProductVariants)
+              .ThenInclude(v => v.Comments)
+                  .ThenInclude(c => c.Account)
+          .Select(p => new ProductDetailVM
+          {
+            Product = p,
+            Variants = p.ProductVariants.ToList(),
+            Images = p.ProductVariants.SelectMany(v => v.ProductImages).ToList(),
+            Comments = p.ProductVariants.SelectMany(v => v.Comments).ToList(),
+          })
+          .FirstOrDefaultAsync();
 
-      var product = await _context.Products
-                      .Include(x => x.Category)
-                      .FirstOrDefaultAsync(x => x.ProductId == id);
-
-      if (product == null)
-      {
+      if (vm == null)
         return NotFound();
-      }
 
-      var variants = await _context.ProductVariants
-                      .Where(v => v.ProductId == id)
-                      .Include(v => v.Size)
-                      .Include(v => v.Color)
-                      .Include(v => v.ProductImages)
-                      .Include(v => v.Comments)
-                      .ToListAsync();
+      var first = vm.Variants.FirstOrDefault();
+      vm.SelectedVariantId = first?.VariantId ?? 0;
+      vm.Price = first?.Price ?? 0;
+      vm.Quanlity = first?.Quantity ?? 0;
+      vm.AvgRating = vm.Comments.Any() ? vm.Comments.Average(c => c.Rating).GetValueOrDefault() : 0;
 
-      var images = variants.SelectMany(v => v.ProductImages).ToList();
-
-      var comments = variants.SelectMany(v => v.Comments).OrderByDescending(c => c.CreateAt).ToList();
-
-      var avgRating = comments.Any() ? comments.Average(c => c.Rating).GetValueOrDefault() : 0;
-
-      var firstvariant = variants.FirstOrDefault();
-
-
-      var vm = new ProductDetailVM
-      {
-        Product = product,
-        Variants = variants,
-        Images = images,
-        SelectedVariantId = firstvariant?.VariantId ?? 0,
-        Price = firstvariant?.Price ?? 0,
-        Quanlity = firstvariant?.Quantity ?? 0,
-        Comments = comments,
-        AvgRating = avgRating
-      };
-
+      vm.RelatedProducts = await _context.Products
+        .Where(p => p.CategoryId == vm.Product.CategoryId && p.ProductId != id && p.ProductVariants.Any())
+        .Include(p => p.ProductVariants)
+            .ThenInclude(v => v.ProductImages)
+        .OrderByDescending(p => p.ProductId)
+        .Take(9)
+        .ToListAsync();
 
       return View(vm);
     }
+
   }
 }
