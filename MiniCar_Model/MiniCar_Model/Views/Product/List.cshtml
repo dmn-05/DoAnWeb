@@ -36,45 +36,31 @@
 				<div class="top-filter-head">Bộ lọc</div>
 				<div class="common-filter">
 					<div class="head">Thương hiệu</div>
-					<form action="#">
+					<div class="common-filter">
 						<ul>
 							@foreach (var item in Model.Trademarks) {
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="@item.TrademarkId" name="brand"><label for="@item.TrademarkId">@item.NameTrademark</label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="brand-@item.TrademarkId" value="@item.TrademarkId" name="brand"><label for="brand-@item.TrademarkId">@item.NameTrademark</label></li>
 							}
 						</ul>
-					</form>
+					</div>
 				</div>
 				<div class="common-filter">
 					<div class="head">Kích thước</div>
-					<form action="#">
+					<div class="common-filter">
 						<ul>
 							@foreach (var item in Model.Sizes) {
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="@item.SizeId" name="size"><label for="@item.SizeId">@item.Scale</label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="size-@item.SizeId" value="@item.SizeId" name="size"><label for="size-@item.SizeId">@item.Scale</label></li>
 							}
 						</ul>
-					</form>
+					</div>
 				</div>
 				<div class="common-filter">
 					<div class="head">Màu sắc</div>
-					<form action="#">
-						<ul>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Đen<span>(29)</span></label></li>
-							<li class="filter-list">
-								<input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">
-									Trắng
-									<span>(29)</span>
-								</label>
-							</li>
-							<li class="filter-list">
-								<input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">
-									Đen-trắng
-									<span>(19)</span>
-								</label>
-							</li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">Đen-đỏ<span>(19)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Vàng<span>(19)</span></label></li>
-						</ul>
-					</form>
+					<ul>
+						@foreach (var item in Model.Colors) {
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="color-@item.ColorId" value="@item.ColorId" name="color"><label for="color-@item.ColorId">@item.ColorName</label></li>
+						}
+					</ul>
 				</div>
 				<div class="common-filter">
 					<div class="head">Giá</div>
@@ -109,37 +95,8 @@
 			<!-- End Filter Bar -->
 			<!-- Start Best Seller -->
 			<section class="lattest-product-area pb-40 category-list">
-				<div class="row">
-					@foreach (var item in Model.Products) {
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
-								<div class="product-details">
-									<a href="single-product-b1.html"><h6>@item.NameProduct</h6></a>
-									<div class="price">
-										<h6>550.000đ</h6>
-									</div>
-									<div class="prd-bottom">
-
-										<a href="" class="social-info add-to-cart"
-											 data-name="@item.NameProduct" data-price="550">
-											<span class="ti-bag"></span>
-											<p class="hover-text">thêm vào giỏ</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Yêu thích</p>
-										</a>
-
-										<a href="" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">Xem thêm</p>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					}
+				<div id="product-list" class="row">
+					@await Html.PartialAsync("_ProductListPartial", Model.Products)
 				</div>
 			</section>
 			<!-- End Best Seller -->
@@ -147,67 +104,69 @@
 
 			<div class="filter-bar d-flex flex-wrap align-items-center">
 				<div class="text-center mt-2">
-					<div class="btn-group">
-
-						<!-- Previous -->
-						<a class="btn btn-default btn-sm bg-white @(currentPage == 1 ? "disabled" : "")"
-							 asp-controller="Product"
-							 asp-action="List"
-							 asp-route-page="@(currentPage - 1)">
-							«
-						</a>
-
-						<!-- Trang 1 -->
-						@if (startPage > 1) {
-							<a class="btn btn-default btn-sm bg-white"
+					<div id="pagination-wrapper">
+						<div class="btn-group">
+							<!-- Previous -->
+							<a class="btn btn-default btn-sm bg-white @(currentPage == 1 ? "disabled" : "")"
 								 asp-controller="Product"
 								 asp-action="List"
-								 asp-route-page="1">
-								1
+								 asp-route-page="@(currentPage - 1)">
+								«
 							</a>
 
-							@if (startPage > 2) {
-								<span class="btn btn-default btn-sm bg-white disabled">...</span>
-							}
-						}
-
-						<!-- Các trang giữa -->
-						@for (int i = startPage; i <= endPage; i++) {
-							if (i == currentPage) {
-								<span class="btn btn-primary btn-sm bg-primary">@i</span>
-							} else {
+							<!-- Trang 1 -->
+							@if (startPage > 1) {
 								<a class="btn btn-default btn-sm bg-white"
 									 asp-controller="Product"
 									 asp-action="List"
-									 asp-route-page="@i">
-									@i
+									 asp-route-page="1">
+									1
+								</a>
+
+								@if (startPage > 2) {
+									<span class="btn btn-default btn-sm bg-white disabled">...</span>
+								}
+							}
+
+							<!-- Các trang giữa -->
+							@for (int i = startPage; i <= endPage; i++) {
+								if (i == currentPage) {
+									<span class="btn btn-primary btn-sm bg-primary">@i</span>
+								} else {
+									<a class="btn btn-default btn-sm bg-white"
+										 asp-controller="Product"
+										 asp-action="List"
+										 asp-route-page="@i">
+										@i
+									</a>
+								}
+							}
+
+							<!-- Trang cuối -->
+							@if (endPage < totalPages) {
+								@if (endPage < totalPages - 1) {
+									<span class="btn btn-default btn-sm bg-white disabled">...</span>
+								}
+
+								<a class="btn btn-default btn-sm bg-white"
+									 asp-controller="Product"
+									 asp-action="List"
+									 asp-route-page="@totalPages">
+									@totalPages
 								</a>
 							}
-						}
 
-						<!-- Trang cuối -->
-						@if (endPage < totalPages) {
-							@if (endPage < totalPages - 1) {
-								<span class="btn btn-default btn-sm bg-white disabled">...</span>
-							}
-
-							<a class="btn btn-default btn-sm bg-white"
+							<!-- Next -->
+							<a class="btn btn-default btn-sm bg-white @(currentPage == totalPages ? "disabled" : "")"
 								 asp-controller="Product"
 								 asp-action="List"
-								 asp-route-page="@totalPages">
-								@totalPages
+								 asp-route-page="@(currentPage + 1)">
+								»
 							</a>
-						}
 
-						<!-- Next -->
-						<a class="btn btn-default btn-sm bg-white @(currentPage == totalPages ? "disabled" : "")"
-							 asp-controller="Product"
-							 asp-action="Index"
-							 asp-route-page="@(currentPage + 1)">
-							»
-						</a>
-
+						</div>
 					</div>
+
 				</div>
 			</div>
 

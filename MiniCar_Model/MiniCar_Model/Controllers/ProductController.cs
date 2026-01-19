@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MiniCar_Model.Models;
 using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models.ViewModels;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace MiniCar_Model.Controllers {
   public class ProductController : Controller {
@@ -17,28 +18,49 @@ namespace MiniCar_Model.Controllers {
     [HttpGet]
     public async Task<IActionResult> List(int page = 1) {
       int pageSize = 9;
+
       var totalProducts = await _context.Products.CountAsync();
 
-      var products = await _context.Products
-        .OrderBy(p => p.ProductId)
-        .Skip((page - 1) * pageSize)
-        .Take(pageSize)
-        .ToListAsync();
+      var productCards = await _context.Products
+          .OrderBy(p => p.ProductId)
+          .Skip((page - 1) * pageSize)
+          .Take(pageSize)
+          .Select(p => new ProductCardVM {
+            ProductId = p.ProductId,
+            NameProduct = p.NameProduct,
 
-      var sizes = await _context.Sizes.ToListAsync();
+            VariantId = p.ProductVariants
+                  .OrderBy(v => v.VariantId)
+                  .Select(v => v.VariantId)
+                  .FirstOrDefault(),
 
-      var trademarks = await _context.Trademarks.ToListAsync();
+            Price = p.ProductVariants
+                  .OrderBy(v => v.VariantId)
+                  .Select(v => v.Price)
+                  .FirstOrDefault(),
 
-      var model = new ProductFilterVM { 
-        Products = products,
-        Sizes = sizes,
-        Trademarks = trademarks 
+            ImageUrl = p.ProductVariants
+                  .SelectMany(v => v.ProductImages)
+                  .OrderByDescending(i => i.IsMain)
+                  .Select(i => i.UrlImage)
+                  .FirstOrDefault()
+          })
+          .ToListAsync();
+
+      var model = new ProductFilterVM {
+        Products = productCards,
+        Sizes = await _context.Sizes.ToListAsync(),
+        Colors = await _context.Colors.ToListAsync(),
+        Trademarks = await _context.Trademarks.ToListAsync()
       };
 
       ViewBag.CurrentPage = page;
       ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+
       return View(model);
     }
+
+
 
     // GET: /Product/Detail/:id
     [HttpGet]
@@ -46,54 +68,80 @@ namespace MiniCar_Model.Controllers {
       return View();
     }
 
-    public IActionResult Search(ProductSearchVM vm) {
-
-      var query = _context.ProductVariants
-          .Include(v => v.Product)
-              .ThenInclude(p => p.Category)
-          .Include(v => v.Size)
-          .Include(v => v.Color)
+    [HttpGet]
+    public async Task<IActionResult> Filter(
+    string keyword,
+    int? trademarkId,
+    int? sizeId,
+    int? colorId,
+    decimal? minPrice,
+    decimal? maxPrice,
+    int? page
+) {
+      var query = _context.Products
+          .Include(p => p.ProductVariants)
+              .ThenInclude(v => v.ProductImages)
           .AsQueryable();
 
-      // 🔎 Tìm theo từ khoá (Tên + mô tả Product)
-      if (!string.IsNullOrEmpty(vm.Keyword)) {
-        query = query.Where(v =>
-            v.Product.NameProduct.Contains(vm.Keyword) ||
-            v.Product.Descriptions.Contains(vm.Keyword)
-        );
+      // 1. Lọc theo các thuộc tính của Product
+      if (!string.IsNullOrWhiteSpace(keyword)) {
+        query = query.Where(p => p.NameProduct.Contains(keyword));
       }
 
-      // 📂 Theo danh mục
-      if (vm.CategoryId.HasValue) {
-        query = query.Where(v =>
-            v.Product.CategoryId == vm.CategoryId
-        );
+      if (trademarkId.HasValue) {
+        query = query.Where(p => p.TrademarkId == trademarkId);
       }
 
-      // 💰 Giá từ
-      if (vm.MinPrice.HasValue) {
-        query = query.Where(v => v.Price >= vm.MinPrice);
+      // 2. Lọc theo các thuộc tính của Variant (nếu có chọn lọc)
+      if (sizeId.HasValue || colorId.HasValue || minPrice.HasValue || maxPrice.HasValue) {
+        query = query.Where(p => p.ProductVariants.Any(v =>
+            (!sizeId.HasValue || v.SizeId == sizeId) &&
+            (!colorId.HasValue || v.ColorId == colorId) &&
+            (!minPrice.HasValue || v.Price >= minPrice) &&
+            (!maxPrice.HasValue || v.Price <= maxPrice)
+        ));
       }
 
-      // 💰 Giá đến
-      if (vm.MaxPrice.HasValue) {
-        query = query.Where(v => v.Price <= vm.MaxPrice);
-      }
+      // 3. Projection dữ liệu ra ViewModel
+      var productCards = await query
+          .Select(p => new ProductCardVM {
+            ProductId = p.ProductId,
+            NameProduct = p.NameProduct,
 
-      // Chỉ lấy variant đang active
-      query = query.Where(v =>
-          v.StatusVariant == "ACTIVE" &&
-          v.Product.StatusProduct == "ACTIVE"
-      );
+            // Lấy Variant thỏa mãn bộ lọc, nếu không lọc thì lấy cái đầu tiên
+            // Sử dụng Let hoặc Sub-query an toàn hơn
+            Price = p.ProductVariants
+                  .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+                              (!colorId.HasValue || v.ColorId == colorId) &&
+                              (!minPrice.HasValue || v.Price >= minPrice) &&
+                              (!maxPrice.HasValue || v.Price <= maxPrice))
+                  .OrderBy(v => v.Price)
+                  .Select(v => v.Price)
+                  .FirstOrDefault(),
 
-      vm.Results = query.ToList();
+            VariantId = p.ProductVariants
+                  .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+                              (!colorId.HasValue || v.ColorId == colorId) &&
+                              (!minPrice.HasValue || v.Price >= minPrice) &&
+                              (!maxPrice.HasValue || v.Price <= maxPrice))
+                  .OrderBy(v => v.Price)
+                  .Select(v => v.VariantId)
+                  .FirstOrDefault(),
 
-      ViewBag.Categories = _context.Categories
-          .Where(c => c.StatusCategory == "ACTIVE")
-          .ToList();
+            ImageUrl = p.ProductVariants
+                  .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+                              (!colorId.HasValue || v.ColorId == colorId) &&
+                              (!minPrice.HasValue || v.Price >= minPrice) &&
+                              (!maxPrice.HasValue || v.Price <= maxPrice))
+                  .SelectMany(v => v.ProductImages)
+                  .OrderByDescending(i => i.IsMain)
+                  .Select(i => i.UrlImage)
+                  .FirstOrDefault()
+          })
+          .ToListAsync();
 
-      return View(vm);
+      return PartialView("_ProductListPartial", productCards);
     }
-
   }
+
 }

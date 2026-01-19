@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "pyaKtNTZayk7TBdJoqAsftdwwLqoSHGHkL+EE8a1iAg=",
+  "Hash": "bVa7R55Zod05Lpcxi/17T0g9rsgNWv5XJxuR+5x3ZQE=",
   "Source": "MiniCar_Model",
   "BasePath": "_content/MiniCar_Model",
   "Mode": "Default",
@@ -4714,8 +4714,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "uxj93bq8jz",
-      "Integrity": "MlzRrveZVkwg/GWmK2zs5k/bYiJtFh7CFMCe7RzpwRA=",
+      "Fingerprint": "vofmouf9nv",
+      "Integrity": "73jbq99mrV4u8mv8WFeyfaC+qIdZpFvNiSbwx7eNgro=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\main.css"
@@ -8830,8 +8830,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "uwaef6rs21",
-      "Integrity": "Qtp5wp9KStTp7/D0ZSahWb1sNd7wGHStVHjwjpOPH5E=",
+      "Fingerprint": "rke4vyx6th",
+      "Integrity": "NQahe43ZuirdRCOpdVbatEY9jvbv2b4+CieSQitW8pw=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\main.js"
@@ -28654,7 +28654,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "185308"
+          "Value": "185385"
         },
         {
           "Name": "Content-Type",
@@ -28662,11 +28662,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MlzRrveZVkwg/GWmK2zs5k/bYiJtFh7CFMCe7RzpwRA=\""
+          "Value": "\"73jbq99mrV4u8mv8WFeyfaC+qIdZpFvNiSbwx7eNgro=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 16 Jan 2026 18:22:19 GMT"
+          "Value": "Mon, 19 Jan 2026 19:00:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28676,7 +28676,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-MlzRrveZVkwg/GWmK2zs5k/bYiJtFh7CFMCe7RzpwRA="
+          "Value": "sha256-73jbq99mrV4u8mv8WFeyfaC+qIdZpFvNiSbwx7eNgro="
         }
       ]
     },
@@ -28800,7 +28800,7 @@
       ]
     },
     {
-      "Route": "css/main.uxj93bq8jz.css",
+      "Route": "css/main.vofmouf9nv.css",
       "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.css",
       "Selectors": [],
       "ResponseHeaders": [
@@ -28810,7 +28810,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "185308"
+          "Value": "185385"
         },
         {
           "Name": "Content-Type",
@@ -28818,11 +28818,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"MlzRrveZVkwg/GWmK2zs5k/bYiJtFh7CFMCe7RzpwRA=\""
+          "Value": "\"73jbq99mrV4u8mv8WFeyfaC+qIdZpFvNiSbwx7eNgro=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 16 Jan 2026 18:22:19 GMT"
+          "Value": "Mon, 19 Jan 2026 19:00:53 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -28832,7 +28832,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "uxj93bq8jz"
+          "Value": "vofmouf9nv"
         },
         {
           "Name": "label",
@@ -28840,7 +28840,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-MlzRrveZVkwg/GWmK2zs5k/bYiJtFh7CFMCe7RzpwRA="
+          "Value": "sha256-73jbq99mrV4u8mv8WFeyfaC+qIdZpFvNiSbwx7eNgro="
         }
       ]
     },
@@ -44681,7 +44681,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "33192"
+          "Value": "28099"
         },
         {
           "Name": "Content-Type",
@@ -44689,11 +44689,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Qtp5wp9KStTp7/D0ZSahWb1sNd7wGHStVHjwjpOPH5E=\""
+          "Value": "\"NQahe43ZuirdRCOpdVbatEY9jvbv2b4+CieSQitW8pw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 Jan 2026 02:45:40 GMT"
+          "Value": "Mon, 19 Jan 2026 19:44:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44703,12 +44703,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Qtp5wp9KStTp7/D0ZSahWb1sNd7wGHStVHjwjpOPH5E="
+          "Value": "sha256-NQahe43ZuirdRCOpdVbatEY9jvbv2b4+CieSQitW8pw="
         }
       ]
     },
     {
-      "Route": "js/main.uwaef6rs21.js",
+      "Route": "js/main.rke4vyx6th.js",
       "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\main.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -44718,7 +44718,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "33192"
+          "Value": "28099"
         },
         {
           "Name": "Content-Type",
@@ -44726,11 +44726,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"Qtp5wp9KStTp7/D0ZSahWb1sNd7wGHStVHjwjpOPH5E=\""
+          "Value": "\"NQahe43ZuirdRCOpdVbatEY9jvbv2b4+CieSQitW8pw=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Thu, 08 Jan 2026 02:45:40 GMT"
+          "Value": "Mon, 19 Jan 2026 19:44:48 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -44740,7 +44740,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "uwaef6rs21"
+          "Value": "rke4vyx6th"
         },
         {
           "Name": "label",
@@ -44748,7 +44748,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Qtp5wp9KStTp7/D0ZSahWb1sNd7wGHStVHjwjpOPH5E="
+          "Value": "sha256-NQahe43ZuirdRCOpdVbatEY9jvbv2b4+CieSQitW8pw="
         }
       ]
     },
