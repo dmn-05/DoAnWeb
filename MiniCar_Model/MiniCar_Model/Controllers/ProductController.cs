@@ -40,10 +40,12 @@ namespace MiniCar_Model.Controllers {
       return View(model);
     }
 
-    // GET: /Product/Detail/:id
+
     [HttpGet]
     public async Task<IActionResult> Detail(int id)
-    {
+    {      
+      var accountId = HttpContext.Session.GetInt32("AccountId");
+
       var vm = await _context.Products
           .Where(p => p.ProductId == id)
           .Include(p => p.Category)
@@ -56,6 +58,7 @@ namespace MiniCar_Model.Controllers {
           .Include(p => p.ProductVariants)
               .ThenInclude(v => v.Comments)
                   .ThenInclude(c => c.Account)
+          .AsSplitQuery()
           .Select(p => new ProductDetailVM
           {
             Product = p,
@@ -81,6 +84,22 @@ namespace MiniCar_Model.Controllers {
         .OrderByDescending(p => p.ProductId)
         .Take(9)
         .ToListAsync();
+
+
+      // NẠP DANH SÁCH YÊU THÍCH CỦA USER (nếu login)
+      if (accountId != null)
+      {
+        vm.WishlistProducts = await _context.Wishlists
+            .Where(w => w.AccountId == accountId)
+            .Include(w => w.Product)
+                .ThenInclude(p => p.ProductVariants)
+            .Select(w => w.Product)
+            .ToListAsync();
+      }
+      else
+      {
+        vm.WishlistProducts = new List<Product>();
+      }
 
       return View(vm);
     }

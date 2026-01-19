@@ -35,6 +35,7 @@ namespace MiniCar_Model.Controllers
         LatestProducts = latestProducts,
         DiscountProducts = discountProducts
       };
+      Console.WriteLine(_context.Database.CanConnect());
 
       return View(model);
     }
@@ -47,20 +48,23 @@ namespace MiniCar_Model.Controllers
       return View();
     }
 
-    //[HttpPost]
-    //public async Task<IActionResult> Contact(Contact contact) 
-    //{ 
-    //    if (ModelState.IsValid)
-    //    {
-    //        _context.Contacts.Add(contact);
-    //        await _context.SaveChangesAsync();
+    [HttpPost]
+    public async Task<IActionResult> Contact(Contact contact)
+    {
+      if (ModelState.IsValid)
+      {
+        contact.CreatedAt = DateTime.Now;
+        contact.StatusContact = "New";
 
-    //        ViewBag.Success = "Cảm ơn bạn đã liên hệ với chúng tôi";
-    //        ModelState.Clear();
-    //        return View();
-    //    }
-    //    return View(contact);
-    //}
+        _context.Contacts.Add(contact);
+        await _context.SaveChangesAsync();
+
+        ViewBag.Success = "Cảm ơn bạn đã liên hệ với chúng tôi";
+        ModelState.Clear();
+        return View();
+      }
+      return View(contact);
+    }
     //------Tri Trong Treo
 
     public IActionResult Introduction()

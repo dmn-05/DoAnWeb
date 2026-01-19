@@ -12,5 +12,8 @@
     public double AvgRating { get; set; }
 
     public List<Product> RelatedProducts { get; set; }
+
+    public List<Product> WishlistProducts { get; set; } = new();
+
   }
 }

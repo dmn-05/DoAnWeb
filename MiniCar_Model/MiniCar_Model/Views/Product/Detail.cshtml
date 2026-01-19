@@ -1,8 +1,6 @@
 ﻿@{
 	ViewData["Title"] = "Chi Tiết Sản Phẩm";
-	var ratingGroups = Model.Comments.GroupBy(c => c.Rating).ToDictionary(g => g.Key, g => g.Count());
 }
-@using MiniCar_Model.Models.ViewModels
 @model ProductDetailVM
 
 <!-- back to top button-->
@@ -30,13 +28,42 @@
 		<div class="row s_product_inner">
 			<div class="col-lg-6">
 				<div class="s_Product_carousel">
-					@foreach (var img in Model.Images)
+					@* @foreach (var img in Model.Images)
 					{
 						<div class="single-prd-item">
 							<img class="img-fluid" 
 										src="~/img/product/@img.ImageId"
 										alt="@Model.Product.NameProduct"/>
 						</div>
+					} *@
+					@if (Model.Images == null || !Model.Images.Any())
+					{
+						<div class="single-prd-item">
+							<img class="img-fluid"
+									 src="~/img/logo_team.png"
+									 alt="@Model.Product.NameProduct" />
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid"
+									 src="~/img/logo_team.png"
+									 alt="@Model.Product.NameProduct" />
+						</div>
+						<div class="single-prd-item">
+							<img class="img-fluid"
+									 src="~/img/logo_team.png"
+									 alt="@Model.Product.NameProduct" />
+						</div>
+					}
+					else
+					{
+						@foreach (var img in Model.Images)
+						{
+							<div class="single-prd-item">
+								<img class="img-fluid"
+										 src="~/img/product/@img.ImageId"
+										 alt="@Model.Product.NameProduct" />
+							</div>
+						}
 					}
 				</div>
 			</div>
@@ -45,13 +72,22 @@
 					<h3>@Model.Product.NameProduct</h3>
 					<h2 id="price">@Model.Price.ToString("N0") đ</h2>
 					<ul class="list">
-						<li><a class="active" href="#"><span>Phân loại</span> : @Model.Product.Category.NameCategory</a></li>
+						<li><a class="active" asp-controller="Category" asp-action="Index"><span>Phân loại</span> : @Model.Product.Category.NameCategory</a></li>
+            <li>
+              <a >
+								<span>Số lượng tồn</span> :
+								<span id="stock-count" class="ml-2 text-success">
+                  @Model.Quanlity
+                </span>
+              </a>
+            </li>
 						<li>
 							<a>
 								<span>Tình trạng</span> :
 								<span id="stock-status">
 									@(Model.Quanlity > 0 ? "Còn hàng" : "Hết hàng")
 								</span>
+								
 							</a>
 						</li>
 					</ul>
@@ -59,30 +95,20 @@
 						@Model.Product.Descriptions
 					</p>
 					<div class="noname align-items-center">
-						<div class="pb-2"><label>Size:</label> </div>
-						<div class="default-select pb-2" id="default-select1">
-
+						<div class="pb-2"><label>Chọn phiên bản:</label></div>
+						<div class="default-select pb-2">
 							<select id="variantSelect">
 								@foreach (var v in Model.Variants)
 								{
 									<option value="@v.VariantId"
 													data-price="@v.Price"
 													data-qty="@v.Quantity">
-										@v.Size.Scale
+										@v.Size.Scale - @v.Color.ColorName
 									</option>
 								}
 							</select>
 						</div>
-
-						<div class="pb-2"><label>Màu:</label> </div>
-						<div class="default-select pb-2" id="select-color">
-							<select id="colorSelect">
-								@foreach (var v in Model.Variants)
-								{
-									<option value="@v.ColorId">@v.Color.ColorName</option>
-								}
-							</select>
-						</div>
+					</div>
 
 
 						<div class="pb-1 pt-2"><label for="qty">Số lượng:</label></div>
@@ -102,7 +128,12 @@
 					<br>
 					<div class="card_area d-flex align-items-center">
 						<a class="primary-btn" href="#">Thêm vào giỏ hàng</a>
-						<a class="icon_btn" href="#" title="Wishlist"><i class="lnr lnr lnr-heart"></i></a>
+						@if (Context.Session.GetInt32("AccountId") != null)
+						{
+							<a class="icon_btn" href="#" title="Wishlist">
+								<i class="lnr lnr-heart"></i>
+							</a>
+						}
 					</div>
 				</div>
 			</div>
@@ -129,78 +160,52 @@
 		<div class="tab-content" id="myTabContent">
 			<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
 				<p>
-					- Đế #LiteTraction với chất liệu cao su EVA nhẹ và êm ái nâng đỡ bàn chân trên mọi trải nghiệm. Độ ma sát & bền bỉ cao, tự tin “cân" mọi thử thách.<br>
-
-					- Đệm lót EVA cùng công nghệ ép khuôn 3D theo biên dạng bàn chân, ôm đều & định vị tốt, tránh tuột chân khi vận động mạnh. Kết hợp với chất liệu thun kháng khuẩn, giúp thấm hút mồ hôi, hạn chế mùi và ẩm mốc.<br>
-
-					- Có dây buộc<br>
-
-					- Do màn hình và điều kiện ánh sáng khác nhau, màu sắc thực tế của sản phẩm có thể chênh lệch khoảng 3-5%.
+					@Model.Product.Descriptions
 				</p>
 
 			</div>
 			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
 				<p>
-					<b>1. Đổi kích cỡ giày </b><br>
+					<b>1 </b><br>
 
 					<u><b>Điều kiện:</b></u> <br>
 
-					Sản phẩm còn mới 100% chưa qua sử dụng hoặc giặt tẩy, nguyên phiếu bảo hành, tem nhãn sản phẩm, không bị dơ bẩn, trầy xước.
-					Khách hàng phải có hoá đơn giao hàng (phiếu giao hàng, email xác nhận đơn hàng).
-					Trong vòng 7 ngày kể từ ngày nhận hàng. <br>
-					Áp dụng 01 sản phẩm được đổi lệch 01 size so với size đã mua và được đổi 01 lần.
-					Không hỗ trợ đối với những sản phẩm có thông báo: không áp dụng đổi trả - bảo hành.
-					Không hỗ trợ đổi mẫu theo nhu cầu. <br>
-					Không hỗ trợ trả hàng hoàn tiền. <br>
+					 <br>
 					<b>Địa điểm:</b> <br>
 
-					Đối với đổi size: Tại tất cả các cửa hàng tiếp thị của Biti’s trên toàn quốc (nếu có sản phẩm và còn kích cỡ). Danh sách cửa hàng tiếp thị tại đây. Thời gian hỗ trợ từ 14h00 - 20h00 các ngày trong tuần. <br>
-					Đối với đổi size/ đổi màu/ đổi mẫu khi hết size: Gửi về trung tâm giao hàng Biti’s tại địa chỉ: 95/6 Trần Văn Kiểu, Phường 10, Quận 6. Thời gian hỗ trợ đổi size tại kho từ 09h00-11h00 & 14h00 - 16h00 (Thứ 3 - Thứ 7).<br>
+					<br>
 					<u><b> Lưu ý:</b></u><br>
 
-					Khách hàng chỉ được đổi chênh lệch 1 kích cỡ so với kích cỡ ban đầu.<br>
-					Ví dụ: Mẫu Hunter X2 màu đen kích cỡ 40 hết, kích cỡ cần đổi sẽ được đổi sang Hunter X2 màu đỏ kích cỡ tương ứng. Kích cỡ 40 được chấp nhận đổi sang 39 (Giảm 1 size) hoặc 41 (Tăng 1 size).<br>
-					Chỉ áp dụng đổi sang sản phẩm khác trong trường hợp đã hết size, hết màu của sản phẩm cần đổi, sản phẩm mới phải có giá trị lớn hơn hoặc bằng sản phẩm trước đó (khách hàng sẽ bù tiền chênh lệch nếu giá trị cao hơn và sẽ không được hoàn lại tiền chênh lệch nếu giá trị thấp hơn).<br>
-					<b>2. Đổi trả hàng khi sản phẩm lỗi </b><br>
+					</b><br>
 
-					Kiểm tra điều kiện hoàn trả hàng bên dưới.<br>
-					Đóng gói sản phẩm và tất cả phụ kiệm kèm theo về trung tâm giao hàng Biti's như hướng dẫn.<br>
-					Nhận sản phẩm mới.<br>
+					<br>
 					<b><u>Điều kiện:</u></b><br>
 
-					Khi Biti’s giao nhầm màu, nhầm kích cỡ, nhầm sản phẩm hoặc sản phẩm bị hư hỏng do nhà sản xuất. Khách hàng gửi các hình ảnh sản phẩm nhận được kèm mã đơn hàng đến email: tuvan_online@bitis.com.vn để được bộ phận tư vấn hỗ trợ.<br>
-					Sản phẩm cần đổi còn mới 100% chưa qua sử dụng hoặc giặt tẩy, nguyên phiếu bảo hành, tem nhãn sản phẩm, không bị dơ bẩn, trầy xước, đầy đủ bao bì, túi hộp (nếu có).<br>
-					Khách hàng phải có hoá đơn giao hàng (phiếu giao hàng, email xác nhận đơn hàng).<br>
-					Trong vòng 7 ngày kể từ ngày nhận hàng.<br>
-					Trừ trường hợp được quyền đổi hàng như trên, Biti's không nhận xử lý các vấn đề khác.<br>
+					<br>
 					<b><u>Lưu ý:</u></b><br>
 
-					Trường hợp sản phẩm lỗi gửi về Biti’s để đổi lại, thông tin hướng dẫn địa điểm cụ thể sẽ được bộ phận tư vấn cung cấp theo email mà khách hàng đã liên hệ.<br>
-					Trường hợp sản phẩm lỗi cần đổi, khi gửi về đổi nhưng bị hết hàng, khách hàng có thể đổi sang sản phẩm khác có giá trị lớn hơn hoặc bằng sản phẩm trước đó (khách hàng sẽ bù tiền chênh lệch nếu giá trị cao hơn và sẽ không được hoàn lại tiền chênh lệch nếu giá trị thấp hơn).<br>
+					<br>
 					<b>3. Chi phí vận chuyển cho việc đổi kích cỡ và đổi hàng lỗi</b><br>
 
-					Trường hợp lỗi từ Biti’s giao sai thông tin sản phẩm (không đúng kích cỡ, không đúng sản phẩm), hư hỏng trong quá trình vận chuyển hoặc từ nhà sản xuất khách hàng được miễn phí hoàn toàn chi phí vận chuyển đổi hàng. Khách hàng gửi hàng về trong thời gian 7 ngày (không tính thứ 7, Chủ nhật) kể từ ngày nhận hàng, khách mang hàng ra bưu điện và chọn người nhận thanh toán.<br>
-					Trường hợp lỗi do khách hàng trong việc đặt sai đơn hàng, Biti’s đã giao đúng sản phẩm theo thông tin trên đơn hàng đã đặt, chi phí vận chuyển hai chiều khi gửi đổi sẽ do khách hàng thanh toán.<br>
+					<br>
 					<b>4. Địa chỉ đổi size</b><br>
 
-					Trung tâm giao hàng Biti's.<br>
+					<br>
 
-					Địa chỉ: Số 95/6 Trần Văn Kiểu Phường 10, Quận 6, TP. Hồ Chí Minh.<br>
+					Email: minicarmodel@gmail.com<br>
 
-					Email: tuvan_online@bitis.com.vn<br>
+					Hotline tư vấn online: 0333854516<br>
 
-					Hotline tư vấn online: 0966 158 666<br>
-
-					Website: www.bitis.com.vn hoặc facebook: www.facebook.com/bitis<br>
+					Website: www.minicar.com.vn hoặc facebook: www.facebook.com/minicar<br>
 
 					<b>5. Thời gian xử lý</b><br>
 
-					Sau khi nhận được sản phẩm gửi về, Biti’s sẽ kiểm tra và đổi trả hàng trong vòng 7 ngày làm việc.
+					
 				</p>
 			</div>
 			<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
 				<div class="row">
-					<div class="col-lg-12">
+					<div class="col-lg-6">
 						<div class="row total_rate">
 							<div class="col-6">
 								<div class="box_total">
@@ -211,23 +216,33 @@
 							</div>
 							<div class="col-6">
 								<div class="rating_list">
-									<h3>Dựa trên @Model.Comments.Count đánh giá</h3>
+									<h3>Dựa trên 3 đánh giá</h3>
 									<ul class="list">
-										@for (int i = 5; i >= 1; i--)
-										{
-											var count = ratingGroups.ContainsKey(i) ? ratingGroups[i] : 0;
-
-											<li>
-												<a href="#">
-													@i sao
-													@for (int s = 1; s <= 5; s++)
-													{
-														<i class="fa fa-star" style="color:@(s <= i ? "#ffcc00" : "#ccc")"></i>
-													}
-													@count
-												</a>
-											</li>
-										}
+										<li>
+											<a href="#">
+												5 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												4 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												3 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												2 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												1 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
@@ -244,7 +259,7 @@
 									<div class="review_item">
 										<div class="media">
 											<div class="d-flex">
-												<img src="~/img/product/default-user.png" alt="" style="width:50px; height:50px;">
+												<img src="~/img/product/default-user.png" alt="" >
 											</div>
 											<div class="media-body">
 												<h4>@c.Account?.UserName ?? "Ẩn danh"</h4>
@@ -260,7 +275,32 @@
 								}
 							}
 						</div>
-					</div>
+          </div>						
+					<div class="col-lg-6">
+            <div class="review_box">
+              <h4>Thêm nhận xét mới</h4>
+              <p>Đánh giá của bạn:</p>
+              <ul class="list">
+                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                <li><a href="#"><i class="fa fa-star"></i></a></li>
+                <li><a href="#"><i class="fa fa-star"></i></a></li>
+              </ul>
+              <p>Tuyệt vời</p>
+              <form class="row contact_form" action="contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <textarea class="form-control" name="message" id="message" rows="1" placeholder="Nhận xét" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Review'"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-12 text-right">
+                  <button type="submit" value="submit" class="primary-btn">Đánh giá ngay</button>
+                </div>
+              </form>
+            </div>
+          </div>
 				</div>
 			</div>
 		</div>
@@ -268,7 +308,7 @@
 </section>
 <!--================End Product Description Area =================-->
 <!-- Start related-product Area -->
-<section class="related-product-area section_gap">
+<section class="related-product-area section_gap py-2">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-6 text-center">
@@ -286,12 +326,12 @@
 						@foreach (var p in Model.RelatedProducts)
 						{
 							var img = p.ProductVariants.SelectMany(v => v.ProductImages)
-							.FirstOrDefault()?.UrlImage ?? "/img/no-image.png";
+							.FirstOrDefault()?.UrlImage ?? "~/img/logo_team.png";
 
 							<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
 								<div class="single-related-product d-flex">
 									<a href="/Product/Detail/@p.ProductId">
-										<img src="@img" alt="" style="height:100px; width:auto;">
+										<img src="~/img/logo_team.png" alt="">
 									</a>
 									<div class="desc">
 										<a href="/Product/Detail/@p.ProductId" class="title">@p.NameProduct</a>
@@ -303,8 +343,14 @@
 							</div>
 						}
 					</div>
-
-				</div>
+        </div>
+				<div class="col-lg-3">
+          <div class="ctg-right">
+            <a href="#" target="_blank">
+              <img class="img-fluid d-block mx-auto" src="../../../img/categories/c5.jpg" alt="">
+            </a>
+          </div>
+        </div>
 			</div>
 		}
 		else
@@ -313,18 +359,47 @@
 		}
 	</div>
 </section>
+
+<section class="related-product-area section_gap py-2">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6 text-center">
+				<div class="section-title">
+					<h1>Sản phẩm bạn yêu thích</h1>
+				</div>
+			</div>
+		</div>
+
+		@if (Model.WishlistProducts?.Any() ?? false)
+		{
+			<div class="row">
+				@foreach (var p in Model.WishlistProducts)
+				{
+					var price = p.ProductVariants.Min(v => v.Price);
+					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+						<div class="single-related-product d-flex">
+							<a href="/Product/Detail/@p.ProductId">
+								<img src="~/img/logo_team.png" />
+							</a>
+							<div class="desc">
+								<a href="/Product/Detail/@p.ProductId" class="title">@p.NameProduct</a>
+								<div class="price">
+									<h6>@string.Format("{0:N0} đ", price)</h6>
+								</div>
+							</div>
+						</div>
+					</div>
+				}
+			</div>
+		}
+		else
+		{
+			<p class="text-center">Hãy bấm ❤️ để thêm sản phẩm yêu thích</p>
+		}
+	</div>
+</section>
 <!-- End related-product Area -->
-<script>
-	document.getElementById("variantSelect").addEventListener("change", function () {
-			let opt = this.selectedOptions[0];
-			let price = opt.getAttribute("data-price");
-			let qty = opt.getAttribute("data-qty");
+<script src="~/js/variant_select.js"></script>
 
-			document.getElementById("price").innerText =
-					Number(price).toLocaleString() + " đ";
 
-			let status = Number(qty) > 0 ? "Còn hàng" : "Hết hàng";
-			document.getElementById("stock-status").innerText = status;
-	});
-</script>
 
