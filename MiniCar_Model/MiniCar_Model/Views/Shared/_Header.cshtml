@@ -48,16 +48,23 @@
 
 						<!-- GIỎ HÀNG -->
 						<li class="nav-item">
-							<a class="nav-link d-flex align-items-center gap-2"
+							<a class="nav-link d-flex align-items-center"
 								 asp-controller="Cart"
 								 asp-action="Index">
-								<span class="ti-bag mr-2"> </span>
-								<span>Giỏ hàng</span>
 
-								@* Nếu có số lượng *@
-								@* <span class="cart-count">3</span> *@
+								<span class="position-relative d-inline-flex align-items-center me-2 cart-icon">
+									<i class="bi bi-cart3" style="font-size:18px;"></i>
+
+									@await Component.InvokeAsync("CartHeader")
+								</span>
+
+								<span class="cart-text">Giỏ hàng</span>
 							</a>
 						</li>
+
+
+
+
 
 						@using Microsoft.AspNetCore.Http
 

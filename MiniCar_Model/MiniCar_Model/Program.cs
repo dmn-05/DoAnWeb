@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
-using MiniCar_Model.Services;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection")
     ));
 //End Nhat
-builder.Services.AddScoped<CartService>();
+
 
 builder.Services.AddSession(options =>
 {
@@ -33,7 +33,7 @@ app.UseStaticFiles();
 app.UseStaticFiles();
 app.UseRouting();
 app.UseSession();
-app.UseAuthorization();
+//app.UseAuthorization();
 
 
 //-------Tri Trong Trang

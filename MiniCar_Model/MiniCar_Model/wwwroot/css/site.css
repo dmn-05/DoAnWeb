@@ -69,3 +69,15 @@
   color: #d70018;
 }
 
+/* chỉ tác động badge giỏ hàng */
+.cart-icon .cart-badge {
+  line-height: 1;
+  height: auto;
+  min-width: 18px;
+  font-size: 11px;
+  padding-top: 2px;
+}
+
+.cart-icon .cart-badge {
+  transform: translate(-50%, -30%);
+}
