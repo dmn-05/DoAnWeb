@@ -33,36 +33,51 @@
 	<div class="container">
 		<div class="cart_inner">
 
-			<div class="cart-title">
-				<h1 class="cart-heading mb-3">GIỎ HÀNG CỦA TÔI</h1>
+			<div class="cart-title d-flex justify-content-between align-items-center mb-3">
+				<div>
+					<h1 class="cart-heading mb-2">GIỎ HÀNG CỦA TÔI</h1>
 
-				<label class="fw-semibold text-muted d-inline-block mt-2">
-					<input type="checkbox" id="toggleSelect" class="form-check-input me-2">
-					Chọn nhiều sản phẩm
-				</label>
+					@if (Model != null && Model.Items.Any())
+					{
+						<label>
+							<input type="checkbox" id="toggleSelect" />
+							Chọn nhiều sản phẩm
+						</label>
+					}
+				</div>
+
+				<div>
+					<button id="btnDeleteSelected"
+									class="btn btn-outline-danger btn-sm d-none">
+						Xóa các sản phẩm đã chọn
+					</button>
+				</div>
 			</div>
 
 			<div class="table-responsive">
 				<table class="table cart-table">
-					<thead>
-						<tr class="text-muted border-bottom">
-							<th style="width:50%">Sản phẩm</th>
-							<th class="text-center">Giá</th>
-							<th class="text-center">Số lượng</th>
-							<th class="text-center">Tổng tiền</th>
-							<th class="text-center">Thao tác</th>
-						</tr>
-					</thead>
-
+					@if (Model != null && Model.Items.Any())
+					{
+						<thead>
+							<tr class="text-muted border-bottom">
+								<th style="width:50%">Sản phẩm</th>
+								<th class="text-center">Giá</th>
+								<th class="text-center">Số lượng</th>
+								<th class="text-center">Tổng tiền</th>
+								<th class="text-center">Thao tác</th>
+							</tr>
+						</thead>
+					}
 					<tbody>
 						@foreach (var item in Model.Items)
 						{
-							<tr class="cart-item" data-price="@item.Price">
+							<tr class="cart-item"
+									data-id="@item.CartItemId"
+									data-price="@item.Price">
 								<td>
 									<div class="d-flex align-items-start ml-3">
 										<input type="checkbox"
-													 class="form-check-input product-check d-none me-2 mt-2">
-
+													 class="form-check-input product-check me-2 mt-2">
 										<img src="@item.ImageUrl" width="80" class="img-thumbnail me-3">
 
 										<div>
@@ -72,10 +87,8 @@
 									</div>
 								</td>
 
-								<td class="text-center">
-									<span class="fw-bold fs-5 text-danger price">
-										@item.Price.ToString("N0")đ
-									</span>
+								<td class="text-center text-danger fw-semibold unit-price">
+									@item.Price.ToString("N0")đ
 								</td>
 
 								<td class="text-center">
@@ -86,20 +99,48 @@
 												 inputmode="numeric"
 												 class="form-control text-center mx-auto qty-input"
 												 style="width:80px">
-
 								</td>
 
-								<td class="text-center text-danger fw-semibold line-total">
+								<td class="text-center text-danger fw-semibold line-total"
+										data-value="@item.TotalPrice">
 									@item.TotalPrice.ToString("N0")đ
 								</td>
 
+
 								<td class="text-center">
-									<button class="btn btn-outline-danger btn-sm">
-										<i class="lnr lnr-trash"> Loại bỏ</i>
+									<button class="btn btn-outline-danger btn-sm btn-delete-single">
+										<i class="lnr lnr-trash"></i> Loại bỏ
 									</button>
 								</td>
 							</tr>
 						}
+						<!-- MODAL XÁC NHẬN XÓA -->
+						<div class="modal fade" id="confirmDeleteModal" tabindex="-1">
+							<div class="modal-dialog modal-dialog-centered">
+								<div class="modal-content">
+
+									<div class="modal-header">
+										<h5 class="modal-title text-danger">Xác nhận xóa</h5>
+										<button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+									</div>
+
+									<div class="modal-body">
+										<p id="deleteMessage" class="mb-0"></p>
+									</div>
+
+									<div class="modal-footer">
+										<button class="btn btn-secondary" id="btnCancelDelete">
+											Hủy
+										</button>
+										<button class="btn btn-danger" id="btnConfirmDelete">
+											Xóa
+										</button>
+									</div>
+
+								</div>
+							</div>
+						</div>
+
 					</tbody>
 				</table>
 			</div>
@@ -126,79 +167,245 @@
 
 
 <script>
-	const toggleSelect = document.getElementById("toggleSelect");
-	const items = document.querySelectorAll(".cart-item");
+	/* ===== BIẾN DÙNG CHUNG ===== */
+	let deleteMode = null;
+	let targetRow = null;
+	let deleteModal = null;
 
-	toggleSelect.addEventListener("change", function () {
-		items.forEach(item => {
-			const cb = item.querySelector(".product-check");
-			cb.classList.toggle("d-none", !this.checked);
-			cb.checked = false;
-			item.classList.remove("active");
+	document.addEventListener("DOMContentLoaded", function () {
+
+		deleteModal = new bootstrap.Modal(
+			document.getElementById('confirmDeleteModal')
+		);
+
+		const toggleSelect = document.getElementById("toggleSelect");
+		const productChecks = document.querySelectorAll(".product-check");
+		const btnDeleteSelected = document.getElementById("btnDeleteSelected");
+		const cartTotalEl = document.getElementById("cartTotal");
+
+		/* ================= TIỆN ÍCH ================= */
+
+		function formatVND(number) {
+			return number.toLocaleString('vi-VN') + 'đ';
+		}
+
+		function updateDeleteButton() {
+			const anyChecked = [...productChecks].some(cb => cb.checked);
+			btnDeleteSelected.classList.toggle("d-none", !anyChecked);
+		}
+
+		function updateToggleSelect() {
+			const allChecked = productChecks.length > 0 &&
+				[...productChecks].every(cb => cb.checked);
+			toggleSelect.checked = allChecked;
+		}
+
+		function updateCartTotal() {
+			let total = 0;
+			document.querySelectorAll('.cart-item').forEach(row => {
+				const checkbox = row.querySelector('.product-check');
+				if (checkbox.checked) {
+					total += parseInt(
+						row.querySelector('.line-total').dataset.value
+					);
+				}
+			});
+			cartTotalEl.innerText = formatVND(total);
+		}
+
+		/* ============== CHECKBOX TỪNG SẢN PHẨM ============== */
+
+		productChecks.forEach(cb => {
+			cb.addEventListener("change", function () {
+				this.closest(".cart-item")
+					.classList.toggle("active", this.checked);
+
+				updateToggleSelect();
+				updateDeleteButton();
+				updateCartTotal();
+			});
 		});
-	});
 
-	document.querySelectorAll(".product-check").forEach(cb => {
-		cb.addEventListener("change", function () {
-			this.closest(".cart-item")
-				.classList.toggle("active", this.checked);
-		});
-	});
-</script>
-<script>
-	function formatVND(number) {
-		return number.toLocaleString('vi-VN') + 'đ';
-	}
+		/* ============== CHECKBOX "CHỌN NHIỀU" ============== */
 
-	function updateCartTotal() {
-		let total = 0;
-		document.querySelectorAll('.line-total').forEach(el => {
-			total += parseInt(el.dataset.value);
-		});
-		document.getElementById('cartTotal').innerText = formatVND(total);
-	}
+		toggleSelect.addEventListener("change", function () {
+			productChecks.forEach(cb => {
+				cb.checked = this.checked;
+				cb.closest(".cart-item")
+					.classList.toggle("active", this.checked);
+			});
 
-	document.querySelectorAll('.qty-input').forEach(input => {
-		input.addEventListener('input', function () {
-			const row = this.closest('.cart-item');
-			const price = parseInt(row.dataset.price);
-			const qty = parseInt(this.value) || 1;
-
-			const lineTotal = price * qty;
-
-			const lineTotalEl = row.querySelector('.line-total');
-			lineTotalEl.innerText = formatVND(lineTotal);
-			lineTotalEl.dataset.value = lineTotal;
-
+			updateDeleteButton();
 			updateCartTotal();
 		});
-	});
 
-	// Khởi tạo dataset ban đầu
-	document.querySelectorAll('.line-total').forEach(el => {
-		el.dataset.value = el.innerText.replace(/\D/g, '');
-	});
-</script>
+		/* ============== SỐ LƯỢNG ================= */
 
-<script>
-	document.querySelectorAll('.qty-input').forEach(input => {
+		document.querySelectorAll('.qty-input').forEach(input => {
 
-		input.addEventListener('keydown', function (e) {
-			// Chặn: -, +, ., e (số mũ)
-			if (['-', '+', '.', 'e', 'E'].includes(e.key)) {
-				e.preventDefault();
-			}
+			input.addEventListener('keydown', function (e) {
+				if (['-', '+', '.', 'e', 'E'].includes(e.key)) {
+					e.preventDefault();
+				}
+			});
+
+			input.addEventListener('input', function () {
+				let value = this.value.replace(/\D/g, '');
+				if (!value || parseInt(value) < 1) value = 1;
+				this.value = value;
+
+				const row = this.closest('.cart-item');
+				const price = parseInt(row.dataset.price);
+				const qty = parseInt(value);
+
+				const lineTotal = price * qty;
+				const lineTotalEl = row.querySelector('.line-total');
+
+				lineTotalEl.dataset.value = lineTotal;
+				lineTotalEl.innerText = formatVND(lineTotal);
+
+				updateCartTotal();
+			});
 		});
 
-		input.addEventListener('input', function () {
-			let value = this.value.replace(/\D/g, '');
+		/* ============== INIT DATASET ================= */
 
-			if (value === '' || parseInt(value) < 1) {
-				value = 1;
-			}
-
-			this.value = value;
+		document.querySelectorAll('.line-total').forEach(el => {
+			el.dataset.value = el.innerText.replace(/\D/g, '');
 		});
 
+		/* ===== NÚT LOẠI BỎ (1 SẢN PHẨM) ===== */
+		document.querySelectorAll('.btn-delete-single').forEach(btn => {
+			btn.addEventListener('click', function () {
+
+				deleteMode = 'single';
+				targetRow = this.closest('.cart-item');
+
+				document.getElementById('deleteMessage').innerText =
+					'Bạn có chắc muốn xóa sản phẩm này khỏi giỏ hàng?';
+
+				deleteModal.show();
+			});
+		});
+
+		/* ===== NÚT XÓA CÁC SẢN PHẨM ĐÃ CHỌN ===== */
+		btnDeleteSelected.addEventListener('click', function () {
+
+			deleteMode = 'multiple';
+			targetRow = null;
+
+			document.getElementById('deleteMessage').innerText =
+				'Bạn có chắc muốn xóa các sản phẩm đã chọn?';
+
+			deleteModal.show();
+		});
+
+		/* ===== XÁC NHẬN XÓA ===== */
+		document.getElementById('btnConfirmDelete')
+			.addEventListener('click', function () {
+
+				if (deleteMode === 'single' && targetRow) {
+
+					const id = targetRow.dataset.id;
+
+					fetch('/Cart/RemoveItem', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/x-www-form-urlencoded'
+						},
+						body: `cartItemId=${id}`
+					})
+						.then(res => res.json())
+						.then(data => {
+
+							targetRow.remove();
+
+							updateHeaderCartCount(data.totalItems);
+
+							updateCartTotal();
+							updateDeleteButton();
+							updateToggleSelect();
+							handleEmptyCartUI();
+							deleteModal.hide();
+						});
+
+				}
+
+
+				if (deleteMode === 'multiple') {
+
+					const checkedBoxes = document.querySelectorAll('.product-check:checked');
+					if (checkedBoxes.length === 0) return;
+					const ids = Array.from(checkedBoxes).map(cb =>
+						cb.closest('.cart-item').dataset.id
+					);
+
+					fetch('/Cart/RemoveSelected', {
+						method: 'POST',
+						headers: {
+							'Content-Type': 'application/json'
+						},
+						body: JSON.stringify(ids)
+					})
+						.then(res => res.json())
+						.then(data => {
+
+							checkedBoxes.forEach(cb => {
+								cb.closest('.cart-item').remove();
+							});
+
+							updateHeaderCartCount(data.totalItems);
+
+							toggleSelect.checked = false;
+
+							updateCartTotal();
+							updateDeleteButton();
+							updateToggleSelect();
+							handleEmptyCartUI();
+							deleteModal.hide();
+						});
+					return;
+				}
+				updateCartTotal();
+				updateDeleteButton();
+				updateToggleSelect();
+
+				deleteModal.hide();
+			});
+		/* ===== RESET KHI ĐÓNG MODAL ===== */
+		document.getElementById('confirmDeleteModal')
+			.addEventListener('hidden.bs.modal', function () {
+				deleteMode = null;
+				targetRow = null;
+			});
 	});
+	document.getElementById('btnCancelDelete')
+		.addEventListener('click', function () {
+			deleteModal.hide();
+		});
+
+	function updateHeaderCartCount(total) {
+		const el = document.getElementById('cartHeaderCount');
+		if (el) {
+			el.innerText = total;
+		}
+	}
+	function handleEmptyCartUI() {
+		const items = document.querySelectorAll('.cart-item');
+
+		const toggleSelectWrapper = document.querySelector('.cart-title label');
+		const deleteSelectedBtn = document.getElementById('btnDeleteSelected');
+		const table = document.querySelector('.cart-table thead');
+
+		if (items.length === 0) {
+			if (toggleSelectWrapper) toggleSelectWrapper.style.display = 'none';
+			if (deleteSelectedBtn) deleteSelectedBtn.style.display = 'none';
+			if (table) table.style.display = 'none';
+		}
+	}
 </script>
+
+
+
+
+

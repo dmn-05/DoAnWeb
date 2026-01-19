@@ -13,23 +13,24 @@ public class CartHeaderViewComponent : ViewComponent
 
 	public async Task<IViewComponentResult> InvokeAsync()
 	{
-		int totalQuantity = 0;
+		int totalItems = 0;
 
 		var accountId = HttpContext.Session.GetInt32("AccountId");
 
 		if (accountId != null)
 		{
-			totalQuantity = _context.CartItems
+			totalItems = _context.CartItems
 					.Where(ci => ci.Cart.AccountId == accountId)
-					.Sum(ci => ci.Quantity);
+					.Count();
 		}
 
 		var vm = new CartHeaderVM
 		{
-			TotalQuantity = totalQuantity
+			TotalQuantity = totalItems
 		};
 
 		return View(vm);
 	}
+
 
 }

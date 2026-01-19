@@ -65,6 +65,71 @@ namespace MiniCar_Model.Controllers
         Items = items
       });
     }
-  }
 
+		[HttpPost]
+		public IActionResult RemoveItem(int cartItemId)
+		{
+			var item = _context.CartItems
+				.Include(ci => ci.Cart)
+				.FirstOrDefault(x => x.CartItemId == cartItemId);
+
+			if (item == null)
+				return NotFound();
+
+			_context.CartItems.Remove(item);
+			_context.SaveChanges();
+
+			var accountId = HttpContext.Session.GetInt32("AccountId");
+			int totalItems = 0;
+
+			if (accountId != null)
+			{
+				totalItems = _context.CartItems
+					.Count(ci => ci.Cart.AccountId == accountId);
+			}
+
+			return Json(new { totalItems });
+		}
+
+
+		[HttpPost]
+		public IActionResult RemoveSelected([FromBody] List<int> ids)
+		{
+			if (ids == null || ids.Count == 0)
+				return BadRequest();
+
+			var items = _context.CartItems
+					.Include(ci => ci.Cart)
+					.Where(x => ids.Contains(x.CartItemId))
+					.ToList();
+
+			if (!items.Any())
+				return BadRequest();
+
+			var cart = items.First().Cart;
+
+			_context.CartItems.RemoveRange(items);
+			_context.SaveChanges();
+
+			bool cartIsEmpty = !_context.CartItems
+					.Any(ci => ci.CartId == cart.CartId);
+
+			if (cartIsEmpty)
+			{
+				_context.Carts.Remove(cart);
+				_context.SaveChanges();
+			}
+
+			var accountId = HttpContext.Session.GetInt32("AccountId");
+
+			int totalItems = 0;
+			if (accountId != null)
+			{
+				totalItems = _context.CartItems
+						.Count(ci => ci.Cart.AccountId == accountId);
+			}
+
+			return Json(new { totalItems });
+		}
+	}
 }
