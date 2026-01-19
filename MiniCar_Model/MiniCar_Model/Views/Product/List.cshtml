@@ -1,6 +1,15 @@
 ﻿@{
 	ViewData["Title"] = "Danh sách sản phẩm";
+
+	int currentPage = ViewBag.CurrentPage;
+	int totalPages = ViewBag.TotalPages;
+
+	int startPage = Math.Max(1, currentPage - 1);
+	int endPage = Math.Min(totalPages, currentPage + 1);
 }
+
+@model ProductFilterVM
+
 
 <!-- back to top Button-->
 <a href="#" class="cd-top">Back To Top</a>
@@ -29,11 +38,9 @@
 					<div class="head">Thương hiệu</div>
 					<form action="#">
 						<ul>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="apple" name="brand"><label for="apple">Louis Vuitton<span>(29)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="asus" name="brand"><label for="asus">Nike<span>(29)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="gionee" name="brand"><label for="gionee">Adidas<span>(19)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="micromax" name="brand"><label for="micromax">Gucci<span>(19)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="samsung" name="brand"><label for="samsung">Puma<span>(19)</span></label></li>
+							@foreach (var item in Model.Trademarks) {
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="@item.TrademarkId" name="brand"><label for="@item.TrademarkId">@item.NameTrademark</label></li>
+							}
 						</ul>
 					</form>
 				</div>
@@ -41,11 +48,9 @@
 					<div class="head">Kích thước</div>
 					<form action="#">
 						<ul>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-s" name="brand"><label for="size-s">Nhỏ<span>(29)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-m" name="brand"><label for="size-m">Trung bình<span>(29)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-l" name="brand"><label for="size-l">Lớn<span>(19)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-xl" name="brand"><label for="size-xl">Rất lớn<span>(19)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="size-xxl" name="brand"><label for="size-xxl">Rất rất lớn<span>(19)</span></label></li>
+							@foreach (var item in Model.Sizes) {
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="@item.SizeId" name="size"><label for="@item.SizeId">@item.Scale</label></li>
+							}
 						</ul>
 					</form>
 				</div>
@@ -105,7 +110,7 @@
 			<!-- Start Best Seller -->
 			<section class="lattest-product-area pb-40 category-list">
 				<div class="row">
-					@foreach (var item in Model) {
+					@foreach (var item in Model.Products) {
 						<div class="col-lg-4 col-md-6">
 							<div class="single-product">
 								<a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductId">
@@ -141,23 +146,79 @@
 			</section>
 			<!-- End Best Seller -->
 			<!-- Start Filter Bar -->
-			<div class="filter-bar d-flex flex-wrap align-items-center">
 
-				<div class="text-center" style="margin-top: 10px;">
+			<div class="filter-bar d-flex flex-wrap align-items-center">
+				<div class="text-center mt-2">
 					<div class="btn-group">
-						<button class="btn btn-default btn-sm" disabled>«</button>
-						<button class="btn btn-primary btn-sm">1</button>
-						<button class="btn btn-default btn-sm">2</button>
-						<button class="btn btn-default btn-sm">3</button>
-						<button class="btn btn-default btn-sm">»</button>
+
+						<!-- Previous -->
+						<a class="btn btn-default btn-sm bg-white @(currentPage == 1 ? "disabled" : "")"
+							 asp-controller="Product"
+							 asp-action="List"
+							 asp-route-page="@(currentPage - 1)">
+							«
+						</a>
+
+						<!-- Trang 1 -->
+						@if (startPage > 1) {
+							<a class="btn btn-default btn-sm bg-white"
+								 asp-controller="Product"
+								 asp-action="List"
+								 asp-route-page="1">
+								1
+							</a>
+
+							@if (startPage > 2) {
+								<span class="btn btn-default btn-sm bg-white disabled">...</span>
+							}
+						}
+
+						<!-- Các trang giữa -->
+						@for (int i = startPage; i <= endPage; i++) {
+							if (i == currentPage) {
+								<span class="btn btn-primary btn-sm bg-primary">@i</span>
+							} else {
+								<a class="btn btn-default btn-sm bg-white"
+									 asp-controller="Product"
+									 asp-action="List"
+									 asp-route-page="@i">
+									@i
+								</a>
+							}
+						}
+
+						<!-- Trang cuối -->
+						@if (endPage < totalPages) {
+							@if (endPage < totalPages - 1) {
+								<span class="btn btn-default btn-sm bg-white disabled">...</span>
+							}
+
+							<a class="btn btn-default btn-sm bg-white"
+								 asp-controller="Product"
+								 asp-action="List"
+								 asp-route-page="@totalPages">
+								@totalPages
+							</a>
+						}
+
+						<!-- Next -->
+						<a class="btn btn-default btn-sm bg-white @(currentPage == totalPages ? "disabled" : "")"
+							 asp-controller="Product"
+							 asp-action="Index"
+							 asp-route-page="@(currentPage + 1)">
+							»
+						</a>
+
 					</div>
 				</div>
-
 			</div>
-			<!-- End Filter Bar -->
+
+
 		</div>
+		<!-- End Filter Bar -->
 	</div>
 </div>
+
 
 <!-- Start related-product Area -->
 <section class="related-product-area section_gap">
