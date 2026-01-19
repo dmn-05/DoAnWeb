@@ -2,34 +2,34 @@
 <html lang="zxx" class="no-js">
 
 <head>
-  <!-- Mobile Specific Meta -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Favicon-->
-  <link rel="shortcut icon" href="img/fav.png">
-  <!-- Author Meta -->
-  <meta name="author" content="CodePixar">
-  <!-- Meta Description -->
-  <meta name="description" content="">
-  <!-- Meta Keyword -->
-  <meta name="keywords" content="">
-  <!-- meta character set -->
-  <meta charset="UTF-8">
-  <!-- Site Title -->
-  <title>@ViewData["Title"]</title>
-  <!--
-      CSS
-      ============================================= -->
-  <link rel="stylesheet" href="~/css/linearicons.css">
-  <link rel="stylesheet" href="~/css/font-awesome.min.css">
-  <link rel="stylesheet" href="~/css/themify-icons.css">
-  <link rel="stylesheet" href="~/css/bootstrap.css">
-  <link rel="stylesheet" href="~/css/owl.carousel.css">
-  <link rel="stylesheet" href="~/css/nice-select.css">
-  <link rel="stylesheet" href="~/css/nouislider.min.css">
-  <link rel="stylesheet" href="~/css/ion.rangeSlider.css" />
-  <link rel="stylesheet" href="~/css/ion.rangeSlider.skinFlat.css" />
-  <link rel="stylesheet" href="~/css/magnific-popup.css">
-  <link rel="stylesheet" href="~/css/main.css">
+	<!-- Mobile Specific Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Favicon-->
+	<link rel="shortcut icon" href="img/fav.png">
+	<!-- Author Meta -->
+	<meta name="author" content="CodePixar">
+	<!-- Meta Description -->
+	<meta name="description" content="">
+	<!-- Meta Keyword -->
+	<meta name="keywords" content="">
+	<!-- meta character set -->
+	<meta charset="UTF-8">
+	<!-- Site Title -->
+	<title>@ViewData["Title"]</title>
+	<!--
+			CSS
+			============================================= -->
+	<link rel="stylesheet" href="~/css/linearicons.css">
+	<link rel="stylesheet" href="~/css/font-awesome.min.css">
+	<link rel="stylesheet" href="~/css/themify-icons.css">
+	<link rel="stylesheet" href="~/css/bootstrap.css">
+	<link rel="stylesheet" href="~/css/owl.carousel.css">
+	<link rel="stylesheet" href="~/css/nice-select.css">
+	<link rel="stylesheet" href="~/css/nouislider.min.css">
+	<link rel="stylesheet" href="~/css/ion.rangeSlider.css" />
+	<link rel="stylesheet" href="~/css/ion.rangeSlider.skinFlat.css" />
+	<link rel="stylesheet" href="~/css/magnific-popup.css">
+	<link rel="stylesheet" href="~/css/main.css">
 
 </head>
 
@@ -56,9 +56,138 @@
 	<script src="~/js/jquery.magnific-popup.min.js"></script>
 	<script src="~/js/owl.carousel.min.js"></script>
 	<!--gmaps Js-->
-	<script src="~/https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="~/js/gmaps.min.js"></script>
 	<script src="~/js/main.js"></script>
+	@* <script> *@
+	@* 	console.log("CO RUI NE") *@
+	@* 	$(document).ready(function () { *@
+
+	@* 		function filterProducts() { *@
+	@* 			console.log("CO ROI NE") *@
+	@* 			let data = { *@
+	@* 				keyword: $("#keyword").val(), *@
+	@* 				trademarkId: $("input[name='brand']:checked").val() || null, *@
+	@* 				sizeId: $("input[name='size']:checked").val() || null, *@
+	@* 				colorId: $("input[name='color']:checked").val() || null, *@
+	@* 				minPrice: parseFloat($("#lower-value").text().replace(/,/g, "")), *@
+	@* 				maxPrice: parseFloat($("#upper-value").text().replace(/,/g, "")), *@
+	@* 				page: 1, *@
+	@* 			}; *@
+
+	@* 			$.ajax({ *@
+	@* 				url: "/Product/Filter", *@
+	@* 				type: "GET", *@
+	@* 				data: data, *@
+	@* 				success: function (result) { *@
+	@* 					$("#product-list").html(result); *@
+	@* 					$("#pagination-wrapper").hide(); *@
+	@* 				} *@
+	@* 			}); *@
+	@* 		} *@
+
+	@* 		$(document).on("change", "input[name='brand']", filterProducts); *@
+	@* 		$(document).on("change", "input[name='size']", filterProducts); *@
+	@* 		$(document).on("change", "input[name='color']", filterProducts); *@
+
+	@* 		//Gõ keyword *@
+	@* 		let searchTimeout; *@
+
+	@* 		$("#keyword").on("keyup", function () { *@
+	@* 			clearTimeout(searchTimeout); *@
+	@* 			searchTimeout = setTimeout(filterProducts, 300); *@
+	@* 		}); *@
+
+	@* 		var priceSlider = document.getElementById('price-range'); *@
+
+	@* 		if (priceSlider && priceSlider.noUiSlider) { *@
+	@* 			priceSlider.noUiSlider.on('update', function (values) { *@
+	@* 				$("#lower-value").text(Math.round(values[0])); *@
+	@* 				$("#upper-value").text(Math.round(values[1])); *@
+	@* 			}); *@
+
+	@* 			priceSlider.noUiSlider.on('change', function () { *@
+	@* 				filterProducts(); *@
+	@* 			}); *@
+	@* 		} *@
+	@* 	}); *@
+
+	@* </script> *@
+
+	<script>
+		$(document).ready(function () {
+
+			function getCheckedValue(name) {
+				const el = document.querySelector(`input[name='${name}']:checked`);
+				return el ? parseInt(el.value) : null;
+			}
+
+			function getPriceValue(id) {
+				const el = document.getElementById(id);
+				if (!el) return null;
+
+				const value = parseFloat(el.textContent.replace(/,/g, ""));
+				return isNaN(value) ? null : value;
+			}
+
+			function filterProducts() {
+
+				const data = {
+					keyword: $("#keyword").val()?.trim() || null,
+					trademarkId: getCheckedValue("brand"),
+					sizeId: getCheckedValue("size"),
+					colorId: getCheckedValue("color"),
+					minPrice: getPriceValue("lower-value"),
+					maxPrice: getPriceValue("upper-value"),
+					page: 1
+				};
+
+				// 🔥 LOG RA TOÀN BỘ FILTER
+				console.log("===== FILTER CLICK =====");
+				console.table(data);
+
+				$.ajax({
+					url: "/Product/Filter",
+					type: "GET",
+					data: data,
+					success: function (result) {
+						$("#product-list").html(result);
+						$("#pagination-wrapper").hide();
+					},
+					error: function (err) {
+						console.error("FILTER ERROR:", err);
+					}
+				});
+			}
+
+			// Checkbox / Radio
+			$(document).on("change", "input[name='brand']", filterProducts);
+			$(document).on("change", "input[name='size']", filterProducts);
+			$(document).on("change", "input[name='color']", filterProducts);
+
+			// Search keyword
+			let searchTimeout;
+			$("#keyword").on("keyup", function () {
+				clearTimeout(searchTimeout);
+				searchTimeout = setTimeout(filterProducts, 300);
+			});
+
+			// Price slider
+			const priceSlider = document.getElementById('price-range');
+
+			if (priceSlider?.noUiSlider) {
+				priceSlider.noUiSlider.on('update', function (values) {
+					$("#lower-value").text(Math.round(values[0]));
+					$("#upper-value").text(Math.round(values[1]));
+				});
+
+				priceSlider.noUiSlider.on('change', function () {
+					filterProducts();
+				});
+			}
+		});
+	</script>
+
 </body>
 
 </html>

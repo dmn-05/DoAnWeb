@@ -8595,3 +8595,8 @@ li {
     border-style: solid;
     border-color: transparent transparent rgba(0,0,0,0.08) transparent;
   }
+
+.pagination-wrapper.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}

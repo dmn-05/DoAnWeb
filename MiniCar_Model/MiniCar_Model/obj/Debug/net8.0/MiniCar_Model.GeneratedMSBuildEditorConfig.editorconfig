@@ -152,8 +152,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxMaXN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/Search.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxTZWFyY2guY3NodG1s
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/_ProductListPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxfUHJvZHVjdExpc3RQYXJ0aWFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/Error.cshtml]
