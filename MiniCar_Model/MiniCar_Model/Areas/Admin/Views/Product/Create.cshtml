@@ -13,23 +13,27 @@
       <div class="col-md-12">
         <div class="content-panel">
           <form asp-action="Create" method="POST" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger mb-3"></div>
             <div class="form-flex">
               <div class="form-column">
                 <div class="input-row">
                   <div class="input-group form-group-flex">
                     <label>Tên sản phẩm</label>
                     <input asp-for="NameProduct" class="input-control" placeholder="Nhập tên..." />
+                    <span asp-validation-for="NameProduct" class="text-danger"></span>
                   </div>
                 </div>
 
                 <div class="input-row">
                   <div class="input-group form-group-flex">
                     <label>Giá bán (VNĐ)</label>
-                    <input asp-for="Price" type="number" class="input-control" />
+                    <input asp-for="Price" type="number" step="0.01" class="input-control" />
+                      <span asp-validation-for="Price" class="text-danger"></span>
                   </div>
                   <div class="input-group form-group-flex">
                     <label>Số lượng kho</label>
                     <input asp-for="Quantity" type="number" class="input-control" />
+                    <span asp-validation-for="Quantity" class="text-danger"></span>
                   </div>
                 </div>
 
@@ -40,7 +44,7 @@
                       <select asp-for="CategoryId" asp-items="ViewBag.CategoryId" class="input-control">
                         <option value="">-- Chọn loại --</option>
                       </select>
-
+                      <span asp-validation-for="CategoryId" class="text-danger"></span>
                       <a asp-area="Admin" asp-controller="Category" asp-action="create"
                          class="btn btn-success btn-add-inline"
                          title="Thêm loại mới">
@@ -53,6 +57,7 @@
                     <select asp-for="TrademarkId" asp-items="ViewBag.TrademarkId" class="input-control">
                       <option value="">-- Chọn thương hiệu --</option>
                     </select>
+                    <span asp-validation-for="TrademarkId" class="text-danger"></span>
                   </div>
                 </div>
 
@@ -62,46 +67,44 @@
                     <select asp-for="SupplierId" asp-items="ViewBag.SupplierId" class="input-control">
                       <option value="">-- Chọn nhà cung cấp --</option>
                     </select>
+                    <span asp-validation-for="SupplierId" class="text-danger"></span>
                   </div>
                   <div class="input-group form-group-flex">
                     <label>Khuyến mãi (Promotion)</label>
                     <select asp-for="PromotionId" asp-items="ViewBag.PromotionId" class="input-control">
                       <option value="">-- Chọn khuyến mãi --</option>
                     </select>
+                    <span asp-validation-for="PromotionId" class="text-danger"></span>
                   </div>
                 </div>
 
                 <div class="input-group">
                   <label>Mô tả sản phẩm</label>
-                  <textarea name="Descriptions" rows="4" class="input-control" style="resize: vertical;" placeholder="Nhập mô tả chi tiết..."></textarea>
+                  <textarea asp-for="Descriptions" rows="4" class="input-control" placeholder="Nhập mô tả chi tiết..."></textarea>
+                  <span asp-validation-for="Descriptions" class="text-danger"></span>
                 </div>
               </div>
 
               <div class="form-column">
                 <div class="input-group">
                   <label>Trạng thái sản phẩm</label>
-                  <select name="StatusProduct" class="input-control">
-                    <option value="Active">Active</option>
-                    <option value="Inactive">Inactive</option>
+                  <select asp-for="StatusProduct" class="input-control">
+                    <option value="ACTIVE">Active</option>
+                    <option value="INACTIVE">Inactive</option>
                   </select>
+                  <span asp-validation-for="StatusProduct" class="text-danger"></span>
                 </div>
 
-                <div class="form-column">
-                  <div class="input-group">
-                    <label>Hình ảnh sản phẩm</label>
-                    <input type="hidden" name="hf_num_ful" id="hf_num_ful" value="1" />
-
-                    <div id="ful_container">
-                      <div class="ful-group mb-3">
-                        <div class="input-row align-end">
-                          <input asp-for="Images" type="file" class="form-control ful-input" id="ful_1" multiple />
-                          <button type="button" class="btn btn-success btn-add-inline" id="btn_add_ful" >
-                            <i class="fa fa-plus"></i>
-                          </button>
-                        </div>
-                        <div class="preview mt-2 d-flex flex-wrap gap-2"></div>
-                      </div>
-                    </div>
+                <div class="input-group">
+                  <label>Hình ảnh sản phẩm</label>
+                  <input asp-for="Images"
+                         id="imagesInput"
+                         class="form-control"
+                         multiple
+                         accept="image/*" />
+                  <span asp-validation-for="Images" class="text-danger"></span>
+                  <div id="imagePreview"
+                       class="preview mt-2 d-flex flex-wrap gap-2">
                   </div>
                 </div>
 
@@ -111,6 +114,7 @@
                     <select asp-for="SizeId" asp-items="ViewBag.SizeId" class="input-control">
                       <option value="">-- Chọn Size --</option>
                     </select>
+                    <span asp-validation-for="SizeId" class="text-danger"></span>
                   </div>
 
                   <div class="input-group form-group-flex">
@@ -118,6 +122,7 @@
                     <select asp-for="ColorId" asp-items="ViewBag.ColorId" class="input-control">
                       <option value="">-- Chọn màu --</option>
                     </select>
+                    <span asp-validation-for="ColorId" class="text-danger"></span>
                   </div>
                 </div>
               </div>

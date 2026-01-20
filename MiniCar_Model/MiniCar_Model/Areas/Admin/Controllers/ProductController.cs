@@ -99,7 +99,22 @@ namespace MiniCar_Model.Areas.Admin.Controllers
         ViewBag.CategoryId = new SelectList(_context.Categories, "CategoryId", "NameCategory");
         ViewBag.SupplierId = new SelectList(_context.Suppliers, "SupplierId", "NameSupplier");
         ViewBag.TrademarkId = new SelectList(_context.Trademarks, "TrademarkId", "NameTrademark");
-        ViewBag.PromotionId = new SelectList(_context.Promotions, "PromotionId", "DiscountValue");
+        var promos = _context.Promotions
+        .Select(p => new
+        {
+          p.PromotionId,
+          p.DiscountType,
+          p.DiscountValue
+        })
+        .ToList();
+
+        ViewBag.PromotionId = promos.Select(x => new SelectListItem
+        {
+          Value = x.PromotionId.ToString(),
+          Text = x.DiscountType == "%"
+                ? $"{x.DiscountValue}%"
+                : $"{x.DiscountValue:N0} VND"
+        }).ToList();
         ViewBag.SizeId = new SelectList(_context.Sizes, "SizeId", "Scale");
         ViewBag.ColorId = new SelectList(_context.Colors, "ColorId", "ColorName");
         return View(vm);
@@ -133,7 +148,7 @@ namespace MiniCar_Model.Areas.Admin.Controllers
           ColorId = vm.ColorId,
           Price = vm.Price,
           Quantity = vm.Quantity,
-          StatusVariant = "Active",
+          StatusVariant = vm.StatusProduct,
           CreatedAt = DateTime.Now
         };
 
@@ -143,27 +158,52 @@ namespace MiniCar_Model.Areas.Admin.Controllers
         // 3. Upload Images
         if (vm.Images != null && vm.Images.Any())
         {
+          var uploadDir = Path.Combine(_env.WebRootPath, "product_images");
+
+          if (!Directory.Exists(uploadDir))
+          {
+            Directory.CreateDirectory(uploadDir);
+          }
+
           int index = 0;
+
           foreach (var file in vm.Images)
           {
-            string fileName = Guid.NewGuid() + Path.GetExtension(file.FileName);
-            string uploadPath = Path.Combine(_env.WebRootPath, "product_images", fileName);
+            // 1️⃣ Check file null / rỗng / không tên
+            if (file == null || file.Length == 0  || string.IsNullOrWhiteSpace(file.FileName))
+              continue;
 
-            using (var stream = new FileStream(uploadPath, FileMode.Create))
+            // 3️⃣ Check extension
+            var ext = Path.GetExtension(file.FileName).ToLowerInvariant();
+            var allowExt = new[] { ".jpg", ".jpeg", ".png", ".webp" };
+
+            if (!allowExt.Contains(ext))
+              continue;
+
+            // 4️⃣ Tạo tên file KHÔNG TRÙNG
+            var timeStamp = DateTime.Now.ToString("yyyyMMdd_HHmmss_fff");
+            var random = Guid.NewGuid().ToString("N").Substring(0, 6);
+            var fileName = $"{timeStamp}_{random}{ext}";
+
+            var path = Path.Combine(uploadDir, fileName);
+
+            // 5️⃣ Lưu file
+            using (var stream = new FileStream(path, FileMode.Create))
             {
               await file.CopyToAsync(stream);
             }
 
-            var img = new ProductImage
+            // 6️⃣ Lưu DB
+            _context.ProductImages.Add(new ProductImage
             {
               VariantId = variant.VariantId,
               UrlImage = "/product_images/" + fileName,
               IsMain = index == 0
-            };
+            });
 
-            _context.ProductImages.Add(img);
             index++;
           }
+
           await _context.SaveChangesAsync();
         }
 

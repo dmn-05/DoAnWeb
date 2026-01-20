@@ -1,47 +1,105 @@
-﻿	document.addEventListener("DOMContentLoaded", function() {
-		setTimeout(function () {
-			const variantSelect = document.getElementById("variantSelect");
-			const priceDisplay = document.getElementById("price");
-			const stockCountDisplay = document.getElementById("stock-count");
-			const stockStatusDisplay = document.getElementById("stock-status");
+﻿//document.addEventListener("DOMContentLoaded", function () {
 
-			function updateProductInfo() {
-				const selectedOption = variantSelect.options[variantSelect.selectedIndex];
-				const price = parseFloat(selectedOption.getAttribute("data-price"));
-				const qty = parseInt(selectedOption.getAttribute("data-qty"));
+//  const select = document.getElementById("variantSelect");
+//  if (!select) return;
 
-				// Cập nhật giá
-				priceDisplay.textContent = price.toLocaleString('vi-VN') + " đ";
+//  const priceEl = document.getElementById("price");
+//  const qtyEl = document.getElementById("stock-count");
+//  const statusEl = document.getElementById("stock-status");
 
-				// Cập nhật số lượng tồn
-				stockCountDisplay.textContent = qty;
+//  function render() {
+//    const opt = select.options[select.selectedIndex];
+//    if (!opt) return;
 
-				// Cập nhật trạng thái
-				if (qty > 0) {
-					stockStatusDisplay.textContent = "Còn hàng";
-					stockStatusDisplay.className = "text-success";
-					stockCountDisplay.className = "ml-2 text-success";
-				} else {
-					stockStatusDisplay.textContent = "Hết hàng";
-					stockStatusDisplay.className = "text-danger";
-					stockCountDisplay.className = "ml-2 text-danger";
-				}
-			}
+//    const price = Number(opt.dataset.price);
+//    const qty = Number(opt.dataset.qty);
 
-			// 1. Lắng nghe event change từ select gốc
-			variantSelect.addEventListener('change', function () {
-				console.log("Change event fired!");
-				updateProductInfo();
-			});
+//    priceEl.textContent = price.toLocaleString('vi-VN') + " đ";
+//    qtyEl.textContent = qty;
 
-			// 2. Lắng nghe click trực tiếp vào nice-select options
-			document.addEventListener('click', function (e) {
-				if (e.target.classList.contains('option') && e.target.closest('.nice-select')) {
-					setTimeout(updateProductInfo, 50);
-				}
-			});
+//    if (qty > 0) {
+//      statusEl.textContent = "Còn hàng";
+//      statusEl.className = "text-success";
+//      qtyEl.className = "ml-2 text-success";
+//    } else {
+//      statusEl.textContent = "Hết hàng";
+//      statusEl.className = "text-danger";
+//      qtyEl.className = "ml-2 text-danger";
+//    }
+//  }
 
-			// 3. Khởi tạo lần đầu
-			updateProductInfo();
-		}, 500); // Tăng timeout lên 500ms
-	});
+//  // 👉 Bắt click CHỈ trong nice-select
+//  const observer = new MutationObserver(() => {
+//    const nice = document.querySelector(".nice-select");
+//    if (!nice) return;
+
+//    nice.addEventListener("click", function (e) {
+//      const option = e.target.closest(".option");
+//      if (!option) return;
+
+//      select.value = option.dataset.value;
+//      render();
+//    });
+
+//    observer.disconnect(); // 🔥 chỉ init 1 lần
+//  });
+
+//  observer.observe(document.body, { childList: true, subtree: true });
+
+//  render();
+//});
+document.addEventListener("DOMContentLoaded", function () {
+
+  const select = document.getElementById("variantSelect");
+  if (!select) return;
+
+  const priceEl = document.getElementById("price");
+  const qtyEl = document.getElementById("stock-count");
+  const statusEl = document.getElementById("stock-status");
+
+  async function loadRealtime() {
+    const variantId = select.value;
+    if (!variantId) return;
+
+    const res = await fetch(`/Product/GetVariantInfo?variantId=${variantId}`);
+    if (!res.ok) return;
+
+    const data = await res.json();
+
+    priceEl.textContent =
+      Number(data.price).toLocaleString("vi-VN") + " đ";
+
+    qtyEl.textContent = data.quantity;
+
+    if (data.quantity > 0) {
+      statusEl.textContent = "Còn hàng";
+      statusEl.className = "text-success";
+      qtyEl.className = "ml-2 text-success";
+    } else {
+      statusEl.textContent = "Hết hàng";
+      statusEl.className = "text-danger";
+      qtyEl.className = "ml-2 text-danger";
+    }
+  }
+
+  // 👉 Hook với nice-select
+  const observer = new MutationObserver(() => {
+    const nice = document.querySelector(".nice-select");
+    if (!nice) return;
+
+    nice.addEventListener("click", function (e) {
+      const option = e.target.closest(".option");
+      if (!option) return;
+
+      select.value = option.dataset.value;
+      loadRealtime(); // 🔥 GỌI SERVER
+    });
+
+    observer.disconnect();
+  });
+
+  observer.observe(document.body, { childList: true, subtree: true });
+
+  loadRealtime(); // load lần đầu
+});
+

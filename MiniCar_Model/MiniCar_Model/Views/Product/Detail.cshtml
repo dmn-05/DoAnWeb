@@ -84,7 +84,8 @@
 						<li>
 							<a>
 								<span>Tình trạng</span> :
-								<span id="stock-status">
+								<span id="stock-status"
+											class="@(Model.Quanlity > 0 ? "text-success" : "text-danger")">
 									@(Model.Quanlity > 0 ? "Còn hàng" : "Hết hàng")
 								</span>
 								
@@ -100,15 +101,13 @@
 							<select id="variantSelect">
 								@foreach (var v in Model.Variants)
 								{
-									<option value="@v.VariantId"
-													data-price="@v.Price"
-													data-qty="@v.Quantity">
+									<option value="@v.VariantId">
 										@v.Size.Scale - @v.Color.ColorName
 									</option>
 								}
 							</select>
 						</div>
-					</div>
+					
 
 
 						<div class="pb-1 pt-2"><label for="qty">Số lượng:</label></div>
@@ -128,10 +127,10 @@
 					<br>
 					<div class="card_area d-flex align-items-center">
 						<a class="primary-btn" href="#">Thêm vào giỏ hàng</a>
-						@if (Context.Session.GetInt32("AccountId") != null)
+						@if (Model.IsLoggedIn)
 						{
 							<a class="icon_btn" href="#" title="Wishlist">
-								<i class="lnr lnr-heart"></i>
+								<i class="lnr lnr lnr-heart"></i>
 							</a>
 						}
 					</div>

@@ -14,6 +14,7 @@
     public List<Product> RelatedProducts { get; set; }
 
     public List<Product> WishlistProducts { get; set; } = new();
+    public bool IsLoggedIn { get; set; }
 
   }
 }

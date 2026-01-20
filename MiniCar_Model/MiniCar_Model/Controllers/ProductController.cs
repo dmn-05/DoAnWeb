@@ -84,6 +84,7 @@ namespace MiniCar_Model.Controllers {
         .OrderByDescending(p => p.ProductId)
         .Take(9)
         .ToListAsync();
+      vm.IsLoggedIn = accountId != null;
 
 
       // NẠP DANH SÁCH YÊU THÍCH CỦA USER (nếu login)
@@ -102,6 +103,24 @@ namespace MiniCar_Model.Controllers {
       }
 
       return View(vm);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetVariantInfo(int variantId)
+    {
+      var variant = await _context.ProductVariants
+          .Where(v => v.VariantId == variantId)
+          .Select(v => new
+          {
+            v.Price,
+            v.Quantity
+          })
+          .FirstOrDefaultAsync();
+
+      if (variant == null)
+        return NotFound();
+
+      return Json(variant);
     }
 
 
