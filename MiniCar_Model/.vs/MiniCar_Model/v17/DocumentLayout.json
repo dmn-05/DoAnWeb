@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|c:\\users\\dazok\\onedrive\\desktop\\minicar_model_thuong_bk\\doanweb\\minicar_model\\minicar_model\\areas\\admin\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|c:\\users\\dazok\\onedrive\\desktop\\minicar_model_thuong_bk\\doanweb\\minicar_model\\minicar_model\\areas\\admin\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|c:\\users\\dazok\\onedrive\\desktop\\minicar_model_thuong_bk\\doanweb\\minicar_model\\minicar_model\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|c:\\users\\dazok\\onedrive\\desktop\\minicar_model_thuong_bk\\doanweb\\minicar_model\\minicar_model\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|c:\\users\\dazok\\onedrive\\desktop\\minicar_model_thuong_bk\\doanweb\\minicar_model\\minicar_model\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -110,8 +126,60 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 22,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAiwHAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T14:09:49.247Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAABcAAAAAAAAAAAAiwDMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T14:10:28.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\Category\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Category\\Edit.cshtml*",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\Category\\Edit.cshtml*",
+              "ViewState": "AgIAABoAAAAAAAAAAAAiwDYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-20T14:10:10.354Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAcwGwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-20T14:08:22.9Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
@@ -134,7 +202,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Wishlist.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Account\\Wishlist.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Account\\Wishlist.cshtml",
@@ -147,7 +215,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "ProductVariant.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Models\\ProductVariant.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\ProductVariant.cs",
@@ -160,7 +228,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Wishlist.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Models\\Wishlist.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\Wishlist.cs",
@@ -173,7 +241,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "ProductImage.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Models\\ProductImage.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\ProductImage.cs",
@@ -186,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "Bill.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Models\\Bill.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\Bill.cs",
@@ -199,7 +267,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 15,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Cart\\Index.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Cart\\Index.cshtml",
@@ -212,7 +280,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "PopupDN.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\PopupDN.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\PopupDN.cshtml",
@@ -224,7 +292,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 17,
               "Title": "CartController.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Controllers\\CartController.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Controllers\\CartController.cs",
@@ -236,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 23,
               "Title": "EditProfile.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Account\\EditProfile.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Account\\EditProfile.cshtml",
@@ -248,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 16,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
@@ -260,7 +328,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 24,
               "Title": "EditAccount.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Account\\EditAccount.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Account\\EditAccount.cshtml",
@@ -272,7 +340,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 13,
               "Title": "Account.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Models\\Account.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\Account.cs",
@@ -285,7 +353,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Profile.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Account\\Profile.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Account\\Profile.cshtml",
@@ -298,7 +366,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 27,
               "Title": "CartItem.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Models\\CartItem.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\CartItem.cs",
@@ -310,7 +378,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 25,
               "Title": "CartService.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Services\\CartService.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Services\\CartService.cs",
@@ -322,7 +390,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 21,
               "Title": "Login.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Account\\Login.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Account\\Login.cshtml",
@@ -334,7 +402,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Controllers\\AccountController.cs",
@@ -347,7 +415,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Models\\Product.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\Product.cs",
@@ -360,7 +428,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 28,
               "Title": "List.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Product\\List.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Product\\List.cshtml",
@@ -372,7 +440,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 19,
               "Title": "_Header.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Header.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\_Header.cshtml",
@@ -384,7 +452,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "ApplicationDbContext.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\ApplicationDbContext.cs",
@@ -397,7 +465,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Program.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Program.cs",
@@ -409,7 +477,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 22,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\appsettings.json",
               "RelativeDocumentMoniker": "MiniCar_Model\\appsettings.json",
@@ -421,7 +489,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 26,
               "Title": "ProductController.cs",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Controllers\\ProductController.cs",
@@ -433,7 +501,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 14,
               "Title": "Order.cshtml",
               "DocumentMoniker": "C:\\Users\\dazok\\OneDrive\\Desktop\\MiniCar_Model_Thuong_bk\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\Views\\Account\\Order.cshtml",
               "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Account\\Order.cshtml",

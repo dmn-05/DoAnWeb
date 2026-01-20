@@ -1,0 +1,52 @@
+﻿@model MiniCar_Model.Models.Category
+@{
+  ViewData["Title"] = "Thêm loại sản phẩm";
+}
+
+<section id="main-content">
+  <section class="wrapper">
+    <h3><i class="fa fa-angle-right"></i> Thêm mới loại sản phẩm</h3>
+
+    <div class="row mt">
+      <div class="col-lg-8 col-md-10 col-sm-12">
+        <div class="form-panel shadow-sm p-4 rounded-4">
+          <h4 class="mb-4"><i class="fa fa-pencil"></i> Nhập thông tin danh mục</h4>
+
+          <form asp-action="Create" method="post" class="form-horizontal style-form">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group mb-3">
+              <label class="col-sm-3 control-label fw-bold">Tên loại sản phẩm</label>
+              <div class="col-sm-9">
+                <input asp-for="NameCategory" class="form-control" placeholder="Ví dụ: Xe đua, Siêu xe..." required />
+                <span asp-validation-for="NameCategory" class="text-danger"></span>
+              </div>
+            </div>
+
+            <div class="form-group mb-3">
+              <label class="col-sm-3 control-label fw-bold">Danh mục cha</label>
+              <div class="col-sm-9">
+                <select asp-for="ParentId" class="form-control" asp-items="@(new SelectList(ViewBag.ParentCategories, "CategoryId", "NameCategory"))">
+                  <option value="">-- Chọn danh mục cha (Nếu có) --</option>
+                </select>
+                <p class="help-block small text-muted">Để trống nếu đây là danh mục gốc.</p>
+              </div>
+            </div>
+
+            <div class="form-group mb-4">
+              <label class="col-sm-3 control-label fw-bold">Trạng thái mặc định</label>
+              <div class="col-sm-9">
+                <input type="text" class="form-control" value="ACTIVE" disabled />
+              </div>
+            </div>
+
+            <div class="text-right mt-4 border-top pt-3">
+              <a asp-action="Index" class="btn btn-default mr-2"><i class="fa fa-reply"></i> Quay lại</a>
+              <button type="submit" class="btn btn-success"><i class="fa fa-save"></i> Lưu danh mục</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
