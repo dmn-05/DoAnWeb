@@ -3,14 +3,17 @@ using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
 using MiniCar_Model.Models.ViewModels;
 
-namespace MiniCar_Model.Controllers {
-  public class AccountController : Controller {
+namespace MiniCar_Model.Controllers
+{
+  public class AccountController : Controller
+  {
     private readonly ApplicationDbContext _context;
     //thuong code
     private readonly ILogger<AccountController> _logger;
     //thuong end code
 
-    public AccountController(ApplicationDbContext context, ILogger<AccountController> logger) {
+    public AccountController(ApplicationDbContext context, ILogger<AccountController> logger)
+    {
       _context = context;
       //thuong code
       _logger = logger;
@@ -19,7 +22,8 @@ namespace MiniCar_Model.Controllers {
 
     // GET: /Account/Login
     [HttpGet]
-    public IActionResult Login() {
+    public IActionResult Login()
+    {
       var count = _context.Accounts.Count();
       ViewBag.TestDb = count;
       return View();
@@ -27,14 +31,16 @@ namespace MiniCar_Model.Controllers {
 
     // POST: /Account/Login
     [HttpPost]
-    public IActionResult Login(string email, string password) {
+    public IActionResult Login(string email, string password)
+    {
       var account = _context.Accounts.FirstOrDefault(x =>
           (x.Email == email || x.UserName == email) &&
           x.PasswordAccount == password &&
           x.StatusAccount == "ACTIVE"
       );
 
-      if (account == null) {
+      if (account == null)
+      {
         ViewBag.Error = "Sai tài khoản hoặc mật khẩu";
         return View();
       }
@@ -78,18 +84,22 @@ namespace MiniCar_Model.Controllers {
     }
 
     [HttpGet]
-    public IActionResult Register() {
+    public IActionResult Register()
+    {
       return View();
     }
 
-    public IActionResult ForgotPassword() {
+    public IActionResult ForgotPassword()
+    {
       return View();
     }
 
-    public IActionResult Profile() {
+    public IActionResult Profile()
+    {
       var accountId = HttpContext.Session.GetInt32("AccountId");
 
-      if (accountId == null) {
+      if (accountId == null)
+      {
         return RedirectToAction("Login");
       }
 
@@ -153,7 +163,8 @@ namespace MiniCar_Model.Controllers {
       }
     }
     //thuong end code
-    public IActionResult Logout() {
+    public IActionResult Logout()
+    {
       return RedirectToAction("Index", "Home");
     }
     //thuong code
@@ -233,15 +244,63 @@ namespace MiniCar_Model.Controllers {
 
     //thuong end code
 
-    public IActionResult Wishlist() {
+    //thuong code
+    public IActionResult Wishlist()
+    {
+      var accountId = HttpContext.Session.GetInt32("AccountId");
+      if (accountId == null) return RedirectToAction("Login", "Account");
+
+      var model = _context.Wishlists
+          .Where(w => w.AccountId == accountId)
+          // Load các bảng liên quan
+          .Include(w => w.ProductVariant)
+              .ThenInclude(pv => pv.Product)
+          .Include(w => w.ProductVariant)
+              .ThenInclude(pv => pv.ProductImages)
+          .Select(w => new WishlistItemVM
+          {
+            WishlistId = w.WishlistId,
+            VariantId = w.ProductVariantId,
+            ProductName = w.ProductVariant.Product.NameProduct, // Lấy tên từ bảng Product
+            Descriptions = w.ProductVariant.Product.Descriptions, // Lấy nội dung
+            Price = w.ProductVariant.Price, // Lấy giá từ bản Variant
+            ImageUrl = w.ProductVariant.ProductImages
+                    .Where(i => i.IsMain == true)
+                    .Select(i => i.UrlImage)
+                    .FirstOrDefault() ?? "default.jpg" // Ảnh mặc định nếu không có ảnh chính
+          })
+          .AsNoTracking()
+          .ToList();
+
+      return View(model);
+    }
+    [HttpPost]
+    public IActionResult RemoveFromWishlist(int id)
+    {
+      // Tìm bản ghi Wishlist trong database theo ID nhận được
+      var item = _context.Wishlists.Find(id);
+
+      if (item != null)
+      {
+        // Thực hiện xóa khỏi DbContext
+        _context.Wishlists.Remove(item);
+
+        // Lưu thay đổi xuống SQL Server thực tế
+        _context.SaveChanges();
+      }
+
+      // Sau khi xóa xong, quay lại trang Danh sách yêu thích
+      return RedirectToAction("Wishlist");
+    }
+    //thuong end code
+
+    public ActionResult EditAccount()
+    {
       return View();
     }
 
-    public ActionResult EditAccount() {
-      return View();
-    }
-
-    public IActionResult ChangePassword() {
+    public IActionResult ChangePassword()
+    {
       return View();
     }
 

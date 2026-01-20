@@ -285,7 +285,7 @@ public partial class ApplicationDbContext : DbContext
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Wishlist_Account");
 
-            entity.HasOne(d => d.Product).WithMany(p => p.Wishlists)
+            entity.HasOne(d => d.ProductVariant).WithMany(p => p.Wishlists)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Wishlist_Product");
         });
