@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MiniCar_Model.Filters;
 using MiniCar_Model.Models;
 
 namespace MiniCar_Model.Areas.Admin.Controllers
 {
   [Area("Admin")]
+  [AdminAuthorize]
   public class CategoryController : Controller
   {
     //thuong code 

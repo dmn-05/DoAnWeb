@@ -24,6 +24,14 @@ namespace MiniCar_Model.Controllers
     [HttpGet]
     public IActionResult Login()
     {
+      //thuong code
+      if (HttpContext.Session.GetInt32("AccountId") != null)
+      {
+        if (HttpContext.Session.GetInt32("RoleId") == 1)
+          return RedirectToAction("Index", "Home", new { area = "Admin" });
+        return RedirectToAction("Index", "Home");
+      }
+      //thuong end code
       var count = _context.Accounts.Count();
       ViewBag.TestDb = count;
       return View();
@@ -50,8 +58,12 @@ namespace MiniCar_Model.Controllers
       HttpContext.Session.SetInt32("RoleId", account.RoleId);
       HttpContext.Session.SetString("UserName", account.UserName);
       HttpContext.Session.SetString("FullName", account.NameAccount ?? "");
+      //thuong code
+      if (account.RoleId == 1)
+        return RedirectToAction("Index", "Home", new { area = "Admin" });
 
       return RedirectToAction("Index", "Home");
+      //thuong end code
     }
     [HttpPost]
     public IActionResult LoginPopup(string email, string password)
