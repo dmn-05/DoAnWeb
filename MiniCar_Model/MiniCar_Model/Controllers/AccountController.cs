@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
+using MiniCar_Model.Models.ViewModels;
 
 namespace MiniCar_Model.Controllers {
   public class AccountController : Controller {
@@ -155,10 +156,82 @@ namespace MiniCar_Model.Controllers {
     public IActionResult Logout() {
       return RedirectToAction("Index", "Home");
     }
+    //thuong code
+    public IActionResult Order(string status)
+    {
+      var accountId = HttpContext.Session.GetInt32("AccountId");
+      if (accountId == null) return RedirectToAction("Login");
 
-    public IActionResult Order() {
-      return View();
+      // 1. Khởi tạo Query lọc theo Account trước
+      var query = _context.Bills.Where(b => b.AccountId == accountId);
+
+      // 2. Lọc trạng thái (Lọc trực tiếp trên IQueryable để SQL thực thi)
+      if (!string.IsNullOrEmpty(status) && status != "Tất cả")
+      {
+        // Dùng Trim() để xử lý khoảng trắng, không dùng Normalize ở đây
+        query = query.Where(b => b.StatusBill.Trim() == status.Trim());
+      }
+
+      // 3. Select dữ liệu (Giữ nguyên logic Items để lấy nguyên bảng)
+      var orders = query
+          .OrderByDescending(b => b.CreateAt)
+          .Select(b => new OrderVM
+          {
+            BillId = b.BillId,
+            TotalPrice = b.TotalPrice,
+            StatusBill = b.StatusBill,
+            CreateAt = b.CreateAt,
+            // Quan trọng: Phải Select Items ở đây để View có dữ liệu vẽ bảng
+            Items = b.BillInfos.Select(bi => new OrderItemVM
+            {
+              ProductName = bi.Variant.Product.NameProduct,
+              Quantity = bi.Quantity,
+              UnitPrice = bi.UnitPrice,
+              ImageUrl = bi.Variant.ProductImages
+                          .Where(img => img.IsMain)
+                          .Select(img => img.UrlImage)
+                          .FirstOrDefault()
+            }).ToList()
+          })
+          .AsNoTracking()
+          .ToList();
+
+      ViewBag.CurrentStatus = status ?? "Tất cả";
+      return View(orders);
     }
+
+    [HttpPost]
+    public IActionResult CancelOrder(int id)
+    {
+      // 1. Tìm đơn hàng trong DB
+      var bill = _context.Bills.Find(id);
+
+      if (bill != null)
+      {
+        // 2. Kiểm tra điều kiện một lần nữa ở Server để bảo mật
+        // Chỉ cho phép hủy khi trạng thái là "Chưa vận chuyển"
+        if (bill.StatusBill?.Trim() == "Chưa vận chuyển")
+        {
+          // 3. Cập nhật trạng thái
+          bill.StatusBill = "Đã hủy";
+
+          // 4. Lưu vào SQL
+          _context.SaveChanges();
+
+          // Gợi ý: Bạn có thể thêm TempData để thông báo cho người dùng
+          TempData["Message"] = "Hủy đơn hàng thành công!";
+        }
+        else
+        {
+          TempData["Error"] = "Đơn hàng đang trong quá trình vận chuyển, không thể hủy.";
+        }
+      }
+
+      // Quay lại trang danh sách đơn hàng
+      return RedirectToAction("Order");
+    }
+
+    //thuong end code
 
     public IActionResult Wishlist() {
       return View();

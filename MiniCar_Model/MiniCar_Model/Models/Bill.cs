@@ -17,7 +17,7 @@ public partial class Bill
     public int AccountId { get; set; }
 
     [Column("Total_Price", TypeName = "decimal(12, 2)")]
-    public decimal? TotalPrice { get; set; }
+    public decimal TotalPrice { get; set; }
 
     [Column("Payment_Date", TypeName = "datetime")]
     public DateTime? PaymentDate { get; set; }

@@ -1,12 +1,9 @@
-﻿@{
+﻿@model List<MiniCar_Model.Models.ViewModels.OrderVM>
+
+@{
 	ViewData["Title"] = "Danh sách đơn hàng";
 }
 
-
-<!-- back to top Button-->
-<a href="#" class="cd-top">Back To Top</a>
-<!--End Back to top Button-->
-<!-- Start Banner Area -->
 <section class="banner-area organic-breadcrumb">
 	<div class="container">
 		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
@@ -15,120 +12,122 @@
 				<nav class="d-flex align-items-center">
 					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
 					<a asp-controller="Account" asp-action="Profile">Tài khoản<span class="lnr lnr-arrow-right"></span></a>
-					<a asp-controller="Account" asp-action="Order">Đơn hàng</a>
+					<a href="#">Đơn hàng</a>
 				</nav>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- End Banner Area -->
 <div class="container my-4">
-
-	<!-- NÚT QUAY LẠI -->
 	<div class="row align-items-center mb-3">
 		<div class="col-6">
-			<button class="btn btn-outline-secondary btn-sm"
-							onclick="history.back()">
-				← Quay lại
+			<button class="btn btn-outline-secondary btn-sm" onclick="history.back()">
+				<span class="lnr lnr-arrow-left"></span>  Quay lại
 			</button>
 		</div>
 	</div>
 
-	<!-- NAV TABS -->
 	<ul class="nav nav-tabs mb-4 flex-nowrap overflow-auto">
 		<li class="nav-item">
-			<a class="nav-link active" href="#">Tất cả</a>
+			<a class="nav-link @(ViewBag.CurrentStatus == "Tất cả" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Tất cả">Tất cả</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#">Chưa thanh toán</a>
+			<a class="nav-link @(ViewBag.CurrentStatus == "Ðã giao thành công" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Ðã giao thành công">Ðã giao thành công</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#">Đã thanh toán</a>
+			<a class="nav-link @(ViewBag.CurrentStatus == "Chưa vận chuyển" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Chưa vận chuyển">Chưa vận chuyển</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="#">Chờ vận chuyển</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="#">Cần đánh giá</a>
+			<a class="nav-link @(ViewBag.CurrentStatus == "Đã hủy" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Đã hủy">Đã hủy</a>
 		</li>
 	</ul>
 
-	<!-- ĐƠN HÀNG -->
-	<div class="card shadow-sm rounded-4 mb-4">
-		<div class="card-body">
+	@if (Model != null && Model.Any())
+	{
+		@foreach (var order in Model)
+		{
+			<div class="card shadow-sm rounded-4 mb-4 border-0">
+				<div class="card-body">
+					<div class="d-flex justify-content-between mb-3 border-bottom pb-2">
+						<span class="text-muted small">Mã đơn: #@order.BillId | @order.CreateAt?.ToString("dd/MM/yyyy")</span>
+						<span class="fw-semibold @(order.StatusBill?.Trim() == "Ðã giao thành công" ? "text-success" : "text-warning")">
+							@order.StatusBill
 
-			<div class="d-flex justify-content-between mb-2">
-				<span class="text-success fw-semibold">Đã giao</span>
-			</div>
+						</span>
+					</div>
 
-			<div class="row align-items-center g-3">
-				<div class="col-3 col-md-2">
-					<img src="~/img/logo.png"
-							 class="img-fluid rounded"
-							 alt="">
+					@* Vòng lặp duyệt qua từng món hàng trong 1 hóa đơn *@
+					@foreach (var item in order.Items)
+					{
+						<div class="row align-items-center g-3 mb-3">
+							<div class="col-3 col-md-2 text-center">
+								<img src="@(string.IsNullOrEmpty(item.ImageUrl) ? "/img/logo.png" : item.ImageUrl)"
+										 class="img-fluid rounded border shadow-sm" style="max-height: 80px;" alt="">
+							</div>
+
+							<div class="col-9 col-md-6">
+								<h6 class="mb-1 text-dark">@item.ProductName</h6>
+								<small class="text-muted">Số lượng: x@item.Quantity</small>
+								<div class="d-md-none text-danger fw-semibold">@item.UnitPrice.ToString("N0")₫</div>
+							</div>
+
+							<div class="col-md-4 text-md-end d-none d-md-block">
+								<div class="text-muted small">Giá đơn vị</div>
+								<div class="fw-semibold text-danger">@item.UnitPrice.ToString("N0")₫</div>
+							</div>
+						</div>
+					}
+
+					<div class="border-top pt-3 mt-2">
+						<div class="d-flex justify-content-between align-items-center">
+							<div class="text-muted small">
+							</div>
+							<div class="text-end">
+								<span class="text-muted small">Thành tiền:</span>
+								<span class="text-danger fs-5 fw-bold ms-2">@order.TotalPrice.ToString("N0")₫</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="d-flex justify-content-end mt-3 gap-2">
+						@if (order.StatusBill?.Trim() == "Chưa vận chuyển")
+						{
+							<form asp-controller="Account" asp-action="CancelOrder" method="post">
+								<input type="hidden" name="id" value="@order.BillId" />
+								<button type="submit" class="btn btn-outline-danger btn-sm"
+												onclick="return confirm('Bạn có chắc chắn muốn hủy đơn hàng #@order.BillId này không?')">
+									Hủy đơn hàng
+								</button>
+							</form>
+						}
+						else
+						{
+							<button class="btn btn-outline-secondary btn-sm">
+								Mua lại
+							</button>
+
+							@if (order.StatusBill?.Trim() == "Ðã giao thành công")
+							{
+								<button class="btn btn-outline-danger btn-sm">
+									Viết đánh giá
+								</button>
+							}
+						}
+					</div>
 				</div>
-
-				<div class="col-9 col-md-6">
-					<h6 class="mb-1">Xe Đen</h6>
-					<small class="text-muted">x1</small>
-				</div>
-
-				<div class="col-md-4 text-md-end">
-					<div class="text-muted small">01/01/2025</div>
-					<div class="fw-semibold text-danger">15.500₫</div>
-					<div class="small">Tổng: <strong>15.500₫</strong></div>
-				</div>
 			</div>
-
-			<div class="d-flex justify-content-end mt-3 gap-2">
-				<button class="btn btn-outline-secondary btn-sm">
-					Mua lại
-				</button>
-				<button class="btn btn-danger btn-sm">
-					Viết đánh giá
-				</button>
-			</div>
-
+		}
+	}
+	else
+	{
+		<div class="text-center py-5">
+			<i class="lnr lnr-cart fs-1 text-muted"></i>
+			<p class="mt-3 text-muted">Bạn chưa có đơn hàng nào.</p>
+			<a asp-controller="Home" asp-action="Index" class="primary-btn mt-2" style="line-height: 38px; padding: 0 30px;">Mua sắm ngay</a>
 		</div>
-	</div>
-
-	<!-- ĐƠN HÀNG 2 -->
-	<div class="card shadow-sm rounded-4">
-		<div class="card-body">
-
-			<div class="d-flex justify-content-between mb-2">
-				<span class="text-success fw-semibold">Đã giao</span>
-			</div>
-
-			<div class="row align-items-center g-3">
-				<div class="col-3 col-md-2">
-					<img src="~/img/logo.png"
-							 class="img-fluid rounded"
-							 alt="">
-				</div>
-
-				<div class="col-9 col-md-6">
-					<h6 class="mb-1">Xe Vàng</h6>
-					<small class="text-muted">x1</small>
-				</div>
-
-				<div class="col-md-4 text-md-end">
-					<div class="text-muted small">01/01/2025</div>
-					<div class="fw-semibold text-danger">25.000₫</div>
-					<div class="small">Tổng: <strong>25.000₫</strong></div>
-				</div>
-			</div>
-
-			<div class="d-flex justify-content-end mt-3 gap-2">
-				<button class="btn btn-outline-secondary btn-sm">
-					Mua lại
-				</button>
-				<button class="btn btn-danger btn-sm">
-					Viết đánh giá
-				</button>
-			</div>
-
-		</div>
-	</div>
-
+	}
 </div>

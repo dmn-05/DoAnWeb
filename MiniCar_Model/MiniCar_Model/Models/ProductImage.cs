@@ -21,7 +21,7 @@ public partial class ProductImage
     public string? UrlImage { get; set; }
 
     [Column("Is_Main")]
-    public bool? IsMain { get; set; }
+    public bool IsMain { get; set; }
 
     [Column("Create_At", TypeName = "datetime")]
     public DateTime? CreateAt { get; set; }
