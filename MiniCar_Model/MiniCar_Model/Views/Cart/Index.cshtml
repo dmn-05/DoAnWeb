@@ -143,6 +143,44 @@
 
 					</tbody>
 				</table>
+				@if (Model.TotalPages > 1)
+				{
+					<nav class="mt-4">
+						<ul class="pagination justify-content-center">
+
+							<!-- Trang trước -->
+							<li class="page-item @(Model.CurrentPage == 1 ? "disabled" : "")">
+								<a class="page-link"
+									 asp-action="Index"
+									 asp-route-page="@(Model.CurrentPage - 1)">
+									&laquo;
+								</a>
+							</li>
+
+							@for (int i = 1; i <= Model.TotalPages; i++)
+							{
+								<li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+									<a class="page-link"
+										 asp-action="Index"
+										 asp-route-page="@i">
+										@i
+									</a>
+								</li>
+							}
+
+							<!-- Trang sau -->
+							<li class="page-item @(Model.CurrentPage == Model.TotalPages ? "disabled" : "")">
+								<a class="page-link"
+									 asp-action="Index"
+									 asp-route-page="@(Model.CurrentPage + 1)">
+									&raquo;
+								</a>
+							</li>
+
+						</ul>
+					</nav>
+				}
+
 			</div>
 
 			<div class="d-flex justify-content-end mt-4">
@@ -228,16 +266,19 @@
 
 		/* ============== CHECKBOX "CHỌN NHIỀU" ============== */
 
-		toggleSelect.addEventListener("change", function () {
-			productChecks.forEach(cb => {
-				cb.checked = this.checked;
-				cb.closest(".cart-item")
-					.classList.toggle("active", this.checked);
-			});
+		if (toggleSelect) {
+			toggleSelect.addEventListener("change", function () {
+				productChecks.forEach(cb => {
+					cb.checked = this.checked;
+					cb.closest(".cart-item")
+						.classList.toggle("active", this.checked);
+				});
 
-			updateDeleteButton();
-			updateCartTotal();
-		});
+				updateDeleteButton();
+				updateCartTotal();
+			});
+		}
+
 
 		/* ============== SỐ LƯỢNG ================= */
 
@@ -289,16 +330,18 @@
 		});
 
 		/* ===== NÚT XÓA CÁC SẢN PHẨM ĐÃ CHỌN ===== */
-		btnDeleteSelected.addEventListener('click', function () {
+		if (btnDeleteSelected) {
+			btnDeleteSelected.addEventListener('click', function () {
+				deleteMode = 'multiple';
+				targetRow = null;
 
-			deleteMode = 'multiple';
-			targetRow = null;
+				document.getElementById('deleteMessage').innerText =
+					'Bạn có chắc muốn xóa các sản phẩm đã chọn?';
 
-			document.getElementById('deleteMessage').innerText =
-				'Bạn có chắc muốn xóa các sản phẩm đã chọn?';
+				deleteModal.show();
+			});
+		}
 
-			deleteModal.show();
-		});
 
 		/* ===== XÁC NHẬN XÓA ===== */
 		document.getElementById('btnConfirmDelete')
@@ -379,10 +422,14 @@
 				targetRow = null;
 			});
 	});
-	document.getElementById('btnCancelDelete')
-		.addEventListener('click', function () {
+
+	const btnCancelDelete = document.getElementById('btnCancelDelete');
+	if (btnCancelDelete) {
+		btnCancelDelete.addEventListener('click', function () {
 			deleteModal.hide();
 		});
+	}
+
 
 	function updateHeaderCartCount(total) {
 		const el = document.getElementById('cartHeaderCount');

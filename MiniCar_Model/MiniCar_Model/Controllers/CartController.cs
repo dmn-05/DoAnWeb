@@ -7,64 +7,63 @@ using System.Linq;
 
 namespace MiniCar_Model.Controllers
 {
-  public class CartController : Controller
-  {
-    private readonly ApplicationDbContext _context;
+	public class CartController : Controller
+	{
+		private readonly ApplicationDbContext _context;
 
-    public CartController(ApplicationDbContext context)
-    {
-      _context = context;
-    }
+		public CartController(ApplicationDbContext context)
+		{
+			_context = context;
+		}
 
-    public IActionResult Index()
-    {
-      // 1. Kiểm tra đăng nhập bằng Session
-      var accountId = HttpContext.Session.GetInt32("AccountId");
-      if (accountId == null)
-      {
-        return RedirectToAction("Login", "Account");
-      }
+		public IActionResult Index(int page = 1)
+		{
+			var accountId = HttpContext.Session.GetInt32("AccountId");
+			if (accountId == null)
+				return RedirectToAction("Login", "Account");
 
-      // 2. Lấy Cart theo Account
-      var cart = _context.Carts
-          .AsNoTracking()
-          .FirstOrDefault(c => c.AccountId == accountId.Value);
+			var cart = _context.Carts
+					.FirstOrDefault(c => c.AccountId == accountId.Value);
 
-      if (cart == null)
-      {
-        return View(new CartViewModel());
-      }
+			if (cart == null)
+				return View(new CartViewModel());
 
-      // 3. Lấy CartItem
-      var items = _context.CartItems
-          .AsNoTracking()
-          .Where(ci => ci.CartId == cart.CartId)
-          .Include(ci => ci.Variant)
-              .ThenInclude(v => v.Product)
-          .Include(ci => ci.Variant)
-              .ThenInclude(v => v.Color)
-          .Include(ci => ci.Variant)
-              .ThenInclude(v => v.ProductImages)
-          .Select(ci => new CartItemViewModel
-          {
-            CartItemId = ci.CartItemId,
-            VariantId = ci.VariantId,
-            ProductName = ci.Variant.Product.NameProduct,
-            ColorName = ci.Variant.Color.ColorName,
-            ImageUrl = ci.Variant.ProductImages
-                  .Where(img => img.IsMain == true)
-                  .Select(img => img.UrlImage)
-                  .FirstOrDefault(),
-            Price = ci.Price,
-            Quantity = ci.Quantity
-          })
-          .ToList();
+			int pageSize = 10;
 
-      return View(new CartViewModel
-      {
-        Items = items
-      });
-    }
+			var query = _context.CartItems
+					.Where(ci => ci.CartId == cart.CartId);
+
+			int totalItems = query.Count();
+			int totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+			var items = query
+					.OrderByDescending(ci => ci.CartItemId)
+					.Skip((page - 1) * pageSize)   // QUAN TRỌNG
+					.Take(pageSize)
+					.Select(ci => new CartItemViewModel
+					{
+						CartItemId = ci.CartItemId,
+						ProductName = ci.Variant.Product.NameProduct,
+						ColorName = ci.Variant.Color.ColorName,
+						ImageUrl = ci.Variant.ProductImages
+									.Where(x => x.IsMain == true)
+									.Select(x => x.UrlImage)
+									.FirstOrDefault(),
+						Price = ci.Price,
+						Quantity = ci.Quantity
+					})
+					.ToList();
+
+			return View(new CartViewModel
+			{
+				Items = items,
+				CurrentPage = page,
+				TotalPages = totalPages,
+				PageSize = pageSize
+			});
+		}
+
+
 
 		[HttpPost]
 		public IActionResult RemoveItem(int cartItemId)
@@ -131,5 +130,42 @@ namespace MiniCar_Model.Controllers
 
 			return Json(new { totalItems });
 		}
+		[HttpGet]
+		public IActionResult LoadMore(int skip)
+		{
+			var accountId = HttpContext.Session.GetInt32("AccountId");
+			if (accountId == null)
+				return Unauthorized();
+
+			var cart = _context.Carts
+				.FirstOrDefault(c => c.AccountId == accountId.Value);
+
+			if (cart == null)
+				return Json(new List<CartItemViewModel>());
+
+			int pageSize = 10;
+
+			var items = _context.CartItems
+				.Where(ci => ci.CartId == cart.CartId)
+				.OrderByDescending(ci => ci.CartItemId)
+				.Skip(skip)
+				.Take(pageSize)
+				.Select(ci => new CartItemViewModel
+				{
+					CartItemId = ci.CartItemId,
+					ProductName = ci.Variant.Product.NameProduct,
+					ColorName = ci.Variant.Color.ColorName,
+					ImageUrl = ci.Variant.ProductImages
+						.Where(x => x.IsMain ==  true)
+						.Select(x => x.UrlImage)
+						.FirstOrDefault(),
+					Price = ci.Price,
+					Quantity = ci.Quantity
+				})
+				.ToList();
+
+			return Json(items);
+		}
+
 	}
 }
