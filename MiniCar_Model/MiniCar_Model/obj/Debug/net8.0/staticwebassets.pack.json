@@ -1049,6 +1049,10 @@
       "PackagePath": "staticwebassets\\img\\categories\\puma.jpg"
     },
     {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\change.png",
+      "PackagePath": "staticwebassets\\img\\change.png"
+    },
+    {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\disabled-check.png",
       "PackagePath": "staticwebassets\\img\\elements\\disabled-check.png"
     },
@@ -1103,6 +1107,10 @@
     {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo_team.png",
       "PackagePath": "staticwebassets\\img\\logo_team.png"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\payment.jpg",
+      "PackagePath": "staticwebassets\\img\\payment.jpg"
     },
     {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\Nam\\Boots\\b1.1.png",
@@ -1643,6 +1651,14 @@
     {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c5.jpg",
       "PackagePath": "staticwebassets\\img\\sd\\c5.jpg"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\shipping.jpg",
+      "PackagePath": "staticwebassets\\img\\shipping.jpg"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\warranty.jpg",
+      "PackagePath": "staticwebassets\\img\\warranty.jpg"
     },
     {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\countdown.js",
