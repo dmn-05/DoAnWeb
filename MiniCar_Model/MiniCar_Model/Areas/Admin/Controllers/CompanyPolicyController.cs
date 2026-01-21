@@ -8,10 +8,12 @@ namespace MiniCar_Model.Areas.Admin.Controllers
 	public class CompanyPolicyController : Controller
 	{
 		private readonly ApplicationDbContext _context;
+		private readonly IWebHostEnvironment _env;
 
-		public CompanyPolicyController(ApplicationDbContext context)
+		public CompanyPolicyController(ApplicationDbContext context, IWebHostEnvironment env)
 		{
 			_context = context;
+			_env = env;
 		}
 
 		// GET: /Admin/Policy
@@ -19,8 +21,8 @@ namespace MiniCar_Model.Areas.Admin.Controllers
 		public IActionResult Index()
 		{
 			var list = _context.CompanyPolicies
-				.OrderBy(x => x.DisplayOrder)
-				.ToList();
+					.OrderBy(x => x.DisplayOrder)
+					.ToList();
 
 			return View(list);
 		}
@@ -33,7 +35,7 @@ namespace MiniCar_Model.Areas.Admin.Controllers
 				return NotFound();
 
 			var policy = _context.CompanyPolicies
-				.FirstOrDefault(x => x.Code == code);
+					.FirstOrDefault(x => x.Code == code);
 
 			if (policy == null)
 				return NotFound();
@@ -44,12 +46,44 @@ namespace MiniCar_Model.Areas.Admin.Controllers
 		// POST: /Admin/Policy/Edit
 		[HttpPost("Edit")]
 		[ValidateAntiForgeryToken]
-		public IActionResult EditPost(CompanyPolicy model)
+		public async Task<IActionResult> Edit(
+				CompanyPolicy model,
+				IFormFile iconFile,
+				bool RemoveIcon)
 		{
-			if (!ModelState.IsValid)
-				return View("Edit", model);
+			var policy = _context.CompanyPolicies
+					.FirstOrDefault(x => x.Id == model.Id);
 
-			_context.CompanyPolicies.Update(model);
+			if (policy == null)
+				return NotFound();
+
+			policy.Title = model.Title;
+			policy.Description = model.Description;
+			policy.Status = model.Status;
+			policy.DisplayOrder = model.DisplayOrder;
+
+			// REMOVE ICON
+			if (RemoveIcon)
+			{
+				policy.Icon = null;
+			}
+
+			// UPLOAD ICON
+			if (iconFile != null && iconFile.Length > 0)
+			{
+				var fileName = Guid.NewGuid() + Path.GetExtension(iconFile.FileName);
+				var folder = Path.Combine(_env.WebRootPath, "uploads/policy");
+
+				if (!Directory.Exists(folder))
+					Directory.CreateDirectory(folder);
+
+				var path = Path.Combine(folder, fileName);
+				using var stream = new FileStream(path, FileMode.Create);
+				await iconFile.CopyToAsync(stream);
+
+				policy.Icon = "/uploads/policy/" + fileName;
+			}
+
 			_context.SaveChanges();
 
 			TempData["success"] = "Cập nhật chính sách thành công";

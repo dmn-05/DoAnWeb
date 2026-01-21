@@ -152,7 +152,148 @@
 		</div>
 	</div>
 </section>
+<section class="about-blog section_gap rounded-section bg-light">
+	<div class="container">
 
+		<div class="d-flex justify-content-between align-items-center mb-4">
+			<h3 class="mb-0">Bài viết mới</h3>
+
+			<div>
+				<button class="btn btn-outline-secondary btn-sm me-2"
+								data-bs-target="#blogCarousel"
+								data-bs-slide="prev">
+					<i class="bi bi-chevron-left"></i>
+				</button>
+
+				<button class="btn btn-outline-secondary btn-sm"
+								data-bs-target="#blogCarousel"
+								data-bs-slide="next">
+					<i class="bi bi-chevron-right"></i>
+				</button>
+			</div>
+		</div>
+
+		<div id="blogCarousel" class="carousel slide" data-bs-ride="false">
+			<div class="carousel-inner">
+
+				@for (int i = 0; i < Model.Blogs.Count; i += 3)
+				{
+					<div class="carousel-item @(i == 0 ? "active" : "")">
+						<div class="row">
+
+							@foreach (var blog in Model.Blogs.Skip(i).Take(3))
+							{
+								<div class="col-lg-4 col-md-6 mb-4">
+									<div class="card h-100 border-0 shadow-sm reveal">
+
+										<img src="@blog.Thumbnail"
+												 class="card-img-top"
+												 alt="@blog.Title"
+												 style="height:200px; object-fit:cover;">
+
+										<div class="card-body">
+											<h5 class="card-title">@blog.Title</h5>
+											<p class="card-text text-muted">
+												@blog.Summary
+											</p>
+										</div>
+
+										<div class="card-footer bg-white border-0">
+											<a href="/Blog/@blog.Slug"
+												 class="btn btn-outline-primary btn-sm">
+												Xem chi tiết
+											</a>
+										</div>
+
+									</div>
+								</div>
+							}
+
+						</div>
+					</div>
+				}
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="about-product-post section_gap rounded-section">
+	<div class="container">
+
+		<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap">
+			<h3 class="mb-3 mb-md-0">Bài viết sản phẩm</h3>
+
+			<form method="get" class="d-flex">
+				<input type="text"
+							 name="keyword"
+							 value="@Model.Keyword"
+							 class="form-control me-2"
+							 placeholder="Tìm bài viết...">
+				<button class="btn btn-primary">
+					Tìm
+				</button>
+			</form>
+		</div>
+		<div class="row">
+			@if (Model.ProductPosts != null && Model.ProductPosts.Any())
+			{
+				foreach (var item in Model.ProductPosts)
+				{
+					<div class="col-lg-4 col-md-6 mb-4">
+						<div class="card h-100 shadow-sm border-0 reveal">
+
+							<img src="@item.Thumbnail"
+									 class="card-img-top"
+									 alt="@item.Title"
+									 style="height:220px; object-fit:cover;">
+
+							<div class="card-body">
+								<h5 class="card-title">@item.Title</h5>
+								<p class="card-text text-muted">
+									@item.Summary
+								</p>
+							</div>
+
+							<div class="card-footer bg-white border-0">
+								<a href="/ProductPost/@item.Slug"
+									 class="btn btn-outline-dark btn-sm">
+									Xem chi tiết
+								</a>
+							</div>
+
+						</div>
+					</div>
+				}
+			}
+			else
+			{
+				<div class="col-12 text-center text-muted">
+					Không có bài viết sản phẩm
+				</div>
+			}
+		</div>
+
+		<!-- PAGINATION -->
+		@if (Model.TotalPages > 1)
+		{
+			<nav class="mt-4">
+				<ul class="pagination justify-content-center">
+
+					@for (int i = 1; i <= Model.TotalPages; i++)
+					{
+						<li class="page-item @(i == Model.CurrentPage ? "active" : "")">
+							<a class="page-link"
+								 href="?page=@i&keyword=@Model.Keyword">
+								@i
+							</a>
+						</li>
+					}
+
+				</ul>
+			</nav>
+		}
+	</div>
+</section>
 <section class="about-cta section_gap text-center">
 	<div class="container">
 		<h3>Bạn đang tìm mô hình yêu thích?</h3>

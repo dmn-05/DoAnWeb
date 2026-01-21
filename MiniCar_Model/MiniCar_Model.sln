@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniCar_Model", "MiniCar_Model\MiniCar_Model.csproj", "{0756D4EF-3414-4EF7-9176-F718B397272D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MiniCar_Model", "MiniCar_Model\MiniCar_Model.csproj", "{0756D4EF-3414-4EF7-9176-F718B397272D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

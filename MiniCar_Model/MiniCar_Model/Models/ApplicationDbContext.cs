@@ -60,6 +60,9 @@ public partial class ApplicationDbContext : DbContext
 	public virtual DbSet<Wishlist> Wishlists { get; set; }
 	public DbSet<CompanyInfo> CompanyInfos { get; set; }
 	public DbSet<CompanyPolicy> CompanyPolicies { get; set; }
+	public DbSet<BlogPost> BlogPosts { get; set; }
+	public DbSet<ProductPost> ProductPosts { get; set; }
+
 
 
 	//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

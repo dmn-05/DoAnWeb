@@ -19,8 +19,9 @@
 
 					<form asp-area="Admin"
 								asp-controller="CompanyPolicy"
-								asp-action="Update"
-								method="post">
+								asp-action="Edit"
+								method="post"
+								enctype="multipart/form-data">
 
 						@Html.AntiForgeryToken()
 						<input type="hidden" asp-for="Id" />
@@ -55,9 +56,10 @@
 
 									<input type="file"
 												 id="iconUpload"
-												 name="Icon"
+												 name="iconFile"
 												 style="display:none;" />
 
+									<input type="hidden" name="RemoveIcon" id="removeIconFlag" value="false" />
 								</div>
 								<p class="text-muted small">
 									Icon đại diện cho chính sách
@@ -139,8 +141,11 @@
 	const btnAdd = document.getElementById('btnAddIcon');
 	const btnRemove = document.getElementById('btnRemoveIcon');
 	const preview = document.getElementById('policyIconPreview');
+	const removeFlag = document.getElementById('removeIconFlag');
 
-	btnAdd.onclick = () => iconUpload.click();
+	btnAdd.onclick = () => {
+		iconUpload.click();
+	};
 
 	iconUpload.onchange = e => {
 		const file = e.target.files[0];
@@ -151,6 +156,8 @@
 
 		btnAdd.style.display = 'none';
 		btnRemove.style.display = 'flex';
+
+		removeFlag.value = "false";
 	};
 
 	btnRemove.onclick = () => {
@@ -160,5 +167,9 @@
 
 		btnAdd.style.display = 'flex';
 		btnRemove.style.display = 'none';
+
+		removeFlag.value = "true"; // ⬅ QUAN TRỌNG
 	};
+</script>
+
 </script>
