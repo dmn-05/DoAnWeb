@@ -84,6 +84,33 @@
 					<span>khuyến mãi</span>
 				</a>
 			</li>
+			<li class="sub-menu">
+				<a href="javascript:;" data-toggle="collapse" data-target="#companySubMenu">
+					<i class="fa fa-info-circle"></i>
+					<span>Thông tin</span>
+					<span class="menu-arrow pull-right">
+						<i class="fa fa-angle-down"></i>
+					</span>
+				</a>
+
+				<ul class="sub collapse" id="companySubMenu">
+					<li>
+						<a asp-area="Admin"
+							 asp-controller="CompanyInfo"
+							 asp-action="Edit">
+							Công ty
+						</a>
+					</li>
+
+					<li>
+						<a asp-area="Admin"
+							 asp-controller="CompanyPolicy"
+							 asp-action="Index">
+							Chính sách
+						</a>
+					</li>
+				</ul>
+			</li>
 		</ul>
 		<!-- sidebar menu end-->
 	</div>

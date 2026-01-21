@@ -30,26 +30,27 @@ namespace MiniCar_Model.Areas.Admin.Controllers
 		public IActionResult Edit(CompanyInfo model)
 		{
 			if (!ModelState.IsValid)
+			{
 				return View(model);
-
+			}
 			var entity = _context.CompanyInfos.FirstOrDefault();
 
 			if (entity == null)
 			{
-				_context.CompanyInfos.Add(model);
-			}
-			else
-			{
-				entity.CompanyName = model.CompanyName;
-				entity.BusinessField = model.BusinessField;
-				entity.Address = model.Address;
-				entity.Email = model.Email;
-				entity.Hotline = model.Hotline;
-				entity.Description = model.Description;
-				entity.Updated_At = DateTime.Now;
+				entity = new CompanyInfo();
+				_context.CompanyInfos.Add(entity);
 			}
 
+			entity.CompanyName = model.CompanyName;
+			entity.BusinessField = model.BusinessField;
+			entity.Address = model.Address;
+			entity.Email = model.Email;
+			entity.Hotline = model.Hotline;
+			entity.Description = model.Description;
+			entity.Updated_At = DateTime.Now;
+
 			_context.SaveChanges();
+
 			TempData["success"] = "Cập nhật thông tin công ty thành công";
 			return RedirectToAction(nameof(Edit));
 		}

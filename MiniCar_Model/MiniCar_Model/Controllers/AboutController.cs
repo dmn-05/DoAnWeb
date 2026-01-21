@@ -18,10 +18,10 @@ namespace MiniCar_Model.Controllers
 			var viewModel = new AboutViewModel
 			{
 				CompanyInfo = _context.CompanyInfos.FirstOrDefault(),
-				//Policies = _context.CompanyPolicies
-				//											.Where(p => p.Status == "ACTIVE")
-				//											.OrderBy(p => p.DisplayOrder)
-				//											.ToList()
+				Policies = _context.CompanyPolicies
+															.Where(p => p.Status == "ACTIVE")
+															.OrderBy(p => p.DisplayOrder)
+															.ToList()
 			};
 
 			return View(viewModel);

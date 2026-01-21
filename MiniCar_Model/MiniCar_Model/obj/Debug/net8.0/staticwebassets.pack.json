@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\admin\\css\\bootstrap.css"
     },
     {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\site.css",
+      "PackagePath": "staticwebassets\\admin\\css\\site.css"
+    },
+    {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\style-responsive.css",
       "PackagePath": "staticwebassets\\admin\\css\\style-responsive.css"
     },
