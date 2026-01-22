@@ -19,15 +19,33 @@
 				<!-- Collect the nav links, forms, and other content for toggling -->
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="nav navbar-nav menu_nav ml-auto mt-25px">
-						<li class="nav-item active"><a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a></li>
-						<li class="nav-item"><a class="nav-link" asp-controller="Product" asp-action="List">Sản phẩm</a></li>
-						<li class="nav-item submenu dropdown">
-							<a asp-controller="Home" asp-action="Promotion" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-								 aria-expanded="false">Khuyến mãi</a>
+						<li class="nav-item active">
+							<a class="nav-link" asp-controller="Home" asp-action="Index">Trang chủ</a>
 						</li>
-						<li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Introduction">Giới thiệu</a></li>
-						<li class="nav-item"><a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a></li>
+
+						@await Component.InvokeAsync("CategoryMenu")
+
+						<li class="nav-item submenu dropdown">
+							<a asp-controller="Home"
+								 asp-action="Promotion"
+								 class="nav-link dropdown-toggle"
+								 data-toggle="dropdown"
+								 role="button"
+								 aria-haspopup="true"
+								 aria-expanded="false">
+								Khuyến mãi
+							</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" asp-controller="Home" asp-action="Introduction">Giới thiệu</a>
+						</li>
+
+						<li class="nav-item">
+							<a class="nav-link" asp-controller="Home" asp-action="Contact">Liên hệ</a>
+						</li>
 					</ul>
+
 					<ul class="nav navbar-nav navbar-right height-75px">
 						<!--            <li class="nav-item"><a href="login.html" class="cart" id="cart"><span class="ti-bag"></span></a></li>-->
 						<li class="nav-item"><a asp-controller="Cart" asp-action="Index" class="cart"><span title="Giỏ hàng" class="ti-bag" data-toggle="modal" data-target="#cart1"></span></a></li>

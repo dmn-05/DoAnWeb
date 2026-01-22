@@ -1,6 +1,7 @@
 @{
 	ViewData["Title"] = "Thanh toán";
 }
+@model CheckoutVM
 
 <section class="banner-area organic-breadcrumb">
 	<div class="container">
@@ -9,7 +10,7 @@
 				<h1>Thanh toán</h1>
 				<nav class="d-flex align-items-center">
 					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-					<a asp></a>
+					<a asp-controller="Checkout" asp-action="Index">Thanh toán</a>
 				</nav>
 			</div>
 		</div>
@@ -28,16 +29,16 @@
 
 					<div class="border rounded p-4 bg-light d-flex justify-content-between align-items-center">
 						<div>
-							<div class="fw-bold">Nguyễn Văn A</div>
-							<div>0123 456 789</div>
+							<div class="fw-bold">@Model.Customer.NameAccount</div>
+							<div>@Model.Customer.PhoneNumber</div>
 							<div class="text-muted">
-								123 Nguyễn Trãi, Phường 5, Quận 5, TP.HCM
+								@Model.Customer.AddressAccount
 							</div>
 						</div>
 
-						<button class="btn btn-outline-primary btn-sm">
-							Đổi địa chỉ
-						</button>
+						<a asp-controller="Account" asp-action="EditProfile" class="btn btn-outline-primary btn-sm">
+							Đổi thông tin
+						</a>
 					</div>
 				</div>
 
@@ -48,7 +49,7 @@
 					<textarea class="form-control"
 										rows="3"
 										placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi giao...">
-	</textarea>
+					</textarea>
 				</div>
 
 				<!-- SẢN PHẨM -->
@@ -61,63 +62,36 @@
 								<tr>
 									<th style="width:80px;">Ảnh</th>
 									<th>Sản phẩm</th>
+									<th class="text-center">Màu sắc</th>
 									<th class="text-center">Số lượng</th>
 									<th class="text-end">Đơn giá</th>
 									<th class="text-end">Thành tiền</th>
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td>
-										<img src="/img/product/demo1.jpg"
-												 class="img-fluid rounded"
-												 style="width:60px;height:60px;object-fit:cover">
-									</td>
+								@foreach (var item in Model.Products) {
+									<tr>
+										<td>
+											<img src="@Url.Content(@item.ProductImage)"
+													 class="img-fluid rounded"
+													 style="width:60px;height:60px;object-fit:cover">
+										</td>
 
-									<td>
-										Giày Boot Nam Đế Cao Màu Vàng
-									</td>
+										<td>
+											@item.ProductName
+										</td>
 
-									<td class="text-center">
-										<input type="number"
-													 class="form-control form-control-sm text-center"
-													 value="1"
-													 min="1"
-													 style="width:70px;margin:auto">
-									</td>
+										<td class="text-center">
+											@item.Quantity
+										</td>
 
-									<td class="text-end">550.000đ</td>
+										<td class="text-end">@item.Price</td>
 
-									<td class="text-end text-danger fw-bold">
-										550.000đ
-									</td>
-								</tr>
-
-								<tr>
-									<td>
-										<img src="/img/product/demo2.jpg"
-												 class="img-fluid rounded"
-												 style="width:60px;height:60px;object-fit:cover">
-									</td>
-
-									<td>
-										Giày boot nam không dây
-									</td>
-
-									<td class="text-center">
-										<input type="number"
-													 class="form-control form-control-sm text-center"
-													 value="1"
-													 min="1"
-													 style="width:70px;margin:auto">
-									</td>
-
-									<td class="text-end">806.000đ</td>
-
-									<td class="text-end fw-bold">
-										806.000đ
-									</td>
-								</tr>
+										<td class="text-end text-danger fw-bold">
+											@item.PriceTotal
+										</td>
+									</tr>
+								}
 							</tbody>
 
 						</table>
@@ -125,7 +99,7 @@
 
 					<div class="d-flex justify-content-end fw-bold fs-5 mt-3">
 						<span class="me-3">Tổng cộng: </span>
-						<span class="text-danger"> 1.999.000đ</span>
+						<span class="text-danger"> @Model.Total</span>
 					</div>
 
 
@@ -164,5 +138,6 @@
 				</div>
 			</div>
 		</div>
+	</div>
 </section>
 

@@ -2976,6 +2976,18 @@
       <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ufchc90c8g"},{"Name":"integrity","Value":"sha256-OqnyE9GDpd5gvbjLis/lxGju8a7tCGwGGO8GyI7o3HM="},{"Name":"label","Value":"_content/MiniCar_Model/img/banner/common-banner.jpg"}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"80152"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022OqnyE9GDpd5gvbjLis/lxGju8a7tCGwGGO8GyI7o3HM=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 Jan 2026 16:24:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/banner/hypercar-collection.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\banner\hypercar-collection.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"13663"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 22 Jan 2026 22:11:22 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/banner/hypercar-collection.zfdgrjr9ll.jpg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\banner\hypercar-collection.jpg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"zfdgrjr9ll"},{"Name":"integrity","Value":"sha256-D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY="},{"Name":"label","Value":"_content/MiniCar_Model/img/banner/hypercar-collection.jpg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"13663"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY=\u0022"},{"Name":"Last-Modified","Value":"Thu, 22 Jan 2026 22:11:22 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/banner/next.kx6fu6yb5u.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\banner\next.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
