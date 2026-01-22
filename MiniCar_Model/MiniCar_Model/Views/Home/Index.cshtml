@@ -22,33 +22,50 @@
 									<div class="banner-content">
 										<h1>@item.Title</h1>
 										<div class="add-bag d-flex align-items-center">
-											<a class="add-btn" asp-controller="Cart" asp-action="Index" asp-route-variantId="@item.VariantId"><span class="lnr lnr-cross"></span></a>
-											<span class="add-text text-uppercase">Mô tả chi tiết sản phẩm</span>
+											@if (item.StatusSlideshow != "Only") {
+												<a class="add-btn" asp-controller="Cart" asp-action="Index" asp-route-variantId="@item.VariantId"><span class="lnr lnr-cross"></span></a>
+												<span class="add-text text-uppercase">Mô tả chi tiết</span>
+											}
 										</div>
 									</div>
 								</div>
 								<div class="col-lg-7">
-									<a asp-controller="Product" asp-action="Detail" asp-route-variantId="@item.VariantId" class="banner-img">
-										<img class="img-fluid" src="@item.ImageUrl" alt="@item.Title">
-									</a>
+									@if (item.StatusSlideshow == "Only") {
+										<a asp-controller="Product" asp-action="List" asp-route-CategoryId="1" class="banner-img">
+											<img class="img-fluid" src="@Url.Content(@item.ImageUrl)" alt="@item.Title">
+										</a>
+									} else {
+										<a asp-controller="Product" asp-action="Detail" asp-route-variantId="@item.VariantId" class="banner-img">
+											<img class="img-fluid" src="@Url.Content(@item.ImageUrl)" alt="@item.Title">
+										</a>
+									}
 								</div>
 							</div>
 						} else {
 							<!-- single-slide -->
-							<div class="row single-slide">
+							<!-- single-slide -->
+							<div class="row single-slide align-items-center d-flex">
 								<div class="col-lg-5 col-md-6">
 									<div class="banner-content">
 										<h1>@item.Title</h1>
 										<div class="add-bag d-flex align-items-center">
-											<a class="add-btn" asp-controller="Cart" asp-action="Index" asp-route-variantId="@item.VariantId"><span class="lnr lnr-cross"></span></a>
-											<span class="add-text text-uppercase">Mô tả chi tiết sản phẩm</span>
+											@if (item.StatusSlideshow != "Only") {
+												<a class="add-btn" asp-controller="Cart" asp-action="Index" asp-route-variantId="@item.VariantId"><span class="lnr lnr-cross"></span></a>
+												<span class="add-text text-uppercase">Mô tả chi tiết</span>
+											}
 										</div>
 									</div>
 								</div>
 								<div class="col-lg-7">
-									<a asp-controller="Product" asp-action="Detail" asp-route-variantId="@item.VariantId" class="banner-img">
-										<img class="img-fluid" src="@item.ImageUrl" alt="@item.Title">
-									</a>
+									@if (item.StatusSlideshow == "Only") {
+										<a asp-controller="Product" asp-action="List" asp-route-CategoryId="1" class="banner-img">
+											<img class="img-fluid" src="@Url.Content(@item.ImageUrl)" alt="@item.Title">
+										</a>
+									} else {
+										<a asp-controller="Product" asp-action="Detail" asp-route-variantId="@item.VariantId" class="banner-img">
+											<img class="img-fluid" src="@Url.Content(@item.ImageUrl)" alt="@item.Title">
+										</a>
+									}
 								</div>
 							</div>
 						}

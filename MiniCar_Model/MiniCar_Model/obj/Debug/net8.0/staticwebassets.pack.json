@@ -997,6 +997,10 @@
       "PackagePath": "staticwebassets\\img\\banner\\common-banner.jpg"
     },
     {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\hypercar-collection.jpg",
+      "PackagePath": "staticwebassets\\img\\banner\\hypercar-collection.jpg"
+    },
+    {
       "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\next.png",
       "PackagePath": "staticwebassets\\img\\banner\\next.png"
     },

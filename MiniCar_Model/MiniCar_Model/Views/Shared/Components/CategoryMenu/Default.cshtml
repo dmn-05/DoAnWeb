@@ -1,0 +1,36 @@
+﻿@model List<Category>
+
+<li class="nav-item dropdown">
+	<a class="nav-link dropdown-toggle"
+		 href="#"
+		 id="categoryDropdown"
+		 role="button"
+		 data-toggle="dropdown"
+		 aria-haspopup="true"
+		 aria-expanded="false">
+		Danh mục
+	</a>
+
+	<div class="dropdown-menu shadow-sm border-0"
+			 aria-labelledby="categoryDropdown"
+			 style="min-width:220px">
+
+		@foreach (var item in Model) {
+			<a class="dropdown-item d-flex align-items-center"
+				 asp-controller="Product"
+				 asp-action="List"
+				 asp-route-CategoryId="@item.CategoryId">
+				<i class="ti-tag mr-2"></i>
+				@item.NameCategory
+			</a>
+		}
+
+		<div class="dropdown-divider"></div>
+
+		<a class="dropdown-item font-weight-bold text-primary"
+			 asp-controller="Product"
+			 asp-action="List">
+			Tất cả sản phẩm
+		</a>
+	</div>
+</li>

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Ucvy+QjrIV9vkroKkgBm5wJDkaOycEpI3X1oqtOS7to=",
+  "Hash": "i6mKnF5WRxyGWjeczSUED/UnjIhjAMaUhvRUm5ovUFk=",
   "Source": "MiniCar_Model",
   "BasePath": "_content/MiniCar_Model",
   "Mode": "Default",
@@ -5265,6 +5265,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\banner\\common-banner.jpg"
+    },
+    {
+      "Identity": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\hypercar-collection.jpg",
+      "SourceId": "MiniCar_Model",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\",
+      "BasePath": "_content/MiniCar_Model",
+      "RelativePath": "img/banner/hypercar-collection#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "zfdgrjr9ll",
+      "Integrity": "D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\banner\\hypercar-collection.jpg"
     },
     {
       "Identity": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\next.png",
@@ -30599,6 +30620,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-OqnyE9GDpd5gvbjLis/lxGju8a7tCGwGGO8GyI7o3HM="
+        }
+      ]
+    },
+    {
+      "Route": "img/banner/hypercar-collection.jpg",
+      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\hypercar-collection.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13663"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 Jan 2026 22:11:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY="
+        }
+      ]
+    },
+    {
+      "Route": "img/banner/hypercar-collection.zfdgrjr9ll.jpg",
+      "AssetFile": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\hypercar-collection.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "13663"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 22 Jan 2026 22:11:22 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "zfdgrjr9ll"
+        },
+        {
+          "Name": "label",
+          "Value": "img/banner/hypercar-collection.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-D785DoZbI4NIFdJSOT4L/YccU9onTgRAWZF4qEdMhpY="
         }
       ]
     },

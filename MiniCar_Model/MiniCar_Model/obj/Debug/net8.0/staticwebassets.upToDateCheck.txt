@@ -246,6 +246,7 @@ wwwroot\fonts\themify.woff
 wwwroot\img\banner\banner-bg.jpg
 wwwroot\img\banner\banner-img.png
 wwwroot\img\banner\common-banner.jpg
+wwwroot\img\banner\hypercar-collection.jpg
 wwwroot\img\banner\next.png
 wwwroot\img\banner\prev.png
 wwwroot\img\brand\Adidas.png

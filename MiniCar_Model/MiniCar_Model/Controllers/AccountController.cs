@@ -3,17 +3,14 @@ using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
 using MiniCar_Model.Models.ViewModels;
 
-namespace MiniCar_Model.Controllers
-{
-  public class AccountController : Controller
-  {
+namespace MiniCar_Model.Controllers {
+  public class AccountController : Controller {
     private readonly ApplicationDbContext _context;
     //thuong code
     private readonly ILogger<AccountController> _logger;
     //thuong end code
 
-    public AccountController(ApplicationDbContext context, ILogger<AccountController> logger)
-    {
+    public AccountController(ApplicationDbContext context, ILogger<AccountController> logger) {
       _context = context;
       //thuong code
       _logger = logger;
@@ -22,11 +19,9 @@ namespace MiniCar_Model.Controllers
 
     // GET: /Account/Login
     [HttpGet]
-    public IActionResult Login()
-    {
+    public IActionResult Login() {
       //thuong code
-      if (HttpContext.Session.GetInt32("AccountId") != null)
-      {
+      if (HttpContext.Session.GetInt32("AccountId") != null) {
         if (HttpContext.Session.GetInt32("RoleId") == 1)
           return RedirectToAction("Index", "Home", new { area = "Admin" });
         return RedirectToAction("Index", "Home");
@@ -39,16 +34,14 @@ namespace MiniCar_Model.Controllers
 
     // POST: /Account/Login
     [HttpPost]
-    public IActionResult Login(string email, string password)
-    {
+    public IActionResult Login(string email, string password) {
       var account = _context.Accounts.FirstOrDefault(x =>
           (x.Email == email || x.UserName == email) &&
           x.PasswordAccount == password &&
           x.StatusAccount == "ACTIVE"
       );
 
-      if (account == null)
-      {
+      if (account == null) {
         ViewBag.Error = "Sai tài khoản hoặc mật khẩu";
         return View();
       }
@@ -66,18 +59,15 @@ namespace MiniCar_Model.Controllers
       //thuong end code
     }
     [HttpPost]
-    public IActionResult LoginPopup(string email, string password)
-    {
+    public IActionResult LoginPopup(string email, string password) {
       var account = _context.Accounts.FirstOrDefault(x =>
           (x.Email == email || x.UserName == email) &&
           x.PasswordAccount == password &&
           x.StatusAccount == "ACTIVE"
       );
 
-      if (account == null)
-      {
-        return Json(new
-        {
+      if (account == null) {
+        return Json(new {
           success = false,
           message = "Email hoặc mật khẩu không đúng"
         });
@@ -89,29 +79,24 @@ namespace MiniCar_Model.Controllers
       HttpContext.Session.SetString("UserName", account.UserName);
       HttpContext.Session.SetString("FullName", account.NameAccount ?? "");
 
-      return Json(new
-      {
+      return Json(new {
         success = true
       });
     }
 
     [HttpGet]
-    public IActionResult Register()
-    {
+    public IActionResult Register() {
       return View();
     }
 
-    public IActionResult ForgotPassword()
-    {
+    public IActionResult ForgotPassword() {
       return View();
     }
 
-    public IActionResult Profile()
-    {
+    public IActionResult Profile() {
       var accountId = HttpContext.Session.GetInt32("AccountId");
 
-      if (accountId == null)
-      {
+      if (accountId == null) {
         return RedirectToAction("Login");
       }
 
@@ -122,14 +107,12 @@ namespace MiniCar_Model.Controllers
     }
     //thuong code
     [HttpGet]
-    public IActionResult EditProfile()
-    {
+    public IActionResult EditProfile() {
       var accountId = HttpContext.Session.GetInt32("AccountId");
 
       var model = _context.Accounts
           .Where(a => a.AccountId == accountId)
-          .Select(a => new Account
-          {
+          .Select(a => new Account {
             NameAccount = a.NameAccount,
             Email = a.Email,
             PhoneNumber = a.PhoneNumber,
@@ -146,10 +129,8 @@ namespace MiniCar_Model.Controllers
     //thuong code
     [HttpPost]
     [ValidateAntiForgeryToken]
-    public IActionResult EditProfile(Account model)
-    {
-      try
-      {
+    public IActionResult EditProfile(Account model) {
+      try {
         var accountId = HttpContext.Session.GetInt32("AccountId");
 
         var account = _context.Accounts
@@ -167,21 +148,17 @@ namespace MiniCar_Model.Controllers
         _context.SaveChanges();
 
         return RedirectToAction("Profile");
-      }
-      catch (Exception ex)
-      {
+      } catch (Exception ex) {
         _logger.LogError(ex, "Lỗi cập nhật profile");
         return View(model);
       }
     }
     //thuong end code
-    public IActionResult Logout()
-    {
+    public IActionResult Logout() {
       return RedirectToAction("Index", "Home");
     }
     //thuong code
-    public IActionResult Order(string status)
-    {
+    public IActionResult Order(string status) {
       var accountId = HttpContext.Session.GetInt32("AccountId");
       if (accountId == null) return RedirectToAction("Login");
 
@@ -189,8 +166,7 @@ namespace MiniCar_Model.Controllers
       var query = _context.Bills.Where(b => b.AccountId == accountId);
 
       // 2. Lọc trạng thái (Lọc trực tiếp trên IQueryable để SQL thực thi)
-      if (!string.IsNullOrEmpty(status) && status != "Tất cả")
-      {
+      if (!string.IsNullOrEmpty(status) && status != "Tất cả") {
         // Dùng Trim() để xử lý khoảng trắng, không dùng Normalize ở đây
         query = query.Where(b => b.StatusBill.Trim() == status.Trim());
       }
@@ -198,22 +174,20 @@ namespace MiniCar_Model.Controllers
       // 3. Select dữ liệu (Giữ nguyên logic Items để lấy nguyên bảng)
       var orders = query
           .OrderByDescending(b => b.CreateAt)
-          .Select(b => new OrderVM
-          {
+          .Select(b => new OrderVM {
             BillId = b.BillId,
             TotalPrice = b.TotalPrice,
             StatusBill = b.StatusBill,
             CreateAt = b.CreateAt,
             // Quan trọng: Phải Select Items ở đây để View có dữ liệu vẽ bảng
-            Items = b.BillInfos.Select(bi => new OrderItemVM
-            {
+            Items = b.BillInfos.Select(bi => new OrderItemVM {
               ProductName = bi.Variant.Product.NameProduct,
               Quantity = bi.Quantity,
               UnitPrice = bi.UnitPrice,
               ImageUrl = bi.Variant.ProductImages
                           .Where(img => img.IsMain == true)
                           .Select(img => img.UrlImage)
-                          .FirstOrDefault()
+                          .FirstOrDefault() ?? ""
             }).ToList()
           })
           .AsNoTracking()
@@ -224,17 +198,14 @@ namespace MiniCar_Model.Controllers
     }
 
     [HttpPost]
-    public IActionResult CancelOrder(int id)
-    {
+    public IActionResult CancelOrder(int id) {
       // 1. Tìm đơn hàng trong DB
       var bill = _context.Bills.Find(id);
 
-      if (bill != null)
-      {
+      if (bill != null) {
         // 2. Kiểm tra điều kiện một lần nữa ở Server để bảo mật
         // Chỉ cho phép hủy khi trạng thái là "Chưa vận chuyển"
-        if (bill.StatusBill?.Trim() == "Chưa vận chuyển")
-        {
+        if (bill.StatusBill?.Trim() == "Chưa vận chuyển") {
           // 3. Cập nhật trạng thái
           bill.StatusBill = "Đã hủy";
 
@@ -243,9 +214,7 @@ namespace MiniCar_Model.Controllers
 
           // Gợi ý: Bạn có thể thêm TempData để thông báo cho người dùng
           TempData["Message"] = "Hủy đơn hàng thành công!";
-        }
-        else
-        {
+        } else {
           TempData["Error"] = "Đơn hàng đang trong quá trình vận chuyển, không thể hủy.";
         }
       }
@@ -257,8 +226,7 @@ namespace MiniCar_Model.Controllers
     //thuong end code
 
     //thuong code
-    public IActionResult Wishlist()
-    {
+    public IActionResult Wishlist() {
       var accountId = HttpContext.Session.GetInt32("AccountId");
       if (accountId == null) return RedirectToAction("Login", "Account");
 
@@ -269,8 +237,7 @@ namespace MiniCar_Model.Controllers
               .ThenInclude(pv => pv.Product)
           .Include(w => w.ProductVariant)
               .ThenInclude(pv => pv.ProductImages)
-          .Select(w => new WishlistItemVM
-          {
+          .Select(w => new WishlistItemVM {
             WishlistId = w.WishlistId,
             VariantId = w.ProductVariantId,
             ProductName = w.ProductVariant.Product.NameProduct, // Lấy tên từ bảng Product
@@ -287,13 +254,11 @@ namespace MiniCar_Model.Controllers
       return View(model);
     }
     [HttpPost]
-    public IActionResult RemoveFromWishlist(int id)
-    {
+    public IActionResult RemoveFromWishlist(int id) {
       // Tìm bản ghi Wishlist trong database theo ID nhận được
       var item = _context.Wishlists.Find(id);
 
-      if (item != null)
-      {
+      if (item != null) {
         // Thực hiện xóa khỏi DbContext
         _context.Wishlists.Remove(item);
 
@@ -306,13 +271,11 @@ namespace MiniCar_Model.Controllers
     }
     //thuong end code
 
-    public ActionResult EditAccount()
-    {
+    public ActionResult EditAccount() {
       return View();
     }
 
-    public IActionResult ChangePassword()
-    {
+    public IActionResult ChangePassword() {
       return View();
     }
 

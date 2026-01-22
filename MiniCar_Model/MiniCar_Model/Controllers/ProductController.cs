@@ -16,12 +16,18 @@ namespace MiniCar_Model.Controllers {
 
     // GET: /Product/List
     [HttpGet]
-    public async Task<IActionResult> List(int page = 1) {
+    public async Task<IActionResult> List(int page = 1, int CategoryId = 0) {
       int pageSize = 15;
 
-      var totalProducts = await _context.Products.CountAsync();
+      var query = _context.Products.AsQueryable();
 
-      var productCards = await _context.Products
+      if (CategoryId != 0) {
+        query = query.Where(p => p.CategoryId == CategoryId || p.Category.ParentId == CategoryId);
+      }
+
+      var totalProducts = await query.CountAsync();
+
+      var productCards = await query
           .OrderBy(p => p.ProductId)
           .Skip((page - 1) * pageSize)
           .Take(pageSize)
@@ -43,7 +49,7 @@ namespace MiniCar_Model.Controllers {
                   .SelectMany(v => v.ProductImages)
                   .OrderByDescending(i => i.IsMain)
                   .Select(i => i.UrlImage)
-                  .FirstOrDefault()
+                  .FirstOrDefault() ?? ""
           })
           .ToListAsync();
 
@@ -56,9 +62,11 @@ namespace MiniCar_Model.Controllers {
 
       ViewBag.CurrentPage = page;
       ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+      ViewBag.CategoryId = CategoryId;
 
       return View(model);
     }
+
 
 
 
@@ -142,7 +150,7 @@ namespace MiniCar_Model.Controllers {
                   .SelectMany(v => v.ProductImages)
                   .OrderByDescending(i => i.IsMain)
                   .Select(i => i.UrlImage)
-                  .FirstOrDefault()
+                  .FirstOrDefault() ??  ""
           })
           .ToListAsync();
 
