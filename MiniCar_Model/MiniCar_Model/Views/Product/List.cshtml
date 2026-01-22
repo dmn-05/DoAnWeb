@@ -94,82 +94,23 @@
 			</div>
 			<!-- End Filter Bar -->
 			<!-- Start Best Seller -->
-			<section class="lattest-product-area pb-40 category-list">
-				<div id="product-list" class="row">
-					@await Html.PartialAsync("_ProductListPartial", Model.Products)
-				</div>
-			</section>
-			<!-- End Best Seller -->
-			<!-- Start Filter Bar -->
+			<div id="filter-result">
+				<section class="lattest-product-area pb-40 category-list">
+					<div id="product-list" class="row">
+						@await Html.PartialAsync("_ProductListPartial", Model.Products)
+					</div>
+				</section>
 
-			<div class="filter-bar d-flex flex-wrap align-items-center">
-				<div class="text-center mt-2">
-					<div id="pagination-wrapper">
-						<div class="btn-group">
-							<!-- Previous -->
-							<a class="btn btn-default btn-sm bg-white @(currentPage == 1 ? "disabled" : "")"
-								 asp-controller="Product"
-								 asp-action="List"
-								 asp-route-page="@(currentPage - 1)">
-								«
-							</a>
-
-							<!-- Trang 1 -->
-							@if (startPage > 1) {
-								<a class="btn btn-default btn-sm bg-white"
-									 asp-controller="Product"
-									 asp-action="List"
-									 asp-route-page="1">
-									1
-								</a>
-
-								@if (startPage > 2) {
-									<span class="btn btn-default btn-sm bg-white disabled">...</span>
-								}
-							}
-
-							<!-- Các trang giữa -->
-							@for (int i = startPage; i <= endPage; i++) {
-								if (i == currentPage) {
-									<span class="btn btn-primary btn-sm bg-primary">@i</span>
-								} else {
-									<a class="btn btn-default btn-sm bg-white"
-										 asp-controller="Product"
-										 asp-action="List"
-										 asp-route-page="@i">
-										@i
-									</a>
-								}
-							}
-
-							<!-- Trang cuối -->
-							@if (endPage < totalPages) {
-								@if (endPage < totalPages - 1) {
-									<span class="btn btn-default btn-sm bg-white disabled">...</span>
-								}
-
-								<a class="btn btn-default btn-sm bg-white"
-									 asp-controller="Product"
-									 asp-action="List"
-									 asp-route-page="@totalPages">
-									@totalPages
-								</a>
-							}
-
-							<!-- Next -->
-							<a class="btn btn-default btn-sm bg-white @(currentPage == totalPages ? "disabled" : "")"
-								 asp-controller="Product"
-								 asp-action="List"
-								 asp-route-page="@(currentPage + 1)">
-								»
-							</a>
-
+				<div class="filter-bar d-flex flex-wrap align-items-center">
+					<div class="text-center mt-2">
+						<div id="pagination-wrapper">
+							<div class="btn-group">
+								@await Html.PartialAsync("_PaginationPartial")
+							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
-
 
 		</div>
 		<!-- End Filter Bar -->

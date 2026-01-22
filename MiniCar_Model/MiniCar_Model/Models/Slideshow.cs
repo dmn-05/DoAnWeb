@@ -11,15 +11,9 @@ public partial class Slideshow
 
     public string ImageUrl { get; set; } = null!;
 
-    public string? LinkType { get; set; }
-
-    public int? LinkId { get; set; }
+    public int? VariantId { get; set; }
 
     public string? LinkUrl { get; set; }
-
-    public string? Position { get; set; }
-
-    public int? DisplayOrder { get; set; }
 
     public DateTime? StartDate { get; set; }
 
@@ -30,4 +24,6 @@ public partial class Slideshow
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
+
+    public virtual ProductVariant? Variant { get; set; }
 }

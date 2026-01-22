@@ -1,5 +1,6 @@
 ﻿@{
 	ViewData["Title"] = "Trang Chủ";
+	int i = 1;
 }
 @model HomeVM
 
@@ -12,40 +13,48 @@
 		<div class="row fullscreen align-items-center justify-content-start">
 			<div class="col-lg-12">
 				<div class="active-banner-slider owl-carousel">
-					<!-- single-slide -->
-					<div class="row single-slide align-items-center d-flex">
-						<div class="col-lg-5 col-md-6">
-							<div class="banner-content">
-								<h1>Bộ Sưu tập mới!</h1>
-								<div class="add-bag d-flex align-items-center">
-									<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-									<span class="add-text text-uppercase">Mô tả chi tiết sản phẩm</span>
+
+					@foreach (var item in Model.Slideshows) {
+						if (i == 1) {
+							<!-- single-slide -->
+							<div class="row single-slide align-items-center d-flex">
+								<div class="col-lg-5 col-md-6">
+									<div class="banner-content">
+										<h1>@item.Title</h1>
+										<div class="add-bag d-flex align-items-center">
+											<a class="add-btn" asp-controller="Cart" asp-action="Index" asp-route-variantId="@item.VariantId"><span class="lnr lnr-cross"></span></a>
+											<span class="add-text text-uppercase">Mô tả chi tiết sản phẩm</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-7">
+									<a asp-controller="Product" asp-action="Detail" asp-route-variantId="@item.VariantId" class="banner-img">
+										<img class="img-fluid" src="@item.ImageUrl" alt="@item.Title">
+									</a>
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-7">
-							<a asp-controller="Product" asp-action="List" class="banner-img">
-								<img class="img-fluid" src="~/img/banner/banner-img.png" alt="">
-							</a>
-						</div>
-					</div>
-					<!-- single-slide -->
-					<div class="row single-slide">
-						<div class="col-lg-5">
-							<div class="banner-content">
-								<h1>Nike New <br>Collection!</h1>
-								<div class="add-bag d-flex align-items-center">
-									<a class="add-btn" href=""><span class="lnr lnr-cross"></span></a>
-									<span class="add-text text-uppercase">Thêm vào giỏ</span>
+						} else {
+							<!-- single-slide -->
+							<div class="row single-slide">
+								<div class="col-lg-5 col-md-6">
+									<div class="banner-content">
+										<h1>@item.Title</h1>
+										<div class="add-bag d-flex align-items-center">
+											<a class="add-btn" asp-controller="Cart" asp-action="Index" asp-route-variantId="@item.VariantId"><span class="lnr lnr-cross"></span></a>
+											<span class="add-text text-uppercase">Mô tả chi tiết sản phẩm</span>
+										</div>
+									</div>
+								</div>
+								<div class="col-lg-7">
+									<a asp-controller="Product" asp-action="Detail" asp-route-variantId="@item.VariantId" class="banner-img">
+										<img class="img-fluid" src="@item.ImageUrl" alt="@item.Title">
+									</a>
 								</div>
 							</div>
-						</div>
-						<div class="col-lg-7">
-							<div class="banner-img">
-								<img class="img-fluid" src="~/img/banner/banner-img.png" alt="">
-							</div>
-						</div>
-					</div>
+						}
+						i += 1;
+					}
+
 				</div>
 			</div>
 		</div>
@@ -58,43 +67,43 @@
 		<div class="row features-inner">
 			<!-- single features -->
 			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="single-features">
+				<a asp-controller="Policy" asp-action="Shipping" class="single-features">
 					<div class="f-icon">
 						<img src="img/features/f-icon1.png" alt="">
 					</div>
 					<h6>Miễn phí vận chuyển</h6>
-					<!--                    <p>Miễn phí vận chuyển cho tất cả các đơn đặt hàng</p>-->
-				</div>
+					<!--<p>Miễn phí vận chuyển cho tất cả các đơn đặt hàng</p>-->
+				</a>
 			</div>
 			<!-- single features -->
 			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="single-features">
+				<a asp-controller="Policy" asp-action="ReturnPolicy" class="single-features">
 					<div class="f-icon">
 						<img src="img/features/f-icon2.png" alt="">
 					</div>
 					<h6>Chính sách hoàn trả</h6>
-					<!--                    <p>Free Shipping on all order</p>-->
-				</div>
+					<!--<p>Free Shipping on all order</p>-->
+				</a>
 			</div>
 			<!-- single features -->
 			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="single-features">
+				<a asp-controller="Policy" asp-action="Support" class="single-features">
 					<div class="f-icon">
 						<img src="img/features/f-icon3.png" alt="">
 					</div>
 					<h6>Hỗ trợ 24/7</h6>
-					<!--                    <p>Free Shipping on all order</p>-->
-				</div>
+					<!--<p>Free Shipping on all order</p>-->
+				</a>
 			</div>
 			<!-- single features -->
 			<div class="col-lg-3 col-md-6 col-sm-6">
-				<div class="single-features">
+				<a asp-controller="Policy" asp-action="Payment" class="single-features">
 					<div class="f-icon">
 						<img src="img/features/f-icon4.png" alt="">
 					</div>
 					<h6>Phương thức thanh toán</h6>
-					<!--                    <p>Free Shipping on all order</p>-->
-				</div>
+					<!--<p>Free Shipping on all order</p>-->
+				</a>
 			</div>
 		</div>
 	</div>
@@ -183,26 +192,24 @@
 				@foreach (var item in Model.LatestProducts) {
 					<div class="col-lg-3 col-md-6">
 						<div class="single-product">
-							<img class="img-fluid" src="~/img/product/p1.jpg" alt="">
+							<img class="img-fluid" src="@item.ImageUrl" alt="@item.NameProduct">
 							<div class="product-details">
 								<h6>@item.NameProduct</h6>
 								<div class="price">
-									<h6>189.000đ</h6>
-									<h6 class="l-through">210.000đ</h6>
+									<h6>@item.Price</h6>
+									<h6>@item.NameCategory</h6>
 								</div>
 								<div class="prd-bottom">
 
-									<a href="" class="social-info add-to-cart"
-										 data-name="@item.NameProduct" data-price="189">
+									<a asp-controller="Cart" asp-action="Index" asp-route-variantId="@item.VariantId" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">Thêm vào giỏ</p>
-
 									</a>
-									<a href="" class="social-info">
+									<a asp-controller="Account" asp-action="Wishlist" asp-route-variantId="@item.VariantId" class="social-info">
 										<span class="lnr lnr-heart"></span>
 										<p class="hover-text">Thêm vào yêu thích</p>
 									</a>
-									<a href="" class="social-info">
+									<a asp-controller="Product" asp-action="Detail" asp-route-variantId="@item.VariantId" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Xem thêm</p>
 									</a>
@@ -229,26 +236,24 @@
 				@foreach (var item in Model.DiscountProducts) {
 					<div class="col-lg-3 col-md-6">
 						<div class="single-product">
-							<img class="img-fluid" src="~/img/product/p1.jpg" alt="">
+							<img class="img-fluid" src="@item.ImageUrl" alt="@item.NameProduct">
 							<div class="product-details">
 								<h6>@item.NameProduct</h6>
 								<div class="price">
-									<h6>189.000đ</h6>
-									<h6 class="l-through">210.000đ</h6>
+									<h6>@item.Price</h6>
+									<h6>@item.NameCategory</h6>
 								</div>
 								<div class="prd-bottom">
 
-									<a href="" class="social-info add-to-cart"
-										 data-name="@item.NameProduct" data-price="189">
+									<a asp-controller="Cart" asp-action="Index" asp-route-variantId="@item.VariantId" class="social-info">
 										<span class="ti-bag"></span>
 										<p class="hover-text">Thêm vào giỏ</p>
-
 									</a>
-									<a href="" class="social-info">
+									<a asp-controller="Account" asp-action="Wishlist" asp-route-variantId="@item.VariantId" class="social-info">
 										<span class="lnr lnr-heart"></span>
 										<p class="hover-text">Thêm vào yêu thích</p>
 									</a>
-									<a href="" class="social-info">
+									<a asp-controller="Product" asp-action="Detail" asp-route-variantId="@item.VariantId" class="social-info">
 										<span class="lnr lnr-move"></span>
 										<p class="hover-text">Xem thêm</p>
 									</a>
@@ -371,28 +376,3 @@
 	</div>
 </section>
 <!-- End brand Area -->
-<!-- Start related-product Area -->
-<!-- End related-product Area -->
-@* <!--Modal--> *@
-@* <div class="modal fade" id="cart1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true"> *@
-@*   <div class="modal-dialog modal-lg" role="document"> *@
-@*     <div class="modal-content"> *@
-@*       <div class="modal-header"> *@
-@*         <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5> *@
-@*         <button type="button" class="close" data-dismiss="modal" aria-label="Close"> *@
-@*           <span aria-hidden="true">&times;</span> *@
-@*         </button> *@
-@*       </div> *@
-@*       <div class="modal-body"> *@
-@*         <table class="show-cart table"> *@
-@*         </table> *@
-@*         <div>Tổng tiền: <span class="total-cart"></span>.000đ</div> *@
-@*       </div> *@
-@*       <div class="modal-footer"> *@
-@*         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> *@
-@*         <a href="cart.html" type="button" class="btn btn-primary" style="background-color: #ffba00"> Thanh toán</a> *@
-@*       </div> *@
-@*     </div> *@
-@*   </div> *@
-@* </div> *@
-

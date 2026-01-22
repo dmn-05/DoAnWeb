@@ -1,0 +1,56 @@
+﻿@model Bill
+
+<section id="main-content">
+  <section class="wrapper">
+    <h3><i class="fa fa-angle-right"></i> Cập nhật hóa đơn</h3>
+
+    <div class="content-panel" style="padding:30px">
+      <form asp-action="Update" method="post">
+        <input type="hidden" name="id" value="@Model.BillId" />
+
+        <div class="form-group">
+          <label>Mã hóa đơn</label>
+          <input class="form-control" value="@Model.BillId" disabled />
+        </div>
+
+        <div class="form-group">
+          <label>Tài khoản</label>
+          <input class="form-control" value="@Model.AccountId" disabled />
+        </div>
+
+        <div class="form-group">
+          <label>Tổng tiền</label>
+          <input class="form-control" value="@Model.TotalPrice VNĐ" disabled />
+        </div>
+
+        <div class="form-group">
+          <label>Ngày thanh toán</label>
+          <input class="form-control" value="@Model.PaymentDate?.ToString("dd/MM/yyyy HH:mm")" disabled />
+        </div>
+
+        <div class="form-group">
+          <label>Trạng thái</label>
+          <select name="newStatus" class="form-control">
+            @* Chỉ hiển thị trạng thái hợp lệ *@
+
+            @if (Model.StatusBill == "Pending") {
+              <option value="Confirmed">Đã xác nhận</option>
+              <option value="Cancelled">Đã hủy</option>
+            } else if (Model.StatusBill == "Confirmed") {
+              <option value="Paid">Đã thanh toán</option>
+            } else if (Model.StatusBill == "Paid") {
+              <option value="Completed">Đã hoàn thành</option>
+              <option value="Refunded">Đã hoàn tiền</option>
+            }
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+          <i class="fa fa-save"></i> Cập nhật
+        </button>
+
+        <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+      </form>
+    </div>
+  </section>
+</section>

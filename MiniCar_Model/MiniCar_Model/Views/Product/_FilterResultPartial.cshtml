@@ -1,0 +1,17 @@
+﻿@model List<ProductCardVM>
+
+<section class="lattest-product-area pb-40 category-list">
+	<div id="product-list" class="row">
+		@await Html.PartialAsync("_ProductListPartial", Model)
+	</div>
+</section>
+
+<div class="filter-bar d-flex flex-wrap align-items-center">
+	<div class="text-center mt-2">
+		<div id="pagination-wrapper">
+			<div class="btn-group">
+				@await Html.PartialAsync("_PaginationPartial_Product")
+			</div>
+		</div>
+	</div>
+</div>

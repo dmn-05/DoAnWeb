@@ -1,0 +1,87 @@
+﻿<div class="modal fade" id="loginPopup" tabindex="-1">
+	<div class="modal-dialog modal-lg modal-dialog-centered">
+		<div class="modal-content border-0">
+
+			<section class="login_box_area section_gap">
+				<div class="container">
+					<div class="row justify-content-center">
+						<div class="col-lg-10">
+
+							<!-- CARD WRAPPER -->
+							<div class="card login-wrapper border-0 shadow-lg overflow-hidden">
+								<div class="row g-0">
+
+									<!-- LEFT IMAGE -->
+									<div class="col-lg-6">
+										<div class="login_box_img h-100 rounded-start">
+											<img src="~/img/login.jpg"
+													 class="img-fluid h-100 w-100 object-fit-cover"
+													 alt="Login Image">
+
+											<div class="hover">
+												<h4>Bạn là người mới?</h4>
+												<p>Hãy tạo tài khoản để mua hàng ở trang web chúng tôi!</p>
+												<a class="primary-btn"
+													 asp-controller="Account"
+													 asp-action="Register">
+													Tạo tài khoản
+												</a>
+											</div>
+										</div>
+									</div>
+
+									<!-- RIGHT FORM -->
+									<div class="col-lg-6">
+										<div class="login_form_inner p-5 h-100 d-flex flex-column justify-content-center">
+											<h3 class="text-center mb-4">ĐĂNG NHẬP</h3>
+
+											<form id="loginForm" class="row login_form">
+
+												<div class="col-md-12 form-group mb-3">
+													<input type="email"
+																 name="email"
+																 class="form-control"
+																 placeholder="Email hoặc Username"
+																 required>
+												</div>
+
+												<div class="col-md-12 form-group mb-3">
+													<input type="password"
+																 name="password"
+																 class="form-control"
+																 placeholder="Mật khẩu"
+																 required>
+												</div>
+
+												<div class="col-md-12 form-group mb-4">
+													<div class="creat_account">
+														<input type="checkbox" id="remember">
+														<label for="remember">Duy trì đăng nhập</label>
+													</div>
+												</div>
+
+												<div class="col-md-12 form-group">
+													<button type="submit" class="primary-btn w-100">
+														Đăng nhập
+													</button>
+
+													<div class="text-center mt-3">
+														<a href="#">Quên mật khẩu?</a>
+													</div>
+												</div>
+											</form>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</div>
+	</div>
+</div>
+
+

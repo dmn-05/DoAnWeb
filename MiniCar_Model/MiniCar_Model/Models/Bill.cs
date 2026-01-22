@@ -11,11 +11,16 @@ public partial class Bill
 
     public decimal? TotalPrice { get; set; }
 
+
     public DateTime? PaymentDate { get; set; }
 
-    public string? StatusBill { get; set; }
+    public string StatusBill { get; set; } = null!;
 
-    public DateTime? CreateAt { get; set; }
+    public DateTime CreateAt { get; set; }
+
+    public bool IsDeleted { get; set; }
+
+    public DateTime? DeletedAt { get; set; }
 
     public virtual Account Account { get; set; } = null!;
 

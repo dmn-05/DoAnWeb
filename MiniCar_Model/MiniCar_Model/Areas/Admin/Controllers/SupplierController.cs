@@ -1,10 +1,15 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using MiniCar_Model.Filters;
 
-namespace MiniCar_Model.Areas.Admin.Controllers {
+namespace MiniCar_Model.Areas.Admin.Controllers
+{
   [Area("Admin")]
+  [AdminAuthorize]
 
-  public class SupplierController : Controller {
-    public IActionResult Index() {
+  public class SupplierController : Controller
+  {
+    public IActionResult Index()
+    {
       return View();
     }
   }

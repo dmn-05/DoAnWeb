@@ -1023,3 +1023,30 @@ displayCart();
 //     $('#search_input_box').slideUp(500);
 // });
 
+//function loadProducts(page = 1) {
+//  let data = {
+//    keyword: $('#keyword').val(),
+//    trademarkId: $('input[name="brand"]:checked').val(),
+//    sizeId: $('input[name="size"]:checked').val(),
+//    colorId: $('input[name="color"]:checked').val(),
+//    minPrice: $('#lower-value').text(),
+//    maxPrice: $('#upper-value').text(),
+//    page: page
+//  };
+
+//  $.get('/Product/Filter', data, function (res) {
+//    $('#product-list').parent().html(res);
+//  });
+//}
+
+//// Khi chọn filter → reset page = 1
+//$('input[type=radio]').on('change', function () {
+//  loadProducts(1);
+//});
+
+//// Khi bấm pagination
+//$(document).on('click', '.page-link', function (e) {
+//  e.preventDefault();
+//  let page = $(this).data('page');
+//  if (page) loadProducts(page);
+//});
