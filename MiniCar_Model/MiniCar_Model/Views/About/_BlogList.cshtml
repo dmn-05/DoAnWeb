@@ -1,0 +1,68 @@
+﻿@model MiniCar_Model.Models.ViewModels.AboutViewModel
+
+<div class="row">
+  @foreach (var blog in Model.Blogs)
+  {
+    <div class="col-lg-4 col-md-6 mb-4">
+      <div class="card h-100 shadow-sm">
+        <img src="@blog.Thumbnail"
+             class="card-img-top"
+             style="height:200px; object-fit:cover">
+
+        <div class="card-body">
+          <h5>@blog.Title</h5>
+          <p class="text-muted">@blog.Summary</p>
+        </div>
+
+        <div class="card-footer bg-white border-0 text-center">
+          <a href="/Blog/@blog.Slug"
+             class="btn btn-outline-primary btn-sm">
+            Xem chi tiết
+          </a>
+        </div>
+      </div>
+    </div>
+  }
+</div>
+
+@if (Model.BlogTotalPages > 1)
+{
+  <nav>
+    <ul class="pagination justify-content-center align-items-center">
+
+      <!-- PREVIOUS -->
+      <li class="page-item @(Model.BlogCurrentPage == 1 ? "disabled" : "")">
+        <a class="page-link blog-page"
+           href="#"
+           data-page="@(Model.BlogCurrentPage - 1)"
+           aria-label="Previous">
+          &laquo;
+        </a>
+      </li>
+
+      <!-- PAGE NUMBERS -->
+      @for (int i = 1; i <= Model.BlogTotalPages; i++)
+      {
+        <li class="page-item @(i == Model.BlogCurrentPage ? "active" : "")">
+          <a href="#"
+             class="page-link blog-page"
+             data-page="@i">
+            @i
+          </a>
+        </li>
+      }
+
+      <!-- NEXT -->
+      <li class="page-item @(Model.BlogCurrentPage == Model.BlogTotalPages ? "disabled" : "")">
+        <a class="page-link blog-page"
+           href="#"
+           data-page="@(Model.BlogCurrentPage + 1)"
+           aria-label="Next">
+          &raquo;
+        </a>
+      </li>
+
+    </ul>
+  </nav>
+}
+

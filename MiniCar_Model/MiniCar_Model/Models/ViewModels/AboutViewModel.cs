@@ -7,13 +7,14 @@ namespace MiniCar_Model.Models.ViewModels
 		public List<CompanyPolicy> Policies { get; set; }
 		// BLOG
 		public List<BlogPost> Blogs { get; set; }
+		public int BlogCurrentPage { get; set; }
+		public int BlogTotalPages { get; set; }
 
-		// PRODUCT POST
+		// PRODUCT
 		public List<ProductPost> ProductPosts { get; set; }
+		public int ProductCurrentPage { get; set; }
+		public int ProductTotalPages { get; set; }
 
-		// PAGING + SEARCH
-		public int CurrentPage { get; set; }
-		public int TotalPages { get; set; }
 		public string Keyword { get; set; }
 	}
 }	
