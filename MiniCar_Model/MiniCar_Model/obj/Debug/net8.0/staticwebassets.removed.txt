@@ -1,0 +1,6 @@
+D:\DoAn\DoAnWeb_Nhat\MiniCar_Model\MiniCar_Model\wwwroot\img\products\41\OIP (1).jpg
+D:\DoAn\DoAnWeb_Nhat\MiniCar_Model\MiniCar_Model\wwwroot\img\products\41\OIP.jpg
+D:\DoAn\DoAnWeb_Nhat\MiniCar_Model\MiniCar_Model\wwwroot\img\products\41\p18223c-pagani-utopia-pearl-white-bbr-9.webp
+D:\DoAn\DoAnWeb_Nhat\MiniCar_Model\MiniCar_Model\wwwroot\img\products\42\OIP.jpg
+D:\DoAn\DoAnWeb_Nhat\MiniCar_Model\MiniCar_Model\wwwroot\img\products\42\Pagani-Zonda-F-red-1-64-PosterCars-licensed-karz-scale-model-car-collectible-1_grande.webp
+D:\DoAn\DoAnWeb_Nhat\MiniCar_Model\MiniCar_Model\wwwroot\img\products\42\truescale-miniatures-pagani-zonda-f-metallic-rot-carbon-2006-1.jpg

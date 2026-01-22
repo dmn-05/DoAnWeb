@@ -4,7 +4,7 @@
 @foreach (var item in Model) {
 	<div class="col-lg-4 col-md-6">
 		<div class="single-product">
-			<img class="img-fluid resize" src="@item.ImageUrl" alt="@item.NameProduct">
+			<img class="img-fluid resize" src="@Url.Content(@item.ImageUrl)" alt="@item.NameProduct">
 			<div class="product-details">
 				<a asp-action="Detail"
 					 asp-route-productId="@item.ProductId"

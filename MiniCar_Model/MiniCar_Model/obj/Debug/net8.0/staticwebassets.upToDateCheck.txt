@@ -273,136 +273,126 @@ wwwroot\img\features\f-icon3.png
 wwwroot\img\features\f-icon4.png
 wwwroot\img\logo_team.png
 wwwroot\img\login.jpg
-wwwroot\img\product\card.jpg
-wwwroot\img\product\e-p1.png
-wwwroot\img\product\main.jpg
-wwwroot\img\product\Nam\Boots\b1.1.png
-wwwroot\img\product\Nam\Boots\b1.2.png
-wwwroot\img\product\Nam\Boots\b1.3.png
-wwwroot\img\product\Nam\Boots\b10.png
-wwwroot\img\product\Nam\Boots\b11.png
-wwwroot\img\product\Nam\Boots\b12.png
-wwwroot\img\product\Nam\Boots\b2.1.png
-wwwroot\img\product\Nam\Boots\b2.2.png
-wwwroot\img\product\Nam\Boots\b2.3.png
-wwwroot\img\product\Nam\Boots\b3.1.png
-wwwroot\img\product\Nam\Boots\b3.2.png
-wwwroot\img\product\Nam\Boots\b3.3.png
-wwwroot\img\product\Nam\Boots\b4.png
-wwwroot\img\product\Nam\Boots\b5.png
-wwwroot\img\product\Nam\Boots\b6.png
-wwwroot\img\product\Nam\Boots\b7.png
-wwwroot\img\product\Nam\Boots\b8.png
-wwwroot\img\product\Nam\Boots\b9.png
-wwwroot\img\product\Nam\RunningShoes\adidas1.png
-wwwroot\img\product\Nam\RunningShoes\adidas2.png
-wwwroot\img\product\Nam\RunningShoes\adidas3.png
-wwwroot\img\product\Nam\RunningShoes\new2.png
-wwwroot\img\product\Nam\RunningShoes\new3.png
-wwwroot\img\product\Nam\RunningShoes\newbalance1.png
-wwwroot\img\product\Nam\RunningShoes\nike1.png
-wwwroot\img\product\Nam\RunningShoes\nike2.png
-wwwroot\img\product\Nam\RunningShoes\puma1.png
-wwwroot\img\product\Nam\RunningShoes\under1.png
-wwwroot\img\product\Nam\RunningShoes\under2.png
-wwwroot\img\product\Nam\RunningShoes\under3.png
-wwwroot\img\product\Nam\Sandal\s1.png
-wwwroot\img\product\Nam\Sandal\s10.png
-wwwroot\img\product\Nam\Sandal\s11.png
-wwwroot\img\product\Nam\Sandal\s12.png
-wwwroot\img\product\Nam\Sandal\s2.png
-wwwroot\img\product\Nam\Sandal\s3.png
-wwwroot\img\product\Nam\Sandal\s4.png
-wwwroot\img\product\Nam\Sandal\s5.png
-wwwroot\img\product\Nam\Sandal\s6.png
-wwwroot\img\product\Nam\Sandal\s7.png
-wwwroot\img\product\Nam\Sandal\s8.png
-wwwroot\img\product\Nam\Sandal\s9.png
-wwwroot\img\product\Nam\SoccerShoes\adidas1.png
-wwwroot\img\product\Nam\SoccerShoes\adidas2.png
-wwwroot\img\product\Nam\SoccerShoes\adidas3.png
-wwwroot\img\product\Nam\SoccerShoes\adidas4.png
-wwwroot\img\product\Nam\SoccerShoes\adidas5.png
-wwwroot\img\product\Nam\SoccerShoes\adidas6.png
-wwwroot\img\product\Nam\SoccerShoes\Nike1.png
-wwwroot\img\product\Nam\SoccerShoes\Nike2.png
-wwwroot\img\product\Nam\SoccerShoes\Nike3.png
-wwwroot\img\product\Nam\SoccerShoes\puma1.png
-wwwroot\img\product\Nam\SoccerShoes\puma2.png
-wwwroot\img\product\Nam\SoccerShoes\puma3.png
-wwwroot\img\product\Nam\SportShoe\sp1.png
-wwwroot\img\product\Nam\SportShoe\sp10.png
-wwwroot\img\product\Nam\SportShoe\sp11.png
-wwwroot\img\product\Nam\SportShoe\sp12.png
-wwwroot\img\product\Nam\SportShoe\sp2.png
-wwwroot\img\product\Nam\SportShoe\sp3.png
-wwwroot\img\product\Nam\SportShoe\sp4.png
-wwwroot\img\product\Nam\SportShoe\sp5.png
-wwwroot\img\product\Nam\SportShoe\sp6.png
-wwwroot\img\product\Nam\SportShoe\sp7.png
-wwwroot\img\product\Nam\SportShoe\sp8.png
-wwwroot\img\product\Nam\SportShoe\sp9.png
-wwwroot\img\product\next.png
-wwwroot\img\product\Nu\Boots\3k.png
-wwwroot\img\product\Nu\Boots\cgbd.png
-wwwroot\img\product\Nu\Boots\cgct.png
-wwwroot\img\product\Nu\Boots\clmv.png
-wwwroot\img\product\Nu\Boots\cloc.png
-wwwroot\img\product\Nu\Boots\cndbmn.png
-wwwroot\img\product\Nu\Boots\cndt.png
-wwwroot\img\product\Nu\Boots\cndtkk.png
-wwwroot\img\product\Nu\Boots\cnmn.png
-wwwroot\img\product\Nu\Boots\cngn.png
-wwwroot\img\product\Nu\Boots\chelsea boots.png
-wwwroot\img\product\Nu\Boots\martin.png
-wwwroot\img\product\Nu\RunningShoes\rs1.png
-wwwroot\img\product\Nu\RunningShoes\rs10.png
-wwwroot\img\product\Nu\RunningShoes\rs11.png
-wwwroot\img\product\Nu\RunningShoes\rs12.png
-wwwroot\img\product\Nu\RunningShoes\rs2.png
-wwwroot\img\product\Nu\RunningShoes\rs3.png
-wwwroot\img\product\Nu\RunningShoes\rs4.png
-wwwroot\img\product\Nu\RunningShoes\rs5.png
-wwwroot\img\product\Nu\RunningShoes\rs6.png
-wwwroot\img\product\Nu\RunningShoes\rs7.png
-wwwroot\img\product\Nu\RunningShoes\rs8.png
-wwwroot\img\product\Nu\RunningShoes\rs9.png
-wwwroot\img\product\Nu\Sandal\s1.png
-wwwroot\img\product\Nu\Sandal\s10.png
-wwwroot\img\product\Nu\Sandal\s11.png
-wwwroot\img\product\Nu\Sandal\s12.png
-wwwroot\img\product\Nu\Sandal\s2.png
-wwwroot\img\product\Nu\Sandal\s3.png
-wwwroot\img\product\Nu\Sandal\s4.png
-wwwroot\img\product\Nu\Sandal\s5.png
-wwwroot\img\product\Nu\Sandal\s6.png
-wwwroot\img\product\Nu\Sandal\s7.png
-wwwroot\img\product\Nu\Sandal\s8.png
-wwwroot\img\product\Nu\Sandal\s9.png
-wwwroot\img\product\Nu\SportShoes\sp1.png
-wwwroot\img\product\Nu\SportShoes\sp10.png
-wwwroot\img\product\Nu\SportShoes\sp11.png
-wwwroot\img\product\Nu\SportShoes\sp12.png
-wwwroot\img\product\Nu\SportShoes\sp2.png
-wwwroot\img\product\Nu\SportShoes\sp3.png
-wwwroot\img\product\Nu\SportShoes\sp4.png
-wwwroot\img\product\Nu\SportShoes\sp5.png
-wwwroot\img\product\Nu\SportShoes\sp6.png
-wwwroot\img\product\Nu\SportShoes\sp7.png
-wwwroot\img\product\Nu\SportShoes\sp8.png
-wwwroot\img\product\Nu\SportShoes\sp9.png
-wwwroot\img\product\p1.jpg
-wwwroot\img\product\p2.jpg
-wwwroot\img\product\p3.jpg
-wwwroot\img\product\p4.jpg
-wwwroot\img\product\p5.jpg
-wwwroot\img\product\p6.jpg
-wwwroot\img\product\p7.jpg
-wwwroot\img\product\p8.jpg
-wwwroot\img\product\prev.png
-wwwroot\img\product\review-1.png
-wwwroot\img\product\review-2.png
-wwwroot\img\product\review-3.png
+wwwroot\img\products\1\179589.jpg
+wwwroot\img\products\1\OIP.jpg
+wwwroot\img\products\1\peako_Apollo-Project-EVO-FC6-650x320.jpg
+wwwroot\img\products\10\11045R-MAI-Bburago-Bugatti-Divo-118-3__97565.jpg
+wwwroot\img\products\10\11045R-MAI-Bburago-Bugatti-Divo-118-5__85317.jpg
+wwwroot\img\products\10\11045R-MAI-Bburago-Bugatti-Divo-118-6-det.jpg
+wwwroot\img\products\11\138286_2.jpg
+wwwroot\img\products\11\138286_3.jpg
+wwwroot\img\products\11\138286_6.jpg
+wwwroot\img\products\12\bugatti-veyron-grand-sport-red-minichamps-1-18 (1).jpg
+wwwroot\img\products\12\bugatti-veyron-grand-sport-red-minichamps-1-18 (2).jpg
+wwwroot\img\products\12\bugatti-veyron-grand-sport-red-minichamps-1-18.jpg
+wwwroot\img\products\128\OIP (1).jpg
+wwwroot\img\products\128\OIP.jpg
+wwwroot\img\products\128\p18223c-pagani-utopia-pearl-white-bbr-9.webp
+wwwroot\img\products\129\OIP.jpg
+wwwroot\img\products\129\Pagani-Zonda-F-red-1-64-PosterCars-licensed-karz-scale-model-car-collectible-1_grande.webp
+wwwroot\img\products\129\truescale-miniatures-pagani-zonda-f-metallic-rot-carbon-2006-1.jpg
+wwwroot\img\products\13\bugatti-veyron-edition-centenaire-chrome-green-minichamps-1-18.jpg
+wwwroot\img\products\13\OIP (1).jpg
+wwwroot\img\products\13\OIP.jpg
+wwwroot\img\products\14\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (1).jpg
+wwwroot\img\products\14\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (2).jpg
+wwwroot\img\products\14\koenigsegg-agera-rsr-blue-gt-spirit-1-18.jpg
+wwwroot\img\products\15\Koenigsegg-Aera-RS-White-and-Carbon-Black-118-Diecast-Car-8.jpg
+wwwroot\img\products\15\Koenigsegg-Agera-RS-White-and-Carbon-Black-118-Diecast-Car.jpg
+wwwroot\img\products\15\Koenigsegg-Agera-RS-White-and-Carbon-Black-118-Diecast-Car-6.jpg
+wwwroot\img\products\16\OIP (1).jpg
+wwwroot\img\products\16\OIP (2).jpg
+wwwroot\img\products\16\OIP.jpg
+wwwroot\img\products\17\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12 (1).jpg
+wwwroot\img\products\17\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12 (2).jpg
+wwwroot\img\products\17\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12.jpg
+wwwroot\img\products\18\ab326464-d396-48f7-8eec-b4d980a8cc21.jpg
+wwwroot\img\products\18\OIP (1).jpg
+wwwroot\img\products\18\OIP.jpg
+wwwroot\img\products\19\koenigsegg-regera-white-1-gt-spirit-1-18 (1).jpg
+wwwroot\img\products\19\koenigsegg-regera-white-1-gt-spirit-1-18.jpg
+wwwroot\img\products\19\SD03H068.jpg
+wwwroot\img\products\2\OM_20D03d.jpg
+wwwroot\img\products\2\OM_20D03e-350x239.jpg
+wwwroot\img\products\2\QQ20230516203346__67648.webp
+wwwroot\img\products\20\1659421525_494722__24474.jpg
+wwwroot\img\products\20\38522-thickbox_default.jpg
+wwwroot\img\products\20\MGT00417_2.jpg
+wwwroot\img\products\21\189956.jpg
+wwwroot\img\products\21\189956_2.jpg
+wwwroot\img\products\21\189956_3.jpg
+wwwroot\img\products\23\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (1).jpg
+wwwroot\img\products\23\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (2).jpg
+wwwroot\img\products\23\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg
+wwwroot\img\products\24\rimac-nevera-blue-gt-spirit-1-18 (1).jpg
+wwwroot\img\products\24\rimac-nevera-blue-gt-spirit-1-18 (2).jpg
+wwwroot\img\products\24\rimac-nevera-blue-gt-spirit-1-18.jpg
+wwwroot\img\products\25\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (1).jpg
+wwwroot\img\products\25\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (2).jpg
+wwwroot\img\products\25\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg
+wwwroot\img\products\26\IMG_2310__35693.jpg
+wwwroot\img\products\26\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg
+wwwroot\img\products\26\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg
+wwwroot\img\products\28\IMG_2310__35693.jpg
+wwwroot\img\products\28\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg
+wwwroot\img\products\28\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg
+wwwroot\img\products\29\kyosho-mr-03-mini-z-audi-r8-lms-p1-720x380.jpg
+wwwroot\img\products\29\maisto-maisto-audi-r8-v10-plus-rouge-clair-1.jpg
+wwwroot\img\products\29\OIP.jpg
+wwwroot\img\products\3\58AAE75A-A779-4BED-AAF1-EF6D516781B6.webp
+wwwroot\img\products\3\OQVV0402.webp
+wwwroot\img\products\3\pk_aplloRED-1.jpg
+wwwroot\img\products\30\IMG_3907__95758.jpg
+wwwroot\img\products\30\pol_pl_Mini-Z-RWD-Audi-R8-LMS-2015-Bialy-RTR-13_2.jpg
+wwwroot\img\products\30\welly-audi-r8-weiss-1-24-1.jpg
+wwwroot\img\products\31\IMG_2310__35693.jpg
+wwwroot\img\products\31\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg
+wwwroot\img\products\31\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg
+wwwroot\img\products\32\1409e145-adf6-4c44-927b-3f948efb3f87.jpg
+wwwroot\img\products\32\147346-1.jpg
+wwwroot\img\products\32\audi-rs7-c8-sportback-red-kengfai-1-18.jpg
+wwwroot\img\products\33\Ferrari F8 Black 164 main model.webp
+wwwroot\img\products\33\Ferrari F8 Black 164_0.1.jpg
+wwwroot\img\products\33\Ferrari F8 Black 164_0.webp
+wwwroot\img\products\34\Ferrari F8 Blue-143-0.1.jpg
+wwwroot\img\products\34\Ferrari F8 Blue-143-0.jpg
+wwwroot\img\products\34\Ferrari F8 Blue-143-main.jpg
+wwwroot\img\products\35\Ferrari F8 Blue-143-0.1.jpg
+wwwroot\img\products\35\Ferrari F8 Blue-143-0.jpg
+wwwroot\img\products\35\Ferrari F8 Blue-143-main.jpg
+wwwroot\img\products\36\Ferrari F8 Green 1-32-0.1.jpg
+wwwroot\img\products\36\Ferrari F8 Green 1-32-0.webp
+wwwroot\img\products\36\Ferrari F8 Green 1-32-main.webp
+wwwroot\img\products\37\Ferrari F8 Red-143-0.1.jpg
+wwwroot\img\products\37\Ferrari F8 Red-143-0.jpg
+wwwroot\img\products\37\Ferrari F8 Red-143-main.webp
+wwwroot\img\products\38\Ferrari F8 Red-143-0.1.jpg
+wwwroot\img\products\38\Ferrari F8 Red-143-0.jpg
+wwwroot\img\products\38\Ferrari F8 Red-143-main.webp
+wwwroot\img\products\39\Ferrari F8 White164_0.2.webp
+wwwroot\img\products\39\Ferrari F8 White164_0.jpg
+wwwroot\img\products\39\Ferrari F8 White164_main.webp
+wwwroot\img\products\4\2KJe6WeAc4sTtg-TZWltAan-1AdIgnZm3u3uqLwmrhx.webp
+wwwroot\img\products\4\B2BepSYStBeb2yekcH8HuDU4OYO1MPRhcLCbs0JlfnJ.webp
+wwwroot\img\products\4\MaydVyX9W5rI0oNn1ee9vrHaO6f3ZhmGkMavtXgGsYd.webp
+wwwroot\img\products\40\Ferrari F8 Yellow 132-0.2.webp
+wwwroot\img\products\40\Ferrari F8 Yellow 132-0.webp
+wwwroot\img\products\40\Ferrari F8 Yellow 132-main.jpg
+wwwroot\img\products\5\O1CN01ChrImE2GL8HWzAmRS_283888998__95506.jpg
+wwwroot\img\products\5\peako_Apollo-IE-Chameleon-Purple-with-Gold-wheel.jpg
+wwwroot\img\products\5\peako_Apollo-IE-Chameleon-Purple-with-Gold-wheel7.jpg
+wwwroot\img\products\6\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-3__22390.jpg
+wwwroot\img\products\6\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-5__14482.jpg
+wwwroot\img\products\6\61sXrIMoHUL._AC_SL1500_.jpg
+wwwroot\img\products\7\OIP (1).jpg
+wwwroot\img\products\7\OIP (2).jpg
+wwwroot\img\products\7\OIP.jpg
+wwwroot\img\products\8\36984-thickbox_default.jpg
+wwwroot\img\products\8\4951-Mini-GT-BUGATTI-DIVO-PRESENTATION-MINI-GT-474.jpg
+wwwroot\img\products\8\bugatti-divo-1-24-p24586-10502_image.jpg
+wwwroot\img\products\9\51SbOqFf0L._SL1080_-1.webp
+wwwroot\img\products\9\MGT00601_2.jpg
+wwwroot\img\products\9\Mini-GT-Bugatti-Divo-Blu-Bugatti-Image-03_1800x1800.webp
 wwwroot\img\sd\c1.jpg
 wwwroot\img\sd\c2.jpg
 wwwroot\img\sd\c3.jpg

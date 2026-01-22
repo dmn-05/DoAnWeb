@@ -1,0 +1,35 @@
+﻿@{
+	int currentPage = ViewBag.CurrentPage;
+	int totalPages = ViewBag.TotalPages;
+
+	int startPage = Math.Max(1, currentPage - 1);
+	int endPage = Math.Min(totalPages, currentPage + 1);
+}
+<div class="btn-group">
+	<!-- Previous -->
+	<a href="javascript:void(0)"
+		 class="btn btn-default btn-sm bg-white page-link @(currentPage == 1 ? "disabled" : "")"
+		 data-page="@(currentPage - 1)">
+		«
+	</a>
+
+	@for (int i = startPage; i <= endPage; i++) {
+		if (i == currentPage) {
+			<span class="btn btn-primary btn-sm">@i</span>
+		} else {
+			<a href="javascript:void(0)"
+				 class="btn btn-default btn-sm bg-white page-link"
+				 data-page="@i">
+				@i
+			</a>
+		}
+	}
+
+	<!-- Next -->
+	<a href="javascript:void(0)"
+		 class="btn btn-default btn-sm bg-white page-link @(currentPage == endPage ? "disabled" : "")"
+		 data-page="@(currentPage + 1)">
+		»
+	</a>
+
+</div>
