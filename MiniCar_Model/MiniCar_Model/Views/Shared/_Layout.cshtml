@@ -151,8 +151,9 @@
 					type: "GET",
 					data: data,
 					success: function (result) {
-						$("#product-list").html(result);
-						$("#pagination-wrapper").hide();
+						// $("#product-list").html(result);
+						// $("#pagination-wrapper-all").hide();
+						$("#filter-result").html(result);
 					},
 					error: function (err) {
 						console.error("FILTER ERROR:", err);

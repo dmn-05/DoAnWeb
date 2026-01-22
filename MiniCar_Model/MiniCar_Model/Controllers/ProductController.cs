@@ -78,6 +78,9 @@ namespace MiniCar_Model.Controllers {
     decimal? maxPrice,
     int? page
 ) {
+
+      int pageSize = 9;
+      int currentPage = page ?? 1;
       var query = _context.Products
           .Include(p => p.ProductVariants)
               .ThenInclude(v => v.ProductImages)
@@ -140,7 +143,12 @@ namespace MiniCar_Model.Controllers {
           })
           .ToListAsync();
 
-      return PartialView("_ProductListPartial", productCards);
+      var totalProducts = await query.CountAsync();
+
+      ViewBag.CurrentPage = currentPage;
+      ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+
+      return PartialView("_FilterResultPartial", productCards);
     }
   }
 

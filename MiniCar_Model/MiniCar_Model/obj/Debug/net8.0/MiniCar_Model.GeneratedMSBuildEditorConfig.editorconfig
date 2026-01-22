@@ -24,8 +24,16 @@ build_property.EnableCodeStyleSeverity =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWR2ZXJ0aXNlbWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Bill/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Bill/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Bill/_PaginationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQmlsbFxfUGFnaW5hdGlvblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Cart/Index.cshtml]
@@ -38,6 +46,18 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Comment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29tbWVudFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Contact/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Contact/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Contact/_PaginationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ29udGFjdFxfUGFnaW5hdGlvblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Customer/Index.cshtml]
@@ -144,12 +164,36 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbnRyb2R1Y3Rpb24uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Policy/Payment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XFBheW1lbnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Policy/ReturnPolicy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XFJldHVyblBvbGljeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Policy/Shipping.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XFNoaXBwaW5nLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Policy/Support.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUG9saWN5XFN1cHBvcnQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/Detail.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxEZXRhaWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/List.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxMaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/_FilterResultPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxfRmlsdGVyUmVzdWx0UGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/_PaginationPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJvZHVjdFxfUGFnaW5hdGlvblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Product/_ProductListPartial.cshtml]
