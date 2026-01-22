@@ -14,7 +14,8 @@ public partial class ProductVariant
     public int ColorId { get; set; }
 
     public decimal Price { get; set; }
-  public int Quantity { get; set; }
+
+    public int Quantity { get; set; }
 
     public string? StatusVariant { get; set; }
 
@@ -37,5 +38,4 @@ public partial class ProductVariant
     public virtual ICollection<Slideshow> Slideshows { get; set; } = new List<Slideshow>();
 
     public virtual ICollection<Wishlist> Wishlists { get; set; } = new List<Wishlist>();
-
 }

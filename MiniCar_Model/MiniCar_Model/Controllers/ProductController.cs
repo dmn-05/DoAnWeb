@@ -17,7 +17,7 @@ namespace MiniCar_Model.Controllers {
     // GET: /Product/List
     [HttpGet]
     public async Task<IActionResult> List(int page = 1) {
-      int pageSize = 9;
+      int pageSize = 15;
 
       var totalProducts = await _context.Products.CountAsync();
 
@@ -79,7 +79,7 @@ namespace MiniCar_Model.Controllers {
     int? page
 ) {
 
-      int pageSize = 9;
+      int pageSize = 15;
       int currentPage = page ?? 1;
       var query = _context.Products
           .Include(p => p.ProductVariants)
@@ -107,6 +107,9 @@ namespace MiniCar_Model.Controllers {
 
       // 3. Projection dữ liệu ra ViewModel
       var productCards = await query
+          .OrderBy(p => p.ProductId)
+          .Skip((currentPage - 1) * pageSize)
+          .Take(pageSize)
           .Select(p => new ProductCardVM {
             ProductId = p.ProductId,
             NameProduct = p.NameProduct,

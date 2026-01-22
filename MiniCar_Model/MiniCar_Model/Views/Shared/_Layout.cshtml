@@ -30,14 +30,14 @@
 	<link rel="stylesheet" href="~/css/ion.rangeSlider.skinFlat.css" />
 	<link rel="stylesheet" href="~/css/magnific-popup.css">
 	<link rel="stylesheet" href="~/css/main.css">
-  @* thuong code *@
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-  @* thuong end code *@
+	@* thuong code *@
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	@* thuong end code *@
 </head>
 
 <body>
-  @* thuong code *@
-  @await Html.PartialAsync("PopupDN")
+	@* thuong code *@
+	@await Html.PartialAsync("PopupDN")
 	@* thuong end code *@
 
 	@* Partial View *@
@@ -67,98 +67,67 @@
 	<script src="~/js/main.js"></script>
 
 	<script>
-		$(document).ready(function () {
-
-			function getCheckedValue(name) {
+		function getCheckedValue(name) {
 				const el = document.querySelector(`input[name='${name}']:checked`);
 				return el ? parseInt(el.value) : null;
-			}
+		}
 
-			function getPriceValue(id) {
+		function getPriceValue(id) {
 				const el = document.getElementById(id);
 				if (!el) return null;
-
 				const value = parseFloat(el.textContent.replace(/,/g, ""));
 				return isNaN(value) ? null : value;
-			}
+		}
 
-			function filterProducts() {
+		function filterProducts(page = 1) {
 
 				const data = {
-					keyword: $("#keyword").val()?.trim() || null,
-					trademarkId: getCheckedValue("brand"),
-					sizeId: getCheckedValue("size"),
-					colorId: getCheckedValue("color"),
-					minPrice: getPriceValue("lower-value"),
-					maxPrice: getPriceValue("upper-value"),
-					page: 1
+						keyword: $("#keyword").val()?.trim() || null,
+						trademarkId: getCheckedValue("brand"),
+						sizeId: getCheckedValue("size"),
+						colorId: getCheckedValue("color"),
+						minPrice: getPriceValue("lower-value"),
+						maxPrice: getPriceValue("upper-value"),
+						page: page
 				};
 
-				// 🔥 LOG RA TOÀN BỘ FILTER
-				console.log("===== FILTER CLICK =====");
-				console.table(data);
-
 				$.ajax({
-					url: "/Product/Filter",
-					type: "GET",
-					data: data,
-					success: function (result) {
-						// $("#product-list").html(result);
-						// $("#pagination-wrapper-all").hide();
-						$("#filter-result").html(result);
-					},
-					error: function (err) {
-						console.error("FILTER ERROR:", err);
-					}
+						url: "/Product/Filter",
+						type: "GET",
+						data: data,
+						success: function (result) {
+								$("#filter-result").html(result);
+						}
 				});
-			}
+		}
 
-			// Checkbox / Radio
-			$(document).on("change", "input[name='brand']", filterProducts);
-			$(document).on("change", "input[name='size']", filterProducts);
-			$(document).on("change", "input[name='color']", filterProducts);
+		$(document).ready(function () {
 
-			// Search keyword
-			let searchTimeout;
-			$("#keyword").on("keyup", function () {
-				clearTimeout(searchTimeout);
-				searchTimeout = setTimeout(filterProducts, 300);
-			});
+				$(document).on("change", "input[name='brand']", () => filterProducts(1));
+				$(document).on("change", "input[name='size']", () => filterProducts(1));
+				$(document).on("change", "input[name='color']", () => filterProducts(1));
 
-			// Price slider
-			const priceSlider = document.getElementById('price-range');
-
-			if (priceSlider?.noUiSlider) {
-				priceSlider.noUiSlider.on('update', function (values) {
-					$("#lower-value").text(Math.round(values[0]));
-					$("#upper-value").text(Math.round(values[1]));
+				let searchTimeout;
+				$("#keyword").on("keyup", function () {
+						clearTimeout(searchTimeout);
+						searchTimeout = setTimeout(() => filterProducts(1), 300);
 				});
 
-				priceSlider.noUiSlider.on('change', function () {
-					filterProducts();
-				});
-			}
+				const priceSlider = document.getElementById('price-range');
+				if (priceSlider?.noUiSlider) {
+						priceSlider.noUiSlider.on('change', () => filterProducts(1));
+				}
 		});
-  @* thuong code *@
-    $("#loginForm").submit(function (e) {
-        e.preventDefault(); // ⬅️ DÒNG CỨU MẠNG (BẮT BUỘC)
 
-        $.ajax({
-            url: "/Account/LoginPopup",
-            type: "POST",
-            data: $(this).serialize(),
-            success: function (res) {
-                if (res.success) {
-                    $("#loginPopup").modal("hide");
-                    location.reload(); // reload GET /Cart
-                } else {
-                    $("#loginError").text(res.message);
-                }
-            }
-        });
-    });
-  </script>
-  @* thuong code end *@
+		// Pagination
+		$(document).on("click", ".page-link", function () {
+				const page = $(this).data("page");
+				if (!page) return;
+				filterProducts(page);
+		});
+	</script>
+
+
 
 </body>
 
