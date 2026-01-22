@@ -64,7 +64,7 @@ namespace MiniCar_Model.Controllers {
 
     // GET: /Product/Detail/:id
     [HttpGet]
-    public IActionResult Detail() {
+    public IActionResult Detail(int variantId) {
       return View();
     }
 

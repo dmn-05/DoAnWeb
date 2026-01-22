@@ -11,6 +11,7 @@ public partial class Bill
 
     public decimal? TotalPrice { get; set; }
 
+
     public DateTime? PaymentDate { get; set; }
 
     public string StatusBill { get; set; } = null!;

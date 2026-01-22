@@ -40,6 +40,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2FydFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Areas/Admin/Views/Category/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -118,6 +126,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/EditAccount.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0QWNjb3VudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/EditProfile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxFZGl0UHJvZmlsZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Account/Login.cshtml]
@@ -202,6 +214,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/PopupDN.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXFBvcHVwRE4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/DoAn/DoAnWeb_Nhat/MiniCar_Model/MiniCar_Model/Views/Shared/_Footer.cshtml]

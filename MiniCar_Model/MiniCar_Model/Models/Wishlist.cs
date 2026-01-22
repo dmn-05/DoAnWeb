@@ -16,4 +16,5 @@ public partial class Wishlist
     public virtual Account Account { get; set; } = null!;
 
     public virtual ProductVariant ProductVariant { get; set; } = null!;
+
 }
