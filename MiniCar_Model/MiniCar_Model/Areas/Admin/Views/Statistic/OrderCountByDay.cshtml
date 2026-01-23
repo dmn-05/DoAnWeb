@@ -1,0 +1,106 @@
+﻿@model MiniCar_Model.Models.ViewModels.RevenueFilterViewModel
+
+<section id="main-content">
+  <section class="wrapper">
+
+    <h3>
+      <i class="fa fa-shopping-cart"></i>
+      Thống kê lượt mua theo ngày
+    </h3>
+
+    <!-- FORM -->
+    <div class="row mt">
+      <div class="col-lg-12">
+        <div class="content-panel">
+          <h4><i class="fa fa-filter"></i> Lọc theo ngày</h4>
+          <div class="panel-body">
+            <form method="get" class="form-inline">
+              <div class="form-group mr-3">
+                <label>Từ ngày</label>
+                <input type="date" name="FromDate"
+                       value="@(Model.FromDate?.ToString("yyyy-MM-dd"))"
+                       class="form-control ml-2" />
+              </div>
+
+              <div class="form-group mr-3">
+                <label>Đến ngày</label>
+                <input type="date" name="ToDate"
+                       value="@(Model.ToDate?.ToString("yyyy-MM-dd"))"
+                       class="form-control ml-2" />
+              </div>
+
+              <button type="submit" class="btn btn-primary">
+                <i class="fa fa-search"></i> Thống kê
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BIỂU ĐỒ -->
+    <div class="row mt">
+      <div class="col-lg-12">
+        <div class="content-panel">
+          <h4><i class="fa fa-bar-chart"></i> Biểu đồ lượt mua theo ngày</h4>
+          <div class="panel-body" style="height:360px">
+            <canvas id="orderDayChart"></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BẢNG -->
+    <div class="row mt">
+      <div class="col-lg-12">
+        <div class="content-panel">
+          <h4><i class="fa fa-table"></i> Chi tiết</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th>Ngày</th>
+                <th>Số đơn</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach (var item in Model.Data)
+              {
+                <tr>
+                  <td>@item.Label</td>
+                  <td>@item.OrderCount</td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</section>
+
+@section Scripts {
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script>
+    const ctx = document.getElementById('orderDayChart');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(
+     Model.Data.Select(x => x.Label))),
+        datasets: [{
+          label: 'Lượt mua',
+          data: @Html.Raw(System.Text.Json.JsonSerializer.Serialize(
+       Model.Data.Select(x => x.OrderCount)))
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: { legend: { display: false } },
+        scales: { y: { beginAtZero: true, precision: 0 } }
+      }
+    });
+  </script>
+}

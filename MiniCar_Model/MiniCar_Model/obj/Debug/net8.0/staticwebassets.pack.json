@@ -1993,8 +1993,28 @@
       "PackagePath": "staticwebassets\\scss\\theme\\_variables.scss"
     },
     {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\20240202_134624.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\20240202_134624.jpg"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\548b56aa-ed45-4008-8a3c-54dee91bba98.png",
+      "PackagePath": "staticwebassets\\uploads\\blog\\548b56aa-ed45-4008-8a3c-54dee91bba98.png"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\62448afa-0a60-481a-8711-1c38e5c8429e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\62448afa-0a60-481a-8711-1c38e5c8429e.jpg"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\6a6d8b79-11d9-4a4c-81d0-4d4360a41b5d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\6a6d8b79-11d9-4a4c-81d0-4d4360a41b5d.jpg"
+    },
+    {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\bao-quan.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\bao-quan.jpg"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\f50b6b14-adf7-4c07-aec8-8baa232c06d6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\f50b6b14-adf7-4c07-aec8-8baa232c06d6.jpg"
     },
     {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\hotwheels.png",
@@ -2033,6 +2053,18 @@
       "PackagePath": "staticwebassets\\uploads\\policy\\warranty.jpg"
     },
     {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\product-post\\3c914de1-8023-4601-97c6-83dfe45dadd6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\product-post\\3c914de1-8023-4601-97c6-83dfe45dadd6.jpg"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\4520ad32-4b4e-4669-96cc-92b00881a1de.webp",
+      "PackagePath": "staticwebassets\\uploads\\products\\4520ad32-4b4e-4669-96cc-92b00881a1de.webp"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\45281eb5-4f74-4d35-8419-23d4d0e2d39d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\45281eb5-4f74-4d35-8419-23d4d0e2d39d.jpg"
+    },
+    {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\apollo-evo-black.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\apollo-evo-black.jpg"
     },
@@ -2051,6 +2083,10 @@
     {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\lamborghini-yellow-118.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\lamborghini-yellow-118.jpg"
+    },
+    {
+      "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\mini-cooper-s-2024.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\mini-cooper-s-2024.jpg"
     },
     {
       "Id": "D:\\DoAnWeb\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\nissan-black-164.jpg",

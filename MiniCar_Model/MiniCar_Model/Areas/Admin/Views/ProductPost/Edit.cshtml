@@ -1,0 +1,167 @@
+﻿@model MiniCar_Model.Models.ProductPost
+
+@{
+  ViewData["Title"] = "Chỉnh sửa Product Post";
+}
+
+<section id="main-content">
+  <section class="wrapper">
+
+    <h3 class="mb-4">
+      <i class="fa fa-angle-right"></i>
+      Chỉnh sửa Product Post
+    </h3>
+
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+
+        <div class="content-panel p-4">
+
+          <form asp-area="Admin"
+                asp-controller="ProductPost"
+                asp-action="Edit"
+                method="post"
+                enctype="multipart/form-data">
+
+            @Html.AntiForgeryToken()
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" name="RemoveThumbnail" id="removeThumbFlag" value="false" />
+
+            <div class="row">
+
+              <!-- LEFT COLUMN -->
+              <div class="col-md-4 text-center border-right">
+
+                <h5 class="mb-3">Ảnh đại diện</h5>
+
+                <div class="policy-icon-wrapper">
+
+                  <img id="thumbPreview"
+                       src="@Url.Content(Model.Thumbnail)"
+                       style="max-width:100%; max-height:200px;
+                                         display:@(string.IsNullOrEmpty(Model.Thumbnail) ? "none" : "block")" />
+
+                  <button type="button"
+                          id="btnAddThumb"
+                          class="btn btn-success"
+                          style="display:@(string.IsNullOrEmpty(Model.Thumbnail) ? "inline-flex" : "none")">
+                    <i class="fa fa-plus"></i>
+                  </button>
+
+                  <button type="button"
+                          id="btnRemoveThumb"
+                          class="btn btn-danger"
+                          style="display:@(string.IsNullOrEmpty(Model.Thumbnail) ? "none" : "inline-flex")">
+                    <i class="fa fa-minus"></i>
+                  </button>
+
+                  <input type="file"
+                         id="thumbUpload"
+                         name="thumbnailFile"
+                         accept="image/*"
+                         style="display:none;" />
+                </div>
+
+                <p class="text-muted small mt-2">
+                  Ảnh đại diện bài Product
+                </p>
+
+                <hr />
+
+                <div class="form-group text-left">
+                  <label>Trạng thái</label>
+                  <select asp-for="Status" class="form-control">
+                    <option value="ACTIVE">ACTIVE</option>
+                    <option value="INACTIVE">INACTIVE</option>
+                  </select>
+                </div>
+
+                <div class="form-group text-left">
+                  <label>Ngày tạo</label>
+                  <input class="form-control"
+                         value="@Model.CreatedAt.ToString("dd/MM/yyyy HH:mm")"
+                         readonly />
+                </div>
+              </div>
+
+              <!-- RIGHT COLUMN -->
+              <div class="col-md-8 pl-4">
+
+                <h5 class="mb-3">Nội dung Product Post</h5>
+
+                <div class="form-group">
+                  <label>Tiêu đề</label>
+                  <input asp-for="Title"
+                         class="form-control"
+                         placeholder="Nhập tiêu đề product post" />
+                </div>
+
+                <div class="form-group">
+                  <label>Tóm tắt</label>
+                  <textarea asp-for="Summary"
+                            rows="3"
+                            class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Nội dung</label>
+                  <textarea asp-for="Content"
+                            rows="8"
+                            class="form-control"></textarea>
+                </div>
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa fa-save"></i> Lưu thay đổi
+              </button>
+
+              <a asp-action="Index" class="btn btn-default btn-lg">
+                Quay lại
+              </a>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<script>
+  const upload = document.getElementById('thumbUpload');
+  const btnAdd = document.getElementById('btnAddThumb');
+  const btnRemove = document.getElementById('btnRemoveThumb');
+  const preview = document.getElementById('thumbPreview');
+  const removeFlag = document.getElementById('removeThumbFlag');
+
+  btnAdd.onclick = () => upload.click();
+
+  upload.onchange = e => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = 'block';
+
+    btnAdd.style.display = 'none';
+    btnRemove.style.display = 'inline-flex';
+
+    removeFlag.value = "false";
+  };
+
+  btnRemove.onclick = () => {
+    preview.src = '';
+    preview.style.display = 'none';
+    upload.value = '';
+
+    btnAdd.style.display = 'inline-flex';
+    btnRemove.style.display = 'none';
+
+    removeFlag.value = "true";
+  };
+</script>
