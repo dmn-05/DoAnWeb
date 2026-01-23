@@ -36,6 +36,4 @@ public partial class Product
     public virtual Supplier? Supplier { get; set; }
 
     public virtual Trademark? Trademark { get; set; }
-
-    public virtual ICollection<Wishlist> Wishlists { get; set; } = new List<Wishlist>();
 }

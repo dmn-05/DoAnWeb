@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using MiniCar_Model.Models;
 using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models.ViewModels;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace MiniCar_Model.Controllers {
   public class ProductController : Controller {
@@ -15,28 +16,54 @@ namespace MiniCar_Model.Controllers {
 
     // GET: /Product/List
     [HttpGet]
-    public async Task<IActionResult> List(int page = 1) {
-      int pageSize = 9;
-      var totalProducts = await _context.Products.CountAsync();
+    public async Task<IActionResult> List(int page = 1, int CategoryId = 0) {
+      int pageSize = 15;
 
-      var products = await _context.Products
-        .OrderBy(p => p.ProductId)
-        .Skip((page - 1) * pageSize)
-        .Take(pageSize)
-        .ToListAsync();
+      var query = _context.Products.AsQueryable();
 
-      var sizes = await _context.Sizes.ToListAsync();
+      if (CategoryId != 0) {
+        query = query.Where(p => p.CategoryId == CategoryId || p.Category.ParentId == CategoryId);
+      }
 
-      var trademarks = await _context.Trademarks.ToListAsync();
+      var totalProducts = await query.CountAsync();
 
-      var model = new ProductFilterVM { 
-        Products = products,
-        Sizes = sizes,
-        Trademarks = trademarks 
+      var productCards = await query
+          .OrderBy(p => p.ProductId)
+          .Skip((page - 1) * pageSize)
+          .Take(pageSize)
+          .Select(p => new ProductCardVM {
+            ProductId = p.ProductId,
+            NameProduct = p.NameProduct,
+
+            VariantId = p.ProductVariants
+                  .OrderBy(v => v.VariantId)
+                  .Select(v => v.VariantId)
+                  .FirstOrDefault(),
+
+            Price = p.ProductVariants
+                  .OrderBy(v => v.VariantId)
+                  .Select(v => v.Price)
+                  .FirstOrDefault(),
+
+            ImageUrl = p.ProductVariants
+                  .SelectMany(v => v.ProductImages)
+                  .OrderByDescending(i => i.IsMain)
+                  .Select(i => i.UrlImage)
+                  .FirstOrDefault() ?? ""
+          })
+          .ToListAsync();
+
+      var model = new ProductFilterVM {
+        Products = productCards,
+        Sizes = await _context.Sizes.ToListAsync(),
+        Colors = await _context.Colors.ToListAsync(),
+        Trademarks = await _context.Trademarks.ToListAsync()
       };
 
       ViewBag.CurrentPage = page;
       ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+      ViewBag.CategoryId = CategoryId;
+
       return View(model);
     }
 
@@ -90,14 +117,14 @@ namespace MiniCar_Model.Controllers {
 
       vm.IsLoggedIn = accountId != null;
 
-      vm.WishlistProducts = accountId != null
-        ? await _context.Wishlists
-            .Where(w => w.AccountId == accountId)
-            .Include(w => w.Product)
-                .ThenInclude(p => p.ProductVariants)
-            .Select(w => w.Product)
-            .ToListAsync()
-        : new List<Product>();
+      //vm.WishlistProducts = accountId != null
+      //  ? await _context.Wishlists
+      //      .Where(w => w.AccountId == accountId)
+      //      .Include(w => w.Product)
+      //          .ThenInclude(p => p.ProductVariants)
+      //      .Select(w => w.Product)
+      //      .ToListAsync()
+      //  : new List<Product>();
 
       return View(vm);
     }
@@ -125,55 +152,84 @@ namespace MiniCar_Model.Controllers {
     }
 
 
-    public IActionResult Search(ProductSearchVM vm) {
+    //public IActionResult Search(ProductSearchVM vm) {
 
-      var query = _context.ProductVariants
-          .Include(v => v.Product)
-              .ThenInclude(p => p.Category)
-          .Include(v => v.Size)
-          .Include(v => v.Color)
-          .AsQueryable();
 
-      // 🔎 Tìm theo từ khoá (Tên + mô tả Product)
-      if (!string.IsNullOrEmpty(vm.Keyword)) {
-        query = query.Where(v =>
-            v.Product.NameProduct.Contains(vm.Keyword) ||
-            v.Product.Descriptions.Contains(vm.Keyword)
-        );
-      }
+    //  int pageSize = 15;
+    //  int currentPage = page ?? 1;
+    //  var query = _context.Products
+    //      .Include(p => p.ProductVariants)
+    //          .ThenInclude(v => v.ProductImages)
+    //      .AsQueryable();
 
-      // 📂 Theo danh mục
-      if (vm.CategoryId.HasValue) {
-        query = query.Where(v =>
-            v.Product.CategoryId == vm.CategoryId
-        );
-      }
+    //  // 1. Lọc theo các thuộc tính của Product
+    //  if (!string.IsNullOrWhiteSpace(keyword)) {
+    //    query = query.Where(p => p.NameProduct.Contains(keyword));
+    //  }
 
-      // 💰 Giá từ
-      if (vm.MinPrice.HasValue) {
-        query = query.Where(v => v.Price >= vm.MinPrice);
-      }
+    //  if (trademarkId.HasValue) {
+    //    query = query.Where(p => p.TrademarkId == trademarkId);
+    //  }
 
-      // 💰 Giá đến
-      if (vm.MaxPrice.HasValue) {
-        query = query.Where(v => v.Price <= vm.MaxPrice);
-      }
+    //  // 2. Lọc theo các thuộc tính của Variant (nếu có chọn lọc)
+    //  if (sizeId.HasValue || colorId.HasValue || minPrice.HasValue || maxPrice.HasValue) {
+    //    query = query.Where(p => p.ProductVariants.Any(v =>
+    //        (!sizeId.HasValue || v.SizeId == sizeId) &&
+    //        (!colorId.HasValue || v.ColorId == colorId) &&
+    //        (!minPrice.HasValue || v.Price >= minPrice) &&
+    //        (!maxPrice.HasValue || v.Price <= maxPrice)
+    //    ));
+    //  }
 
-      // Chỉ lấy variant đang active
-      query = query.Where(v =>
-          v.StatusVariant == "ACTIVE" &&
-          v.Product.StatusProduct == "ACTIVE"
-      );
+    //  // 3. Projection dữ liệu ra ViewModel
+    //  var productCards = await query
+    //      .OrderBy(p => p.ProductId)
+    //      .Skip((currentPage - 1) * pageSize)
+    //      .Take(pageSize)
+    //      .Select(p => new ProductCardVM {
+    //        ProductId = p.ProductId,
+    //        NameProduct = p.NameProduct,
 
-      vm.Results = query.ToList();
+    //        // Lấy Variant thỏa mãn bộ lọc, nếu không lọc thì lấy cái đầu tiên
+    //        // Sử dụng Let hoặc Sub-query an toàn hơn
+    //        Price = p.ProductVariants
+    //              .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+    //                          (!colorId.HasValue || v.ColorId == colorId) &&
+    //                          (!minPrice.HasValue || v.Price >= minPrice) &&
+    //                          (!maxPrice.HasValue || v.Price <= maxPrice))
+    //              .OrderBy(v => v.Price)
+    //              .Select(v => v.Price)
+    //              .FirstOrDefault(),
 
-      ViewBag.Categories = _context.Categories
-          .Where(c => c.StatusCategory == "ACTIVE")
-          .ToList();
+    //        VariantId = p.ProductVariants
+    //              .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+    //                          (!colorId.HasValue || v.ColorId == colorId) &&
+    //                          (!minPrice.HasValue || v.Price >= minPrice) &&
+    //                          (!maxPrice.HasValue || v.Price <= maxPrice))
+    //              .OrderBy(v => v.Price)
+    //              .Select(v => v.VariantId)
+    //              .FirstOrDefault(),
 
-      return View(vm);
-    }
+    //        ImageUrl = p.ProductVariants
+    //              .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+    //                          (!colorId.HasValue || v.ColorId == colorId) &&
+    //                          (!minPrice.HasValue || v.Price >= minPrice) &&
+    //                          (!maxPrice.HasValue || v.Price <= maxPrice))
+    //              .SelectMany(v => v.ProductImages)
+    //              .OrderByDescending(i => i.IsMain)
+    //              .Select(i => i.UrlImage)
+    //              .FirstOrDefault() ??  ""
+    //      })
+    //      .ToListAsync();
 
+    //  var totalProducts = await query.CountAsync();
+
+    //  ViewBag.CurrentPage = currentPage;
+    //  ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+
+    //  return PartialView("_FilterResultPartial", productCards);
+    //}
 
   }
+
 }

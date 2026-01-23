@@ -1,0 +1,44 @@
+﻿@model List<ProductCardVM>
+
+
+@foreach (var item in Model) {
+	<div class="col-lg-4 col-md-6">
+		<div class="single-product">
+			<img class="img-fluid resize" src="@Url.Content(@item.ImageUrl)" alt="@item.NameProduct">
+			<div class="product-details">
+				<a asp-action="Detail"
+					 asp-route-productId="@item.ProductId"
+					 asp-route-variantId="@item.VariantId"><h6>@item.NameProduct</h6></a>
+				<div class="price">
+					<h6>@item.Price</h6>
+				</div>
+				<div class="prd-bottom">
+
+					<a asp-controller="Cart"
+						 asp-action="Index"
+						 asp-route-productId="@item.ProductId"
+						 asp-route-variantId="@item.VariantId" class="social-info add-to-cart"
+						 data-name="@item.NameProduct" data-price="@item.Price">
+						<span class="ti-bag"></span>
+						<p class="hover-text">thêm vào giỏ</p>
+					</a>
+					<a asp-controller="Account"
+						 asp-action="Wishlist"
+						 asp-route-productId="@item.ProductId"
+						 asp-route-variantId="@item.VariantId" class="social-info">
+						<span class="lnr lnr-heart"></span>
+						<p class="hover-text">Yêu thích</p>
+					</a>
+
+					<a asp-action="Detail"
+						 asp-route-productId="@item.ProductId"
+						 asp-route-variantId="@item.VariantId" class="social-info">
+						<span class="lnr lnr-move"></span>
+						<p class="hover-text">Xem thêm</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+}
+

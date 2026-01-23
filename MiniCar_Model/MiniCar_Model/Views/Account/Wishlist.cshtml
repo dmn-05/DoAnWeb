@@ -1,85 +1,101 @@
-﻿@{
-    ViewData["Title"] = "Danh sách sản phẩ yêu thích";
+
+@model List<MiniCar_Model.Models.ViewModels.WishlistItemVM>
+@{
+  ViewData["Title"] = "Danh sách yêu thích";
 }
 
-
-
-
-<!-- back to top Button-->
-<a href="#" class="cd-top">Back To Top</a>
-<!--End Back to top Button-->
-<!-- Start Banner Area -->
 <section class="banner-area organic-breadcrumb">
-	<div class="container">
-		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
-			<div class="col-first">
-				<h1>Danh sách yêu thích</h1>
-				<nav class="d-flex align-items-center">
-					<a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
-					<a asp-controller="Account" asp-action="Profile">Tài khoản<span class="lnr lnr-arrow-right"></span></a>
-					<a asp-controller="Account" asp-action="Wishlist">Danh sách yêu thích</a>
-				</nav>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+      <div class="col-first">
+        <h1>Danh sách yêu thích</h1>
+        <nav class="d-flex align-items-center">
+          <a asp-controller="Home" asp-action="Index">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+          <a asp-controller="Account" asp-action="Profile">Tài khoản<span class="lnr lnr-arrow-right"></span></a>
+          <a href="#">Danh sách yêu thích</a>
+        </nav>
+      </div>
+    </div>
+  </div>
 </section>
-<!-- End Banner Area -->
-<div class="container my-4">
+<div class="container my-5">
+  <div class="row align-items-center mb-4">
+    <div class="col-6">
+      <button class="btn btn-outline-secondary btn-sm" onclick="history.back()">
+        <span class="lnr lnr-arrow-left"></span> Quay lại
+      </button>
+    </div>
+  </div>
 
-	<!-- NÚT QUAY LẠI -->
-	<div class="row align-items-center mb-3">
-		<div class="col-6">
-			<button class="btn btn-outline-secondary btn-sm"
-							onclick="history.back()">
-				← Quay lại
-			</button>
-		</div>
-	</div>
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover align-middle text-center">
+      <thead class="table-light">
+        <tr>
+          <th style="width: 15%">Hình ảnh</th>
+          <th style="width: 25%">Tên sản phẩm</th>
+          <th style="width: 15%" class="d-none d-md-table-cell">Giá</th>
+          <th style="width: 35%">Mô tả</th>
+          <th style="width: 10%">Xóa</th>
+        </tr>
+      </thead>
 
-	<div class="table-responsive">
-		<table class="table table-bordered table-hover align-middle text-center">
-			<thead class="table-light">
-				<tr>
-					<th>Hình ảnh</th>
-					<th>Tên</th>
-					<th class="d-none d-md-table-cell">Giá</th>
-					<th>Thêm</th>
-					<th>Xóa</th>
-				</tr>
-			</thead>
+      <tbody>
+        @if (Model != null && Model.Any())
+        {
+          @foreach (var item in Model)
+          {
+            <tr>
+              <td>
+                @* Kiểm tra đường dẫn ảnh: Nếu bắt đầu bằng / hoặc http thì giữ nguyên, không thì thêm đường dẫn gốc *@
+                <img src="@(string.IsNullOrEmpty(item.ImageUrl) ? item.ImageUrl : "~/img/logo_team.png")"
+                     class="img-fluid rounded"
+                     style="max-width: 80px; height: auto;"
+                     alt="@item.ProductName">
+              </td>
 
-			<tbody>
-				<tr>
-					<td>
-						<img src="~/img/logo.png"
-								 class="img-fluid rounded"
-								 style="max-width: 80px;">
-					</td>
+              <td class="fw-semibold text-start">
+                @* Link tới chi tiết sản phẩm dựa trên VariantId *@
+                <a asp-controller="Product" asp-action="Details" asp-route-id="@item.VariantId" class="text-dark">
+                  @item.ProductName
+                </a>
+              </td>
 
-					<td class="fw-semibold">
-						Lorem ipsum
-					</td>
-					<td class="d-none d-md-table-cell text-success fw-semibold">
-						$80
-					</td>
+              <td class="d-none d-md-table-cell text-danger fw-bold">
+                @item.Price.ToString("N0") đ
+              </td>
 
-					<td>
-						<button class="btn btn-sm btn-success rounded-circle px-2">
-							+
-						</button>
-					</td>
+              <td class="text-start">
+                <small class="text-muted" style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">
+                  @item.Descriptions
+                </small>
+              </td>
 
-					<td>
-						<button class="btn btn-sm btn-outline-danger rounded-circle px-2">
-							<i class="fa-solid fa-trash"></i>
-						</button>
-					</td>
-				</tr>
-			</tbody>
+              <td>
+                <form asp-controller="Account" asp-action="RemoveFromWishlist" method="post">
+                  <input type="hidden" name="id" value="@item.WishlistId" />
 
-		</table>
-	</div>
-
+                  <button type="submit"
+                          class="btn btn-sm btn-outline-danger rounded-circle px-2"
+                          onclick="return confirm('Bạn có chắc chắn muốn xóa sản phẩm này khỏi danh sách yêu thích?')">
+                    <i class="fa-solid fa-trash"></i>
+                  </button>
+                </form>
+              </td>
+            </tr>
+          }
+        }
+        else
+        {
+          <tr>
+            <td colspan="5" class="py-5 text-muted">
+              <i class="lnr lnr-heart" style="font-size: 3rem; display: block; margin-bottom: 10px;"></i>
+              Danh sách yêu thích của bạn đang trống.
+              <br>
+              <a asp-controller="Home" asp-action="Index" class="primary-btn mt-3" style="line-height: 30px; padding: 0 30px;">Tiếp tục mua sắm</a>
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
 </div>
-
-

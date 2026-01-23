@@ -1,0 +1,71 @@
+﻿@model Contact
+
+<section id="main-content">
+  <section class="wrapper">
+    <h3>
+      <i class="fa fa-angle-right"></i> Xử lý liên hệ
+    </h3>
+
+    <div class="content-panel" style="padding:30px">
+      <form asp-action="Update" method="post">
+        <input type="hidden" name="id" value="@Model.ContactId" />
+
+        <div class="form-group">
+          <label>Tên</label>
+          <input class="form-control" value="@Model.Name" disabled />
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <input class="form-control" value="@Model.Email" disabled />
+        </div>
+
+        <div class="form-group">
+          <label>Nội dung</label>
+          <textarea class="form-control" rows="4" disabled>@Model.Message</textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Trạng thái</label>
+
+          @* Nếu đã đóng thì không cho sửa *@
+          @if (Model.StatusContact == "Closed"
+          || Model.StatusContact == "Spam"
+          || Model.StatusContact == "Rejected") {
+
+            <input class="form-control" value="@Model.StatusContact" disabled />
+            <p class="text-danger mt-2">
+              Liên hệ đã kết thúc, không thể chỉnh sửa
+            </p>
+
+          } else {
+
+            <select name="newStatus" class="form-control">
+
+              @if (Model.StatusContact == "Pending") {
+                <option value="Read">Đã đọc</option>
+              } else if (Model.StatusContact == "Read") {
+                <option value="InProgress">Đang xử lý</option>
+                <option value="Spam">Spam</option>
+                <option value="Rejected">Từ chối</option>
+              } else if (Model.StatusContact == "InProgress") {
+                <option value="Replied">Đã phản hồi</option>
+              } else if (Model.StatusContact == "Replied") {
+                <option value="Closed">Đã đóng</option>
+              }
+
+            </select>
+          }
+        </div>
+
+        @if (Model.StatusContact != "Closed") {
+          <button type="submit" class="btn btn-success">
+            <i class="fa fa-save"></i> Cập nhật
+          </button>
+        }
+
+        <a asp-action="Index" class="btn btn-secondary">Quay lại</a>
+      </form>
+    </div>
+  </section>
+</section>

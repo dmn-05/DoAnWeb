@@ -36,45 +36,31 @@
 				<div class="top-filter-head">Bộ lọc</div>
 				<div class="common-filter">
 					<div class="head">Thương hiệu</div>
-					<form action="#">
+					<div class="common-filter">
 						<ul>
 							@foreach (var item in Model.Trademarks) {
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="@item.TrademarkId" name="brand"><label for="@item.TrademarkId">@item.NameTrademark</label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="brand-@item.TrademarkId" value="@item.TrademarkId" name="brand"><label for="brand-@item.TrademarkId">@item.NameTrademark</label></li>
 							}
 						</ul>
-					</form>
+					</div>
 				</div>
 				<div class="common-filter">
 					<div class="head">Kích thước</div>
-					<form action="#">
+					<div class="common-filter">
 						<ul>
 							@foreach (var item in Model.Sizes) {
-								<li class="filter-list"><input class="pixel-radio" type="radio" id="@item.SizeId" name="size"><label for="@item.SizeId">@item.Scale</label></li>
+								<li class="filter-list"><input class="pixel-radio" type="radio" id="size-@item.SizeId" value="@item.SizeId" name="size"><label for="size-@item.SizeId">@item.Scale</label></li>
 							}
 						</ul>
-					</form>
+					</div>
 				</div>
 				<div class="common-filter">
 					<div class="head">Màu sắc</div>
-					<form action="#">
-						<ul>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="black" name="color"><label for="black">Đen<span>(29)</span></label></li>
-							<li class="filter-list">
-								<input class="pixel-radio" type="radio" id="balckleather" name="color"><label for="balckleather">
-									Trắng
-									<span>(29)</span>
-								</label>
-							</li>
-							<li class="filter-list">
-								<input class="pixel-radio" type="radio" id="blackred" name="color"><label for="blackred">
-									Đen-trắng
-									<span>(19)</span>
-								</label>
-							</li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="gold" name="color"><label for="gold">Đen-đỏ<span>(19)</span></label></li>
-							<li class="filter-list"><input class="pixel-radio" type="radio" id="spacegrey" name="color"><label for="spacegrey">Vàng<span>(19)</span></label></li>
-						</ul>
-					</form>
+					<ul>
+						@foreach (var item in Model.Colors) {
+							<li class="filter-list"><input class="pixel-radio" type="radio" id="color-@item.ColorId" value="@item.ColorId" name="color"><label for="color-@item.ColorId">@item.ColorName</label></li>
+						}
+					</ul>
 				</div>
 				<div class="common-filter">
 					<div class="head">Giá</div>
@@ -92,265 +78,38 @@
 				</div>
 			</div>
 		</div>
-		<div class="col-xl-9 col-lg-8 col-md-7 mt-5">
+		<div class="col-xl-9 col-lg-8 col-md-7 mt-5" style="margin-top: 50px !important">
 			<!-- Start Filter Bar -->
-			<div class="filter-bar d-flex flex-wrap align-items-center">
+			<div class="filter-bar d-flex flex-wrap align-items-center" style="
+					height: 60px;
+					font-size: 16px;
+					color: white;">
 				<div class="sorting">
-					<select>
-						<option value="1">Giá: Tăng dần</option>
-						<option value="1">Giá: Giảm dần</option>
-						<option value="1">Tên: A-Z</option>
-						<option value="1">Tên: Z-A</option>
-						<option value="1">Cũ nhất</option>
-						<option value="1">Mới nhất</option>
-					</select>
+					<div class="top-filter-head">Danh sách sản phẩm</div>
 				</div>
 			</div>
 			<!-- End Filter Bar -->
 			<!-- Start Best Seller -->
-			<section class="lattest-product-area pb-40 category-list">
-				<div class="row">
-					@foreach (var item in Model.Products) {
-						<div class="col-lg-4 col-md-6">
-							<div class="single-product">
-								<a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductId">
-									<img class="img-fluid resize" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
-								</a>
-								<div class="product-details">
-									<a href="single-product-b1.html"><h6>@item.NameProduct</h6></a>
-									<div class="price">
-										<h6>550.000đ</h6>
-									</div>
-									<div class="prd-bottom">
 
-										<a href="" class="social-info add-to-cart"
-											 data-name="@item.NameProduct" data-price="550">
-											<span class="ti-bag"></span>
-											<p class="hover-text">thêm vào giỏ</p>
-										</a>
-										<a href="" class="social-info">
-											<span class="lnr lnr-heart"></span>
-											<p class="hover-text">Yêu thích</p>
-										</a>
+			<div id="filter-result">
+				<section class="lattest-product-area pb-40 category-list">
+					<div id="product-list" class="row">
+						@await Html.PartialAsync("_ProductListPartial", Model.Products)
+					</div>
+				</section>
 
-										<a asp-controller="Product" asp-action="Detail" asp-route-id="@item.ProductId" class="social-info">
-											<span class="lnr lnr-move"></span>
-											<p class="hover-text">Xem thêm</p>
-										</a>
-									</div>
-								</div>
+				<div class="filter-bar d-flex flex-wrap align-items-center">
+					<div class="text-center mt-2">
+						<div id="pagination-wrapper">
+							<div class="btn-group">
+								@await Html.PartialAsync("_PaginationPartial")
 							</div>
 						</div>
-					}
-				</div>
-			</section>
-			<!-- End Best Seller -->
-			<!-- Start Filter Bar -->
-
-			<div class="filter-bar d-flex flex-wrap align-items-center">
-				<div class="text-center mt-2">
-					<div class="btn-group">
-
-						<!-- Previous -->
-						<a class="btn btn-default btn-sm bg-white @(currentPage == 1 ? "disabled" : "")"
-							 asp-controller="Product"
-							 asp-action="List"
-							 asp-route-page="@(currentPage - 1)">
-							«
-						</a>
-
-						<!-- Trang 1 -->
-						@if (startPage > 1) {
-							<a class="btn btn-default btn-sm bg-white"
-								 asp-controller="Product"
-								 asp-action="List"
-								 asp-route-page="1">
-								1
-							</a>
-
-							@if (startPage > 2) {
-								<span class="btn btn-default btn-sm bg-white disabled">...</span>
-							}
-						}
-
-						<!-- Các trang giữa -->
-						@for (int i = startPage; i <= endPage; i++) {
-							if (i == currentPage) {
-								<span class="btn btn-primary btn-sm bg-primary">@i</span>
-							} else {
-								<a class="btn btn-default btn-sm bg-white"
-									 asp-controller="Product"
-									 asp-action="List"
-									 asp-route-page="@i">
-									@i
-								</a>
-							}
-						}
-
-						<!-- Trang cuối -->
-						@if (endPage < totalPages) {
-							@if (endPage < totalPages - 1) {
-								<span class="btn btn-default btn-sm bg-white disabled">...</span>
-							}
-
-							<a class="btn btn-default btn-sm bg-white"
-								 asp-controller="Product"
-								 asp-action="List"
-								 asp-route-page="@totalPages">
-								@totalPages
-							</a>
-						}
-
-						<!-- Next -->
-						<a class="btn btn-default btn-sm bg-white @(currentPage == totalPages ? "disabled" : "")"
-							 asp-controller="Product"
-							 asp-action="Index"
-							 asp-route-page="@(currentPage + 1)">
-							»
-						</a>
-
 					</div>
 				</div>
 			</div>
-
 
 		</div>
 		<!-- End Filter Bar -->
 	</div>
 </div>
-
-
-<!-- Start related-product Area -->
-<section class="related-product-area section_gap">
-	<div class="container">
-		<div class="row justify-content-center">
-			<div class="col-lg-6 text-center">
-				<div class="section-title">
-					<h1>Giảm giá trong tuần</h1>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-lg-9">
-				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/SportShoe/sp2.png" alt=""></a>
-							<div class="desc">
-								<a href="../SportShoe/single-product-sp2.html" class="title">Giày Thể Thao Nam Trung Cấp Biti's DSM074400XNH (Xanh Nhớt)</a>
-								<div class="price">
-									<h6>189.000đ</h6>
-									<h6 class="l-through">210.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/SportShoe/sp1.png" alt=""></a>
-							<div class="desc">
-								<a href="../SportShoe/single-product-sp1.html" class="title">Giày Thể Thao Nam Trung Cấp Biti's DSM074400DEN (Đen)</a>
-								<div class="price">
-									<h6>359.100đ</h6>
-									<h6 class="l-through">378.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/SportShoe/sp3.png" alt=""></a>
-							<div class="desc">
-								<a href="../SportShoe/single-product-sp3.html" class="title">Giày Thể Thao Nam Biti's DSM074500DEN (Đen)</a>
-								<div class="price">
-									<h6>340.100đ</h6>
-									<h6 class="l-through">358.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b12.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b12.html" class="title">Nam Giày ống Chelsea Suedette Mặc vào</a>
-								<div class="price">
-									<h6>440.000đ</h6>
-									<h6 class="l-through">550.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b11.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b11.html" class="title">Giày Boot Nam Màu Cát IQI GN385</a>
-								<div class="price">
-									<h6>440.000đ</h6>
-									<h6 class="l-through">810.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b10.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b10.html" class="title">Giày Boot Nam Màu Đen IQI GN386</a>
-								<div class="price">
-									<h6>440.000đ</h6>
-									<h6 class="l-through">510.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b8.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b8.html" class="title">Giày Boot Nam - Chelsea Boots Nam RIO GN390</a>
-								<div class="price">
-									<h6>440.000đ</h6>
-									<h6 class="l-through">900.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href="#"><img src="../../../img/product/Nam/Boots/b5.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b5.html" class="title">Nam Giày ống Tây Combat Suedette Mặt trước thắt dây</a>
-								<div class="price">
-									<h6>189.000đ</h6>
-									<h6 class="l-through">210.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="col-lg-4 col-md-4 col-sm-6">
-						<div class="single-related-product d-flex">
-							<a href=""><img src="../../../img/product/Nam/Boots/b2.1.png" alt=""></a>
-							<div class="desc">
-								<a href="../Boots/single-product-b2.html" class="title">Giày boot nam màu trơn Không có dây kéo</a>
-								<div class="price">
-									<h6>806.000đ</h6>
-									<h6 class="l-through">900.000đ</h6>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-3">
-				<div class="ctg-right">
-					<a href="#" target="_blank">
-						<img class="img-fluid d-block mx-auto" src="../../../img/categories/c5.jpg" alt="">
-					</a>
-				</div>
-			</div>
-		</div>
-	</div>
-</section>
-<!-- End related-product Area -->

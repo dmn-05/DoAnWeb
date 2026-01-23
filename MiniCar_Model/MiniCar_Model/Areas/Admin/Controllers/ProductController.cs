@@ -4,10 +4,13 @@ using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
 using MiniCar_Model.Models.ViewModels;
 using System.Drawing;
+using MiniCar_Model.Filters;
+
 
 namespace MiniCar_Model.Areas.Admin.Controllers
 {
   [Area("Admin")]
+  [AdminAuthorize]
   public class ProductController : Controller
   {
     //------Tri Trong Trang
@@ -164,6 +167,7 @@ namespace MiniCar_Model.Areas.Admin.Controllers
 
       ViewBag.SizeId = new SelectList(_context.Sizes, "SizeId", "Scale");
       ViewBag.ColorId = new SelectList(_context.Colors, "ColorId", "ColorName");
+
 
       return View();
     }

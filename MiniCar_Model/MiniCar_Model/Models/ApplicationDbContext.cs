@@ -64,18 +64,20 @@ public partial class ApplicationDbContext : DbContext
     public virtual DbSet<Wishlist> Wishlists { get; set; }
 
 
+    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        => optionsBuilder.UseSqlServer("Name=DefaultConnection");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.AccountId).HasName("PK__Account__B19E45E9099DC4EB");
+            entity.HasKey(e => e.AccountId).HasName("PK__Account__B19E45E9FF438FFD");
 
             entity.ToTable("Account");
 
-            entity.HasIndex(e => e.Email, "UQ__Account__A9D10534CE59FEC0").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Account__A9D10534688CD20D").IsUnique();
 
-            entity.HasIndex(e => e.UserName, "UQ__Account__C9F28456548F10AE").IsUnique();
+            entity.HasIndex(e => e.UserName, "UQ__Account__C9F28456908782BE").IsUnique();
 
             entity.Property(e => e.AccountId).HasColumnName("Account_Id");
             entity.Property(e => e.AddressAccount)
@@ -112,7 +114,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Advertisement>(entity =>
         {
-            entity.HasKey(e => e.AdvertisementId).HasName("PK__Advertis__4B7F25D8962D36D6");
+            entity.HasKey(e => e.AdvertisementId).HasName("PK__Advertis__4B7F25D881DA1BA1");
 
             entity.ToTable("Advertisement");
 
@@ -143,7 +145,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Bill>(entity =>
         {
-            entity.HasKey(e => e.BillId).HasName("PK__Bill__CF6E7DA3466A102E");
+            entity.HasKey(e => e.BillId).HasName("PK__Bill__CF6E7DA3BCBC4571");
 
             entity.ToTable("Bill");
 
@@ -153,6 +155,9 @@ public partial class ApplicationDbContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("Create_At");
+            entity.Property(e => e.DeletedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("Deleted_At");
             entity.Property(e => e.PaymentDate)
                 .HasColumnType("datetime")
                 .HasColumnName("Payment_Date");
@@ -194,11 +199,11 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.CartId).HasName("PK__Cart__D6AB4759203D0D88");
+            entity.HasKey(e => e.CartId).HasName("PK__Cart__D6AB4759B60E6D28");
 
             entity.ToTable("Cart");
 
-            entity.HasIndex(e => e.AccountId, "UQ__Cart__B19E45E80A444885").IsUnique();
+            entity.HasIndex(e => e.AccountId, "UQ__Cart__B19E45E8750969B6").IsUnique();
 
             entity.Property(e => e.CartId).HasColumnName("Cart_Id");
             entity.Property(e => e.AccountId).HasColumnName("Account_Id");
@@ -221,7 +226,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<CartItem>(entity =>
         {
-            entity.HasKey(e => e.CartItemId).HasName("PK__CartItem__7B6515015B5BF7BD");
+            entity.HasKey(e => e.CartItemId).HasName("PK__CartItem__7B651501E1C8B704");
 
             entity.ToTable("CartItem");
 
@@ -249,7 +254,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__6DB38D6E28D1CBB6");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__6DB38D6E42F7BAB6");
 
             entity.ToTable("Category");
 
@@ -276,7 +281,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Color>(entity =>
         {
-            entity.HasKey(e => e.ColorId).HasName("PK__Color__795F1D544F3FF533");
+            entity.HasKey(e => e.ColorId).HasName("PK__Color__795F1D54BFA7D5EB");
 
             entity.ToTable("Color");
 
@@ -295,7 +300,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Comment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__Comment__99FC14DB3F789B2A");
+            entity.HasKey(e => e.CommentId).HasName("PK__Comment__99FC14DB1BC27171");
 
             entity.ToTable("Comment");
 
@@ -327,7 +332,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Contact>(entity =>
         {
-            entity.HasKey(e => e.ContactId).HasName("PK__Contact__82ACC1EDF365AD6E");
+            entity.HasKey(e => e.ContactId).HasName("PK__Contact__82ACC1EDFE077319");
 
             entity.ToTable("Contact");
 
@@ -336,6 +341,9 @@ public partial class ApplicationDbContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("Created_At");
+            entity.Property(e => e.DeletedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("Deleted_At");
             entity.Property(e => e.Email).HasMaxLength(150);
             entity.Property(e => e.Message).HasMaxLength(500);
             entity.Property(e => e.Name).HasMaxLength(150);
@@ -349,11 +357,11 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Post>(entity =>
         {
-            entity.HasKey(e => e.PostId).HasName("PK__Post__5875F7AD345605F4");
+            entity.HasKey(e => e.PostId).HasName("PK__Post__5875F7ADBBDF7B7D");
 
             entity.ToTable("Post");
 
-            entity.HasIndex(e => e.Slug, "UQ__Post__BC7B5FB68B303E1F").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__Post__BC7B5FB6C86E7E05").IsUnique();
 
             entity.Property(e => e.PostId).HasColumnName("Post_Id");
             entity.Property(e => e.AuthorId).HasColumnName("Author_Id");
@@ -397,11 +405,11 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<PostCategory>(entity =>
         {
-            entity.HasKey(e => e.PostCategoryId).HasName("PK__PostCate__E72E4AA0A095DA2E");
+            entity.HasKey(e => e.PostCategoryId).HasName("PK__PostCate__E72E4AA0AF047798");
 
             entity.ToTable("PostCategory");
 
-            entity.HasIndex(e => e.Slug, "UQ__PostCate__BC7B5FB64C67508B").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__PostCate__BC7B5FB623808A58").IsUnique();
 
             entity.Property(e => e.PostCategoryId).HasColumnName("PostCategory_Id");
             entity.Property(e => e.CreatedAt)
@@ -425,7 +433,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Product__9834FBBA499CD8E3");
+            entity.HasKey(e => e.ProductId).HasName("PK__Product__9834FBBAE2F948E3");
 
             entity.ToTable("Product");
 
@@ -467,7 +475,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ProductImage>(entity =>
         {
-            entity.HasKey(e => e.ImageId).HasName("PK__ProductI__3CAB4D59D4C26737");
+            entity.HasKey(e => e.ImageId).HasName("PK__ProductI__3CAB4D59A728BFF3");
 
             entity.ToTable("ProductImage");
 
@@ -491,7 +499,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ProductVariant>(entity =>
         {
-            entity.HasKey(e => e.VariantId).HasName("PK__ProductV__E19D76CCAEF9D033");
+            entity.HasKey(e => e.VariantId).HasName("PK__ProductV__E19D76CC7595D931");
 
             entity.ToTable("ProductVariant");
 
@@ -529,7 +537,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Promotion>(entity =>
         {
-            entity.HasKey(e => e.PromotionId).HasName("PK__Promotio__DAF79ADB339A0DC7");
+            entity.HasKey(e => e.PromotionId).HasName("PK__Promotio__DAF79ADB2A2069F0");
 
             entity.ToTable("Promotion");
 
@@ -563,7 +571,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Role__D80AB49B06B3BEC9");
+            entity.HasKey(e => e.RoleId).HasName("PK__Role__D80AB49BB497DD9D");
 
             entity.ToTable("Role");
 
@@ -576,7 +584,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ShippingAddress>(entity =>
         {
-            entity.HasKey(e => e.AddressId).HasName("PK__Shipping__03BDEBBA25985830");
+            entity.HasKey(e => e.AddressId).HasName("PK__Shipping__03BDEBBAF75F1A92");
 
             entity.ToTable("ShippingAddress");
 
@@ -605,7 +613,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Size>(entity =>
         {
-            entity.HasKey(e => e.SizeId).HasName("PK__Size__0BC32560F6ED01AD");
+            entity.HasKey(e => e.SizeId).HasName("PK__Size__0BC3256046301C6C");
 
             entity.ToTable("Size");
 
@@ -619,7 +627,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Slideshow>(entity =>
         {
-            entity.HasKey(e => e.SlideshowId).HasName("PK__Slidesho__27DE308D77EA619B");
+            entity.HasKey(e => e.SlideshowId).HasName("PK__Slidesho__27DE308D11B410F2");
 
             entity.ToTable("Slideshow");
 
@@ -628,39 +636,36 @@ public partial class ApplicationDbContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("Created_At");
-            entity.Property(e => e.DisplayOrder)
-                .HasDefaultValue(0)
-                .HasColumnName("Display_Order");
             entity.Property(e => e.EndDate)
                 .HasColumnType("datetime")
                 .HasColumnName("End_Date");
             entity.Property(e => e.ImageUrl)
                 .HasMaxLength(255)
                 .HasColumnName("Image_Url");
-            entity.Property(e => e.LinkId).HasColumnName("Link_Id");
-            entity.Property(e => e.LinkType)
-                .HasMaxLength(50)
-                .HasColumnName("Link_Type");
             entity.Property(e => e.LinkUrl)
                 .HasMaxLength(255)
                 .HasColumnName("Link_Url");
-            entity.Property(e => e.Position).HasMaxLength(50);
             entity.Property(e => e.StartDate)
                 .HasColumnType("datetime")
                 .HasColumnName("Start_Date");
             entity.Property(e => e.StatusSlideshow)
                 .HasMaxLength(50)
-                .HasDefaultValue("ACTIVE")
+                .HasDefaultValue("Active")
                 .HasColumnName("Status_Slideshow");
             entity.Property(e => e.Title).HasMaxLength(150);
             entity.Property(e => e.UpdatedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("Updated_At");
+            entity.Property(e => e.VariantId).HasColumnName("Variant_Id");
+
+            entity.HasOne(d => d.Variant).WithMany(p => p.Slideshows)
+                .HasForeignKey(d => d.VariantId)
+                .HasConstraintName("FK_Slideshow_VariantId");
         });
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__83918DB821FB0B32");
+            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__83918DB858B5D4AC");
 
             entity.ToTable("Supplier");
 
@@ -689,7 +694,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Token>(entity =>
         {
-            entity.HasKey(e => e.TokenId).HasName("PK__Token__AA16D4A01E8EFFF1");
+            entity.HasKey(e => e.TokenId).HasName("PK__Token__AA16D4A0A8E0FFA8");
 
             entity.ToTable("Token");
 
@@ -711,7 +716,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Trademark>(entity =>
         {
-            entity.HasKey(e => e.TrademarkId).HasName("PK__Trademar__FECFFA070D80FD72");
+            entity.HasKey(e => e.TrademarkId).HasName("PK__Trademar__FECFFA07CC7D1EAC");
 
             entity.ToTable("Trademark");
 
@@ -735,11 +740,11 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Wishlist>(entity =>
         {
-            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__C65247E303ED115C");
+            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__C65247E3F5450DBA");
 
             entity.ToTable("Wishlist");
 
-            entity.HasIndex(e => new { e.AccountId, e.ProductId }, "UQ_Wishlist").IsUnique();
+            entity.HasIndex(e => new { e.AccountId, e.ProductVariantId }, "UQ_Wishlist").IsUnique();
 
             entity.Property(e => e.WishlistId).HasColumnName("Wishlist_Id");
             entity.Property(e => e.AccountId).HasColumnName("Account_Id");
@@ -747,17 +752,17 @@ public partial class ApplicationDbContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("Created_At");
-            entity.Property(e => e.ProductId).HasColumnName("Product_Id");
+            entity.Property(e => e.ProductVariantId).HasColumnName("ProductVariant_Id");
 
             entity.HasOne(d => d.Account).WithMany(p => p.Wishlists)
                 .HasForeignKey(d => d.AccountId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
                 .HasConstraintName("FK_Wishlist_Account");
 
-            entity.HasOne(d => d.Product).WithMany(p => p.Wishlists)
-                .HasForeignKey(d => d.ProductId)
+            entity.HasOne(d => d.ProductVariant).WithMany(p => p.Wishlists)
+                .HasForeignKey(d => d.ProductVariantId)
                 .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Wishlist_Product");
+                .HasConstraintName("FK_Wishlist_ProductVariant");
         });
 
         OnModelCreatingPartial(modelBuilder);

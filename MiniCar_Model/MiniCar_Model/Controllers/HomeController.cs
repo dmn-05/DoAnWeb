@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
 using MiniCar_Model.Models.ViewModels;
@@ -23,17 +24,66 @@ namespace MiniCar_Model.Controllers
       var latestProducts = _context.Products
           .OrderByDescending(p => p.CreateAt)
           .Take(8)
+          .Select(p => new ProductCardVM {
+            ProductId = p.ProductId,
+            NameProduct = p.NameProduct,
+
+            NameCategory = p.Category.NameCategory,
+
+            VariantId = p.ProductVariants
+                  .OrderBy(v => v.VariantId)
+                  .Select(v => v.VariantId)
+                  .FirstOrDefault(),
+
+            Price = p.ProductVariants
+                  .OrderBy(v => v.VariantId)
+                  .Select(v => v.Price)
+                  .FirstOrDefault(),
+
+            ImageUrl = p.ProductVariants
+                  .SelectMany(v => v.ProductImages)
+                  .OrderByDescending(i => i.IsMain)
+                  .Select(i => i.UrlImage)
+                  .FirstOrDefault()
+          })
           .ToList();
 
       var discountProducts = _context.Products
           .Where(p => p.PromotionId != null)
           .Take(8)
+          .Select(p => new ProductCardVM {
+            ProductId = p.ProductId,
+            NameProduct = p.NameProduct,
+
+            NameCategory = p.Category.NameCategory,
+
+            VariantId = p.ProductVariants
+                  .OrderBy(v => v.VariantId)
+                  .Select(v => v.VariantId)
+                  .FirstOrDefault(),
+
+            Price = p.ProductVariants
+                  .OrderBy(v => v.VariantId)
+                  .Select(v => v.Price)
+                  .FirstOrDefault(),
+
+            ImageUrl = p.ProductVariants
+                  .SelectMany(v => v.ProductImages)
+                  .OrderByDescending(i => i.IsMain)
+                  .Select(i => i.UrlImage)
+                  .FirstOrDefault()
+          })
           .ToList();
 
-      var model = new HomeVM
-      {
+
+
+      var banner = _context.Slideshows
+        .Where(s => (s.StartDate <= DateTime.Now || s.EndDate > DateTime.Now) || s.StatusSlideshow == "Only")
+        .ToList();
+      var model = new HomeVM {
         LatestProducts = latestProducts,
-        DiscountProducts = discountProducts
+        DiscountProducts = discountProducts,
+        Slideshows = banner
       };
       Console.WriteLine(_context.Database.CanConnect());
 

@@ -31,9 +31,14 @@
   <link rel="stylesheet" href="~/css/magnific-popup.css">
   <link rel="stylesheet" href="~/css/main.css">
   <link rel="stylesheet" href="~/css/images_product.css"/>
+
 </head>
 
 <body>
+	@* thuong code *@
+	@await Html.PartialAsync("PopupDN")
+	@* thuong end code *@
+
 	@* Partial View *@
 	@await Html.PartialAsync("_Header")
 
@@ -56,10 +61,73 @@
 	<script src="~/js/jquery.magnific-popup.min.js"></script>
 	<script src="~/js/owl.carousel.min.js"></script>
 	<!--gmaps Js-->
-	<script src="~/https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
+	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="~/js/gmaps.min.js"></script>
 	<script src="~/js/main.js"></script>
   @await RenderSectionAsync("Scripts", required: false)
+
+	<script>
+		function getCheckedValue(name) {
+				const el = document.querySelector(`input[name='${name}']:checked`);
+				return el ? parseInt(el.value) : null;
+		}
+
+		function getPriceValue(id) {
+				const el = document.getElementById(id);
+				if (!el) return null;
+				const value = parseFloat(el.textContent.replace(/,/g, ""));
+				return isNaN(value) ? null : value;
+		}
+
+		function filterProducts(page = 1) {
+
+				const data = {
+						keyword: $("#keyword").val()?.trim() || null,
+						trademarkId: getCheckedValue("brand"),
+						sizeId: getCheckedValue("size"),
+						colorId: getCheckedValue("color"),
+						minPrice: getPriceValue("lower-value"),
+						maxPrice: getPriceValue("upper-value"),
+						page: page
+				};
+
+				$.ajax({
+						url: "/Product/Filter",
+						type: "GET",
+						data: data,
+						success: function (result) {
+								$("#filter-result").html(result);
+						}
+				});
+		}
+
+		$(document).ready(function () {
+
+				$(document).on("change", "input[name='brand']", () => filterProducts(1));
+				$(document).on("change", "input[name='size']", () => filterProducts(1));
+				$(document).on("change", "input[name='color']", () => filterProducts(1));
+
+				let searchTimeout;
+				$("#keyword").on("keyup", function () {
+						clearTimeout(searchTimeout);
+						searchTimeout = setTimeout(() => filterProducts(1), 300);
+				});
+
+				const priceSlider = document.getElementById('price-range');
+				if (priceSlider?.noUiSlider) {
+						priceSlider.noUiSlider.on('change', () => filterProducts(1));
+				}
+		});
+
+		// Pagination
+		$(document).on("click", ".page-link", function () {
+				const page = $(this).data("page");
+				if (!page) return;
+				filterProducts(page);
+		});
+	</script>
+
+
 
 </body>
 
