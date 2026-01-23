@@ -33,6 +33,8 @@ public partial class ProductVariant
 
     public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
 
+    public virtual ICollection<ProductView> ProductViews { get; set; } = new List<ProductView>();
+
     public virtual Size Size { get; set; } = null!;
 
     public virtual ICollection<Slideshow> Slideshows { get; set; } = new List<Slideshow>();

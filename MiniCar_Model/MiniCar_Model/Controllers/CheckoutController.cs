@@ -40,6 +40,7 @@ namespace MiniCar_Model.Controllers {
       var customer = cart?.Account;
 
       var model = new CheckoutVM {
+        CartId = CartId,
         Products = products,
         Total = total,
         Customer = customer ?? new Account()
@@ -48,51 +49,76 @@ namespace MiniCar_Model.Controllers {
       return View(model);
     }
 
-    public async Task<IActionResult> Payment(int CartId) {
-      // 1. Lấy Cart + CartItems + Variant
-      var cart = _context.Carts
-          .Include(c => c.CartItems)
-              .ThenInclude(ci => ci.Variant)
-          .FirstOrDefault(c => c.CartId == CartId);
+    [HttpPost]
+    public async Task<IActionResult> Payment(
+    int CartId,
+    string note,
+    string paymentMethod
+) {
+      using var transaction = await _context.Database.BeginTransactionAsync();
 
-      if (cart == null || !cart.CartItems.Any())
-        return NotFound();
+      try {
+        var cart = await _context.Carts
+            .Include(c => c.Account)
+            .Include(c => c.CartItems)
+                .ThenInclude(ci => ci.Variant)
+            .FirstOrDefaultAsync(c => c.CartId == CartId);
 
-      decimal totalPrice = cart.CartItems.Sum(i => i.Variant.Price * i.Quantity);
+        if (cart == null || !cart.CartItems.Any())
+          return NotFound();
 
-      // 2. Tạo Bill
-      var bill = new Bill {
-        AccountId = cart.AccountId,
-        CreateAt = DateTime.Now,
+        // Kiểm tra tồn kho
+        foreach (var item in cart.CartItems) {
+          if (item.Quantity > item.Variant.Quantity) {
+            return BadRequest(
+                $"Sản phẩm {item.Variant.Product.NameProduct} không đủ số lượng tồn kho"
+            );
+          }
+        }
 
-        BillInfos = cart.CartItems.Select(i => new BillInfo {
-          VariantId = i.VariantId,
-          Quantity = i.Quantity,
-          UnitPrice = i.Price
-        }).ToList(),
+        decimal totalPrice = cart.CartItems.Sum(i => i.Price * i.Quantity);
 
-        TotalPrice = totalPrice,
+        var bill = new Bill {
+          AccountId = cart.AccountId,
+          CreateAt = DateTime.Now,
+          NameCustomer = cart.Account.NameAccount ?? "",
+          TotalPrice = totalPrice,
+          PaymentDate = null,
+          StatusBill = "Pending",
+          PhoneNumber = cart.Account.PhoneNumber,
+          DeliveryAddress = cart.Account.AddressAccount ?? "",
+          CustomerNotes = note,
+          PaymentMethod = paymentMethod,
+          IsDeleted = false,
+          BillInfos = cart.CartItems.Select(i => new BillInfo {
+            VariantId = i.VariantId,
+            Quantity = i.Quantity,
+            UnitPrice = i.Price
+          }).ToList()
+        };
 
-        PaymentDate = null,
+        _context.Bills.Add(bill);
 
-        StatusBill = "Pending",
+        foreach (var item in cart.CartItems) {
+          item.Variant.Quantity -= item.Quantity;
+        }
 
-        IsDeleted = false,
+        _context.CartItems.RemoveRange(cart.CartItems);
 
-        DeletedAt = null
-      };
+        await _context.SaveChangesAsync();
+        await transaction.CommitAsync();
 
-      // 3. Lưu Bill + BillInfo
-      _context.Bills.Add(bill);
-      await _context.SaveChangesAsync();
+        TempData["SuccessMessage"] = $"Đặt hàng thành công!";
+        return RedirectToAction("Order", "Account");
 
-      // 4. (OPTIONAL) Clear cart
-      _context.CartItems.RemoveRange(cart.CartItems);
-      await _context.SaveChangesAsync();
 
-      return RedirectToAction("Success", new {
-        billId = bill.BillId
-      });
+      } catch (Exception ex) {
+        await transaction.RollbackAsync();
+
+        var inner = ex.InnerException?.Message ?? "NO INNER EXCEPTION";
+        return BadRequest("Thanh toán thất bại: " + inner);
+      }
     }
+
   }
 }

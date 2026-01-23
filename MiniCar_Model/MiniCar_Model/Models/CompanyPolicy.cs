@@ -1,19 +1,21 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace MiniCar_Model.Models
+namespace MiniCar_Model.Models;
+
+public partial class CompanyPolicy
 {
-	[Table("CompanyPolicy")]
-	public class CompanyPolicy
-	{
-		public int Id { get; set; }
+    public int Id { get; set; }
 
-		public string? Title { get; set; }
-		public string? Description { get; set; }
-		public string? Icon { get; set; }  
+    public string? Title { get; set; }
 
-		public string? Code { get; set; }
-		public int? DisplayOrder { get; set; }
-		public string? Status { get; set; } 
-	}
+    public string? Description { get; set; }
+
+    public string? Code { get; set; }
+
+    public string? Icon { get; set; }
+
+    public int? DisplayOrder { get; set; }
+
+    public string? Status { get; set; }
 }

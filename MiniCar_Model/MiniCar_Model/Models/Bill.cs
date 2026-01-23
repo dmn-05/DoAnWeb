@@ -9,7 +9,17 @@ public partial class Bill
 
     public int AccountId { get; set; }
 
-    public decimal? TotalPrice { get; set; }
+    public string NameCustomer { get; set; } = null!;
+
+    public string DeliveryAddress { get; set; } = null!;
+
+    public string CustomerNotes { get; set; } = null!;
+
+    public string PaymentMethod { get; set; } = null!;
+
+    public string PhoneNumber { get; set; } = null!;
+
+    public decimal TotalPrice { get; set; }
 
     public DateTime? PaymentDate { get; set; }
 

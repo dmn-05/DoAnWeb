@@ -27,8 +27,6 @@ public partial class Product
 
     public virtual Category? Category { get; set; }
 
-    public virtual ICollection<Post> Posts { get; set; } = new List<Post>();
-
     public virtual ICollection<ProductVariant> ProductVariants { get; set; } = new List<ProductVariant>();
 
     public virtual Promotion? Promotion { get; set; }
