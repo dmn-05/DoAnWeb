@@ -33,7 +33,7 @@
 
                 <!-- DANH MỤC + NÚT THÊM (ĐÃ FIX) -->
                 <div class="form-group mb-3">
-                  <label>Danh mục</label>
+                  <label>Loại sản phẩm</label>
 
                   <div class="select-with-btn">
                     <select asp-for="CategoryId"
@@ -42,7 +42,7 @@
                       <option value="">-- Chọn --</option>
                     </select>
 
-                    <a asp-area="Admin" asp-controller="Category" asp-action="Create" class="btn btn-success btn-add-inline" title="Thêm danh mục"> <i class="fa fa-plus"></i> </a>
+                    <a asp-area="Admin" asp-controller="Category" asp-action="Create" class="btn btn-success btn-add-inline" title="Thêm loại sản phẩm"> <i class="fa fa-plus"></i> </a>
                   </div>
 
                   <span asp-validation-for="CategoryId" class="text-danger"></span>

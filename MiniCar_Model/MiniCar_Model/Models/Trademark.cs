@@ -15,8 +15,6 @@ public partial class Trademark
 
     public string? Country { get; set; }
 
-    public string? Logo { get; set; }
-
     public DateTime? CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }

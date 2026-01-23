@@ -11,6 +11,8 @@ public partial class Promotion
 
     public string? DiscountType { get; set; }
 
+    public string? DescriptionPromotion { get; set; }
+
     public DateTime? StartDate { get; set; }
 
     public DateTime? EndDate { get; set; }

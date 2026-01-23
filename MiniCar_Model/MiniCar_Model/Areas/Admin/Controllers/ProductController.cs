@@ -40,7 +40,7 @@ namespace MiniCar_Model.Areas.Admin.Controllers
       int totalItems = await query.CountAsync();
 
       var products = await query
-        .OrderByDescending(p => p.ProductId)
+        .OrderBy(p => p.ProductId)
         .Skip((page - 1) * pageSize)
         .Take(pageSize)
         .Select(p => new ProductIndexVM
@@ -334,10 +334,11 @@ namespace MiniCar_Model.Areas.Admin.Controllers
         StatusVariant = variant.StatusVariant,
 
         ExistingImages = variant.ProductImages
-            .Where(i => !string.IsNullOrEmpty(i.UrlImage))
-            .OrderByDescending(i => i.IsMain)
-            .Select(i => "/" + i.UrlImage)
-            .ToList()
+          .Where(i => !string.IsNullOrEmpty(i.UrlImage))
+          .OrderByDescending(i => i.IsMain)
+          .Select(i => i.UrlImage.TrimStart('~'))
+          .ToList()
+
       };
 
       ViewBag.ProductName = variant.Product?.NameProduct ?? "N/A";

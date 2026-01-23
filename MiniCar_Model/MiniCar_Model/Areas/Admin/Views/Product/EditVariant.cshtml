@@ -93,7 +93,7 @@
                     <div class="d-flex flex-wrap gap-2">
                       @foreach (var img in Model.ExistingImages)
                       {
-                        <img src="@img"
+                        <img src="@Url.Content(img)"
                              class="img-thumbnail"
                              style="width:120px;height:120px;object-fit:cover" />
                       }
