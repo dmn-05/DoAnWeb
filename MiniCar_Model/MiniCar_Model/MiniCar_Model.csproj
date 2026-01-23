@@ -7,9 +7,15 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Component\**" />
+    <Content Remove="Views\Component\**" />
+    <EmbeddedResource Remove="Views\Component\**" />
+    <None Remove="Views\Component\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="wwwroot\uploads\products\" />
-    <Folder Include="Views\Component\PopupDN\" />
   </ItemGroup>
 
   <ItemGroup>

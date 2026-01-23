@@ -1,21 +1,23 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace MiniCar_Model.Models
+namespace MiniCar_Model.Models;
+
+public partial class CompanyInfo
 {
-	[Table("CompanyInfo")]
-	public class CompanyInfo
-	{
-		public int Id { get; set; }
+    public int Id { get; set; }
 
-		public string? CompanyName { get; set; }
-		public string? BusinessField { get; set; }
-		public string? Address { get; set; }
-		public string? Email { get; set; }
-		public string? Hotline { get; set; }
-		public string? Description { get; set; }
+    public string? CompanyName { get; set; }
 
-		public DateTime? Updated_At { get; set; }
-	}
+    public string? BusinessField { get; set; }
 
+    public string? Address { get; set; }
+
+    public string? Email { get; set; }
+
+    public string? Hotline { get; set; }
+
+    public string? Description { get; set; }
+
+    public DateTime? UpdatedAt { get; set; }
 }

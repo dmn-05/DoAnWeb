@@ -275,6 +275,8 @@ wwwroot\img\features\f-icon3.png
 wwwroot\img\features\f-icon4.png
 wwwroot\img\logo_team.png
 wwwroot\img\login.jpg
+wwwroot\img\product\next.png
+wwwroot\img\product\prev.png
 wwwroot\img\products\1\179589.jpg
 wwwroot\img\products\1\OIP.jpg
 wwwroot\img\products\1\peako_Apollo-Project-EVO-FC6-650x320.jpg

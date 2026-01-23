@@ -57,6 +57,7 @@ namespace MiniCar_Model.Controllers
 
 			return View(new CartViewModel
 			{
+				CartId = cart.CartId,
 				Items = items,
 				CurrentPage = page,
 				TotalPages = totalPages,

@@ -3324,6 +3324,30 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-\u002BYsNH3g3h\u002BP\u002B8wyuL8us\u002BngWtdY1Y0PLUBwXwZRWOMk="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"54336"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022\u002BYsNH3g3h\u002BP\u002B8wyuL8us\u002BngWtdY1Y0PLUBwXwZRWOMk=\u0022"},{"Name":"Last-Modified","Value":"Tue, 20 Jan 2026 16:24:32 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/product/next.kx6fu6yb5u.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\product\next.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"kx6fu6yb5u"},{"Name":"integrity","Value":"sha256-2Ga1Q4OEYg8RKZcttzS4TdtEawFJ6Vr/bz3Jy9oq9zU="},{"Name":"label","Value":"_content/MiniCar_Model/img/product/next.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"297"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00222Ga1Q4OEYg8RKZcttzS4TdtEawFJ6Vr/bz3Jy9oq9zU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Dec 2022 09:54:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/product/next.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\product\next.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-2Ga1Q4OEYg8RKZcttzS4TdtEawFJ6Vr/bz3Jy9oq9zU="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"297"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u00222Ga1Q4OEYg8RKZcttzS4TdtEawFJ6Vr/bz3Jy9oq9zU=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Dec 2022 09:54:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/product/prev.9c9hzl6xu4.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\product\prev.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"9c9hzl6xu4"},{"Name":"integrity","Value":"sha256-d59EiXvTcC\u002Br3vr9HOJ\u002BBhfNXQdGo7IeofFcLeFrN4Y="},{"Name":"label","Value":"_content/MiniCar_Model/img/product/prev.png"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"300"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022d59EiXvTcC\u002Br3vr9HOJ\u002BBhfNXQdGo7IeofFcLeFrN4Y=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Dec 2022 09:54:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/product/prev.png">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\product\prev.png'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-d59EiXvTcC\u002Br3vr9HOJ\u002BBhfNXQdGo7IeofFcLeFrN4Y="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"300"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022d59EiXvTcC\u002Br3vr9HOJ\u002BBhfNXQdGo7IeofFcLeFrN4Y=\u0022"},{"Name":"Last-Modified","Value":"Sat, 03 Dec 2022 09:54:31 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/MiniCar_Model/img/products/1/179589.jpg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\img\products\1\179589.jpg'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

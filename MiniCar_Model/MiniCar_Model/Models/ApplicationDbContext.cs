@@ -6,67 +6,68 @@ namespace MiniCar_Model.Models;
 
 public partial class ApplicationDbContext : DbContext
 {
-	public ApplicationDbContext()
-	{
-	}
+    public ApplicationDbContext()
+    {
+    }
 
-	public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-			: base(options)
-	{
-	}
+    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+        : base(options)
+    {
+    }
 
-	public virtual DbSet<Account> Accounts { get; set; }
+    public virtual DbSet<Account> Accounts { get; set; }
 
-	public virtual DbSet<Advertisement> Advertisements { get; set; }
+    public virtual DbSet<Advertisement> Advertisements { get; set; }
 
-	public virtual DbSet<Bill> Bills { get; set; }
+    public virtual DbSet<Bill> Bills { get; set; }
 
-	public virtual DbSet<BillInfo> BillInfos { get; set; }
+    public virtual DbSet<BillInfo> BillInfos { get; set; }
 
-	public virtual DbSet<Cart> Carts { get; set; }
+    public virtual DbSet<BlogPost> BlogPosts { get; set; }
 
-	public virtual DbSet<CartItem> CartItems { get; set; }
+    public virtual DbSet<Cart> Carts { get; set; }
 
-	public virtual DbSet<Category> Categories { get; set; }
+    public virtual DbSet<CartItem> CartItems { get; set; }
 
-	public virtual DbSet<Color> Colors { get; set; }
+    public virtual DbSet<Category> Categories { get; set; }
 
-	public virtual DbSet<Comment> Comments { get; set; }
+    public virtual DbSet<Color> Colors { get; set; }
 
-	public virtual DbSet<Contact> Contacts { get; set; }
+    public virtual DbSet<Comment> Comments { get; set; }
 
-    public virtual DbSet<Post> Posts { get; set; }
+    public virtual DbSet<CompanyInfo> CompanyInfos { get; set; }
 
-    public virtual DbSet<PostCategory> PostCategories { get; set; }
+    public virtual DbSet<CompanyPolicy> CompanyPolicies { get; set; }
+
+    public virtual DbSet<Contact> Contacts { get; set; }
 
     public virtual DbSet<Product> Products { get; set; }
 
+    public virtual DbSet<ProductImage> ProductImages { get; set; }
 
-	public virtual DbSet<ProductImage> ProductImages { get; set; }
+    public virtual DbSet<ProductPost> ProductPosts { get; set; }
 
-	public virtual DbSet<ProductVariant> ProductVariants { get; set; }
+    public virtual DbSet<ProductVariant> ProductVariants { get; set; }
 
-	public virtual DbSet<Promotion> Promotions { get; set; }
+    public virtual DbSet<ProductView> ProductViews { get; set; }
 
-	public virtual DbSet<Role> Roles { get; set; }
+    public virtual DbSet<Promotion> Promotions { get; set; }
 
-	public virtual DbSet<ShippingAddress> ShippingAddresses { get; set; }
+    public virtual DbSet<Role> Roles { get; set; }
 
-	public virtual DbSet<Size> Sizes { get; set; }
+    public virtual DbSet<ShippingAddress> ShippingAddresses { get; set; }
 
-	public virtual DbSet<Slideshow> Slideshows { get; set; }
+    public virtual DbSet<Size> Sizes { get; set; }
 
-	public virtual DbSet<Supplier> Suppliers { get; set; }
+    public virtual DbSet<Slideshow> Slideshows { get; set; }
 
-	public virtual DbSet<Token> Tokens { get; set; }
+    public virtual DbSet<Supplier> Suppliers { get; set; }
 
-	public virtual DbSet<Trademark> Trademarks { get; set; }
+    public virtual DbSet<Token> Tokens { get; set; }
 
-	public virtual DbSet<Wishlist> Wishlists { get; set; }
-	public DbSet<CompanyInfo> CompanyInfos { get; set; }
-	public DbSet<CompanyPolicy> CompanyPolicies { get; set; }
-	public DbSet<BlogPost> BlogPosts { get; set; }
-	public DbSet<ProductPost> ProductPosts { get; set; }
+    public virtual DbSet<Trademark> Trademarks { get; set; }
+
+    public virtual DbSet<Wishlist> Wishlists { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=DefaultConnection");
@@ -75,13 +76,13 @@ public partial class ApplicationDbContext : DbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.AccountId).HasName("PK__Account__B19E45E9FF438FFD");
+            entity.HasKey(e => e.AccountId).HasName("PK__Account__B19E45E9530A09B0");
 
             entity.ToTable("Account");
 
-            entity.HasIndex(e => e.Email, "UQ__Account__A9D10534688CD20D").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Account__A9D10534E19A8C83").IsUnique();
 
-            entity.HasIndex(e => e.UserName, "UQ__Account__C9F28456908782BE").IsUnique();
+            entity.HasIndex(e => e.UserName, "UQ__Account__C9F28456B6286117").IsUnique();
 
             entity.Property(e => e.AccountId).HasColumnName("Account_Id");
             entity.Property(e => e.AddressAccount)
@@ -118,7 +119,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Advertisement>(entity =>
         {
-            entity.HasKey(e => e.AdvertisementId).HasName("PK__Advertis__4B7F25D881DA1BA1");
+            entity.HasKey(e => e.AdvertisementId).HasName("PK__Advertis__4B7F25D813DF31C8");
 
             entity.ToTable("Advertisement");
 
@@ -149,7 +150,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Bill>(entity =>
         {
-            entity.HasKey(e => e.BillId).HasName("PK__Bill__CF6E7DA3BCBC4571");
+            entity.HasKey(e => e.BillId).HasName("PK__Bill__CF6E7DA32D72AE8B");
 
             entity.ToTable("Bill");
 
@@ -159,12 +160,28 @@ public partial class ApplicationDbContext : DbContext
                 .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("Create_At");
+            entity.Property(e => e.CustomerNotes)
+                .HasMaxLength(500)
+                .HasColumnName("Customer_Notes");
             entity.Property(e => e.DeletedAt)
                 .HasColumnType("datetime")
                 .HasColumnName("Deleted_At");
+            entity.Property(e => e.DeliveryAddress)
+                .HasMaxLength(225)
+                .HasColumnName("Delivery_Address");
+            entity.Property(e => e.NameCustomer)
+                .HasMaxLength(50)
+                .HasColumnName("Name_Customer");
             entity.Property(e => e.PaymentDate)
                 .HasColumnType("datetime")
                 .HasColumnName("Payment_Date");
+            entity.Property(e => e.PaymentMethod)
+                .HasMaxLength(50)
+                .HasColumnName("Payment_Method");
+            entity.Property(e => e.PhoneNumber)
+                .HasMaxLength(20)
+                .IsUnicode(false)
+                .HasColumnName("Phone_Number");
             entity.Property(e => e.StatusBill)
                 .HasMaxLength(50)
                 .HasColumnName("Status_Bill");
@@ -201,13 +218,33 @@ public partial class ApplicationDbContext : DbContext
                 .HasConstraintName("FK_BillInfo_Variant");
         });
 
+        modelBuilder.Entity<BlogPost>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__BlogPost__3214EC07BC89E757");
+
+            entity.ToTable("BlogPost");
+
+            entity.HasIndex(e => e.Slug, "UQ__BlogPost__BC7B5FB6A68814FA").IsUnique();
+
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Slug).HasMaxLength(255);
+            entity.Property(e => e.Status)
+                .HasMaxLength(20)
+                .HasDefaultValue("ACTIVE");
+            entity.Property(e => e.Summary).HasMaxLength(500);
+            entity.Property(e => e.Thumbnail).HasMaxLength(255);
+            entity.Property(e => e.Title).HasMaxLength(255);
+        });
+
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.CartId).HasName("PK__Cart__D6AB4759B60E6D28");
+            entity.HasKey(e => e.CartId).HasName("PK__Cart__D6AB4759A0EF1F1B");
 
             entity.ToTable("Cart");
 
-            entity.HasIndex(e => e.AccountId, "UQ__Cart__B19E45E8750969B6").IsUnique();
+            entity.HasIndex(e => e.AccountId, "UQ__Cart__B19E45E8EF5B6C85").IsUnique();
 
             entity.Property(e => e.CartId).HasColumnName("Cart_Id");
             entity.Property(e => e.AccountId).HasColumnName("Account_Id");
@@ -230,7 +267,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<CartItem>(entity =>
         {
-            entity.HasKey(e => e.CartItemId).HasName("PK__CartItem__7B651501E1C8B704");
+            entity.HasKey(e => e.CartItemId).HasName("PK__CartItem__7B651501C401E4C3");
 
             entity.ToTable("CartItem");
 
@@ -258,7 +295,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__6DB38D6E42F7BAB6");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__6DB38D6E76FCC8DC");
 
             entity.ToTable("Category");
 
@@ -285,7 +322,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Color>(entity =>
         {
-            entity.HasKey(e => e.ColorId).HasName("PK__Color__795F1D54BFA7D5EB");
+            entity.HasKey(e => e.ColorId).HasName("PK__Color__795F1D54D2E7DA94");
 
             entity.ToTable("Color");
 
@@ -304,7 +341,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Comment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__Comment__99FC14DB1BC27171");
+            entity.HasKey(e => e.CommentId).HasName("PK__Comment__99FC14DBAC4C0E43");
 
             entity.ToTable("Comment");
 
@@ -334,9 +371,43 @@ public partial class ApplicationDbContext : DbContext
                 .HasConstraintName("FK_Comment_Product");
         });
 
+        modelBuilder.Entity<CompanyInfo>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__CompanyI__3214EC078BDA05F6");
+
+            entity.ToTable("CompanyInfo");
+
+            entity.Property(e => e.Address).HasMaxLength(300);
+            entity.Property(e => e.BusinessField).HasMaxLength(200);
+            entity.Property(e => e.CompanyName).HasMaxLength(200);
+            entity.Property(e => e.Email).HasMaxLength(150);
+            entity.Property(e => e.Hotline).HasMaxLength(50);
+            entity.Property(e => e.UpdatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("Updated_At");
+        });
+
+        modelBuilder.Entity<CompanyPolicy>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__CompanyP__3214EC07542D92D4");
+
+            entity.ToTable("CompanyPolicy");
+
+            entity.HasIndex(e => e.Code, "UQ__CompanyP__A25C5AA76B981D57").IsUnique();
+
+            entity.Property(e => e.Code).HasMaxLength(50);
+            entity.Property(e => e.Description).HasMaxLength(300);
+            entity.Property(e => e.Icon).HasMaxLength(200);
+            entity.Property(e => e.Status)
+                .HasMaxLength(50)
+                .HasDefaultValue("ACTIVE");
+            entity.Property(e => e.Title).HasMaxLength(100);
+        });
+
         modelBuilder.Entity<Contact>(entity =>
         {
-            entity.HasKey(e => e.ContactId).HasName("PK__Contact__82ACC1EDFE077319");
+            entity.HasKey(e => e.ContactId).HasName("PK__Contact__82ACC1ED98174E6E");
 
             entity.ToTable("Contact");
 
@@ -359,85 +430,9 @@ public partial class ApplicationDbContext : DbContext
             entity.Property(e => e.Subject).HasMaxLength(150);
         });
 
-        modelBuilder.Entity<Post>(entity =>
-        {
-            entity.HasKey(e => e.PostId).HasName("PK__Post__5875F7ADBBDF7B7D");
-
-            entity.ToTable("Post");
-
-            entity.HasIndex(e => e.Slug, "UQ__Post__BC7B5FB6C86E7E05").IsUnique();
-
-            entity.Property(e => e.PostId).HasColumnName("Post_Id");
-            entity.Property(e => e.AuthorId).HasColumnName("Author_Id");
-            entity.Property(e => e.CreatedAt)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime")
-                .HasColumnName("Created_At");
-            entity.Property(e => e.PostCategoryId).HasColumnName("PostCategory_Id");
-            entity.Property(e => e.PostType)
-                .HasMaxLength(50)
-                .HasColumnName("Post_Type");
-            entity.Property(e => e.ProductId).HasColumnName("Product_Id");
-            entity.Property(e => e.Slug).HasMaxLength(255);
-            entity.Property(e => e.StatusPost)
-                .HasMaxLength(50)
-                .HasDefaultValue("DRAFT")
-                .HasColumnName("Status_Post");
-            entity.Property(e => e.Summary).HasMaxLength(500);
-            entity.Property(e => e.Thumbnail).HasMaxLength(255);
-            entity.Property(e => e.Title).HasMaxLength(255);
-            entity.Property(e => e.UpdatedAt)
-                .HasColumnType("datetime")
-                .HasColumnName("Updated_At");
-            entity.Property(e => e.ViewCount)
-                .HasDefaultValue(0)
-                .HasColumnName("View_Count");
-
-            entity.HasOne(d => d.Author).WithMany(p => p.Posts)
-                .HasForeignKey(d => d.AuthorId)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK_Post_Author");
-
-            entity.HasOne(d => d.PostCategory).WithMany(p => p.Posts)
-                .HasForeignKey(d => d.PostCategoryId)
-                .HasConstraintName("FK_Post_Category");
-
-            entity.HasOne(d => d.Product).WithMany(p => p.Posts)
-                .HasForeignKey(d => d.ProductId)
-                .HasConstraintName("FK_Post_Product");
-        });
-
-        modelBuilder.Entity<PostCategory>(entity =>
-        {
-            entity.HasKey(e => e.PostCategoryId).HasName("PK__PostCate__E72E4AA0AF047798");
-
-            entity.ToTable("PostCategory");
-
-            entity.HasIndex(e => e.Slug, "UQ__PostCate__BC7B5FB623808A58").IsUnique();
-
-            entity.Property(e => e.PostCategoryId).HasColumnName("PostCategory_Id");
-            entity.Property(e => e.CreatedAt)
-                .HasDefaultValueSql("(getdate())")
-                .HasColumnType("datetime")
-                .HasColumnName("Created_At");
-            entity.Property(e => e.NameCategory)
-                .HasMaxLength(150)
-                .HasColumnName("Name_Category");
-            entity.Property(e => e.ParentId).HasColumnName("Parent_Id");
-            entity.Property(e => e.Slug).HasMaxLength(150);
-            entity.Property(e => e.StatusCategory)
-                .HasMaxLength(50)
-                .HasDefaultValue("ACTIVE")
-                .HasColumnName("Status_Category");
-
-            entity.HasOne(d => d.Parent).WithMany(p => p.InverseParent)
-                .HasForeignKey(d => d.ParentId)
-                .HasConstraintName("FK_PostCategory_Parent");
-        });
-
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Product__9834FBBAE2F948E3");
+            entity.HasKey(e => e.ProductId).HasName("PK__Product__9834FBBA5AAB3A2E");
 
             entity.ToTable("Product");
 
@@ -479,7 +474,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ProductImage>(entity =>
         {
-            entity.HasKey(e => e.ImageId).HasName("PK__ProductI__3CAB4D59A728BFF3");
+            entity.HasKey(e => e.ImageId).HasName("PK__ProductI__3CAB4D599C996ADF");
 
             entity.ToTable("ProductImage");
 
@@ -501,9 +496,29 @@ public partial class ApplicationDbContext : DbContext
                 .HasConstraintName("FK_Image_Variant");
         });
 
+        modelBuilder.Entity<ProductPost>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK__ProductP__3214EC072AEAC91A");
+
+            entity.ToTable("ProductPost");
+
+            entity.HasIndex(e => e.Slug, "UQ__ProductP__BC7B5FB65B8045C2").IsUnique();
+
+            entity.Property(e => e.CreatedAt)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime");
+            entity.Property(e => e.Slug).HasMaxLength(255);
+            entity.Property(e => e.Status)
+                .HasMaxLength(20)
+                .HasDefaultValue("ACTIVE");
+            entity.Property(e => e.Summary).HasMaxLength(500);
+            entity.Property(e => e.Thumbnail).HasMaxLength(255);
+            entity.Property(e => e.Title).HasMaxLength(255);
+        });
+
         modelBuilder.Entity<ProductVariant>(entity =>
         {
-            entity.HasKey(e => e.VariantId).HasName("PK__ProductV__E19D76CC7595D931");
+            entity.HasKey(e => e.VariantId).HasName("PK__ProductV__E19D76CCDD88B800");
 
             entity.ToTable("ProductVariant");
 
@@ -539,9 +554,27 @@ public partial class ApplicationDbContext : DbContext
                 .HasConstraintName("FK_Variant_Size");
         });
 
+        modelBuilder.Entity<ProductView>(entity =>
+        {
+            entity.HasKey(e => e.ViewId).HasName("PK__ProductV__94E21EBCBD758A31");
+
+            entity.ToTable("ProductView");
+
+            entity.Property(e => e.ViewId).HasColumnName("View_Id");
+            entity.Property(e => e.VariantId).HasColumnName("Variant_Id");
+            entity.Property(e => e.ViewDate)
+                .HasDefaultValueSql("(getdate())")
+                .HasColumnType("datetime")
+                .HasColumnName("View_Date");
+
+            entity.HasOne(d => d.Variant).WithMany(p => p.ProductViews)
+                .HasForeignKey(d => d.VariantId)
+                .HasConstraintName("FK_ProductView_Variant");
+        });
+
         modelBuilder.Entity<Promotion>(entity =>
         {
-            entity.HasKey(e => e.PromotionId).HasName("PK__Promotio__DAF79ADB2A2069F0");
+            entity.HasKey(e => e.PromotionId).HasName("PK__Promotio__DAF79ADBC06761A4");
 
             entity.ToTable("Promotion");
 
@@ -575,7 +608,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Role__D80AB49BB497DD9D");
+            entity.HasKey(e => e.RoleId).HasName("PK__Role__D80AB49BC4C8894C");
 
             entity.ToTable("Role");
 
@@ -588,7 +621,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ShippingAddress>(entity =>
         {
-            entity.HasKey(e => e.AddressId).HasName("PK__Shipping__03BDEBBAF75F1A92");
+            entity.HasKey(e => e.AddressId).HasName("PK__Shipping__03BDEBBA23E1363D");
 
             entity.ToTable("ShippingAddress");
 
@@ -617,7 +650,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Size>(entity =>
         {
-            entity.HasKey(e => e.SizeId).HasName("PK__Size__0BC3256046301C6C");
+            entity.HasKey(e => e.SizeId).HasName("PK__Size__0BC32560CBD84D46");
 
             entity.ToTable("Size");
 
@@ -631,7 +664,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Slideshow>(entity =>
         {
-            entity.HasKey(e => e.SlideshowId).HasName("PK__Slidesho__27DE308D11B410F2");
+            entity.HasKey(e => e.SlideshowId).HasName("PK__Slidesho__27DE308D41D0A0E4");
 
             entity.ToTable("Slideshow");
 
@@ -669,7 +702,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__83918DB858B5D4AC");
+            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__83918DB84B2C8374");
 
             entity.ToTable("Supplier");
 
@@ -698,7 +731,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Token>(entity =>
         {
-            entity.HasKey(e => e.TokenId).HasName("PK__Token__AA16D4A0A8E0FFA8");
+            entity.HasKey(e => e.TokenId).HasName("PK__Token__AA16D4A02E433987");
 
             entity.ToTable("Token");
 
@@ -720,7 +753,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Trademark>(entity =>
         {
-            entity.HasKey(e => e.TrademarkId).HasName("PK__Trademar__FECFFA07CC7D1EAC");
+            entity.HasKey(e => e.TrademarkId).HasName("PK__Trademar__FECFFA07CAAEEBE8");
 
             entity.ToTable("Trademark");
 
@@ -744,7 +777,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Wishlist>(entity =>
         {
-            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__C65247E3F5450DBA");
+            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__C65247E366B4C520");
 
             entity.ToTable("Wishlist");
 
@@ -769,8 +802,8 @@ public partial class ApplicationDbContext : DbContext
                 .HasConstraintName("FK_Wishlist_ProductVariant");
         });
 
-		OnModelCreatingPartial(modelBuilder);
-	}
+        OnModelCreatingPartial(modelBuilder);
+    }
 
-	partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
