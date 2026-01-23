@@ -1,50 +1,47 @@
-﻿body {
-}
-/* Flex hàng phải */
+﻿/* Flex hàng đầu trang (Tìm kiếm + Nút Thêm) */
 .search-area {
   display: flex;
   justify-content: flex-end;
   gap: 10px;
-  flex-wrap: nowrap;
+  margin-bottom: 15px; /* Thêm khoảng cách với bảng bên dưới */
 }
 
-/* Form tìm kiếm chiếm hết không gian còn lại */
 .search-bar {
   display: flex;
   flex: 1;
-  KEY POINT gap: 5px;
+  gap: 5px; /* Đã xóa chữ KEY POINT lỗi */
 }
 
-/* Input full width */
 .search-input {
   flex: 1;
   min-width: 200px;
 }
 
-/* Nút thêm đứng cuối không đè input */
-.add-btn {
-  white-space: nowrap;
-}
-
-/* Đảm bảo bảng luôn nằm trong khung và tự động co giãn */
+/* Bảng hiển thị */
 .table-responsive {
-  overflow-x: auto; /* Tạo thanh cuộn ngang nếu màn hình quá nhỏ */
-  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  border: 1px solid #eee; /* Thêm viền nhẹ cho khung bảng */
 }
 
 .table {
-  table-layout: auto; /* Hoặc 'fixed' nếu bạn muốn ép cứng độ rộng cột */
   width: 100% !important;
+  margin-bottom: 0;
 }
 
-  /* Ép dữ liệu trong các ô quá dài phải xuống dòng */
-  .table td, .table th {
-    word-break: break-word;
-    vertical-align: middle;
-  }
+.table td, .table th {
+  vertical-align: middle !important; /* Quan trọng để hết lệch dọc */
+  padding: 12px 8px !important;    /* Tăng khoảng cách cho thoáng */
+}
 
-    /* Giới hạn độ rộng cột địa chỉ hoặc tên nếu cần */
-    .table td:nth-child(6) {
-      max-width: 200px;
-    }
+/* Căn giữa cột # (1) và cột Mã sản phẩm (2) */
+.table th:nth-child(1), .table td:nth-child(1),
+.table th:nth-child(2), .table td:nth-child(2),
+.table th:last-child, .table td:last-child {
+  text-align: center;
+}
 
+/* Giới hạn độ rộng cột Tên sản phẩm nếu quá dài */
+.table td:nth-child(3) {
+  max-width: 250px;
+  font-weight: 600;
+}

@@ -6,7 +6,8 @@
 	int currentPage = ViewBag.CurrentPage ?? 1;
 	int totalPages = ViewBag.TotalPages ?? 1;
 }
-@model IEnumerable<MiniCar_Model.Models.ProductVariant>
+
+@model IEnumerable<ProductIndexVM>
 <section id="main-content">
 	<section class="wrapper">
 		<h3><i class="fa fa-angle-right"></i> Sản phẩm</h3>
@@ -23,10 +24,10 @@
 
 								<form asp-action="Index" method="get" class="search-bar">
 									<input type="text"
-										   name="search"
-										   value="@ViewBag.Search"
-										   class="form-control search-input"
-										   placeholder="Tìm kiếm sản phẩm..." />
+												 name="search"
+												 value="@ViewBag.Search"
+												 class="form-control search-input"
+												 placeholder="Tìm kiếm sản phẩm..." />
 
 									<button class="btn btn-primary">
 										<i class="fa fa-search"></i>
@@ -34,9 +35,9 @@
 								</form>
 
 								<a asp-area="Admin"
-								   asp-controller="product"
-								   asp-action="create"
-								   class="btn btn-success add-btn">
+									 asp-controller="product"
+									 asp-action="create"
+									 class="btn btn-success add-btn">
 									<i class="fa fa-plus"></i> <span class="hidden-xs">Thêm sản phẩm</span>
 								</a>
 
@@ -47,71 +48,92 @@
 
 
 					<hr style="margin: 0;" />
-
+					@await Html.PartialAsync("_AlertPartial")
 					<div class="table-responsive">
 						<table class="table table-hover table-sm">
-
 							<thead>
 								<tr>
 									<th class="text-center">#</th>
-									<th>Mã sản phẩm</th>
+									<th>Mã</th>
 									<th>Tên sản phẩm</th>
-									<th>Loại</th>
+									<th>Danh mục</th>
 									<th>Giá</th>
-									<th>Size</th>
-									<th>Màu</th>
-
+									<th class="text-center">Tồn kho</th>
+									<th class="text-center">Biến thể</th>
 									<th class="text-center">Trạng thái</th>
 									<th class="text-center">Hành động</th>
 								</tr>
 							</thead>
 							<tbody>
-								@if (Model != null && Model.Any())
-								{
+								@{
 									int index = 1;
-									foreach (var v in Model)
-									{
-										<tr>
-											<td class="text-center">@index</td>
-											<td><small>@v.Product.ProductId</small></td>
-											<td><strong>@v.Product.NameProduct</strong></td>
-											<td>@v.Product.Category?.NameCategory</td>
-											<td>@string.Format("{0:N0}đ", v.Price)</td>
-											<td>@v.Size.Scale</td>
-											<td>@v.Color.ColorName</td>
-
-											<td class="text-center">
-												@if (v.StatusVariant == "ACTIVE")
-												{
-													<span class="label label-success label-mini">ACTIVE</span>
-												}
-												else
-												{
-													<span class="label label-danger label-mini">INACTIVE</span>
-												}
-											</td>
-
-											<td class="text-center" style="white-space: nowrap;">
-												<a asp-area="Admin" asp-controller="Product" asp-action="Edit" asp-route-id="@v.VariantId" class="btn btn-primary btn-xs">
-													<i class="fa fa-pencil"></i> Sửa
-												</a>
-												<form asp-action="Delete" asp-route-id="@v.VariantId" method="post" style="display:inline;">
-													<button class="btn btn-danger btn-xs" onclick="return confirm('Bạn có chắc muốn xóa không?')">
-														<i class="fa fa-trash-o"></i> Xóa
-													</button>
-												</form>
-
-											</td>
-										</tr>
-
-										index++;
-									}
 								}
+								@foreach (var p in Model)
+								{
+									<tr>
+										<td class="text-center">@index</td>
+										<td>@p.ProductId</td>
+										<td><strong>@p.NameProduct</strong></td>
+										<td>@p.CategoryName</td>
+										<td>
+											@if (p.MinPrice == p.MaxPrice)
+											{
+												@string.Format("{0:N0}đ", p.MinPrice)
+											}
+											else
+											{
+												@string.Format("{0:N0}", p.MinPrice)
+												<span> – </span>
+												@string.Format("{0:N0}đ", p.MaxPrice)
+											}
+										</td>
+										<td class="text-center">@p.TotalQuantity</td>
+										<td class="text-center">
+											<span class="badge bg-info">@p.VariantCount</span>
+										</td>
+										<td class="text-center">
+											@if (p.StatusProduct == "ACTIVE")
+											{
+												<span class="label label-success label-mini">ACTIVE</span>
+											}
+											else
+											{
+												<span class="label label-danger label-mini">INACTIVE</span>
+											}
+										</td>
+										<td class="text-center">
+											<a asp-action="Variants"
+												 asp-route-id="@p.ProductId"
+												 class="btn btn-info btn-xs">
+												<i class="fa fa-cubes"></i> Biến thể
+											</a>
 
+											<a asp-action="Edit"
+												 asp-route-id="@p.ProductId"
+												 class="btn btn-primary btn-xs">
+												<i class="fa fa-pencil"></i> Sửa
+											</a>
 
+											<form asp-action="Delete"
+														asp-route-id="@p.ProductId"
+														method="post"
+														class="d-inline"
+														onsubmit="return confirm('Bạn có chắc muốn xóa sản phẩm này?');">
+
+												@Html.AntiForgeryToken()
+
+												<button type="submit"
+																class="btn btn-danger btn-xs">
+													<i class="fa fa-trash"></i> Xóa
+												</button>
+											</form>
+										</td>
+									</tr>
+									index++;
+								}
 							</tbody>
 						</table>
-					</div> 
+					</div>
 
 				</div>
 				<div class="text-center" style="margin-top: 20px;">

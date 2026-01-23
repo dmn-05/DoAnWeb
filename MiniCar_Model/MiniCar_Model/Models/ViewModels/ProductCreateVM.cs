@@ -23,24 +23,9 @@ namespace MiniCar_Model.Models.ViewModels
     public int? PromotionId { get; set; }
 
     [Required]
-    public string StatusProduct { get; set; } = "Active";
+    public string StatusProduct { get; set; } = "ACTIVE";
 
-    // ===== Biến thể =====
-    [Required(ErrorMessage = "Vui lòng chọn size")]
-    public int SizeId { get; set; }
-
-    [Required(ErrorMessage = "Vui lòng chọn màu sắc")]
-    public int ColorId { get; set; }
-
-    [Required(ErrorMessage = "Vui lòng nhập giá bán")]
-    [Range(1, double.MaxValue, ErrorMessage = "Giá phải lớn hơn 0")]
-    public decimal Price { get; set; }
-
-    [Range(0, int.MaxValue, ErrorMessage = "Số lượng không được âm")]
-    public int Quantity { get; set; }
-
-    // ===== Hình ảnh =====
-    [Required(ErrorMessage = "Vui lòng chọn ít nhất 1 hình ảnh")]
-    public List<IFormFile>? Images { get; set; }
+    [Required(ErrorMessage = "Phải có ít nhất 1 biến thể")]
+    public List<ProductVariantCreateVM> Variants { get; set; } = new();
   }
 }

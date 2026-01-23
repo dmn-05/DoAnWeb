@@ -1,26 +1,30 @@
-﻿namespace MiniCar_Model.Models.ViewModels
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace MiniCar_Model.Models.ViewModels
 {
   public class ProductEditVM
   {
     public int ProductId { get; set; }
-    public string NameProduct { get; set; }
-    public string? Descriptions { get; set; }
-    public string? StatusProduct { get; set; }
 
+    [Required(ErrorMessage = "Vui lòng nhập tên sản phẩm")]
+    [StringLength(200)]
+    public string NameProduct { get; set; } = string.Empty;
+
+    [StringLength(2000)]
+    public string? Descriptions { get; set; }
+
+    [Required]
     public int? CategoryId { get; set; }
+
+    [Required]
     public int? SupplierId { get; set; }
+
+    [Required]
     public int? TrademarkId { get; set; }
+
     public int? PromotionId { get; set; }
 
-    // Variant
-    public decimal Price { get; set; }
-    public int Quantity { get; set; }
-    public int SizeId { get; set; }
-    public int ColorId { get; set; }
-
-    // Upload ảnh mới
-    public List<IFormFile>? Images { get; set; }
-    // Load ảnh cũ lên giao diện
-    public List<string>? OldImages { get; set; }
+    [Required]
+    public string StatusProduct { get; set; } = "ACTIVE";
   }
 }

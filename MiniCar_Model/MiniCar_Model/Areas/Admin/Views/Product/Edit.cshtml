@@ -1,7 +1,8 @@
-﻿@{
+﻿@model ProductEditVM
+@{
   ViewData["Title"] = "Cập nhật sản phẩm";
 }
-@model ProductEditVM
+
 <section id="main-content">
   <section class="wrapper">
     <h3><i class="fa fa-angle-right"></i> Cập nhật sản phẩm</h3>
@@ -9,136 +10,113 @@
     <div class="row mt">
       <div class="col-md-12">
         <div class="content-panel">
-          <form asp-action="Edit" method="POST" enctype="multipart/form-data">
-            <div asp-validation-summary="All" class="text-danger mb-3"></div>
-            <div class="form-flex">
-              <div class="form-column">
-                <div class="input-row">
-                  <div class="input-group form-group-flex">
-                    <label>Tên sản phẩm</label>
-                    <input asp-for="NameProduct" class="input-control" placeholder="Nhập tên..." />
-                    <span asp-validation-for="NameProduct" class="text-danger"></span>
-                  </div>
+
+          <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="ProductId" />
+
+            <div class="row">
+
+              <!-- CỘT TRÁI -->
+              <div class="col-md-6">
+
+                <div class="form-group mb-3">
+                  <label>Tên sản phẩm</label>
+                  <input asp-for="NameProduct" class="form-control" />
+                  <span asp-validation-for="NameProduct" class="text-danger"></span>
                 </div>
 
-                <div class="input-row">
-                  <div class="input-group form-group-flex">
-                    <label>Giá bán (VNĐ)</label>
-                    <input asp-for="Price" type="number" step="0.01" class="input-control" />
-                    <span asp-validation-for="Price" class="text-danger"></span>
-                  </div>
-                  <div class="input-group form-group-flex">
-                    <label>Số lượng kho</label>
-                    <input asp-for="Quantity" type="number" class="input-control" />
-                    <span asp-validation-for="Quantity" class="text-danger"></span>
-                  </div>
-                </div>
-
-                <div class="input-row align-end">
-                  <div class="input-group form-group-flex">
-                    <label>Loại sản phẩm (Category)</label>
-                    <div class="select-with-btn">
-                      <select asp-for="CategoryId" asp-items="ViewBag.CategoryId" class="input-control">
-                        <option value="">-- Chọn loại --</option>
-                      </select>
-                      <span asp-validation-for="CategoryId" class="text-danger"></span>
-                      <a asp-area="Admin" asp-controller="Category" asp-action="create"
-                         class="btn btn-success btn-add-inline"
-                         title="Thêm loại mới">
-                        <i class="fa fa-plus"></i>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="input-group form-group-flex">
-                    <label>Thương hiệu (Trademark)</label>
-                    <select asp-for="TrademarkId" asp-items="ViewBag.TrademarkId" class="input-control">
-                      <option value="">-- Chọn thương hiệu --</option>
-                    </select>
-                    <span asp-validation-for="TrademarkId" class="text-danger"></span>
-                  </div>
-                </div>
-
-                <div class="input-row align-end">
-                  <div class="input-group form-group-flex">
-                    <label>Nhà cung cấp (Supplier)</label>
-                    <select asp-for="SupplierId" asp-items="ViewBag.SupplierId" class="input-control">
-                      <option value="">-- Chọn nhà cung cấp --</option>
-                    </select>
-                    <span asp-validation-for="SupplierId" class="text-danger"></span>
-                  </div>
-                  <div class="input-group form-group-flex">
-                    <label>Khuyến mãi (Promotion)</label>
-                    <select asp-for="PromotionId" asp-items="ViewBag.PromotionId" class="input-control">
-                      <option value="">-- Chọn khuyến mãi --</option>
-                    </select>
-                    <span asp-validation-for="PromotionId" class="text-danger"></span>
-                  </div>
-                </div>
-
-                <div class="input-group">
-                  <label>Mô tả sản phẩm</label>
-                  <textarea asp-for="Descriptions" rows="4" class="input-control" placeholder="Nhập mô tả chi tiết..."></textarea>
+                <div class="form-group mb-3">
+                  <label>Mô tả</label>
+                  <textarea asp-for="Descriptions"
+                            rows="4"
+                            class="form-control"></textarea>
                   <span asp-validation-for="Descriptions" class="text-danger"></span>
                 </div>
-              </div>
 
-              <div class="form-column">
-                <div class="input-group">
-                  <label>Trạng thái sản phẩm</label>
-                  <select asp-for="StatusProduct" class="input-control">
-                    <option value="ACTIVE">Active</option>
-                    <option value="INACTIVE">Inactive</option>
+                <!-- DANH MỤC + NÚT THÊM -->
+                <div class="form-group mb-3">
+                  <label>Danh mục</label>
+
+                  <div class="d-flex align-items-center gap-2">
+                    <select asp-for="CategoryId"
+                            asp-items="ViewBag.CategoryId"
+                            class="form-control">
+                      <option value="">-- Chọn --</option>
+                    </select>
+
+                    <a asp-area="Admin"
+                       asp-controller="Category"
+                       asp-action="Create"
+                       class="btn btn-success d-flex align-items-center justify-content-center"
+                       style="width:42px;height:38px"
+                       title="Thêm danh mục">
+                      <i class="fa fa-plus"></i>
+                    </a>
+                  </div>
+
+                  <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Nhà cung cấp</label>
+                  <select asp-for="SupplierId"
+                          asp-items="ViewBag.SupplierId"
+                          class="form-control">
+                    <option value="">-- Chọn --</option>
                   </select>
-                  <span asp-validation-for="StatusProduct" class="text-danger"></span>
+                  <span asp-validation-for="SupplierId" class="text-danger"></span>
                 </div>
 
-                <div class="input-group">
-                  <label>Hình ảnh sản phẩm</label>
-                  <input asp-for="Images"
-                         id="imagesInput"
-                         class="form-control"
-                         multiple
-                         accept="image/*" />
-                  <span asp-validation-for="Images" class="text-danger"></span>
-                  <div id="imagePreview"
-                       class="preview mt-2 d-flex flex-wrap gap-2">
-                  </div>
+              </div>
+
+              <!-- CỘT PHẢI -->
+              <div class="col-md-6">
+
+                <div class="form-group mb-3">
+                  <label>Thương hiệu</label>
+                  <select asp-for="TrademarkId"
+                          asp-items="ViewBag.TrademarkId"
+                          class="form-control">
+                    <option value="">-- Chọn --</option>
+                  </select>
+                  <span asp-validation-for="TrademarkId" class="text-danger"></span>
                 </div>
 
-                <div class="input-row">
-                  <div class="input-group form-group-flex">
-                    <label>Kích cỡ (Size)</label>
-                    <select asp-for="SizeId" asp-items="ViewBag.SizeId" class="input-control">
-                      <option value="">-- Chọn Size --</option>
-                    </select>
-                    <span asp-validation-for="SizeId" class="text-danger"></span>
-                  </div>
-
-                  <div class="input-group form-group-flex">
-                    <label>Màu sắc</label>
-                    <select asp-for="ColorId" asp-items="ViewBag.ColorId" class="input-control">
-                      <option value="">-- Chọn màu --</option>
-                    </select>
-                    <span asp-validation-for="ColorId" class="text-danger"></span>
-                  </div>
+                <div class="form-group mb-3">
+                  <label>Khuyến mãi</label>
+                  <select asp-for="PromotionId"
+                          asp-items="ViewBag.PromotionId"
+                          class="form-control">
+                    <option value="">-- Không áp dụng --</option>
+                  </select>
                 </div>
+
+                <div class="form-group mb-3">
+                  <label>Trạng thái</label>
+                  <select asp-for="StatusProduct" class="form-control">
+                    <option value="ACTIVE">ACTIVE</option>
+                    <option value="INACTIVE">INACTIVE</option>
+                  </select>
+                </div>
+
               </div>
             </div>
 
-            <div class="form-footer">
-              <button type="submit" class="btn-save">
-                <i class="fa fa-save"></i> Lưu sản phẩm
+            <!-- FOOTER -->
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="submit" class="btn btn-success">
+                <i class="fa fa-save"></i> Lưu thay đổi
               </button>
-              <a asp-action="Index" class="back-link">Quay lại danh sách</a>
+
+              <a asp-action="Index" class="btn btn-secondary">
+                Quay lại
+              </a>
             </div>
+
           </form>
+
         </div>
       </div>
     </div>
-
   </section>
 </section>
-
-@section Scripts {
-  <script src="~/admin/js/product-image-upload.js"></script>
-}

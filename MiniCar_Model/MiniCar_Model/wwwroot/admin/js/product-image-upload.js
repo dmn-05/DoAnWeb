@@ -1,27 +1,26 @@
-﻿(function () {
-  const imagesInput = document.getElementById('imagesInput');
-  const previewDiv = document.getElementById('imagePreview');
+﻿document.addEventListener("DOMContentLoaded", function () {
 
-  if (!imagesInput || !previewDiv) {
-    console.warn('imagesInput hoặc imagePreview chưa tồn tại');
-    return;
-  }
+  const input = document.getElementById("imageInput");
+  const preview = document.getElementById("previewImages");
 
-  imagesInput.addEventListener('change', function () {
-    previewDiv.innerHTML = '';
+  if (!input || !preview) return;
+
+  input.addEventListener("change", function () {
+    preview.innerHTML = "";
 
     Array.from(this.files).forEach(file => {
-      if (!file.type.startsWith('image/')) return;
+      if (!file.type.startsWith("image/")) return;
 
-      const img = document.createElement('img');
+      const img = document.createElement("img");
+      img.className = "img-thumbnail";
+      img.style.width = "120px";
+      img.style.height = "120px";
+      img.style.objectFit = "cover";
+
       img.src = URL.createObjectURL(file);
-      img.style.width = '120px';
-      img.style.height = '150px';
-      img.style.objectFit = 'cover';
-      img.style.border = '1px solid #ccc';
-      img.style.borderRadius = '8px';
 
-      previewDiv.appendChild(img);
+      preview.appendChild(img);
     });
   });
-})();
+
+});

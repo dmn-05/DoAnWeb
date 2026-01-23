@@ -43,64 +43,61 @@ namespace MiniCar_Model.Controllers {
 
     [HttpGet]
     public async Task<IActionResult> Detail(int id)
-    {      
+    {
       var accountId = HttpContext.Session.GetInt32("AccountId");
 
       var vm = await _context.Products
-          .Where(p => p.ProductId == id)
-          .Include(p => p.Category)
-          .Include(p => p.ProductVariants)
-              .ThenInclude(v => v.Size)
-          .Include(p => p.ProductVariants)
-              .ThenInclude(v => v.Color)
-          .Include(p => p.ProductVariants)
-              .ThenInclude(v => v.ProductImages)
-          .Include(p => p.ProductVariants)
-              .ThenInclude(v => v.Comments)
-                  .ThenInclude(c => c.Account)
-          .AsSplitQuery()
-          .Select(p => new ProductDetailVM
-          {
-            Product = p,
-            Variants = p.ProductVariants.ToList(),
-            Images = p.ProductVariants.SelectMany(v => v.ProductImages).ToList(),
-            Comments = p.ProductVariants.SelectMany(v => v.Comments).ToList(),
-          })
-          .FirstOrDefaultAsync();
+        .Where(p => p.ProductId == id)
+        .Include(p => p.Category)
+        .Include(p => p.ProductVariants).ThenInclude(v => v.Size)
+        .Include(p => p.ProductVariants).ThenInclude(v => v.Color)
+        .Include(p => p.ProductVariants).ThenInclude(v => v.ProductImages)
+        .Include(p => p.ProductVariants)
+            .ThenInclude(v => v.Comments)
+                .ThenInclude(c => c.Account)
+        .AsSplitQuery()
+        .Select(p => new ProductDetailVM
+        {
+          Product = p,
+          Variants = p.ProductVariants.ToList(),
+          Images = new List<ProductImage>(), 
+          Comments = p.ProductVariants.SelectMany(v => v.Comments).ToList()
+        })
+        .FirstOrDefaultAsync();
 
       if (vm == null)
         return NotFound();
 
       var first = vm.Variants.FirstOrDefault();
+
       vm.SelectedVariantId = first?.VariantId ?? 0;
       vm.Price = first?.Price ?? 0;
       vm.Quanlity = first?.Quantity ?? 0;
-      vm.AvgRating = vm.Comments.Any() ? vm.Comments.Average(c => c.Rating).GetValueOrDefault() : 0;
+      vm.Images = first?.ProductImages.ToList() ?? new List<ProductImage>();
+      vm.AvgRating = vm.Comments.Any()
+        ? vm.Comments.Average(c => c.Rating).GetValueOrDefault()
+        : 0;
 
       vm.RelatedProducts = await _context.Products
-        .Where(p => p.CategoryId == vm.Product.CategoryId && p.ProductId != id && p.ProductVariants.Any())
+        .Where(p => p.CategoryId == vm.Product.CategoryId
+                 && p.ProductId != id
+                 && p.ProductVariants.Any())
         .Include(p => p.ProductVariants)
             .ThenInclude(v => v.ProductImages)
         .OrderByDescending(p => p.ProductId)
         .Take(9)
         .ToListAsync();
+
       vm.IsLoggedIn = accountId != null;
 
-
-      // NẠP DANH SÁCH YÊU THÍCH CỦA USER (nếu login)
-      if (accountId != null)
-      {
-        vm.WishlistProducts = await _context.Wishlists
+      vm.WishlistProducts = accountId != null
+        ? await _context.Wishlists
             .Where(w => w.AccountId == accountId)
             .Include(w => w.Product)
                 .ThenInclude(p => p.ProductVariants)
             .Select(w => w.Product)
-            .ToListAsync();
-      }
-      else
-      {
-        vm.WishlistProducts = new List<Product>();
-      }
+            .ToListAsync()
+        : new List<Product>();
 
       return View(vm);
     }
@@ -109,13 +106,17 @@ namespace MiniCar_Model.Controllers {
     public async Task<IActionResult> GetVariantInfo(int variantId)
     {
       var variant = await _context.ProductVariants
-          .Where(v => v.VariantId == variantId)
-          .Select(v => new
-          {
-            v.Price,
-            v.Quantity
-          })
-          .FirstOrDefaultAsync();
+      .Where(v => v.VariantId == variantId)
+      .Select(v => new
+      {
+        v.Price,
+        v.Quantity,
+        Images = v.ProductImages
+            .OrderByDescending(i => i.IsMain)
+            .Select(i => "/" + i.UrlImage)
+            .ToList()
+      })
+      .FirstOrDefaultAsync();
 
       if (variant == null)
         return NotFound();

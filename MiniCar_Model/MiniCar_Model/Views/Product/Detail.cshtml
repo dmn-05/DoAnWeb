@@ -27,52 +27,31 @@
 	<div class="container">
 		<div class="row s_product_inner">
 			<div class="col-lg-6">
-				<div class="s_Product_carousel">
-					@* @foreach (var img in Model.Images)
+				<div class="s_Product_carousel owl-carousel">
+
+					@foreach (var img in Model.Images)
 					{
-						<div class="single-prd-item">
-							<img class="img-fluid" 
-										src="~/img/product/@img.ImageId"
-										alt="@Model.Product.NameProduct"/>
-						</div>
-					} *@
-					@if (Model.Images == null || !Model.Images.Any())
-					{
-						<div class="single-prd-item">
-							<img class="img-fluid"
-									 src="~/img/logo_team.png"
-									 alt="@Model.Product.NameProduct" />
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid"
-									 src="~/img/logo_team.png"
-									 alt="@Model.Product.NameProduct" />
-						</div>
-						<div class="single-prd-item">
-							<img class="img-fluid"
-									 src="~/img/logo_team.png"
+						<div class="single-prd-item
+	                d-flex
+	                align-items-center
+	                justify-content-center">
+
+							<img src="/@img.UrlImage"
+									 class="img-fluid product-img"
 									 alt="@Model.Product.NameProduct" />
 						</div>
 					}
-					else
-					{
-						@foreach (var img in Model.Images)
-						{
-							<div class="single-prd-item">
-								<img class="img-fluid"
-										 src="~/img/product/@img.ImageId"
-										 alt="@Model.Product.NameProduct" />
-							</div>
-						}
-					}
+
 				</div>
+
 			</div>
 			<div class="col-lg-5 offset-lg-1">
 				<div class="s_product_text">
 					<h3>@Model.Product.NameProduct</h3>
 					<h2 id="price">@Model.Price.ToString("N0") đ</h2>
 					<ul class="list">
-						<li><a class="active" asp-controller="Category" asp-action="Index"><span>Phân loại</span> : @Model.Product.Category.NameCategory</a></li>
+						<li><a ><span>Thương hiệu</span> : @Model.Product.Trademark?.NameTrademark</a></li>
+						<li><a class="active" asp-controller="Category" asp-action="Index"><span>Phân loại</span> : @Model.Product.Category?.NameCategory</a></li>
             <li>
               <a >
 								<span>Số lượng tồn</span> :
@@ -164,43 +143,48 @@
 
 			</div>
 			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-				<p>
-					<b>1 </b><br>
+				<div class="policy-content p-3">
 
-					<u><b>Điều kiện:</b></u> <br>
+					<p>
+						<b>1. Quy định chung</b><br>
+						Tại <b>Minicar</b>, chúng tôi cam kết mang đến những sản phẩm mô hình chất lượng nhất. Tuy nhiên, nếu sản phẩm gặp lỗi từ nhà sản xuất hoặc hư hỏng trong quá trình vận chuyển, chúng tôi sẵn sàng hỗ trợ đổi trả theo quy định.
+					</p>
 
-					 <br>
-					<b>Địa điểm:</b> <br>
+					<p>
+						<u><b>Điều kiện đổi trả:</b></u> <br>
+						* Sản phẩm còn nguyên bao bì, hộp và các phụ kiện đi kèm (nếu có).<br>
+						* Sản phẩm chưa qua sử dụng, không có dấu hiệu tháo lắp hoặc can thiệp kỹ thuật.<br>
+						* Có hóa đơn mua hàng hoặc thông tin đơn hàng trên hệ thống.
+					</p>
 
-					<br>
-					<u><b> Lưu ý:</b></u><br>
+					<p>
+						<b>2. Thời hạn đổi trả</b><br>
+						* <b>Lỗi do nhà sản xuất (Sơn, chi tiết lắp ráp):</b> Đổi mới trong vòng 03 ngày kể từ khi nhận hàng.<br>
+						* <b>Hư hỏng do vận chuyển (Gãy, vỡ):</b> Quý khách vui lòng phản hồi ngay trong vòng 24h sau khi nhận hàng (kèm video mở hộp).
+					</p>
 
-					</b><br>
+					<p>
+						<b>3. Chi phí vận chuyển cho việc đổi hàng</b><br>
+						* <b>Hàng lỗi/Giao sai mẫu:</b> Minicar chịu 100% phí vận chuyển hai chiều.<br>
+						* <b>Đổi theo nhu cầu (Đổi mẫu/size):</b> Khách hàng thanh toán phí vận chuyển hai chiều và chênh lệch giá trị sản phẩm (nếu có).
+					</p>
 
-					<br>
-					<b><u>Điều kiện:</u></b><br>
+					<p>
+						<b>4. Địa chỉ và Thông tin liên hệ</b><br>
+						Để thực hiện đổi trả, quý khách vui lòng liên hệ hoặc gửi hàng về:<br>
+						<b>Email:</b> minicarmodel@gmail.com<br>
+						<b>Hotline tư vấn:</b> 0333854516<br>
+						<b>Website:</b> www.minicar.com.vn<br>
+						<b>Facebook:</b> www.facebook.com/minicar
+					</p>
 
-					<br>
-					<b><u>Lưu ý:</u></b><br>
+					<p>
+						<b>5. Thời gian xử lý</b><br>
+						Sau khi nhận được hàng gửi về, Minicar sẽ kiểm tra và thực hiện gửi lại sản phẩm mới hoặc hoàn tiền trong vòng <b>3 - 5 ngày làm việc</b>.
+					</p>
 
-					<br>
-					<b>3. Chi phí vận chuyển cho việc đổi kích cỡ và đổi hàng lỗi</b><br>
-
-					<br>
-					<b>4. Địa chỉ đổi size</b><br>
-
-					<br>
-
-					Email: minicarmodel@gmail.com<br>
-
-					Hotline tư vấn online: 0333854516<br>
-
-					Website: www.minicar.com.vn hoặc facebook: www.facebook.com/minicar<br>
-
-					<b>5. Thời gian xử lý</b><br>
-
-					
-				</p>
+					<p><i>* Lưu ý: Đối với các sản phẩm mô hình phiên bản giới hạn (Limited), việc đổi hàng sẽ tùy thuộc vào tình trạng tồn kho thực tế.</i></p>
+				</div>
 			</div>
 			<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
 				<div class="row">
@@ -397,8 +381,10 @@
 		}
 	</div>
 </section>
+<div id="clock"></div>
 <!-- End related-product Area -->
 <script src="~/js/variant_select.js"></script>
+
 
 
 

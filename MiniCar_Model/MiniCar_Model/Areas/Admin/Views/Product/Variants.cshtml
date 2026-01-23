@@ -1,0 +1,193 @@
+﻿@model IEnumerable<ProductVariantIndexVM>
+
+@{
+  ViewData["Title"] = "Biến thể sản phẩm";
+  int currentPage = ViewBag.CurrentPage ?? 1;
+  int totalPages = ViewBag.TotalPages ?? 1;
+}
+
+<section id="main-content">
+  <section class="wrapper">
+
+    <h3>
+      <i class="fa fa-cubes"></i>
+      Biến thể – <strong>@ViewBag.ProductName</strong>
+    </h3>
+
+    <div class="row mt">
+      <div class="col-md-12">
+        <div class="content-panel">
+
+          <div style="padding:15px;">
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <h4 style="margin-bottom:15px;">
+                  <i class="fa fa-angle-right"></i> Danh sách biến thể
+                </h4>
+              </div>
+
+              <!-- RIGHT: Search + Buttons -->
+              <div class="col-md-8 col-sm-12 text-right search-area">
+
+                <form method="get" class="search-bar d-inline-block">
+                  <input type="hidden" name="id" value="@ViewBag.ProductId" />
+
+                  <input type="text"
+                         name="search"
+                         value="@ViewBag.Search"
+                         class="form-control search-input"
+                         placeholder="Tìm size hoặc màu..." />
+
+                  <button class="btn btn-primary">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </form>
+
+                <a asp-action="CreateVariant"
+                   asp-route-productId="@ViewBag.ProductId"
+                   class="btn btn-success add-btn">
+                  <i class="fa fa-plus"></i> Thêm biến thể
+                </a>
+
+                <a asp-action="Index"
+                   class="btn btn-danger add-btn">
+                  Quay lại sản phẩm
+                </a>
+
+              </div>
+
+            </div>
+          </div>
+
+          <hr style="margin:0" />
+          @await Html.PartialAsync("_AlertPartial")
+          <div class="table-responsive">
+            <table class="table table-hover table-sm">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Size</th>
+                  <th>Màu</th>
+                  <th>Giá</th>
+                  <th class="text-center">Tồn kho</th>
+                  <th class="text-center">Trạng thái</th>
+                  <th class="text-center">Hành động</th>
+                </tr>
+              </thead>
+              <tbody>
+                @{
+                  int index = 1;
+                }
+                @foreach (var v in Model)
+                {
+                  <tr>
+                    <td>@index</td>
+                    <td>@v.SizeName</td>
+                    <td>@v.ColorName</td>
+                    <td>@string.Format("{0:N0}đ", v.Price)</td>
+                    <td class="text-center">@v.Quantity</td>
+                    <td class="text-center">
+                      @if (v.StatusVariant == "ACTIVE")
+                      {
+                        <span class="label label-success label-mini">ACTIVE</span>
+                      }
+                      else
+                      {
+                        <span class="label label-danger label-mini">INACTIVE</span>
+                      }
+                    </td>
+                    <td class="text-center" style="white-space:nowrap">
+                      <a asp-action="EditVariant"
+                         asp-route-id="@v.VariantId"
+                         class="btn btn-primary btn-xs">
+                        <i class="fa fa-pencil"></i> Sửa
+                      </a>
+
+                      <form asp-action="DeleteVariant"
+                            asp-route-id="@v.VariantId"
+                            method="post"
+                            class="d-inline"
+                            onsubmit="return confirm('Bạn có chắc muốn xóa biến thể này?');">
+
+                        @Html.AntiForgeryToken()
+
+                        <button type="submit"
+                                class="btn btn-danger btn-xs">
+                          <i class="fa fa-trash"></i> Xóa
+                        </button>
+                      </form>
+
+                    </td>
+                  </tr>
+                  index++;
+                }
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+         <div class="text-center" style="margin-top: 20px;">
+          <ul class="pagination">
+
+            <!-- PREV -->
+            <li class="page-item @(currentPage <= 1 ? "disabled" : "")">
+              @if (currentPage > 1)
+              {
+                <a class="page-link"
+                    href="@Url.Action("Variants", new {
+                      id = ViewBag.ProductId,
+                      page = currentPage - 1,
+                      search = ViewBag.Search
+                    })">«</a>
+              }
+              else
+              {
+                <span class="page-link">«</span>
+              }
+            </li>
+
+            <!-- PAGES -->
+            @for (int i = 1; i <= totalPages; i++)
+            {
+              <li class="page-item @(i == currentPage ? "active" : "")">
+                @if (i == currentPage)
+                {
+                  <span class="page-link">@i</span>
+                }
+                else
+                {
+                  <a class="page-link"
+                      href="@Url.Action("Variants", new {
+                        id = ViewBag.ProductId,
+                        page = i,
+                        search = ViewBag.Search
+                      })">@i</a>
+                }
+              </li>
+            }
+
+            <!-- NEXT -->
+            <li class="page-item @(currentPage >= totalPages ? "disabled" : "")">
+              @if (currentPage < totalPages)
+              {
+                <a class="page-link"
+                    href="@Url.Action("Variants", new {
+                      id = ViewBag.ProductId,
+                      page = currentPage + 1,
+                      search = ViewBag.Search
+                    })">»</a>
+              }
+              else
+              {
+                <span class="page-link">»</span>
+              }
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+  </section>
+</section>
