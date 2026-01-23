@@ -33,8 +33,6 @@ public partial class Account
 
     public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
 
-    public virtual ICollection<Post> Posts { get; set; } = new List<Post>();
-
     public virtual Role Role { get; set; } = null!;
 
     public virtual ICollection<ShippingAddress> ShippingAddresses { get; set; } = new List<ShippingAddress>();

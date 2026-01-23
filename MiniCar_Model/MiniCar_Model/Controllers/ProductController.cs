@@ -151,8 +151,98 @@ namespace MiniCar_Model.Controllers {
       return Json(variant);
     }
 
+[HttpGet]
+    public async Task<IActionResult> Filter(
+   string keyword,
+   int? trademarkId,
+   int? sizeId,
+   int? colorId,
+   decimal? minPrice,
+   decimal? maxPrice,
+   int? page
+)
+    {
 
-    //public IActionResult Search(ProductSearchVM vm) {
+      int pageSize = 15;
+      int currentPage = page ?? 1;
+      var query = _context.Products
+          .Include(p => p.ProductVariants)
+              .ThenInclude(v => v.ProductImages)
+          .AsQueryable();
+
+      // 1. Lọc theo các thuộc tính của Product
+      if (!string.IsNullOrWhiteSpace(keyword))
+      {
+        query = query.Where(p => p.NameProduct.Contains(keyword));
+      }
+
+      if (trademarkId.HasValue)
+      {
+        query = query.Where(p => p.TrademarkId == trademarkId);
+      }
+
+      // 2. Lọc theo các thuộc tính của Variant (nếu có chọn lọc)
+      if (sizeId.HasValue || colorId.HasValue || minPrice.HasValue || maxPrice.HasValue)
+      {
+        query = query.Where(p => p.ProductVariants.Any(v =>
+            (!sizeId.HasValue || v.SizeId == sizeId) &&
+            (!colorId.HasValue || v.ColorId == colorId) &&
+            (!minPrice.HasValue || v.Price >= minPrice) &&
+            (!maxPrice.HasValue || v.Price <= maxPrice)
+        ));
+      }
+
+      // 3. Projection dữ liệu ra ViewModel
+      var productCards = await query
+          .OrderBy(p => p.ProductId)
+          .Skip((currentPage - 1) * pageSize)
+          .Take(pageSize)
+          .Select(p => new ProductCardVM
+          {
+            ProductId = p.ProductId,
+            NameProduct = p.NameProduct,
+
+            // Lấy Variant thỏa mãn bộ lọc, nếu không lọc thì lấy cái đầu tiên
+            // Sử dụng Let hoặc Sub-query an toàn hơn
+            Price = p.ProductVariants
+                  .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+                              (!colorId.HasValue || v.ColorId == colorId) &&
+                              (!minPrice.HasValue || v.Price >= minPrice) &&
+                              (!maxPrice.HasValue || v.Price <= maxPrice))
+                  .OrderBy(v => v.Price)
+                  .Select(v => v.Price)
+                  .FirstOrDefault(),
+
+            VariantId = p.ProductVariants
+                  .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+                              (!colorId.HasValue || v.ColorId == colorId) &&
+                              (!minPrice.HasValue || v.Price >= minPrice) &&
+                              (!maxPrice.HasValue || v.Price <= maxPrice))
+                  .OrderBy(v => v.Price)
+                  .Select(v => v.VariantId)
+                  .FirstOrDefault(),
+
+            ImageUrl = p.ProductVariants
+                  .Where(v => (!sizeId.HasValue || v.SizeId == sizeId) &&
+                              (!colorId.HasValue || v.ColorId == colorId) &&
+                              (!minPrice.HasValue || v.Price >= minPrice) &&
+                              (!maxPrice.HasValue || v.Price <= maxPrice))
+                  .SelectMany(v => v.ProductImages)
+                  .OrderByDescending(i => i.IsMain)
+                  .Select(i => i.UrlImage)
+                  .FirstOrDefault() ?? ""
+          })
+          .ToListAsync();
+
+      var totalProducts = await query.CountAsync();
+
+      ViewBag.CurrentPage = currentPage;
+      ViewBag.TotalPages = (int)Math.Ceiling((double)totalProducts / pageSize);
+
+      return PartialView("_FilterResultPartial", productCards);
+    }
+    //public IActionResult Search(ProductSearchVM vm)
+    //{
 
 
     //  int pageSize = 15;
@@ -163,16 +253,19 @@ namespace MiniCar_Model.Controllers {
     //      .AsQueryable();
 
     //  // 1. Lọc theo các thuộc tính của Product
-    //  if (!string.IsNullOrWhiteSpace(keyword)) {
+    //  if (!string.IsNullOrWhiteSpace(keyword))
+    //  {
     //    query = query.Where(p => p.NameProduct.Contains(keyword));
     //  }
 
-    //  if (trademarkId.HasValue) {
+    //  if (trademarkId.HasValue)
+    //  {
     //    query = query.Where(p => p.TrademarkId == trademarkId);
     //  }
 
     //  // 2. Lọc theo các thuộc tính của Variant (nếu có chọn lọc)
-    //  if (sizeId.HasValue || colorId.HasValue || minPrice.HasValue || maxPrice.HasValue) {
+    //  if (sizeId.HasValue || colorId.HasValue || minPrice.HasValue || maxPrice.HasValue)
+    //  {
     //    query = query.Where(p => p.ProductVariants.Any(v =>
     //        (!sizeId.HasValue || v.SizeId == sizeId) &&
     //        (!colorId.HasValue || v.ColorId == colorId) &&
@@ -186,7 +279,8 @@ namespace MiniCar_Model.Controllers {
     //      .OrderBy(p => p.ProductId)
     //      .Skip((currentPage - 1) * pageSize)
     //      .Take(pageSize)
-    //      .Select(p => new ProductCardVM {
+    //      .Select(p => new ProductCardVM
+    //      {
     //        ProductId = p.ProductId,
     //        NameProduct = p.NameProduct,
 
@@ -218,7 +312,7 @@ namespace MiniCar_Model.Controllers {
     //              .SelectMany(v => v.ProductImages)
     //              .OrderByDescending(i => i.IsMain)
     //              .Select(i => i.UrlImage)
-    //              .FirstOrDefault() ??  ""
+    //              .FirstOrDefault() ?? ""
     //      })
     //      .ToListAsync();
 
@@ -229,6 +323,9 @@ namespace MiniCar_Model.Controllers {
 
     //  return PartialView("_FilterResultPartial", productCards);
     //}
+
+    
+
 
   }
 
