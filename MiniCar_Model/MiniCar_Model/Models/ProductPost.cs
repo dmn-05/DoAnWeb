@@ -1,8 +1,10 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+﻿using System;
+using System.Collections.Generic;
 
-namespace MiniCar_Model.Models {
-  [Table("ProductPost")]
-  public class ProductPost {
+namespace MiniCar_Model.Models;
+
+public partial class ProductPost
+{
     public int Id { get; set; }
 
     public string Title { get; set; } = null!;
@@ -15,8 +17,7 @@ namespace MiniCar_Model.Models {
 
     public string? Thumbnail { get; set; }
 
-    public string Status { get; set; } = "ACTIVE";
+    public string? Status { get; set; }
 
-    public DateTime CreatedAt { get; set; }
-  }
+    public DateTime? CreatedAt { get; set; }
 }

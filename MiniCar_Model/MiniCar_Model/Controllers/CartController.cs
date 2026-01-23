@@ -167,16 +167,59 @@ namespace MiniCar_Model.Controllers
 
 			return Json(items);
 		}
- 
-    public IActionResult CheckLogin()
-    {
+
+    public IActionResult CheckLogin() {
       var accountId = HttpContext.Session.GetInt32("AccountId");
 
-      return Json(new
-      {
+      return Json(new {
         isLogin = accountId != null
       });
     }
+    [HttpPost]
+    public async Task<IActionResult> AddToCartAndRedirect(int variantId, int quantity) {
+      var accountId = HttpContext.Session.GetInt32("AccountId");
+      if (accountId == null) return RedirectToAction("Login", "Account");
 
-	}
+      // 1. Kiểm tra tồn kho
+      var variant = await _context.ProductVariants.FindAsync(variantId);
+      if (variant == null || variant.Quantity < quantity) {
+        TempData["Error"] = "Sản phẩm không đủ số lượng tồn!";
+        return RedirectToAction("Detail", "Product", new { id = variant?.ProductId });
+      }
+
+      // 2. Tìm/Tạo giỏ hàng
+      var cart = await _context.Carts.FirstOrDefaultAsync(c => c.AccountId == accountId);
+      if (cart == null) {
+        cart = new Cart { AccountId = accountId.Value, CreateAt = DateTime.Now, StatusCart = "Active" };
+        _context.Carts.Add(cart);
+        await _context.SaveChangesAsync();
+      }
+
+      // 3. Lưu CartItem (Lưu ý ánh xạ Variant_Id)
+      var cartItem = await _context.CartItems
+          .FirstOrDefaultAsync(ci => ci.CartId == cart.CartId && ci.VariantId == variantId);
+
+      if (cartItem != null) {
+        // Kiểm tra tổng số lượng sau khi cộng thêm có vượt tồn kho không
+        if (variant.Quantity < (cartItem.Quantity + quantity)) {
+          TempData["Error"] = "Tổng số lượng trong giỏ hàng vượt quá tồn kho!";
+          return RedirectToAction("Detail", "Product", new { id = variant.ProductId });
+        }
+        cartItem.Quantity += quantity;
+      } else {
+        cartItem = new CartItem {
+          CartId = cart.CartId,
+          VariantId = variantId,
+          Quantity = quantity,
+          Price = variant.Price,
+          CreatedAt = DateTime.Now
+        };
+        _context.CartItems.Add(cartItem);
+      }
+
+      await _context.SaveChangesAsync();
+      return RedirectToAction("Index", "Cart"); // Chuyển sang trang giỏ hàng
+    }
+  }
 }
+

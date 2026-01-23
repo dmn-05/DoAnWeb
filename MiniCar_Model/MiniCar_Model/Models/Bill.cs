@@ -16,7 +16,7 @@ public partial class Bill
     public string CustomerNotes { get; set; } = null!;
 
     public string PaymentMethod { get; set; } = null!;
- 
+
     public string PhoneNumber { get; set; } = null!;
 
     public decimal TotalPrice { get; set; }

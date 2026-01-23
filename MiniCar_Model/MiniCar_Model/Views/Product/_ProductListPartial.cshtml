@@ -19,7 +19,7 @@
 						 asp-route-productId="@item.ProductId"
 						 asp-route-variantId="@item.VariantId" class="social-info"
 						 data-name="@item.NameProduct" data-price="@item.Price">
-						<span class="ti-bag"></span>
+						<span class="ti-bag btn-checkout"></span>
 						<p class="hover-text">thêm vào giỏ</p>
 					</a>
 					<a asp-controller="Account"
@@ -42,3 +42,20 @@
 	</div>
 }
 
+@* thuong code *@
+<script>
+	document.querySelector(".btn-checkout")
+		.addEventListener("click", function () {
+
+			fetch("/Cart/CheckLogin")
+				.then(res => res.json())
+				.then(data => {
+					if (data.isLogin) {
+						window.location.href = "/Checkout";
+					} else {
+						$("#loginPopup").modal("show");
+					}
+				});
+		});
+</script>
+@* thuong end code *@

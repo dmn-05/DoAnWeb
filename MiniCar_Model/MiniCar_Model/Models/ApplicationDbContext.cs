@@ -76,13 +76,13 @@ public partial class ApplicationDbContext : DbContext
     {
         modelBuilder.Entity<Account>(entity =>
         {
-            entity.HasKey(e => e.AccountId).HasName("PK__Account__B19E45E9530A09B0");
+            entity.HasKey(e => e.AccountId).HasName("PK__Account__B19E45E918FE3F17");
 
             entity.ToTable("Account");
 
-            entity.HasIndex(e => e.Email, "UQ__Account__A9D10534E19A8C83").IsUnique();
+            entity.HasIndex(e => e.Email, "UQ__Account__A9D105340A73377D").IsUnique();
 
-            entity.HasIndex(e => e.UserName, "UQ__Account__C9F28456B6286117").IsUnique();
+            entity.HasIndex(e => e.UserName, "UQ__Account__C9F2845655DFEE1D").IsUnique();
 
             entity.Property(e => e.AccountId).HasColumnName("Account_Id");
             entity.Property(e => e.AddressAccount)
@@ -119,7 +119,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Advertisement>(entity =>
         {
-            entity.HasKey(e => e.AdvertisementId).HasName("PK__Advertis__4B7F25D813DF31C8");
+            entity.HasKey(e => e.AdvertisementId).HasName("PK__Advertis__4B7F25D86D030D44");
 
             entity.ToTable("Advertisement");
 
@@ -150,7 +150,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Bill>(entity =>
         {
-            entity.HasKey(e => e.BillId).HasName("PK__Bill__CF6E7DA32D72AE8B");
+            entity.HasKey(e => e.BillId).HasName("PK__Bill__CF6E7DA314D92D92");
 
             entity.ToTable("Bill");
 
@@ -220,11 +220,11 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<BlogPost>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__BlogPost__3214EC07BC89E757");
+            entity.HasKey(e => e.Id).HasName("PK__BlogPost__3214EC074548704C");
 
             entity.ToTable("BlogPost");
 
-            entity.HasIndex(e => e.Slug, "UQ__BlogPost__BC7B5FB6A68814FA").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__BlogPost__BC7B5FB6BDDDF166").IsUnique();
 
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
@@ -236,15 +236,16 @@ public partial class ApplicationDbContext : DbContext
             entity.Property(e => e.Summary).HasMaxLength(500);
             entity.Property(e => e.Thumbnail).HasMaxLength(255);
             entity.Property(e => e.Title).HasMaxLength(255);
+            entity.Property(e => e.UpdatedAt).HasColumnType("datetime");
         });
 
         modelBuilder.Entity<Cart>(entity =>
         {
-            entity.HasKey(e => e.CartId).HasName("PK__Cart__D6AB4759A0EF1F1B");
+            entity.HasKey(e => e.CartId).HasName("PK__Cart__D6AB4759AF4A0EF0");
 
             entity.ToTable("Cart");
 
-            entity.HasIndex(e => e.AccountId, "UQ__Cart__B19E45E8EF5B6C85").IsUnique();
+            entity.HasIndex(e => e.AccountId, "UQ__Cart__B19E45E8A8C11956").IsUnique();
 
             entity.Property(e => e.CartId).HasColumnName("Cart_Id");
             entity.Property(e => e.AccountId).HasColumnName("Account_Id");
@@ -267,7 +268,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<CartItem>(entity =>
         {
-            entity.HasKey(e => e.CartItemId).HasName("PK__CartItem__7B651501C401E4C3");
+            entity.HasKey(e => e.CartItemId).HasName("PK__CartItem__7B65150151B489EA");
 
             entity.ToTable("CartItem");
 
@@ -295,7 +296,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Category>(entity =>
         {
-            entity.HasKey(e => e.CategoryId).HasName("PK__Category__6DB38D6E76FCC8DC");
+            entity.HasKey(e => e.CategoryId).HasName("PK__Category__6DB38D6E3C0E617C");
 
             entity.ToTable("Category");
 
@@ -322,7 +323,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Color>(entity =>
         {
-            entity.HasKey(e => e.ColorId).HasName("PK__Color__795F1D54D2E7DA94");
+            entity.HasKey(e => e.ColorId).HasName("PK__Color__795F1D545AD62D81");
 
             entity.ToTable("Color");
 
@@ -341,7 +342,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Comment>(entity =>
         {
-            entity.HasKey(e => e.CommentId).HasName("PK__Comment__99FC14DBAC4C0E43");
+            entity.HasKey(e => e.CommentId).HasName("PK__Comment__99FC14DB1DCD5BC3");
 
             entity.ToTable("Comment");
 
@@ -373,7 +374,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<CompanyInfo>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__CompanyI__3214EC078BDA05F6");
+            entity.HasKey(e => e.Id).HasName("PK__CompanyI__3214EC073CA41EFC");
 
             entity.ToTable("CompanyInfo");
 
@@ -390,11 +391,11 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<CompanyPolicy>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__CompanyP__3214EC07542D92D4");
+            entity.HasKey(e => e.Id).HasName("PK__CompanyP__3214EC0735099B2F");
 
             entity.ToTable("CompanyPolicy");
 
-            entity.HasIndex(e => e.Code, "UQ__CompanyP__A25C5AA76B981D57").IsUnique();
+            entity.HasIndex(e => e.Code, "UQ__CompanyP__A25C5AA7F2A0F45A").IsUnique();
 
             entity.Property(e => e.Code).HasMaxLength(50);
             entity.Property(e => e.Description).HasMaxLength(300);
@@ -407,7 +408,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Contact>(entity =>
         {
-            entity.HasKey(e => e.ContactId).HasName("PK__Contact__82ACC1ED98174E6E");
+            entity.HasKey(e => e.ContactId).HasName("PK__Contact__82ACC1EDA9F8928D");
 
             entity.ToTable("Contact");
 
@@ -432,7 +433,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__Product__9834FBBA5AAB3A2E");
+            entity.HasKey(e => e.ProductId).HasName("PK__Product__9834FBBA4595CE61");
 
             entity.ToTable("Product");
 
@@ -474,7 +475,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ProductImage>(entity =>
         {
-            entity.HasKey(e => e.ImageId).HasName("PK__ProductI__3CAB4D599C996ADF");
+            entity.HasKey(e => e.ImageId).HasName("PK__ProductI__3CAB4D595530A839");
 
             entity.ToTable("ProductImage");
 
@@ -498,11 +499,11 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ProductPost>(entity =>
         {
-            entity.HasKey(e => e.Id).HasName("PK__ProductP__3214EC072AEAC91A");
+            entity.HasKey(e => e.Id).HasName("PK__ProductP__3214EC0794A9A7E0");
 
             entity.ToTable("ProductPost");
 
-            entity.HasIndex(e => e.Slug, "UQ__ProductP__BC7B5FB65B8045C2").IsUnique();
+            entity.HasIndex(e => e.Slug, "UQ__ProductP__BC7B5FB6FA6128CF").IsUnique();
 
             entity.Property(e => e.CreatedAt)
                 .HasDefaultValueSql("(getdate())")
@@ -518,7 +519,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ProductVariant>(entity =>
         {
-            entity.HasKey(e => e.VariantId).HasName("PK__ProductV__E19D76CCDD88B800");
+            entity.HasKey(e => e.VariantId).HasName("PK__ProductV__E19D76CC3C1ABF57");
 
             entity.ToTable("ProductVariant");
 
@@ -556,7 +557,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ProductView>(entity =>
         {
-            entity.HasKey(e => e.ViewId).HasName("PK__ProductV__94E21EBCBD758A31");
+            entity.HasKey(e => e.ViewId).HasName("PK__ProductV__94E21EBC31C2F5C1");
 
             entity.ToTable("ProductView");
 
@@ -574,7 +575,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Promotion>(entity =>
         {
-            entity.HasKey(e => e.PromotionId).HasName("PK__Promotio__DAF79ADBC06761A4");
+            entity.HasKey(e => e.PromotionId).HasName("PK__Promotio__DAF79ADB96C94638");
 
             entity.ToTable("Promotion");
 
@@ -608,7 +609,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Role>(entity =>
         {
-            entity.HasKey(e => e.RoleId).HasName("PK__Role__D80AB49BC4C8894C");
+            entity.HasKey(e => e.RoleId).HasName("PK__Role__D80AB49B53377BBD");
 
             entity.ToTable("Role");
 
@@ -621,7 +622,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<ShippingAddress>(entity =>
         {
-            entity.HasKey(e => e.AddressId).HasName("PK__Shipping__03BDEBBA23E1363D");
+            entity.HasKey(e => e.AddressId).HasName("PK__Shipping__03BDEBBA365A38EB");
 
             entity.ToTable("ShippingAddress");
 
@@ -650,7 +651,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Size>(entity =>
         {
-            entity.HasKey(e => e.SizeId).HasName("PK__Size__0BC32560CBD84D46");
+            entity.HasKey(e => e.SizeId).HasName("PK__Size__0BC325604096C100");
 
             entity.ToTable("Size");
 
@@ -664,7 +665,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Slideshow>(entity =>
         {
-            entity.HasKey(e => e.SlideshowId).HasName("PK__Slidesho__27DE308D41D0A0E4");
+            entity.HasKey(e => e.SlideshowId).HasName("PK__Slidesho__27DE308D5756C193");
 
             entity.ToTable("Slideshow");
 
@@ -702,7 +703,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Supplier>(entity =>
         {
-            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__83918DB84B2C8374");
+            entity.HasKey(e => e.SupplierId).HasName("PK__Supplier__83918DB818FCE620");
 
             entity.ToTable("Supplier");
 
@@ -731,7 +732,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Token>(entity =>
         {
-            entity.HasKey(e => e.TokenId).HasName("PK__Token__AA16D4A02E433987");
+            entity.HasKey(e => e.TokenId).HasName("PK__Token__AA16D4A048D285B8");
 
             entity.ToTable("Token");
 
@@ -753,7 +754,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Trademark>(entity =>
         {
-            entity.HasKey(e => e.TrademarkId).HasName("PK__Trademar__FECFFA07CAAEEBE8");
+            entity.HasKey(e => e.TrademarkId).HasName("PK__Trademar__FECFFA079A4CD82A");
 
             entity.ToTable("Trademark");
 
@@ -777,7 +778,7 @@ public partial class ApplicationDbContext : DbContext
 
         modelBuilder.Entity<Wishlist>(entity =>
         {
-            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__C65247E366B4C520");
+            entity.HasKey(e => e.WishlistId).HasName("PK__Wishlist__C65247E3E77FD62B");
 
             entity.ToTable("Wishlist");
 

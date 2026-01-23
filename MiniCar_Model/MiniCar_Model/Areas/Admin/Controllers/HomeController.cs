@@ -36,5 +36,10 @@ namespace MiniCar_Model.Areas.Admin.Controllers
       };
       return View(model);
     }
+
+    public IActionResult Logout() {
+      HttpContext.Session.Clear();
+      return RedirectToAction("Index", "Home");
+    }
   }
 }
