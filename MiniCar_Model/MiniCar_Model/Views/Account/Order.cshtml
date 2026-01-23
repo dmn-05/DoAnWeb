@@ -33,39 +33,48 @@
 				 asp-action="Order" asp-route-status="Tất cả">Tất cả</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link @(ViewBag.CurrentStatus == "Ðã giao thành công" ? "active" : "")"
-				 asp-action="Order" asp-route-status="Ðã giao thành công">Ðã giao thành công</a>
+			<a class="nav-link @(ViewBag.CurrentStatus == "Completed" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Completed">Completed</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link @(ViewBag.CurrentStatus == "Chưa vận chuyển" ? "active" : "")"
-				 asp-action="Order" asp-route-status="Chưa vận chuyển">Chưa vận chuyển</a>
+			<a class="nav-link @(ViewBag.CurrentStatus == "Paid" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Paid">Paid</a>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link @(ViewBag.CurrentStatus == "Đã hủy" ? "active" : "")"
-				 asp-action="Order" asp-route-status="Đã hủy">Đã hủy</a>
+			<a class="nav-link @(ViewBag.CurrentStatus == "Confirmed" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Confirmed">Confirmed</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link @(ViewBag.CurrentStatus == "Pending" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Pending">Pending</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link @(ViewBag.CurrentStatus == "Refunded" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Refunded">Refunded</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link @(ViewBag.CurrentStatus == "Cancelled" ? "active" : "")"
+				 asp-action="Order" asp-route-status="Cancelled">Cancelled</a>
 		</li>
 	</ul>
 
-	@if (Model != null && Model.Any())
-	{
-		@foreach (var order in Model)
-		{
+	@if (Model != null && Model.Any()) {
+		@foreach (var order in Model) {
 			<div class="card shadow-sm rounded-4 mb-4 border-0">
 				<div class="card-body">
 					<div class="d-flex justify-content-between mb-3 border-bottom pb-2">
 						<span class="text-muted small">Mã đơn: #@order.BillId | @order.CreateAt?.ToString("dd/MM/yyyy")</span>
-						<span class="fw-semibold @(order.StatusBill?.Trim() == "Ðã giao thành công" ? "text-success" : "text-warning")">
+						<span class="fw-semibold @(order.StatusBill?.Trim() == "Completed" ? "text-success" : "text-warning")">
 							@order.StatusBill
 
 						</span>
 					</div>
 
 					@* Vòng lặp duyệt qua từng món hàng trong 1 hóa đơn *@
-					@foreach (var item in order.Items)
-					{
+					@foreach (var item in order.Items) {
 						<div class="row align-items-center g-3 mb-3">
 							<div class="col-3 col-md-2 text-center">
-								<img src="@(string.IsNullOrEmpty(item.ImageUrl) ? "/img/logo.png" : item.ImageUrl)"
+								<img src="@Url.Content(item.ImageUrl ?? "~/img/products/default.png")"
 										 class="img-fluid rounded border shadow-sm" style="max-height: 80px;" alt="">
 							</div>
 
@@ -94,8 +103,7 @@
 					</div>
 
 					<div class="d-flex justify-content-end mt-3 gap-2">
-						@if (order.StatusBill?.Trim() == "Chưa vận chuyển")
-						{
+						@if (order.StatusBill?.Trim() == "Pending") {
 							<form asp-controller="Account" asp-action="CancelOrder" method="post">
 								<input type="hidden" name="id" value="@order.BillId" />
 								<button type="submit" class="btn btn-outline-danger btn-sm"
@@ -103,15 +111,12 @@
 									Hủy đơn hàng
 								</button>
 							</form>
-						}
-						else
-						{
+						} else {
 							<button class="btn btn-outline-secondary btn-sm">
 								Mua lại
 							</button>
 
-							@if (order.StatusBill?.Trim() == "Ðã giao thành công")
-							{
+							@if (order.StatusBill?.Trim() == "Completed") {
 								<button class="btn btn-outline-danger btn-sm">
 									Viết đánh giá
 								</button>
@@ -121,9 +126,7 @@
 				</div>
 			</div>
 		}
-	}
-	else
-	{
+	} else {
 		<div class="text-center py-5">
 			<i class="lnr lnr-cart fs-1 text-muted"></i>
 			<p class="mt-3 text-muted">Bạn chưa có đơn hàng nào.</p>

@@ -40,14 +40,12 @@
       </thead>
 
       <tbody>
-        @if (Model != null && Model.Any())
-        {
-          @foreach (var item in Model)
-          {
+        @if (Model != null && Model.Any()) {
+          @foreach (var item in Model) {
             <tr>
               <td>
                 @* Kiểm tra đường dẫn ảnh: Nếu bắt đầu bằng / hoặc http thì giữ nguyên, không thì thêm đường dẫn gốc *@
-                <img src="@(string.IsNullOrEmpty(item.ImageUrl) ? item.ImageUrl : "~/img/logo_team.png")"
+                <img src="@Url.Content(item.ImageUrl ?? "~/img/products/default.png")"
                      class="img-fluid rounded"
                      style="max-width: 80px; height: auto;"
                      alt="@item.ProductName">
@@ -83,9 +81,7 @@
               </td>
             </tr>
           }
-        }
-        else
-        {
+        } else {
           <tr>
             <td colspan="5" class="py-5 text-muted">
               <i class="lnr lnr-heart" style="font-size: 3rem; display: block; margin-bottom: 10px;"></i>

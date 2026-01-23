@@ -1,5 +1,10 @@
 ﻿@{
 	ViewData["Title"] = "Chi Tiết Sản Phẩm";
+	var allReviews = (List<Comment>)ViewBag.Reviews;
+}
+@model ProductDetailVM
+@if (TempData["Error"] != null) {
+	<div class="alert alert-danger">@TempData["Error"]</div>
 }
 <!-- back to top button-->
 <a href="#" class="cd-top">Back To Top</a>
@@ -25,53 +30,85 @@
 	<div class="container">
 		<div class="row s_product_inner">
 			<div class="col-lg-6">
-				<div class="s_Product_carousel">
-					<div class="single-prd-item">
-						<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
-					</div>
-					<div class="single-prd-item">
-						<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.2.png" alt="">
-					</div>
-					<div class="single-prd-item">
-						<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.3.png" alt="">
-					</div>
+				@* <div class="single-prd-item">
+					<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
 				</div>
+				<div class="single-prd-item">
+					<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.2.png" alt="">
+				</div>
+				<div class="single-prd-item">
+					<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.3.png" alt="">
+				</div> *@
+				<div class="s_Product_carousel owl-carousel">
+
+					@foreach (var img in Model.Images) {
+						<div class="single-prd-item
+	                d-flex
+	                align-items-center
+	                justify-content-center">
+
+							<img src="/@img.UrlImage"
+									 class="img-fluid product-img"
+									 alt="@Model.Product.NameProduct" />
+						</div>
+					}
+
+				</div>
+
 			</div>
 			<div class="col-lg-5 offset-lg-1">
 				<div class="s_product_text">
-					<h3>Giày Boot Nam Đế Cao Màu Vàng PALA GN400</h3>
-					<h2>550.000đ</h2>
+					<h3>@Model.Product.NameProduct</h3>
+					<h2 id="price">@Model.Price.ToString("N0") đ</h2>
 					<ul class="list">
-						<li><a class="active" href="#"><span>Phân loại</span> : Boots</a></li>
-						<li><a href="#"><span>Tình trạng </span> : Còn hàng</a></li>
+						<li><a><span>Thương hiệu</span> : @Model.Product.Trademark?.NameTrademark</a></li>
+						<li><a class="active" asp-controller="Category" asp-action="Index"><span>Phân loại</span> : @Model.Product.Category?.NameCategory</a></li>
+						<li>
+							<a>
+								<span>Số lượng tồn</span> :
+								<span id="stock-count" class="ml-2 text-success">
+									@Model.Quanlity
+								</span>
+							</a>
+						</li>
+						<li>
+							<a>
+								<span>Tình trạng</span> :
+								<span id="stock-status"
+											class="@(Model.Quanlity > 0 ? "text-success" : "text-danger")">
+									@(Model.Quanlity > 0 ? "Còn hàng" : "Hết hàng")
+								</span>
+
+							</a>
+						</li>
 					</ul>
 					<p>
-						Chi Tiết Sản Phẩm: Loại Giày: đi chơi, dạo phố.....
-						Bảo hành keo 12 tháng Giao Hàng Tận Nơi Toàn Quốc Nhận Hàng Trả Tiền Sản phẩm giống hình 100%...
+						@Model.Product.Descriptions
 					</p>
 					<div class="noname align-items-center">
-						<div class="pb-2"><label>Size:</label> </div>
-						<div class="default-select pb-2" id="default-select1">
-
-							<select>
-								<option value="1">38</option>
-								<option value="2">39</option>
-								<option value="3">40</option>
-								<option value="4">41</option>
-								<option value="5">42</option>
+						<div class="pb-2"><label>Chọn phiên bản:</label></div>
+						<div class="default-select pb-2">
+							<select id="variantSelect">
+								@foreach (var v in Model.Variants) {
+									<option value="@v.VariantId">
+										@v.Size.Scale - @v.Color.ColorName
+									</option>
+								}
 							</select>
 						</div>
 
 
+
 						<div class="pb-1 pt-2"><label for="qty">Số lượng:</label></div>
 						<div class="product_count">
-
 							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
+
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; var stock = parseInt($('#stock-count').text()); if(!isNaN(sst) && sst < stock) result.value++; updateHiddenQty(); return false;"
 											class="increase items-count" type="button">
 								<i class="lnr lnr-chevron-up"></i>
 							</button>
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
+
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if(!isNaN(sst) && sst > 1) result.value--; updateHiddenQty(); return false;"
 											class="reduced items-count" type="button">
 								<i class="lnr lnr-chevron-down"></i>
 							</button>
@@ -79,8 +116,25 @@
 					</div>
 					<br>
 					<div class="card_area d-flex align-items-center">
-						<a class="primary-btn" href="#">Thêm vào giỏ hàng</a>
-						<a class="icon_btn" href="#" title="Wishlist"><i class="lnr lnr lnr-heart"></i></a>
+						<form asp-controller="Cart" asp-action="AddToCartAndRedirect" method="post">
+							<input type="hidden" name="variantId" id="hiddenVariantId" value="@Model.SelectedVariantId" />
+							<input type="hidden" name="quantity" id="hiddenQuantity" value="1" />
+
+							<div class="card_area d-flex align-items-center">
+								<button type="submit" class="primary-btn" style="border:none;">Thêm vào giỏ hàng</button>
+
+								@* Các nút Wishlist và View giữ nguyên *@
+								<a class="icon_btn btn-wishlist" href="javascript:void(0);">
+									<i class="lnr lnr-heart"></i>
+									<span class="ml-1">@Model.TotalWishlist</span>
+								</a>
+								<a class="icon_btn" href="javascript:void(0);">
+									<i class="lnr lnr-eye"></i>
+									<span class="ml-1">@Model.TotalViews</span>
+								</a>
+							</div>
+						</form>
+
 					</div>
 				</div>
 			</div>
@@ -107,176 +161,177 @@
 		<div class="tab-content" id="myTabContent">
 			<div class="tab-pane fade" id="home" role="tabpanel" aria-labelledby="home-tab">
 				<p>
-					- Đế #LiteTraction với chất liệu cao su EVA nhẹ và êm ái nâng đỡ bàn chân trên mọi trải nghiệm. Độ ma sát & bền bỉ cao, tự tin “cân" mọi thử thách.<br>
-
-					- Đệm lót EVA cùng công nghệ ép khuôn 3D theo biên dạng bàn chân, ôm đều & định vị tốt, tránh tuột chân khi vận động mạnh. Kết hợp với chất liệu thun kháng khuẩn, giúp thấm hút mồ hôi, hạn chế mùi và ẩm mốc.<br>
-
-					- Có dây buộc<br>
-
-					- Do màn hình và điều kiện ánh sáng khác nhau, màu sắc thực tế của sản phẩm có thể chênh lệch khoảng 3-5%.
+					@Model.Product.Descriptions
 				</p>
 
 			</div>
 			<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-				<p>
-					<b>1. Đổi kích cỡ giày </b><br>
+				<div class="policy-content p-3">
 
-					<u><b>Điều kiện:</b></u> <br>
+					<p>
+						<b>1. Quy định chung</b><br>
+						Tại <b>Minicar</b>, chúng tôi cam kết mang đến những sản phẩm mô hình chất lượng nhất. Tuy nhiên, nếu sản phẩm gặp lỗi từ nhà sản xuất hoặc hư hỏng trong quá trình vận chuyển, chúng tôi sẵn sàng hỗ trợ đổi trả theo quy định.
+					</p>
 
-					Sản phẩm còn mới 100% chưa qua sử dụng hoặc giặt tẩy, nguyên phiếu bảo hành, tem nhãn sản phẩm, không bị dơ bẩn, trầy xước.
-					Khách hàng phải có hoá đơn giao hàng (phiếu giao hàng, email xác nhận đơn hàng).
-					Trong vòng 7 ngày kể từ ngày nhận hàng. <br>
-					Áp dụng 01 sản phẩm được đổi lệch 01 size so với size đã mua và được đổi 01 lần.
-					Không hỗ trợ đối với những sản phẩm có thông báo: không áp dụng đổi trả - bảo hành.
-					Không hỗ trợ đổi mẫu theo nhu cầu. <br>
-					Không hỗ trợ trả hàng hoàn tiền. <br>
-					<b>Địa điểm:</b> <br>
+					<p>
+						<u><b>Điều kiện đổi trả:</b></u> <br>
+						* Sản phẩm còn nguyên bao bì, hộp và các phụ kiện đi kèm (nếu có).<br>
+						* Sản phẩm chưa qua sử dụng, không có dấu hiệu tháo lắp hoặc can thiệp kỹ thuật.<br>
+						* Có hóa đơn mua hàng hoặc thông tin đơn hàng trên hệ thống.
+					</p>
 
-					Đối với đổi size: Tại tất cả các cửa hàng tiếp thị của Biti’s trên toàn quốc (nếu có sản phẩm và còn kích cỡ). Danh sách cửa hàng tiếp thị tại đây. Thời gian hỗ trợ từ 14h00 - 20h00 các ngày trong tuần. <br>
-					Đối với đổi size/ đổi màu/ đổi mẫu khi hết size: Gửi về trung tâm giao hàng Biti’s tại địa chỉ: 95/6 Trần Văn Kiểu, Phường 10, Quận 6. Thời gian hỗ trợ đổi size tại kho từ 09h00-11h00 & 14h00 - 16h00 (Thứ 3 - Thứ 7).<br>
-					<u><b> Lưu ý:</b></u><br>
+					<p>
+						<b>2. Thời hạn đổi trả</b><br>
+						* <b>Lỗi do nhà sản xuất (Sơn, chi tiết lắp ráp):</b> Đổi mới trong vòng 03 ngày kể từ khi nhận hàng.<br>
+						* <b>Hư hỏng do vận chuyển (Gãy, vỡ):</b> Quý khách vui lòng phản hồi ngay trong vòng 24h sau khi nhận hàng (kèm video mở hộp).
+					</p>
 
-					Khách hàng chỉ được đổi chênh lệch 1 kích cỡ so với kích cỡ ban đầu.<br>
-					Ví dụ: Mẫu Hunter X2 màu đen kích cỡ 40 hết, kích cỡ cần đổi sẽ được đổi sang Hunter X2 màu đỏ kích cỡ tương ứng. Kích cỡ 40 được chấp nhận đổi sang 39 (Giảm 1 size) hoặc 41 (Tăng 1 size).<br>
-					Chỉ áp dụng đổi sang sản phẩm khác trong trường hợp đã hết size, hết màu của sản phẩm cần đổi, sản phẩm mới phải có giá trị lớn hơn hoặc bằng sản phẩm trước đó (khách hàng sẽ bù tiền chênh lệch nếu giá trị cao hơn và sẽ không được hoàn lại tiền chênh lệch nếu giá trị thấp hơn).<br>
-					<b>2. Đổi trả hàng khi sản phẩm lỗi </b><br>
+					<p>
+						<b>3. Chi phí vận chuyển cho việc đổi hàng</b><br>
+						* <b>Hàng lỗi/Giao sai mẫu:</b> Minicar chịu 100% phí vận chuyển hai chiều.<br>
+						* <b>Đổi theo nhu cầu (Đổi mẫu/size):</b> Khách hàng thanh toán phí vận chuyển hai chiều và chênh lệch giá trị sản phẩm (nếu có).
+					</p>
 
-					Kiểm tra điều kiện hoàn trả hàng bên dưới.<br>
-					Đóng gói sản phẩm và tất cả phụ kiệm kèm theo về trung tâm giao hàng Biti's như hướng dẫn.<br>
-					Nhận sản phẩm mới.<br>
-					<b><u>Điều kiện:</u></b><br>
+					<p>
+						<b>4. Địa chỉ và Thông tin liên hệ</b><br>
+						Để thực hiện đổi trả, quý khách vui lòng liên hệ hoặc gửi hàng về:<br>
+						<b>Email:</b> minicarmodel@gmail.com<br>
+						<b>Hotline tư vấn:</b> 0333854516<br>
+						<b>Website:</b> www.minicar.com.vn<br>
+						<b>Facebook:</b> www.facebook.com/minicar
+					</p>
 
-					Khi Biti’s giao nhầm màu, nhầm kích cỡ, nhầm sản phẩm hoặc sản phẩm bị hư hỏng do nhà sản xuất. Khách hàng gửi các hình ảnh sản phẩm nhận được kèm mã đơn hàng đến email: tuvan_online@bitis.com.vn để được bộ phận tư vấn hỗ trợ.<br>
-					Sản phẩm cần đổi còn mới 100% chưa qua sử dụng hoặc giặt tẩy, nguyên phiếu bảo hành, tem nhãn sản phẩm, không bị dơ bẩn, trầy xước, đầy đủ bao bì, túi hộp (nếu có).<br>
-					Khách hàng phải có hoá đơn giao hàng (phiếu giao hàng, email xác nhận đơn hàng).<br>
-					Trong vòng 7 ngày kể từ ngày nhận hàng.<br>
-					Trừ trường hợp được quyền đổi hàng như trên, Biti's không nhận xử lý các vấn đề khác.<br>
-					<b><u>Lưu ý:</u></b><br>
+					<p>
+						<b>5. Thời gian xử lý</b><br>
+						Sau khi nhận được hàng gửi về, Minicar sẽ kiểm tra và thực hiện gửi lại sản phẩm mới hoặc hoàn tiền trong vòng <b>3 - 5 ngày làm việc</b>.
+					</p>
 
-					Trường hợp sản phẩm lỗi gửi về Biti’s để đổi lại, thông tin hướng dẫn địa điểm cụ thể sẽ được bộ phận tư vấn cung cấp theo email mà khách hàng đã liên hệ.<br>
-					Trường hợp sản phẩm lỗi cần đổi, khi gửi về đổi nhưng bị hết hàng, khách hàng có thể đổi sang sản phẩm khác có giá trị lớn hơn hoặc bằng sản phẩm trước đó (khách hàng sẽ bù tiền chênh lệch nếu giá trị cao hơn và sẽ không được hoàn lại tiền chênh lệch nếu giá trị thấp hơn).<br>
-					<b>3. Chi phí vận chuyển cho việc đổi kích cỡ và đổi hàng lỗi</b><br>
-
-					Trường hợp lỗi từ Biti’s giao sai thông tin sản phẩm (không đúng kích cỡ, không đúng sản phẩm), hư hỏng trong quá trình vận chuyển hoặc từ nhà sản xuất khách hàng được miễn phí hoàn toàn chi phí vận chuyển đổi hàng. Khách hàng gửi hàng về trong thời gian 7 ngày (không tính thứ 7, Chủ nhật) kể từ ngày nhận hàng, khách mang hàng ra bưu điện và chọn người nhận thanh toán.<br>
-					Trường hợp lỗi do khách hàng trong việc đặt sai đơn hàng, Biti’s đã giao đúng sản phẩm theo thông tin trên đơn hàng đã đặt, chi phí vận chuyển hai chiều khi gửi đổi sẽ do khách hàng thanh toán.<br>
-					<b>4. Địa chỉ đổi size</b><br>
-
-					Trung tâm giao hàng Biti's.<br>
-
-					Địa chỉ: Số 95/6 Trần Văn Kiểu Phường 10, Quận 6, TP. Hồ Chí Minh.<br>
-
-					Email: tuvan_online@bitis.com.vn<br>
-
-					Hotline tư vấn online: 0966 158 666<br>
-
-					Website: www.bitis.com.vn hoặc facebook: www.facebook.com/bitis<br>
-
-					<b>5. Thời gian xử lý</b><br>
-
-					Sau khi nhận được sản phẩm gửi về, Biti’s sẽ kiểm tra và đổi trả hàng trong vòng 7 ngày làm việc.
-				</p>
+					<p><i>* Lưu ý: Đối với các sản phẩm mô hình phiên bản giới hạn (Limited), việc đổi hàng sẽ tùy thuộc vào tình trạng tồn kho thực tế.</i></p>
+				</div>
 			</div>
-			<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
+			<div class="tab-pane fade show active" id="review" role="tabpanel">
 				<div class="row">
-					<div class="col-lg-12">
+					<div class="col-lg-6">
 						<div class="row total_rate">
 							<div class="col-6">
-								<div class="box_total">
-									<h5>Đánh giá sản phẩm</h5>
-									<h4>4.0</h4>
-									<h6>(03 Nhận xét)</h6>
+								<div class="box_total text-center">
+									<h5>Đánh giá chung</h5>
+									@* Tính trung bình sao từ danh sách reviews *@
+									<h4>@(allReviews.Any() ? ((double)allReviews.Average(r => r.Rating)).ToString("0.0") : "5.0")</h4>
+									<h6>(@allReviews.Count Nhận xét)</h6>
 								</div>
 							</div>
 							<div class="col-6">
 								<div class="rating_list">
-									<h3>Dựa trên 3 đánh giá</h3>
 									<ul class="list">
-										<li>
-											<a href="#">
-												5 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												4 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												3 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												2 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
-										<li>
-											<a href="#">
-												1 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
-											</a>
-										</li>
+										@for (int i = 5; i >= 1; i--) {
+											<li>
+												<a href="#">
+													@i sao <i class="fa fa-star"></i>
+													@allReviews.Count(r => r.Rating == i)
+												</a>
+											</li>
+										}
 									</ul>
 								</div>
 							</div>
 						</div>
-						<div class="review_list">
-							<div class="review_item">
-								<div class="media">
-									<div class="d-flex">
-										<img src="../../../img/product/review-1.png" alt="">
-									</div>
-									<div class="media-body">
-										<h4>Nhi Nguyễn</h4>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
 
+						<div class="review_list mt-4">
+							@foreach (var review in allReviews) {
+								<div class="review_item mb-3">
+									<div class="media">
+										<div class="media-body ml-3">
+											@* Lấy NameAccount từ bảng Account đã Include *@
+											<h4>@review.Account?.NameAccount</h4>
+											@for (int s = 1; s <= 5; s++) {
+												<i class="fa fa-star @(s <= review.Rating ? "text-warning" : "text-secondary")"></i>
+											}
+											<small class="text-muted ml-2">@review.CreateAt</small>
+										</div>
 									</div>
+									<p class="mt-2">@review.Content</p>
 								</div>
-								<p>Nay buồn nên cho shop 3 sao</p>
-							</div>
-							<div class="review_item">
-								<div class="media">
-									<div class="d-flex">
-										<img src="../../../img/product/review-2.png" alt="">
-									</div>
-									<div class="media-body">
-										<h4>Ngân Nguyễn</h4>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-									</div>
-								</div>
-								<p>Sản phẩm tuyệt vời, xuất sắc!</p>
-							</div>
-							<div class="review_item">
-								<div class="media">
-									<div class="d-flex">
-										<img src="../../../img/product/review-3.png" alt="">
-									</div>
-									<div class="media-body">
-										<h4>Linh Nhi</h4>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
-										<i class="fa fa-star"></i>
+							}
+						</div>
+					</div>
 
+					<div class="col-lg-6">
+						<div class="review_box p-4 border rounded">
+							@if (ViewBag.CanReview == true) {
+								<h4>Gửi nhận xét của bạn</h4>
+								<form asp-action="SubmitReview" asp-controller="Product" method="post">
+									@* Lấy VariantId từ phiên bản hiện tại hoặc qua JavaScript cập nhật *@
+									<input type="hidden" name="variantId" id="reviewVariantId" value="@Model.SelectedVariantId" />
+
+									<div class="mb-3">
+										<label>Đánh giá của bạn:</label>
+										<select name="rating" class="form-control">
+											<option value="5">5 Sao - Tuyệt vời</option>
+											<option value="4">4 Sao - Tốt</option>
+											<option value="3">3 Sao - Bình thường</option>
+											<option value="2">2 Sao - Kém</option>
+											<option value="1">1 Sao - Tệ</option>
+										</select>
 									</div>
+
+									<div class="mb-3">
+										<textarea class="form-control" name="content" rows="4" placeholder="Nhận xét của bạn..." required></textarea>
+									</div>
+
+									<div class="text-right">
+										<button type="submit" class="primary-btn border-0">Gửi đánh giá ngay</button>
+									</div>
+								</form>
+							} else {
+								<div class="alert alert-info">
+									Bạn cần mua và nhận hàng thành công để có thể đánh giá sản phẩm này.
 								</div>
-								<p>
-									Cũng rất gì và này nọ. Chưa đi chưa biết có bị vết hằn hay không.
-									Vân giày tạm ổn. Vẫn còn chỉ thừa. Lỗ đục đều.Giày không bị bẩn như một
-									số đôi mà mình mua. 8.5đ nên mua nha mấy ông!
-								</p>
-							</div>
+							}
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 </section>
-<!--================End Product Description Area =================-->
+<script>
+		$(document).ready(function () {
+			// Cập nhật giá trị vào form ẩn khi người dùng thay đổi lựa chọn
+			$('#variantSelect').on('change', function() {
+					$('#hiddenVariantId').val($(this).val());
+			});
+
+			// Cập nhật số lượng khi bấm nút tăng/giảm
+			$('.items-count').on('click', function() {
+					setTimeout(function() {
+							$('#hiddenQuantity').val($('#sst').val());
+					}, 50);
+			});
+	});
+
+	function updateHiddenQty() {
+				$('#hiddenQuantity').val($('#sst').val());
+		}
+
+		$(document).ready(function () {
+				// Khi đổi phiên bản (Size/Màu), cập nhật lại VariantId và reset số lượng về 1
+				$('#variantSelect').on('change', function() {
+						$('#hiddenVariantId').val($(this).val());
+						$('#sst').val(1);
+						$('#hiddenQuantity').val(1);
+				});
+
+				// Kiểm tra thủ công nếu người dùng tự nhập số vào ô input
+				$('#sst').on('change', function() {
+						var stock = parseInt($('#stock-count').text());
+						var val = parseInt($(this).val());
+						if (val > stock) {
+								alert("Số lượng tồn kho không đủ!");
+								$(this).val(stock);
+						}
+						if (val < 1 || isNaN(val)) $(this).val(1);
+						updateHiddenQty();
+				});
+		});
+</script>
+<script src="~/js/variant_select.js"></script>

@@ -1,97 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\",
+  "WorkspaceRootPath": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\shared\\_sidebar.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\shared\\_header.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\areas\\admin\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\views\\shared\\components\\countproductincart\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\shared\\components\\countproductincart\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\areas\\admin\\controllers\\companyinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\controllers\\companyinfocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\shared\\_footer.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\models\\companyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\companyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\views\\shared\\components\\categorymenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\shared\\components\\categorymenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\areas\\admin\\views\\companyinfo\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\companyinfo\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\viewcomponents\\countproductincartviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\viewcomponents\\countproductincartviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\areas\\admin\\views\\productpost\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\productpost\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\viewcomponents\\categorymenuviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\viewcomponents\\categorymenuviewcomponent.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\areas\\admin\\views\\productpost\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\productpost\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Program Files\\dotnet\\sdk\\9.0.203\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\areas\\admin\\views\\blogpost\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\blogpost\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\views\\product\\_productlistpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\product\\_productlistpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\areas\\admin\\controllers\\statisticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\controllers\\statisticcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\models\\viewmodels\\revenuestatisticviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\viewmodels\\revenuestatisticviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\models\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\bill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\models\\productpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\productpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\blogpost.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\checkout\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\cart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\areas\\admin\\views\\bill\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\areas\\admin\\views\\bill\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\models\\viewmodels\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\viewmodels\\cartviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\models\\viewmodels\\checkoutvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\viewmodels\\checkoutvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_the\\minicar_model\\minicar_model\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\models\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|d:\\doan\\doanweb_nhat_thuong\\minicar_model\\minicar_model\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{0756D4EF-3414-4EF7-9176-F718B397272D}|MiniCar_Model\\MiniCar_Model.csproj|solutionrelative:minicar_model\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -101,298 +58,163 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Footer.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Footer.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\_Footer.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Footer.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Views\\Shared\\_Footer.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:55:52.419Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\Components\\CountProductInCart\\Default.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\Components\\CountProductInCart\\Default.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\Components\\CountProductInCart\\Default.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Views\\Shared\\Components\\CountProductInCart\\Default.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAACpAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:50:15.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CountProductInCartViewComponent.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\ViewComponents\\CountProductInCartViewComponent.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\ViewComponents\\CountProductInCartViewComponent.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\ViewComponents\\CountProductInCartViewComponent.cs",
-              "RelativeToolTip": "MiniCar_Model\\ViewComponents\\CountProductInCartViewComponent.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAA3wBQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:42:34.976Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "CategoryMenuViewComponent.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\ViewComponents\\CategoryMenuViewComponent.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\ViewComponents\\CategoryMenuViewComponent.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\ViewComponents\\CategoryMenuViewComponent.cs",
-              "RelativeToolTip": "MiniCar_Model\\ViewComponents\\CategoryMenuViewComponent.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:42:16.585Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Default.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\Components\\CategoryMenu\\Default.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\Components\\CategoryMenu\\Default.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\Components\\CategoryMenu\\Default.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Views\\Shared\\Components\\CategoryMenu\\Default.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:41:58.494Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "DocumentMoniker": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "ToolTip": "C:\\Program Files\\dotnet\\sdk\\9.0.203\\Sdks\\Microsoft.NET.Sdk.StaticWebAssets\\targets\\Microsoft.NET.Sdk.StaticWebAssets.targets",
-              "ViewState": "AgIAAF8CAAAAAAAAAAAMwGUCAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003801|",
-              "WhenOpened": "2026-01-23T19:38:18.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\BlogPost\\Index.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\BlogPost\\Index.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\BlogPost\\Index.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\BlogPost\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEoAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:37:41.62Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "RevenueStatisticViewModel.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ViewModels\\RevenueStatisticViewModel.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Models\\ViewModels\\RevenueStatisticViewModel.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ViewModels\\RevenueStatisticViewModel.cs",
-              "RelativeToolTip": "MiniCar_Model\\Models\\ViewModels\\RevenueStatisticViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAQAAAAyAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:31:36.592Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Bill.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\Bill.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Models\\Bill.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\Bill.cs",
-              "RelativeToolTip": "MiniCar_Model\\Models\\Bill.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAA7wBUAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:22:19.497Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "StatisticController.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Controllers\\StatisticController.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Controllers\\StatisticController.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Controllers\\StatisticController.cs",
-              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Controllers\\StatisticController.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvxcAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:19:54.157Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "ProductPost.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ProductPost.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Models\\ProductPost.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ProductPost.cs",
-              "RelativeToolTip": "MiniCar_Model\\Models\\ProductPost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:17:13.89Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "BlogPost.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\BlogPost.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Models\\BlogPost.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\BlogPost.cs",
-              "RelativeToolTip": "MiniCar_Model\\Models\\BlogPost.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:15:12.422Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Controllers\\HomeController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwCQAAAAZAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:13:32.736Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAACwAAAAAAAAAAAAYwEYAAAAHAAAAAAAAAA==",
+              "Title": "_Sidebar.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\Shared\\_Sidebar.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Shared\\_Sidebar.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\Shared\\_Sidebar.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABgAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:13:02.415Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Cart\\Index.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Cart\\Index.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Cart\\Index.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Views\\Cart\\Index.cshtml",
-              "ViewState": "AgIAALEAAAAAAAAAAAAAAL4AAABVAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:13:02.796Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "CartViewModel.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ViewModels\\CartViewModel.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Models\\ViewModels\\CartViewModel.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ViewModels\\CartViewModel.cs",
-              "RelativeToolTip": "MiniCar_Model\\Models\\ViewModels\\CartViewModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:13:02.8Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Controllers\\CartController.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Controllers\\CartController.cs",
-              "RelativeToolTip": "MiniCar_Model\\Controllers\\CartController.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAYwEIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:13:02.811Z",
+              "WhenOpened": "2026-01-23T22:09:08.754Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_Header.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Header.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\_Header.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Header.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Views\\Shared\\_Header.cshtml",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAACUAAAAAAAAAAAAuwDcAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:13:02.818Z",
+              "WhenOpened": "2026-01-23T22:04:39.56Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T22:04:34.035Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CompanyInfo.cs",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Models\\CompanyInfo.cs",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Models\\CompanyInfo.cs",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Models\\CompanyInfo.cs",
+              "RelativeToolTip": "MiniCar_Model\\Models\\CompanyInfo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T21:58:24.399Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\CompanyInfo\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\CompanyInfo\\Edit.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\CompanyInfo\\Edit.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\CompanyInfo\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T21:56:57.863Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CompanyInfoController.cs",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Controllers\\CompanyInfoController.cs",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Controllers\\CompanyInfoController.cs",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Controllers\\CompanyInfoController.cs",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Controllers\\CompanyInfoController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAASwDEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T21:56:45.856Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\ProductPost\\Edit.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\ProductPost\\Edit.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\ProductPost\\Edit.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\ProductPost\\Edit.cshtml",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAcwFEAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T21:50:46.254Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\ProductPost\\Index.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\ProductPost\\Index.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\ProductPost\\Index.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\ProductPost\\Index.cshtml",
+              "ViewState": "AgIAADYAAAAAAAAAAAAcwEcAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T21:50:40.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ApplicationDbContext.cs",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Models\\ApplicationDbContext.cs",
               "RelativeDocumentMoniker": "MiniCar_Model\\Models\\ApplicationDbContext.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ApplicationDbContext.cs",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Models\\ApplicationDbContext.cs",
               "RelativeToolTip": "MiniCar_Model\\Models\\ApplicationDbContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:13:02.823Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Bill\\Index.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Areas\\Admin\\Views\\Bill\\Index.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Areas\\Admin\\Views\\Bill\\Index.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Areas\\Admin\\Views\\Bill\\Index.cshtml",
-              "ViewState": "AgIAAC8AAAAAAAAAAAAYwDQAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:13:02.829Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 21,
-              "Title": "CheckoutVM.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ViewModels\\CheckoutVM.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Models\\ViewModels\\CheckoutVM.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Models\\ViewModels\\CheckoutVM.cs",
-              "RelativeToolTip": "MiniCar_Model\\Models\\ViewModels\\CheckoutVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:13:02.832Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "CheckoutController.cs",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Controllers\\CheckoutController.cs",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Controllers\\CheckoutController.cs",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Controllers\\CheckoutController.cs",
-              "RelativeToolTip": "MiniCar_Model\\Controllers\\CheckoutController.cs",
-              "ViewState": "AgIAAE4AAAAAAAAAAAAIwFcAAAAzAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-23T19:13:02.836Z",
+              "WhenOpened": "2026-01-23T21:50:24.194Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Checkout\\Index.cshtml",
-              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Checkout\\Index.cshtml",
-              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\Views\\Checkout\\Index.cshtml",
-              "RelativeToolTip": "MiniCar_Model\\Views\\Checkout\\Index.cshtml",
-              "ViewState": "AgIAAG4AAAAAAAAAAAAowHoAAAAXAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "BlogPost.cs",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Models\\BlogPost.cs",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Models\\BlogPost.cs",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Models\\BlogPost.cs",
+              "RelativeToolTip": "MiniCar_Model\\Models\\BlogPost.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-23T21:46:08.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_ProductListPartial.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Views\\Product\\_ProductListPartial.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Product\\_ProductListPartial.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Views\\Product\\_ProductListPartial.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Views\\Product\\_ProductListPartial.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-01-23T19:13:02.843Z"
+              "WhenOpened": "2026-01-23T21:44:23.193Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "MiniCar_Model\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABgAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-23T21:33:36.958Z",
+              "EditorCaption": ""
             }
           ]
         }

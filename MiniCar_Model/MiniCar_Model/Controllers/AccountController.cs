@@ -89,10 +89,51 @@ namespace MiniCar_Model.Controllers {
     }
 
 
+    //thuong code
+    // Hàm GET: Chạy khi người dùng lần đầu vào trang
     [HttpGet]
     public IActionResult Register() {
+      // Đảm bảo không có rác dữ liệu cũ
+      ModelState.Clear();
       return View();
     }
+
+    // Hàm POST: Chạy khi người dùng bấm nút Đăng ký
+    [HttpPost]
+    public IActionResult Register(RegisterVM model) {
+      if (ModelState.IsValid) {
+        var isExist = _context.Accounts.Any(a => a.UserName == model.UserName || a.Email == model.Email);
+        if (isExist) {
+          ModelState.AddModelError("", "Tên đăng nhập hoặc Email đã tồn tại");
+          return View(model);
+        }
+        if (ModelState.IsValid) {
+          var account = new Account {
+            UserName = model.UserName,
+            NameAccount = model.NameAccount,
+            Email = model.Email,
+            PhoneNumber = model.PhoneNumber,
+            PasswordAccount = model.PasswordAccount,
+            AddressAccount = model.AddressAccount,
+            RoleId = 2,
+            StatusAccount = "ACTIVE",
+            CreateAt = DateTime.Now
+          };
+
+          _context.Accounts.Add(account);
+          _context.SaveChanges();
+          return RedirectToAction("Login");
+        }
+
+
+
+      }
+
+      // QUAN TRỌNG: Không dùng ModelState.Clear() ở đây.
+      // Nếu model không hợp lệ, trả lại model để View hiển thị các lỗi [Required]
+      return View(model);
+    }
+    //thuong end code
 
     public IActionResult ForgotPassword() {
       return View();
@@ -160,6 +201,7 @@ namespace MiniCar_Model.Controllers {
     }
     //thuong end code
     public IActionResult Logout() {
+      HttpContext.Session.Clear();
       return RedirectToAction("Index", "Home");
     }
     //thuong code
@@ -210,9 +252,9 @@ namespace MiniCar_Model.Controllers {
       if (bill != null) {
         // 2. Kiểm tra điều kiện một lần nữa ở Server để bảo mật
         // Chỉ cho phép hủy khi trạng thái là "Chưa vận chuyển"
-        if (bill.StatusBill?.Trim() == "Chưa vận chuyển") {
+        if (bill.StatusBill?.Trim() == "Pending") {
           // 3. Cập nhật trạng thái
-          bill.StatusBill = "Đã hủy";
+          bill.StatusBill = "Cancelled";
 
           // 4. Lưu vào SQL
           _context.SaveChanges();
@@ -276,12 +318,24 @@ namespace MiniCar_Model.Controllers {
     }
     //thuong end code
 
-    public ActionResult EditAccount() {
-      return View();
-    }
+    // 2. Nút bấm yêu thích: Lưu và chuyển trang
+    [HttpPost]
+    public async Task<IActionResult> AddAndGo(int variantId) {
+      var accountId = HttpContext.Session.GetInt32("AccountId");
+      if (accountId == null) return RedirectToAction("Login", "Account");
 
-    public IActionResult ChangePassword() {
-      return View();
+      // Kiểm tra xem đã tồn tại chưa để tránh trùng lặp
+      var existing = await _context.Wishlists
+          .AnyAsync(w => w.AccountId == accountId && w.ProductVariantId == variantId);
+
+      if (!existing) {
+        var wish = new Wishlist { AccountId = accountId.Value, ProductVariantId = variantId };
+        _context.Wishlists.Add(wish);
+        await _context.SaveChangesAsync();
+      }
+
+      // Sau khi lưu xong, chuyển hướng sang trang Index của Wishlist
+      return RedirectToAction("Index");
     }
 
 

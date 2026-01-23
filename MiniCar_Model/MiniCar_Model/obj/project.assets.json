@@ -4023,11 +4023,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
+      "projectUniqueName": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
       "projectName": "MiniCar_Model",
-      "projectPath": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
+      "projectPath": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
       "packagesPath": "C:\\Users\\Peter\\.nuget\\packages\\",
-      "outputPath": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\obj\\",
+      "outputPath": "D:\\DoAn\\DoAnWeb_Nhat_Thuong\\MiniCar_Model\\MiniCar_Model\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

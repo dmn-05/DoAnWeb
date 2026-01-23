@@ -53,8 +53,8 @@
 								{
 									<tr>
 										<td class="text-center">@i</td>
-										<td><small>CAT-@item.CategoryId</small></td>
-										<td>@(item.ParentId != null ? "PAR-" + item.ParentId : "N/A")</td>
+										<td><small>@item.CategoryId</small></td>
+										<td>@(item.ParentId != null ?  + item.ParentId : "Không")</td>
 										<td><strong>@item.NameCategory</strong></td>
 										<td class="text-center">
 											@if (item.StatusCategory?.Trim().ToUpper() == "ACTIVE")
