@@ -277,7 +277,7 @@ namespace MiniCar_Model.Areas.Admin.Controllers
             _context.ProductImages.Add(new ProductImage
             {
               VariantId = variant.VariantId,
-              UrlImage = Path.Combine(relativeDir, fileName).Replace("\\", "/"),
+              UrlImage = "~/" + Path.Combine(relativeDir, fileName).Replace("\\", "/"),
               IsMain = (index == 0),
               CreateAt = DateTime.Now
             });
@@ -456,7 +456,7 @@ namespace MiniCar_Model.Areas.Admin.Controllers
             _context.ProductImages.Add(new ProductImage
             {
               VariantId = variant.VariantId,
-              UrlImage = Path.Combine(relativeDir, fileName).Replace("\\", "/"),
+              UrlImage = "~/" + Path.Combine(relativeDir, fileName).Replace("\\", "/"),
               IsMain = (index == 0),
               CreateAt = DateTime.Now
             });
@@ -836,6 +836,41 @@ namespace MiniCar_Model.Areas.Admin.Controllers
           "ColorName",
           selectedColorId
       );
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> CreateAjax(string name)
+    {
+      name = name?.Trim();
+
+      if (string.IsNullOrEmpty(name))
+        return Json(new { success = false, message = "Tên loại không hợp lệ" });
+
+      var exists = await _context.Categories
+          .AnyAsync(c => c.NameCategory.ToLower() == name.ToLower());
+
+      if (exists)
+        return Json(new { success = false, message = "Tên loại đã tồn tại" });
+
+      var category = new Category
+      {
+        NameCategory = name,
+        StatusCategory = "ACTIVE",
+        ParentId = 1
+      };
+
+      _context.Categories.Add(category);
+      await _context.SaveChangesAsync();
+
+      return Json(new
+      {
+        success = true,
+        data = new
+        {
+          id = category.CategoryId,
+          name = category.NameCategory
+        }
+      });
     }
 
 

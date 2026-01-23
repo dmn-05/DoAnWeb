@@ -32,20 +32,20 @@
                 </div>
 
                 <!-- DANH MỤC + NÚT THÊM (ĐÃ FIX) -->
-                <div class="form-group mb-3">
-                  <label>Loại sản phẩm</label>
-
-                  <div class="select-with-btn">
-                    <select asp-for="CategoryId"
-                            asp-items="ViewBag.CategoryId"
-                            class="form-control">
-                      <option value="">-- Chọn --</option>
+                <div class="form-group mb-3"> 
+                  <label>Loại sản phẩm</label> 
+                  <div class="select-with-btn"> 
+                    <select asp-for="CategoryId" asp-items="ViewBag.CategoryId" class="form-control"> 
+                      <option value="">-- Chọn --</option> 
                     </select>
-
-                    <a asp-area="Admin" asp-controller="Category" asp-action="Create" class="btn btn-success btn-add-inline" title="Thêm loại sản phẩm"> <i class="fa fa-plus"></i> </a>
-                  </div>
-
-                  <span asp-validation-for="CategoryId" class="text-danger"></span>
+                    <a href="javascript:void(0)"
+                       class="btn btn-success btn-add-inline"
+                       title="Thêm loại sản phẩm"
+                       onclick="openCategoryModal()">
+                      <i class="fa fa-plus"></i>
+                    </a>
+                  </div> 
+                  <span asp-validation-for="CategoryId" class="text-danger"></span> 
                 </div>
 
                 <div class="form-group mb-3">
@@ -110,4 +110,5 @@
   </section>
 </section>
 
+@await Html.PartialAsync("~/Areas/Admin/Views/Shared/_AddCategoryModal.cshtml")
 

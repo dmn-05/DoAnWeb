@@ -1,0 +1,64 @@
+﻿<div class="modal fade" id="categoryModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Thêm loại sản phẩm</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <div class="form-group">
+          <label>Tên loại sản phẩm</label>
+          <input type="text" id="categoryName" class="form-control" />
+          <span class="text-danger" id="categoryError"></span>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Hủy
+        </button>
+        <button type="button" class="btn btn-primary" onclick="saveCategory()">
+          Lưu
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function openCategoryModal() {
+    $('#categoryName').val('');
+    $('#categoryError').text('');
+    $('#categoryModal').modal('show');
+  }
+
+  function saveCategory() {
+    const name = $('#categoryName').val().trim();
+    if (!name) {
+      $('#categoryError').text('Tên loại không được để trống');
+      return;
+    }
+
+    $.ajax({
+      url: '/Admin/Product/CreateAjax',
+      type: 'POST',
+      data: { name },
+      success: function (res) {
+        if (!res.success) {
+          $('#categoryError').text(res.message);
+          return;
+        }
+
+        // Thêm option mới vào select
+        const option = new Option(res.data.name, res.data.id, true, true);
+        $('select[name="CategoryId"]').append(option);
+
+        $('#categoryModal').modal('hide');
+      },
+      error: function () {
+        $('#categoryError').text('Có lỗi xảy ra, vui lòng thử lại');
+      }
+    });
+  }
+</script>

@@ -99,21 +99,32 @@ namespace MiniCar_Model.Controllers
     }
 
     [HttpPost]
-    public async Task<IActionResult> Contact(Contact contact)
+    public async Task<IActionResult> Contact(ContactCreateVM model)
     {
-      if (ModelState.IsValid)
+      if (!ModelState.IsValid)
+        return View(model);
+
+      var contact = new Contact
       {
-        contact.CreatedAt = DateTime.Now;
-        contact.StatusContact = "New";
+        Name = model.Name,
+        Email = model.Email,
+        Phone = model.Phone,
+        Subject = model.Subject,
+        Message = model.Message,
 
-        _context.Contacts.Add(contact);
-        await _context.SaveChangesAsync();
+        CreatedAt = DateTime.Now,
+        StatusContact = "Pending",
+        IsDeleted = false,
+        DeletedAt = null
+      };
 
-        ViewBag.Success = "Cảm ơn bạn đã liên hệ với chúng tôi";
-        ModelState.Clear();
-        return View();
-      }
-      return View(contact);
+      _context.Contacts.Add(contact);
+      await _context.SaveChangesAsync();
+
+      ViewBag.Success = "Cảm ơn bạn đã liên hệ với chúng tôi";
+      ModelState.Clear();
+
+      return View();
     }
     //------Tri Trong Treo
 

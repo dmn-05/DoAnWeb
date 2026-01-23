@@ -4,11 +4,12 @@
 @foreach (var item in Model) {
 	<div class="col-lg-4 col-md-6">
 		<div class="single-product">
+			<a asp-action="Detail" asp-route-id="@item.ProductId">
 			<img class="img-fluid resize" src="@Url.Content(@item.ImageUrl)" alt="@item.NameProduct">
+			</a>
 			<div class="product-details">
 				<a asp-action="Detail"
-					 asp-route-productId="@item.ProductId"
-					 asp-route-variantId="@item.VariantId"><h6>@item.NameProduct</h6></a>
+					 asp-route-id="@item.ProductId" asp-route-variantId="@item.VariantId"><h6>@item.NameProduct</h6></a>
 				<div class="price">
 					<h6>@item.Price</h6>
 				</div>
@@ -31,8 +32,7 @@
 					</a>
 
 					<a asp-action="Detail"
-						 asp-route-productId="@item.ProductId"
-						 asp-route-variantId="@item.VariantId" class="social-info">
+						 asp-route-id="@item.ProductId" class="social-info">
 						<span class="lnr lnr-move"></span>
 						<p class="hover-text">Xem thêm</p>
 					</a>
