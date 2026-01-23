@@ -1,0 +1,222 @@
+﻿@{
+	ViewData["Title"] = "Giới thiệu";
+}
+@model MiniCar_Model.Models.ViewModels.AboutViewModel
+
+<section class="banner-area organic-breadcrumb">
+	<div class="container">
+		<div class="breadcrumb-banner d-flex flex-wrap align-items-center justify-content-end">
+			<div class="col-first">
+				<h1>Giới thiệu</h1>
+				<nav class="d-flex align-items-center">
+					<a href="/">Trang chủ<span class="lnr lnr-arrow-right"></span></a>
+					<a href="/About/Index">Giới thiệu</a>
+				</nav>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="about-intro section_gap">
+	<div class="container">
+
+		<div class="card shadow-lg border-0 p-5 about-card">
+			<div class="row align-items-center">
+
+				<!-- LOGO -->
+				<div class="col-lg-5 text-center mb-4 mb-lg-0">
+					<img src="/img/logo_team.png"
+							 alt="MiniCar Model"
+							 class="img-fluid"
+							 style="max-width:240px;">
+				</div>
+
+				<!-- TEXT -->
+				<div class="col-lg-7">
+					<h1 class="about-title mb-3">MiniCar Model</h1>
+
+					<p class="about-subtitle mb-3">
+						Cửa hàng mô hình xe sưu tầm chính hãng dành cho người đam mê.
+					</p>
+
+					<p class="about-desc mb-0">
+						Chúng tôi cung cấp các dòng mô hình đa dạng tỉ lệ, cam kết chất lượng,
+						nguồn gốc rõ ràng và trải nghiệm mua sắm chuyên nghiệp.
+					</p>
+				</div>
+
+			</div>
+		</div>
+
+	</div>
+</section>
+
+<section class="about-info section_gap rounded-section">
+	<div class="container">
+		<h3 class="text-center mb-5">Thông tin công ty</h3>
+		<div class="card shadow-sm border-0 p-4 reveal">
+			<div class="row">
+
+				<div class="col-md-6">
+					<h5>Tên công ty</h5>
+					@if (!string.IsNullOrWhiteSpace(Model.CompanyInfo?.CompanyName))
+					{
+						<p>@Model.CompanyInfo.CompanyName</p>
+					}
+					else
+					{
+						<p class="text-muted">Chưa có thông tin</p>
+					}
+
+					<h5>Lĩnh vực kinh doanh</h5>
+					@if (!string.IsNullOrWhiteSpace(Model.CompanyInfo?.BusinessField))
+					{
+						<p>@Model.CompanyInfo.BusinessField</p>
+					}
+					else
+					{
+						<p class="text-muted">Chưa có thông tin</p>
+					}
+					<h5>Mô tả công ty</h5>
+					@if (!string.IsNullOrWhiteSpace(Model.CompanyInfo?.Description))
+					{
+						<p>@Model.CompanyInfo.Description</p>
+					}
+					else
+					{
+						<p class="text-muted">Chưa có thông tin</p>
+					}
+
+				</div>
+
+				<div class="col-md-6">
+					<h5>Địa chỉ</h5>
+					@if (!string.IsNullOrWhiteSpace(Model.CompanyInfo?.Address))
+					{
+						<p>@Model.CompanyInfo.Address</p>
+					}
+					else
+					{
+						<p class="text-muted">Chưa có thông tin</p>
+					}
+					<h5>Liên hệ</h5>
+					@if (!string.IsNullOrWhiteSpace(Model.CompanyInfo?.Email)
+							|| !string.IsNullOrWhiteSpace(Model.CompanyInfo?.Hotline))
+					{
+						@if (!string.IsNullOrWhiteSpace(Model.CompanyInfo.Email))
+						{
+							<p class="mb-1">Email: @Model.CompanyInfo.Email</p>
+						}
+						@if (!string.IsNullOrWhiteSpace(Model.CompanyInfo.Hotline))
+						{
+							<p class="mb-0">Hotline: @Model.CompanyInfo.Hotline</p>
+						}
+					}
+					else
+					{
+						<p class="text-muted mb-0">Chưa có thông tin</p>
+					}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="about-policy section_gap rounded-section">
+	<div class="container">
+		<h3 class="text-center mb-5">Chính sách công ty</h3>
+
+		<div class="row">
+
+			@if (Model.Policies != null && Model.Policies.Any())
+			{
+				foreach (var item in Model.Policies)
+				{
+					<div class="col-lg-3 col-md-6 mb-4">
+						<div class="card h-100 shadow-sm border-0 text-center p-4 reveal">
+							<div class="policy-icon-wrap mb-3">
+								<img src="@item.Icon"
+										 class="policy-icon"
+										 alt="@item.Title">
+							</div>
+							<h5>@item.Title</h5>
+							<p>@item.Description</p>
+						</div>
+					</div>
+				}
+			}
+			else
+			{
+				<div class="col-12 text-center text-muted">
+					Chưa có chính sách nào
+				</div>
+			}
+		</div>
+	</div>
+</section>
+
+<section class="about-blog section_gap bg-light">
+	<div class="container">
+		<h3 class="text-center mb-5">Bài viết mới</h3>
+
+		<div id="blog-container">
+			@await Html.PartialAsync("_BlogList", Model)
+		</div>
+	</div>
+</section>
+
+<section class="about-blog section_gap bg-light">
+	<div class="container">
+		<h3 class="text-center mb-5">Sản phẩm mới</h3>
+
+		<div id="product-container">
+			@await Html.PartialAsync("_ProductList", Model)
+		</div>
+	</div>
+</section>
+
+<section class="about-cta section_gap text-center">
+	<div class="container">
+		<h3>Bạn đang tìm mô hình yêu thích?</h3>
+		<a href="/Product" class="primary-btn">Xem sản phẩm</a>
+	</div>
+</section>
+<script>
+	window.addEventListener("scroll", function () {
+		const reveals = document.querySelectorAll(".reveal");
+
+		for (let i = 0; i < reveals.length; i++) {
+			const windowHeight = window.innerHeight;
+			const elementTop = reveals[i].getBoundingClientRect().top;
+			const elementVisible = 120;
+
+			if (elementTop < windowHeight - elementVisible) {
+				reveals[i].classList.add("active");
+			}
+		}
+	});
+</script>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+	$(document).on("click", ".blog-page", function (e) {
+		e.preventDefault();
+
+		const page = $(this).data("page");
+
+		$("#blog-container").load(
+			"/About/BlogPaging?blogPage=" + page
+		);
+	});
+</script>
+<script>
+	$(document).on("click", ".product-page", function (e) {
+		e.preventDefault();
+
+		const page = $(this).data("page");
+
+		$("#product-container").load(
+			"/About/ProductPaging?productPage=" + page
+		);
+	});
+</script>
+

@@ -53,3 +53,114 @@
   position: relative;
   z-index: 10;
 }
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  font-size: 11px;
+  padding: 4px 6px;
+  border-radius: 50%;
+}
+
+.cart-total {
+  font-size: 13px;
+  font-weight: 600;
+  color: #d70018;
+}
+
+/* chỉ tác động badge giỏ hàng */
+.cart-icon .cart-badge {
+  line-height: 1;
+  height: auto;
+  min-width: 18px;
+  font-size: 11px;
+  padding-top: 2px;
+}
+
+.cart-icon .cart-badge {
+  transform: translate(-50%, -30%);
+}
+
+.about-card {
+  border-radius: 28px;
+}
+
+.about-title {
+  margin-top: -10px; /* đẩy chữ lên trên nhẹ */
+  font-weight: 700;
+}
+
+.about-subtitle {
+  font-size: 16px;
+  color: #555;
+}
+
+.about-desc {
+  font-size: 15px;
+  color: #777;
+  line-height: 1.7;
+}
+/* Giảm khoảng cách giữa các section trong trang About */
+.about-info,
+.about-policy,
+.about-mission,
+.about-feature {
+  padding: 60px 0;
+}
+
+.about-info,
+.about-policy {
+  background-color: #f5f5f7; /* xám rất nhẹ kiểu Apple */
+}
+
+.policy-icon-wrap {
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.policy-icon {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: contain;
+}
+.rounded-section .card {
+  border-radius: 16px;
+}
+/* Card hiệu ứng Apple */
+.about-info .card,
+.about-policy .card {
+	border-radius: 16px;
+	transition: all 0.35s ease;
+	background: #fff;
+}
+
+/* Hover nổi lên */
+.about-info .card:hover,
+.about-policy .card:hover {
+	transform: translateY(-10px);
+	box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+/* Trạng thái ban đầu (chưa xuất hiện) */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+  /* Khi đã xuất hiện */
+  .reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.card.reveal {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+  .card.reveal:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  }

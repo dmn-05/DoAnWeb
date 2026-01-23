@@ -1,0 +1,50 @@
+﻿@model List<CompanyPolicy>
+
+@{
+	ViewData["Title"] = "Chính sách công ty";
+}
+
+<section id="main-content">
+	<section class="wrapper">
+
+		<h3>
+			<i class="fa fa-angle-right"></i>
+			Chính sách công ty
+		</h3>
+
+		<div class="row mt">
+
+			@foreach (var item in Model)
+			{
+				<div class="col-lg-3 col-md-6 mb-4">
+					<div class="content-panel text-center policy-card policy-fixed">
+
+						<div class="policy-body">
+
+							<div class="policy-icon">
+								<img src="@item.Icon" alt="@item.Title">
+							</div>
+
+							<h4>@item.Title</h4>
+
+							<p class="policy-desc">
+								@item.Description
+							</p>
+
+						</div>
+
+						<div class="policy-footer">
+							<a asp-area="Admin"
+								 asp-controller="CompanyPolicy"
+								 asp-action="Edit"
+								 asp-route-code="@item.Code"
+								 class="btn btn-primary">
+								<i class="fa fa-edit"></i> Chỉnh sửa
+							</a>
+						</div>
+					</div>
+				</div>
+			}
+		</div>
+	</section>
+</section>

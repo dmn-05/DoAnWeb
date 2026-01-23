@@ -1,0 +1,175 @@
+﻿@model MiniCar_Model.Models.CompanyPolicy
+
+@{
+	ViewData["Title"] = "Chỉnh sửa chính sách";
+}
+
+<section id="main-content">
+	<section class="wrapper">
+
+		<h3 class="mb-4">
+			<i class="fa fa-angle-right"></i>
+			Chỉnh sửa chính sách
+		</h3>
+
+		<div class="row">
+			<div class="col-lg-10 col-lg-offset-1">
+
+				<div class="content-panel p-4">
+
+					<form asp-area="Admin"
+								asp-controller="CompanyPolicy"
+								asp-action="Edit"
+								method="post"
+								enctype="multipart/form-data">
+
+						@Html.AntiForgeryToken()
+						<input type="hidden" asp-for="Id" />
+						<input type="hidden" asp-for="Code" />
+
+						<div class="row">
+
+							<!-- LEFT COLUMN -->
+							<div class="col-md-4 text-center border-right">
+
+								<h5 class="mb-3">Biểu tượng</h5>
+
+								<div class="policy-icon-wrapper">
+									<img id="policyIconPreview"
+											 src="@Model.Icon"
+											 class="policy-icon-img"
+											 style="display:@(string.IsNullOrEmpty(Model.Icon) ? "none" : "block")" />
+
+									<button type="button"
+													id="btnAddIcon"
+													class="btn btn-success btn-add-icon"
+													style="display:@(string.IsNullOrEmpty(Model.Icon) ? "flex" : "none")">
+										<i class="fa fa-plus"></i>
+									</button>
+
+									<button type="button"
+													id="btnRemoveIcon"
+													class="btn btn-danger btn-remove-icon"
+													style="display:@(string.IsNullOrEmpty(Model.Icon) ? "none" : "flex")">
+										<i class="fa fa-minus"></i>
+									</button>
+
+									<input type="file"
+												 id="iconUpload"
+												 name="iconFile"
+												 style="display:none;" />
+
+									<input type="hidden" name="RemoveIcon" id="removeIconFlag" value="false" />
+								</div>
+								<p class="text-muted small">
+									Icon đại diện cho chính sách
+								</p>
+
+								<hr />
+
+								<div class="form-group text-left">
+									<label>Mã chính sách</label>
+									<input class="form-control"
+												 value="@Model.Code"
+												 readonly />
+								</div>
+
+								<div class="form-group text-left">
+									<label>Trạng thái</label>
+									<select asp-for="Status"
+													class="form-control">
+										<option value="ACTIVE">Hoạt động</option>
+										<option value="INACTIVE">Ẩn</option>
+									</select>
+								</div>
+							</div>
+
+							<!-- RIGHT COLUMN -->
+							<div class="col-md-8 pl-4">
+
+								<h5 class="mb-3">Nội dung chính sách</h5>
+
+								<div class="form-group">
+									<label>Tiêu đề</label>
+									<input asp-for="Title"
+												 class="form-control"
+												 placeholder="Ví dụ: Chính sách bảo hành" />
+								</div>
+
+								<div class="form-group">
+									<label>Mô tả chi tiết</label>
+									<textarea asp-for="Description"
+														rows="6"
+														class="form-control"
+														placeholder="Nhập nội dung chính sách..."></textarea>
+								</div>
+
+								<div class="form-group">
+									<label>Thứ tự hiển thị</label>
+									<input asp-for="DisplayOrder"
+												 type="number"
+												 class="form-control"
+												 style="width:120px" />
+								</div>
+							</div>
+						</div>
+
+						<hr />
+
+						<!-- ACTION -->
+						<div class="text-right">
+							<button type="submit"
+											class="btn btn-primary btn-lg">
+								<i class="fa fa-save"></i> Lưu thay đổi
+							</button>
+
+							<a asp-action="Index"
+								 class="btn btn-default btn-lg">
+								Quay lại
+							</a>
+						</div>
+
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</section>
+<script>
+	const iconUpload = document.getElementById('iconUpload');
+	const btnAdd = document.getElementById('btnAddIcon');
+	const btnRemove = document.getElementById('btnRemoveIcon');
+	const preview = document.getElementById('policyIconPreview');
+	const removeFlag = document.getElementById('removeIconFlag');
+
+	btnAdd.onclick = () => {
+		iconUpload.click();
+	};
+
+	iconUpload.onchange = e => {
+		const file = e.target.files[0];
+		if (!file) return;
+
+		preview.src = URL.createObjectURL(file);
+		preview.style.display = 'block';
+
+		btnAdd.style.display = 'none';
+		btnRemove.style.display = 'flex';
+
+		removeFlag.value = "false";
+	};
+
+	btnRemove.onclick = () => {
+		preview.src = '';
+		preview.style.display = 'none';
+		iconUpload.value = '';
+
+		btnAdd.style.display = 'flex';
+		btnRemove.style.display = 'none';
+
+		removeFlag.value = "true"; // ⬅ QUAN TRỌNG
+	};
+</script>
+
+</script>

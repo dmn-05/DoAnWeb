@@ -1,0 +1,9 @@
+﻿@model MiniCar_Model.Models.ViewModels.CartHeaderVM
+
+@if (Model.TotalQuantity > 0)
+{
+  <em id="cartHeaderCount" class="cart-badge badge bg-danger rounded-pill position-absolute"
+      style="top: 50%; right: -13px; transform: translateY(30%);">
+    @Model.TotalQuantity
+  </em>
+}

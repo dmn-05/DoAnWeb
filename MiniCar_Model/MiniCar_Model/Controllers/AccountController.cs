@@ -3,9 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
 using MiniCar_Model.Models.ViewModels;
 
+
 namespace MiniCar_Model.Controllers {
   public class AccountController : Controller {
     private readonly ApplicationDbContext _context;
+
     //thuong code
     private readonly ILogger<AccountController> _logger;
     //thuong end code
@@ -30,10 +32,12 @@ namespace MiniCar_Model.Controllers {
       var count = _context.Accounts.Count();
       ViewBag.TestDb = count;
       return View();
+
     }
 
     // POST: /Account/Login
     [HttpPost]
+
     public IActionResult Login(string email, string password) {
       var account = _context.Accounts.FirstOrDefault(x =>
           (x.Email == email || x.UserName == email) &&
@@ -83,6 +87,7 @@ namespace MiniCar_Model.Controllers {
         success = true
       });
     }
+
 
     [HttpGet]
     public IActionResult Register() {
