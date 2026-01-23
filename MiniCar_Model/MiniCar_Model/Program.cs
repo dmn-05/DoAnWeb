@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models;
 using MiniCar_Model.Services;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -22,6 +23,14 @@ builder.Services.AddSession(options => {
   options.Cookie.IsEssential = true;
 });
 
+
+builder.Services.AddSession(options =>
+{
+  options.IdleTimeout = TimeSpan.FromHours(2);
+  options.Cookie.HttpOnly = true;
+  options.Cookie.IsEssential = true;
+});
+
 var app = builder.Build();
 
 
@@ -33,8 +42,9 @@ app.UseStaticFiles();
 app.UseStaticFiles();
 app.UseSession();
 app.UseRouting();
+app.UseSession();
+//app.UseAuthorization();
 
-app.UseAuthorization();
 
 
 //-------Tri Trong Trang

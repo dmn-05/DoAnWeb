@@ -6,34 +6,34 @@ namespace MiniCar_Model.Models;
 
 public partial class ApplicationDbContext : DbContext
 {
-    public ApplicationDbContext()
-    {
-    }
+	public ApplicationDbContext()
+	{
+	}
 
-    public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
-        : base(options)
-    {
-    }
+	public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
+			: base(options)
+	{
+	}
 
-    public virtual DbSet<Account> Accounts { get; set; }
+	public virtual DbSet<Account> Accounts { get; set; }
 
-    public virtual DbSet<Advertisement> Advertisements { get; set; }
+	public virtual DbSet<Advertisement> Advertisements { get; set; }
 
-    public virtual DbSet<Bill> Bills { get; set; }
+	public virtual DbSet<Bill> Bills { get; set; }
 
-    public virtual DbSet<BillInfo> BillInfos { get; set; }
+	public virtual DbSet<BillInfo> BillInfos { get; set; }
 
-    public virtual DbSet<Cart> Carts { get; set; }
+	public virtual DbSet<Cart> Carts { get; set; }
 
-    public virtual DbSet<CartItem> CartItems { get; set; }
+	public virtual DbSet<CartItem> CartItems { get; set; }
 
-    public virtual DbSet<Category> Categories { get; set; }
+	public virtual DbSet<Category> Categories { get; set; }
 
-    public virtual DbSet<Color> Colors { get; set; }
+	public virtual DbSet<Color> Colors { get; set; }
 
-    public virtual DbSet<Comment> Comments { get; set; }
+	public virtual DbSet<Comment> Comments { get; set; }
 
-    public virtual DbSet<Contact> Contacts { get; set; }
+	public virtual DbSet<Contact> Contacts { get; set; }
 
     public virtual DbSet<Post> Posts { get; set; }
 
@@ -41,27 +41,32 @@ public partial class ApplicationDbContext : DbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
-    public virtual DbSet<ProductImage> ProductImages { get; set; }
 
-    public virtual DbSet<ProductVariant> ProductVariants { get; set; }
+	public virtual DbSet<ProductImage> ProductImages { get; set; }
 
-    public virtual DbSet<Promotion> Promotions { get; set; }
+	public virtual DbSet<ProductVariant> ProductVariants { get; set; }
 
-    public virtual DbSet<Role> Roles { get; set; }
+	public virtual DbSet<Promotion> Promotions { get; set; }
 
-    public virtual DbSet<ShippingAddress> ShippingAddresses { get; set; }
+	public virtual DbSet<Role> Roles { get; set; }
 
-    public virtual DbSet<Size> Sizes { get; set; }
+	public virtual DbSet<ShippingAddress> ShippingAddresses { get; set; }
 
-    public virtual DbSet<Slideshow> Slideshows { get; set; }
+	public virtual DbSet<Size> Sizes { get; set; }
 
-    public virtual DbSet<Supplier> Suppliers { get; set; }
+	public virtual DbSet<Slideshow> Slideshows { get; set; }
 
-    public virtual DbSet<Token> Tokens { get; set; }
+	public virtual DbSet<Supplier> Suppliers { get; set; }
 
-    public virtual DbSet<Trademark> Trademarks { get; set; }
+	public virtual DbSet<Token> Tokens { get; set; }
 
-    public virtual DbSet<Wishlist> Wishlists { get; set; }
+	public virtual DbSet<Trademark> Trademarks { get; set; }
+
+	public virtual DbSet<Wishlist> Wishlists { get; set; }
+	public DbSet<CompanyInfo> CompanyInfos { get; set; }
+	public DbSet<CompanyPolicy> CompanyPolicies { get; set; }
+	public DbSet<BlogPost> BlogPosts { get; set; }
+	public DbSet<ProductPost> ProductPosts { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseSqlServer("Name=DefaultConnection");
@@ -764,8 +769,8 @@ public partial class ApplicationDbContext : DbContext
                 .HasConstraintName("FK_Wishlist_ProductVariant");
         });
 
-        OnModelCreatingPartial(modelBuilder);
-    }
+		OnModelCreatingPartial(modelBuilder);
+	}
 
-    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+	partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
 }
