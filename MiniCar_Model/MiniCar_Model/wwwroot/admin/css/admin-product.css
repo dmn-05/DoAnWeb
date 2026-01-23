@@ -1,0 +1,185 @@
+﻿
+.content-panel {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    margin: 0 15px;
+}
+
+.form-flex {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.form-column {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Khoảng cách giữa các hàng input */
+}
+
+/* Group & Controls */
+.input-group {
+    flex: 1; /* Quan trọng: Để input group tự giãn rộng */
+    display: flex;
+    flex-direction: column;
+}
+
+    .input-group label {
+        display: block;
+        font-weight: 600;
+        margin-bottom: 8px;
+        color: #555;
+    }
+
+.input-control {
+    width: 100%; /* Đảm bảo input chiếm hết chiều rộng của group */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 40px;
+    background-color: #fff;
+}
+
+/* Rows & Alignment */
+.input-row {
+    display: flex;
+    gap: 20px;
+    width: 100%; /* Đảm bảo hàng chiếm hết chiều ngang của cột */
+}
+
+.align-end {
+    align-items: flex-end !important;
+}
+
+/* Tinh chỉnh nút Thêm (Dấu cộng) */
+.add-btn-category {
+    height: 40px;
+    width: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    box-sizing: border-box;
+    flex-shrink: 0; /* Đảm bảo nút không bị bóp méo khi input giãn ra */
+}
+
+/* Logic cho margin */
+.input-row .input-group {
+    margin-bottom: 0; /* Xóa margin khi nằm trong row để tránh lệch hàng */
+}
+
+/* Trạng thái (Radio) */
+.status-group {
+    display: flex;
+    align-items: center;
+    height: 40px;
+}
+
+    .status-group label {
+        cursor: pointer;
+        margin-bottom: 0;
+        margin-left: 5px;
+    }
+
+.status-active {
+    color: green;
+    margin-right: 25px;
+}
+
+.status-inactive {
+    color: red;
+}
+
+/* Footer & Buttons */
+.form-footer {
+    margin-top: 30px;
+    border-top: 1px solid #eee;
+    padding-top: 25px;
+}
+
+.btn-save {
+    background-color: #5cb85c;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+    .btn-save:hover {
+        background-color: #4cae4c;
+    }
+
+.back-link {
+    margin-left: 20px;
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* Tinh chỉnh phần chú thích dưới input file */
+.input-hint {
+    display: block;
+    color: #999;
+    font-style: italic;
+    margin-top: 5px;
+    font-size: 12px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px; /* Khoảng cách giữa input và nút */
+  align-items: center; /* Căn đều */
+}
+
+.ful-group input {
+    margin-top: 10px;
+}
+
+/* Container bao quanh Select và Nút bấm */
+.select-with-btn {
+  display: flex;
+  gap: 8px; /* Khoảng cách giữa ô chọn và nút */
+  align-items: center;
+  width: 100%;
+}
+
+  /* Ô Select chiếm tối đa không gian */
+  .select-with-btn .input-control {
+    flex: 1;
+    margin-bottom: 0; /* Ghi đè nếu có margin bottom mặc định */
+  }
+
+/* Nút thêm mới (Dấu cộng) */
+.btn-add-inline {
+  height: 38px; /* Khớp với chiều cao tiêu chuẩn của input */
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 4px;
+  flex-shrink: 0; /* Không cho nút bị co lại khi màn hình nhỏ */
+  transition: all 0.3s ease;
+}
+
+  .btn-add-inline:hover {
+    background-color: #4cae4c;
+    transform: scale(1.05);
+  }
+
+/* Tùy chỉnh cho các row input để cân đối */
+.input-group.form-group-flex {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}

@@ -1,0 +1,33 @@
+﻿body {
+}
+/* 1. Thiết lập KHUNG CHỨA màu trắng và dài ra */
+.single-prd-item {
+  width: 100%;
+  height: 550px; /* Tăng chiều dài khung theo ý bạn */
+  background: #ffffff; /* Đổi nền thành màu TRẮNG */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Cắt bỏ phần thừa nếu ảnh quá to */
+}
+
+/* 2. ÉP ẢNH RỘNG RA TOÀN KHUNG */
+.s_Product_carousel .owl-item img {
+  width: 100% !important; /* Ép chiều rộng đạt 100% khung */
+  height: 100% !important; /* Ép chiều cao đạt 100% khung */
+  object-fit: cover; /* Quan trọng: Giúp ảnh phủ kín toàn bộ khung trắng */
+  display: block;
+}
+
+/* 3. Tùy chỉnh cho thiết bị di động */
+@media (max-width: 992px) {
+  .single-prd-item {
+    height: 450px;
+  }
+}
+
+@media (max-width: 576px) {
+  .single-prd-item {
+    height: 350px;
+  }
+}

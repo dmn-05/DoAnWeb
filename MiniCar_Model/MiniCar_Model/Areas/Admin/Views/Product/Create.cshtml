@@ -1,88 +1,114 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+  ViewData["Title"] = "Sản phẩm";
 }
 
+<!-- Link CSS -->
+@* <link href="~/admin/css/admin-product.css" rel="stylesheet" asp-append-version="true" /> *@
+@model ProductCreateVM
+
 <section id="main-content">
-	<section class="wrapper">
-		<h3><i class="fa fa-angle-right"></i>Sản phẩm</h3>
+  <section class="wrapper">
+    <h3><i class="fa fa-angle-right"></i> Thêm sản phẩm mới</h3>
 
-		<div class="row mt">
-			<div class="col-md-12">
-				<div class="content-panel" style="background: #ffffff; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin: 0 15px;">
-					<form action="" method="POST" enctype="multipart/form-data">
+    <div class="row mt">
+      <div class="col-md-12">
+        <div class="content-panel">
 
-						<div style="display: flex; gap: 40px; flex-wrap: wrap; align-items: flex-start;">
+          <form asp-action="Create" method="POST" enctype="multipart/form-data">
 
-							<div style="flex: 1; min-width: 300px;">
-								<div style="margin-bottom: 20px;">
-									<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Mã sản phẩm</label>
-									<input type="text" placeholder="Nhập mã sản phẩm..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-								</div>
+            <div class="row">
+              <!-- CỘT TRÁI -->
+              <div class="col-md-6">
 
-								<div style="margin-bottom: 20px;">
-									<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Tên sản phẩm</label>
-									<input type="text" placeholder="Nhập tên sản phẩm..." style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-								</div>
+                <div class="form-group mb-3">
+                  <label>Tên sản phẩm</label>
+                  <input asp-for="NameProduct" class="form-control" />
+                  <span asp-validation-for="NameProduct" class="text-danger"></span>
+                </div>
 
-								<div style="display: flex; gap: 20px;">
-									<div style="flex: 1;">
-										<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Giá (VNĐ)</label>
-										<input type="number" placeholder="0" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-									</div>
-									<div style="flex: 1;">
-										<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Loại sản phẩm</label>
-										<select style="width: 100%; padding: 0 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px; background-color: #fff;">
-											<option>Giày Boots</option>
-											<option>Giày Thể Thao</option>
-										</select>
-									</div>
-								</div>
-							</div>
+                <div class="form-group mb-3">
+                  <label>Mô tả</label>
+                  <textarea asp-for="Descriptions" rows="4" class="form-control"></textarea>
+                </div>
 
-							<div style="flex: 1; min-width: 300px;">
-								<div style="display: flex; gap: 20px; margin-bottom: 20px;">
-									<div style="flex: 1;">
-										<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Size</label>
-										<input type="text" placeholder="30" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-									</div>
-									<div style="flex: 1;">
-										<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Màu sắc</label>
-										<input type="text" placeholder="Đỏ" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px;">
-									</div>
-								</div>
+                <!-- DANH MỤC + NÚT THÊM (ĐÃ FIX) -->
+                <div class="form-group mb-3"> 
+                  <label>Loại sản phẩm</label> 
+                  <div class="select-with-btn"> 
+                    <select asp-for="CategoryId" asp-items="ViewBag.CategoryId" class="form-control"> 
+                      <option value="">-- Chọn --</option> 
+                    </select>
+                    <a href="javascript:void(0)"
+                       class="btn btn-success btn-add-inline"
+                       title="Thêm loại sản phẩm"
+                       onclick="openCategoryModal()">
+                      <i class="fa fa-plus"></i>
+                    </a>
+                  </div> 
+                  <span asp-validation-for="CategoryId" class="text-danger"></span> 
+                </div>
 
-								<div style="margin-bottom: 20px;">
-									<label style="display: block; font-weight: 600; margin-bottom: 8px; color: #555;">Hình ảnh sản phẩm</label>
-									<input type="file" multiple style="width: 100%; padding: 7px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; height: 40px; background: #fdfdfd;">
-									<small style="color: #999; font-style: italic;">* Có thể chọn nhiều ảnh cùng lúc</small>
-								</div>
+                <div class="form-group mb-3">
+                  <label>Nhà cung cấp</label>
+                  <select asp-for="SupplierId"
+                          asp-items="ViewBag.SupplierId"
+                          class="form-control">
+                    <option value="">-- Chọn --</option>
+                  </select>
+                </div>
 
-								<div style="margin-bottom: 20px;">
-									<label style="display: block; font-weight: 600; margin-bottom: 12px; color: #555;">Trạng thái</label>
-									<div style="display: flex; align-items: center; height: 40px;">
-										<input type="radio" name="status" id="active" checked style="margin-right: 5px;">
-										<label for="active" style="color: green; margin-right: 25px; cursor: pointer; margin-bottom: 0;">Active</label>
+              </div>
 
-										<input type="radio" name="status" id="inactive" style="margin-right: 5px;">
-										<label for="inactive" style="color: red; cursor: pointer; margin-bottom: 0;">Inactive</label>
-									</div>
-								</div>
-							</div>
+              <!-- CỘT PHẢI -->
+              <div class="col-md-6">
 
-						</div>
+                <div class="form-group mb-3">
+                  <label>Thương hiệu</label>
+                  <select asp-for="TrademarkId"
+                          asp-items="ViewBag.TrademarkId"
+                          class="form-control">
+                    <option value="">-- Chọn --</option>
+                  </select>
+                </div>
 
-						<div style="margin-top: 30px; border-top: 1px solid #eee; padding-top: 25px;">
-							<button type="submit" style="background-color: #5cb85c; color: white; border: none; padding: 10px 25px; border-radius: 4px; cursor: pointer; font-size: 15px; font-weight: bold; transition: 0.3s;">
-								<i class="fa fa-save"></i> Lưu sản phẩm
-							</button>
-							<a asp-area="Admin" asp-controller="product" asp-action="index" style="margin-left: 20px; color: #007bff; text-decoration: none; font-size: 14px;">Quay lại danh sách</a>
-						</div>
+                <div class="form-group mb-3">
+                  <label>Khuyến mãi</label>
+                  <select asp-for="PromotionId"
+                          asp-items="ViewBag.PromotionId"
+                          class="form-control">
+                    <option value="">-- Không áp dụng --</option>
+                  </select>
+                </div>
 
-					</form>
-				</div>
-			</div>
-		</div>
-	</section>
+                <div class="form-group mb-3">
+                  <label>Trạng thái</label>
+                  <select asp-for="StatusProduct" class="form-control">
+                    <option value="ACTIVE">ACTIVE</option>
+                    <option value="INACTIVE">INACTIVE</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="submit" class="btn btn-success">
+                <i class="fa fa-save"></i> Lưu sản phẩm
+              </button>
+
+              <a asp-action="Index" class="btn btn-secondary">
+                Quay lại
+              </a>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
 </section>
+
+@await Html.PartialAsync("~/Areas/Admin/Views/Shared/_AddCategoryModal.cshtml")
+

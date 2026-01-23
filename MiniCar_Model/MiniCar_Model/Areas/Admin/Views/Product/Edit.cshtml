@@ -1,0 +1,122 @@
+﻿@model ProductEditVM
+@{
+  ViewData["Title"] = "Cập nhật sản phẩm";
+}
+
+<section id="main-content">
+  <section class="wrapper">
+    <h3><i class="fa fa-angle-right"></i> Cập nhật sản phẩm</h3>
+
+    <div class="row mt">
+      <div class="col-md-12">
+        <div class="content-panel">
+
+          <form asp-action="Edit" method="post">
+            <input type="hidden" asp-for="ProductId" />
+
+            <div class="row">
+
+              <!-- CỘT TRÁI -->
+              <div class="col-md-6">
+
+                <div class="form-group mb-3">
+                  <label>Tên sản phẩm</label>
+                  <input asp-for="NameProduct" class="form-control" />
+                  <span asp-validation-for="NameProduct" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Mô tả</label>
+                  <textarea asp-for="Descriptions"
+                            rows="4"
+                            class="form-control"></textarea>
+                  <span asp-validation-for="Descriptions" class="text-danger"></span>
+                </div>
+
+                <!-- DANH MỤC + NÚT THÊM -->
+                <div class="form-group mb-3">
+                  <label>Loại sản phẩm</label>
+
+                  <div class="d-flex align-items-center gap-2">
+                    <select asp-for="CategoryId"
+                            asp-items="ViewBag.CategoryId"
+                            class="form-control">
+                      <option value="">-- Chọn --</option>
+                    </select>
+
+                    <a asp-area="Admin"
+                       asp-controller="Category"
+                       asp-action="Create"
+                       class="btn btn-success d-flex align-items-center justify-content-center"
+                       style="width:42px;height:38px"
+                       title="Thêm danh mục">
+                      <i class="fa fa-plus"></i>
+                    </a>
+                  </div>
+
+                  <span asp-validation-for="CategoryId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Nhà cung cấp</label>
+                  <select asp-for="SupplierId"
+                          asp-items="ViewBag.SupplierId"
+                          class="form-control">
+                    <option value="">-- Chọn --</option>
+                  </select>
+                  <span asp-validation-for="SupplierId" class="text-danger"></span>
+                </div>
+
+              </div>
+
+              <!-- CỘT PHẢI -->
+              <div class="col-md-6">
+
+                <div class="form-group mb-3">
+                  <label>Thương hiệu</label>
+                  <select asp-for="TrademarkId"
+                          asp-items="ViewBag.TrademarkId"
+                          class="form-control">
+                    <option value="">-- Chọn --</option>
+                  </select>
+                  <span asp-validation-for="TrademarkId" class="text-danger"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Khuyến mãi</label>
+                  <select asp-for="PromotionId"
+                          asp-items="ViewBag.PromotionId"
+                          class="form-control">
+                    <option value="">-- Không áp dụng --</option>
+                  </select>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label>Trạng thái</label>
+                  <select asp-for="StatusProduct" class="form-control">
+                    <option value="ACTIVE">ACTIVE</option>
+                    <option value="INACTIVE">INACTIVE</option>
+                  </select>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- FOOTER -->
+            <div class="d-flex justify-content-end gap-2 mt-4">
+              <button type="submit" class="btn btn-success">
+                <i class="fa fa-save"></i> Lưu thay đổi
+              </button>
+
+              <a asp-action="Index" class="btn btn-secondary">
+                Quay lại
+              </a>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>

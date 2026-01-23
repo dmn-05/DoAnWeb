@@ -1,152 +1,186 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-	ViewData["title"] = "Admin";
+﻿@{
+  ViewData["title"] = "Admin";
+  int currentPage = ViewBag.CurrentPage ?? 1;
+  int totalPages = ViewBag.TotalPages ?? 1;
 }
 
+@model IEnumerable<CommentIndexVM>
 
 <section id="main-content">
-	<section class="wrapper">
-		<h3><i class="fa fa-angle-right"></i> Bình luận</h3>
+  <section class="wrapper">
+    <h3><i class="fa fa-angle-right"></i> Bình luận</h3>
 
-		<div class="row mt">
-			<div class="col-md-12">
-				<div class="content-panel">
-					<div style="padding: 15px;">
-						<div class="row">
-							<div class="col-md-4 col-sm-12">
-								<h4 style="margin-bottom: 15px;"><i class="fa fa-angle-right"></i> Danh sách</h4>
-							</div>
-							<div class="col-md-8 col-sm-12 text-right">
-								<div class="form-group" style="display: flex; gap: 5px; flex-wrap: wrap;">
-									<input type="text" class="form-control" placeholder="Tìm kiếm bình luận..." style="flex: 1; min-width: 200px;" />
+    <div class="row mt">
+      <div class="col-md-12">
+        <div class="content-panel">
 
-									<button class="btn btn-primary">
-										<i class="fa fa-search"></i>
-									</button>
+          <div style="padding: 15px;">
+            <div class="row">
+              <div class="col-md-4 col-sm-12">
+                <h4 style="margin-bottom: 15px;">
+                  <i class="fa fa-angle-right"></i> Danh sách
+                </h4>
+              </div>
 
-									<a href="/Admin/Comment/Create" class="btn btn-success">
-										<i class="fa fa-plus"></i> <span class="hidden-xs">Thêm bình luận</span>
-									</a>
-								</div>
-							</div>
-						</div>
-					</div>
+              <div class="col-md-8 col-sm-12 text-right search-area">
 
-					<hr style="margin: 0;" />
+                <!-- SEARCH -->
+                <form asp-action="Index" method="get" class="search-bar">
+                  <input type="text"
+                         name="search"
+                         value="@ViewBag.Search"
+                         class="form-control search-input"
+                         placeholder="Tìm kiếm bình luận..." />
+                  <button class="btn btn-primary">
+                    <i class="fa fa-search"></i>
+                  </button>
+                </form>
 
-					<div class="table-responsive">
-						<table class="table table-hover">
-							<thead>
-								<tr>
-									<th class="text-center">#</th>
-									<th>Mã bình luận</th>
-									<th>Mã sản phẩm</th>
-									<th class="text-center">Đánh giá</th>
-									<th>Nội dung</th>
-									<th class="text-center">Trạng thái</th>
-									<th class="text-center">Hành động</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="text-center">1</td>
-									<td><small>GbtsNam-Do-37</small></td>
-									<td>MSP-01</td>
-									<td class="text-center"><span class="badge bg-theme">4.5</span></td>
-									<td>Ferrari rất đẹp</td>
-									<td class="text-center">
-										<span class="label label-success label-mini">ACTIVE</span>
-									</td>
-									<td class="text-center" style="white-space: nowrap;">
-										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
-										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-center">2</td>
-									<td><small>GTTNu-Xanh-36</small></td>
-									<td>MSP-01</td>
-									<td class="text-center"><span class="badge bg-theme">4.5</span></td>
-									<td>Ferrari rất đẹp</td>
-									<td class="text-center">
-										<span class="label label-success label-mini">ACTIVE</span>
-									</td>
-									<td class="text-center" style="white-space: nowrap;">
-										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
-										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-center">3</td>
-									<td><small>GTTNu-Xanh-36</small></td>
-									<td>MSP-01</td>
-									<td class="text-center"><span class="badge bg-theme">4.5</span></td>
-									<td>Ferrari rất đẹp</td>
-									<td class="text-center">
-										<span class="label label-success label-mini">ACTIVE</span>
-									</td>
-									<td class="text-center" style="white-space: nowrap;">
-										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
-										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-center">4</td>
-									<td><small>GTTNu-Xanh-36</small></td>
-									<td>MSP-01</td>
-									<td class="text-center"><span class="badge bg-theme">4.5</span></td>
-									<td>Ferrari rất đẹp</td>
-									<td class="text-center">
-										<span class="label label-success label-mini">ACTIVE</span>
-									</td>
-									<td class="text-center" style="white-space: nowrap;">
-										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
-										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
-									</td>
-								</tr>
-								<tr>
-									<td class="text-center">5</td>
-									<td><small>GTTNu-Xanh-36</small></td>
-									<td>MSP-01</td>
-									<td class="text-center"><span class="badge bg-theme">4.5</span></td>
-									<td>Ferrari rất đẹp</td>
-									<td class="text-center">
-										<span class="label label-success label-mini">ACTIVE</span>
-									</td>
-									<td class="text-center" style="white-space: nowrap;">
-										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
-										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
-									</td>
-								<tr>
-									<td class="text-center">6</td>
-									<td><small>GTTNu-Xanh-36</small></td>
-									<td>MSP-01</td>
-									<td class="text-center"><span class="badge bg-theme">4.5</span></td>
-									<td>Ferrari rất đẹp</td>
-									<td class="text-center">
-										<span class="label label-success label-mini">ACTIVE</span>
-									</td>
-									<td class="text-center" style="white-space: nowrap;">
-										<button class="btn btn-primary btn-xs"><i class="fa fa-pencil"></i> Sửa</button>
-										<button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i> Xóa</button>
-									</td>
-								</tr>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-				</div><div class="text-center" style="margin-top: 20px;">
-					<ul class="pagination">
-						<li class="page-item disabled"><a class="page-link" href="#">«</a></li>
-						<li class="page-item active"><a class="page-link" href="#">1</a></li>
-						<li><a href="#">2</a></li>
-						<li><a href="#">3</a></li>
-						<li><a href="#">»</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</section>
+              </div>
+            </div>
+          </div>
+
+          <hr style="margin:0;" />
+          @await Html.PartialAsync("_AlertPartial")
+
+          <!-- TABLE -->
+          <div class="table-responsive">
+            <table class="table table-hover table-sm">
+              <thead>
+                <tr>
+                  <th class="text-center">#</th>
+                  <th>Mã BL</th>
+                  <th>Tài khoản</th>
+                  <th class="text-center">Rating</th>
+                  <th>Nội dung</th>
+                  <th class="text-center">Trạng thái</th>
+                  <th class="text-center">Hành động</th>
+                </tr>
+              </thead>
+              <tbody>
+                @{
+                  int index = 1;
+                }
+                @foreach (var c in Model)
+                {
+                  <tr>
+                    <td class="text-center">@index</td>
+                    <td>@c.CommentId</td>
+                    <td>@c.AccountName</td>
+                    <td class="text-center">
+                      @if (c.Rating.HasValue)
+                      {
+                        <span class="badge bg-theme">@c.Rating</span>
+                      }
+                      else
+                      {
+                        <span class="text-muted">N/A</span>
+                      }
+                    </td>
+                    <td style="max-width:300px"
+                        class="text-truncate">
+                      @c.Content
+                    </td>
+                    <td class="text-center">
+                      @if (c.StatusComment == "ACTIVE")
+                      {
+                        <span class="label label-success label-mini">ACTIVE</span>
+                      }
+                      else
+                      {
+                        <span class="label label-danger label-mini">INACTIVE</span>
+                      }
+                    </td>
+                    <td class="text-center" style="white-space:nowrap">
+
+
+                      @if (c.StatusComment != "INACTIVE")
+                      {
+
+                        <!-- XÓA MỀM -->
+                        <form asp-action="Delete"
+                              asp-route-id="@c.CommentId"
+                              method="post"
+                              class="d-inline"
+                              onsubmit="return confirm('Bạn có chắc muốn xóa bình luận này?');">
+                          @Html.AntiForgeryToken()
+                          <button type="submit" class="btn btn-danger btn-xs">
+                            <i class="fa fa-trash"></i> Xóa
+                          </button>
+                        </form>
+                      }
+                      else
+                      {
+                        <!-- KHÔI PHỤC -->
+                        <form asp-action="Restore"
+                              asp-route-id="@c.CommentId"
+                              method="post"
+                              class="d-inline"
+                              onsubmit="return confirm('Khôi phục bình luận này?');">
+                          @Html.AntiForgeryToken()
+                          <button type="submit" class="btn btn-success btn-xs">
+                            <i class="fa fa-undo"></i> Khôi phục
+                          </button>
+                        </form>
+                      }
+                    </td>
+                  </tr>
+                  index++;
+                }
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="text-center" style="margin-top:20px;">
+          <ul class="pagination">
+
+            <li class="page-item @(currentPage <= 1 ? "disabled" : "")">
+              @if (currentPage > 1)
+              {
+                <a class="page-link"
+                   href="@Url.Action("Index", new { page = currentPage - 1, search = ViewBag.Search })">«</a>
+              }
+              else
+              {
+                <span class="page-link">«</span>
+              }
+            </li>
+
+            @for (int i = 1; i <= totalPages; i++)
+            {
+              <li class="page-item @(i == currentPage ? "active" : "")">
+                @if (i == currentPage)
+                {
+                  <span class="page-link">@i</span>
+                }
+                else
+                {
+                  <a class="page-link"
+                     href="@Url.Action("Index", new { page = i, search = ViewBag.Search })">@i</a>
+                }
+              </li>
+            }
+
+            <li class="page-item @(currentPage >= totalPages ? "disabled" : "")">
+              @if (currentPage < totalPages)
+              {
+                <a class="page-link"
+                   href="@Url.Action("Index", new { page = currentPage + 1, search = ViewBag.Search })">»</a>
+              }
+              else
+              {
+                <span class="page-link">»</span>
+              }
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
 </section>
+
+@await Html.PartialAsync("_ConfirmDeleteModal")

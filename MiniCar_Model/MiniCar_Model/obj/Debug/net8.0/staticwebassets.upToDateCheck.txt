@@ -1,4 +1,7 @@
+wwwroot\admin\css\admin-index.css
+wwwroot\admin\css\admin-product.css
 wwwroot\admin\css\bootstrap.css
+wwwroot\admin\css\product-list.css
 wwwroot\admin\css\site.css
 wwwroot\admin\css\style.css
 wwwroot\admin\css\style-responsive.css
@@ -75,6 +78,7 @@ wwwroot\admin\js\jquery-easy-pie-chart\jquery.easy-pie-chart.css
 wwwroot\admin\js\jquery-easy-pie-chart\jquery.easy-pie-chart.js
 wwwroot\admin\js\jquery-ui-1.9.2.custom.min.js
 wwwroot\admin\js\morris-conf.js
+wwwroot\admin\js\product-image-upload.js
 wwwroot\admin\js\sparkline-chart.js
 wwwroot\admin\js\tasks.js
 wwwroot\admin\js\zabuto_calendar.js
@@ -215,6 +219,7 @@ wwwroot\css\availability-calendar.css
 wwwroot\css\bootstrap.css
 wwwroot\css\bootstrap.map
 wwwroot\css\font-awesome.min.css
+wwwroot\css\images_product.css
 wwwroot\css\ion.rangeSlider.css
 wwwroot\css\ion.rangeSlider.skinFlat.css
 wwwroot\css\jquerysctipttop.css
@@ -244,6 +249,9 @@ wwwroot\fonts\themify.eot
 wwwroot\fonts\themify.svg
 wwwroot\fonts\themify.ttf
 wwwroot\fonts\themify.woff
+wwwroot\Images\Xe mô hình\Apollo EVO\20260121_232942_775_470d1c.jpg
+wwwroot\Images\Xe mô hình\Apollo EVO\20260121_232942_808_807229.jpg
+wwwroot\Images\Xe mô hình\Apollo EVO\20260121_232942_811_78e3c8.jpg
 wwwroot\img\banner\banner-bg.jpg
 wwwroot\img\banner\banner-img.png
 wwwroot\img\banner\common-banner.jpg
@@ -298,6 +306,9 @@ wwwroot\img\products\129\truescale-miniatures-pagani-zonda-f-metallic-rot-carbon
 wwwroot\img\products\13\bugatti-veyron-edition-centenaire-chrome-green-minichamps-1-18.jpg
 wwwroot\img\products\13\OIP (1).jpg
 wwwroot\img\products\13\OIP.jpg
+wwwroot\img\products\130\20260124_044720_369_main.jpg
+wwwroot\img\products\130\20260124_044720_369_sub_1.jpg
+wwwroot\img\products\130\20260124_044720_369_sub_2.webp
 wwwroot\img\products\14\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (1).jpg
 wwwroot\img\products\14\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (2).jpg
 wwwroot\img\products\14\koenigsegg-agera-rsr-blue-gt-spirit-1-18.jpg
@@ -337,6 +348,9 @@ wwwroot\img\products\25\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg
 wwwroot\img\products\26\IMG_2310__35693.jpg
 wwwroot\img\products\26\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg
 wwwroot\img\products\26\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg
+wwwroot\img\products\27\20260123_131806_277_main.jpg
+wwwroot\img\products\27\20260123_131806_277_sub_1.jpg
+wwwroot\img\products\27\20260123_131806_277_sub_2.webp
 wwwroot\img\products\28\IMG_2310__35693.jpg
 wwwroot\img\products\28\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg
 wwwroot\img\products\28\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg
@@ -390,7 +404,7 @@ wwwroot\img\products\6\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-5__14482.jpg
 wwwroot\img\products\6\61sXrIMoHUL._AC_SL1500_.jpg
 wwwroot\img\products\7\OIP (1).jpg
 wwwroot\img\products\7\OIP (2).jpg
-wwwroot\img\products\7\OIP.jpg
+wwwroot\img\products\7\OIPe.jpg
 wwwroot\img\products\8\36984-thickbox_default.jpg
 wwwroot\img\products\8\4951-Mini-GT-BUGATTI-DIVO-PRESENTATION-MINI-GT-474.jpg
 wwwroot\img\products\8\bugatti-divo-1-24-p24586-10502_image.jpg
@@ -414,6 +428,7 @@ wwwroot\js\nouislider.min.js
 wwwroot\js\owl.carousel.min.js
 wwwroot\js\parallax.min.js
 wwwroot\js\site.js
+wwwroot\js\variant_select.js
 wwwroot\js\vendor\bootstrap.min.js
 wwwroot\js\vendor\jquery-2.2.4.min.js
 wwwroot\js\vendor\popper.js
