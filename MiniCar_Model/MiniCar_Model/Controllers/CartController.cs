@@ -65,21 +65,6 @@ namespace MiniCar_Model.Controllers
 			});
 		}
 
-		//public IActionResult Add(int variantId = 0) {
-		//	if (variantId !=0) {
-		//		.....
-		//	} else {
-  //      int userId = HttpContext.Session.SetInt32("AcccountId");
-
-  //      var CartItems = _context.CartItems
-  //        .Where(ci => ci.Cart.AccountId == userId)
-  //        .ToList();
-  //    }
-			
-
-
-		//	return View(CartItem);
-		//}
 
 		[HttpPost]
 		public IActionResult RemoveItem(int cartItemId)

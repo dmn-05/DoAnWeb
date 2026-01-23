@@ -1,0 +1,151 @@
+﻿@model MiniCar_Model.Models.ProductPost
+
+@{
+  ViewData["Title"] = "Thêm Product Post";
+}
+
+<section id="main-content">
+  <section class="wrapper">
+
+    <h3 class="mb-4">
+      <i class="fa fa-angle-right"></i>
+      Thêm Product Post
+    </h3>
+
+    <div class="row">
+      <div class="col-lg-10 col-lg-offset-1">
+
+        <div class="content-panel p-4">
+
+          <form asp-area="Admin"
+                asp-controller="ProductPost"
+                asp-action="Create"
+                method="post"
+                enctype="multipart/form-data">
+
+            @Html.AntiForgeryToken()
+
+            <div class="row">
+
+              <!-- LEFT -->
+              <div class="col-md-4 text-center border-right">
+
+                <h5 class="mb-3">Ảnh đại diện</h5>
+
+                <div class="policy-icon-wrapper">
+
+                  <img id="thumbPreview"
+                       style="max-width:100%; max-height:200px; display:none;" />
+
+                  <button type="button"
+                          id="btnAddThumb"
+                          class="btn btn-success">
+                    <i class="fa fa-plus"></i>
+                  </button>
+
+                  <button type="button"
+                          id="btnRemoveThumb"
+                          class="btn btn-danger"
+                          style="display:none;">
+                    <i class="fa fa-minus"></i>
+                  </button>
+
+                  <input type="file"
+                         id="thumbUpload"
+                         name="thumbnailFile"
+                         accept="image/*"
+                         style="display:none;" />
+                </div>
+
+                <p class="text-muted small mt-2">
+                  Ảnh đại diện Product Post
+                </p>
+
+                <hr />
+
+                <div class="form-group text-left">
+                  <label>Trạng thái</label>
+                  <select asp-for="Status" class="form-control">
+                    <option value="ACTIVE">ACTIVE</option>
+                    <option value="INACTIVE">INACTIVE</option>
+                  </select>
+                </div>
+              </div>
+
+              <!-- RIGHT -->
+              <div class="col-md-8 pl-4">
+
+                <h5 class="mb-3">Nội dung Product Post</h5>
+
+                <div class="form-group">
+                  <label>Tiêu đề</label>
+                  <input asp-for="Title"
+                         class="form-control"
+                         placeholder="Nhập tiêu đề product post" />
+                </div>
+
+                <div class="form-group">
+                  <label>Tóm tắt</label>
+                  <textarea asp-for="Summary"
+                            rows="3"
+                            class="form-control"></textarea>
+                </div>
+
+                <div class="form-group">
+                  <label>Nội dung</label>
+                  <textarea asp-for="Content"
+                            rows="8"
+                            class="form-control"></textarea>
+                </div>
+
+              </div>
+            </div>
+
+            <hr />
+
+            <div class="text-right">
+              <button type="submit" class="btn btn-primary btn-lg">
+                <i class="fa fa-save"></i> Lưu
+              </button>
+
+              <a asp-action="Index" class="btn btn-default btn-lg">
+                Quay lại
+              </a>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<script>
+  const upload = document.getElementById('thumbUpload');
+  const btnAdd = document.getElementById('btnAddThumb');
+  const btnRemove = document.getElementById('btnRemoveThumb');
+  const preview = document.getElementById('thumbPreview');
+
+  btnAdd.onclick = () => upload.click();
+
+  upload.onchange = e => {
+    const file = e.target.files[0];
+    if (!file) return;
+
+    preview.src = URL.createObjectURL(file);
+    preview.style.display = 'block';
+
+    btnAdd.style.display = 'none';
+    btnRemove.style.display = 'inline-flex';
+  };
+
+  btnRemove.onclick = () => {
+    preview.src = '';
+    preview.style.display = 'none';
+    upload.value = '';
+
+    btnAdd.style.display = 'inline-flex';
+    btnRemove.style.display = 'none';
+  };
+</script>

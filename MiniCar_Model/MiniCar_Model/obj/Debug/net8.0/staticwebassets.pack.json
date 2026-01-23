@@ -1,2047 +1,2099 @@
 {
   "Files": [
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MiniCar_Model.bundle.scp.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\MiniCar_Model.bundle.scp.css",
       "PackagePath": "staticwebassets\\MiniCar_Model.yp4pelebwt.bundle.scp.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\bootstrap.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\admin\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\site.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\site.css",
       "PackagePath": "staticwebassets\\admin\\css\\site.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\style-responsive.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\style-responsive.css",
       "PackagePath": "staticwebassets\\admin\\css\\style-responsive.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\style.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\style.css",
       "PackagePath": "staticwebassets\\admin\\css\\style.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\table-responsive.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\table-responsive.css",
       "PackagePath": "staticwebassets\\admin\\css\\table-responsive.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\to-do.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\to-do.css",
       "PackagePath": "staticwebassets\\admin\\css\\to-do.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\zabuto_calendar.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\css\\zabuto_calendar.css",
       "PackagePath": "staticwebassets\\admin\\css\\zabuto_calendar.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\css\\font-awesome.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\css\\font-awesome.css",
       "PackagePath": "staticwebassets\\admin\\font-awesome\\css\\font-awesome.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\FontAwesome.otf",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.eot",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.svg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.ttf",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.woff",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\font-awesome\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\admin\\font-awesome\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.eot",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.eot",
       "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.eot"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.svg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.svg",
       "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.svg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.ttf",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.ttf",
       "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.ttf"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.woff",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\fonts\\glyphicons-halflings-regular.woff",
       "PackagePath": "staticwebassets\\admin\\fonts\\glyphicons-halflings-regular.woff"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\Logo.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\Logo.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\Logo.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\blog-bg.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\blog-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\blog-bg.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\checkbox-gray.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\checkbox-gray.png",
       "PackagePath": "staticwebassets\\admin\\img\\checkbox-gray.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-01.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-01.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-01.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-02.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-02.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-02.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-03.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-03.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-03.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-04.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-04.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-04.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-05.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-05.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-05.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-06.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\friends\\fr-06.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\friends\\fr-06.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\instagram.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\instagram.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\instagram.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\login-bg.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\login-bg.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\login-bg.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\lorde.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\lorde.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\lorde.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\mask.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\mask.png",
       "PackagePath": "staticwebassets\\admin\\img\\mask.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ny.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ny.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\ny.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\product.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\product.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\product.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\product.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\product.png",
       "PackagePath": "staticwebassets\\admin\\img\\product.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\profile-01.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\profile-01.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\profile-01.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\profile-02.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\profile-02.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\profile-02.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\radio-gray.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\radio-gray.png",
       "PackagePath": "staticwebassets\\admin\\img\\radio-gray.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-danro.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-danro.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\ui-danro.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-divya.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-divya.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\ui-divya.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-sam.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-sam.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\ui-sam.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-sherman.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-sherman.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\ui-sherman.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-zac.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\ui-zac.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\ui-zac.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\weather.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\weather.jpg",
       "PackagePath": "staticwebassets\\admin\\img\\weather.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\zoom.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\img\\zoom.png",
       "PackagePath": "staticwebassets\\admin\\img\\zoom.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap-inputmask\\bootstrap-inputmask.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap-inputmask\\bootstrap-inputmask.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\bootstrap-inputmask\\bootstrap-inputmask.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap-switch.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap-switch.js",
       "PackagePath": "staticwebassets\\admin\\js\\bootstrap-switch.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\calendar-conf-events.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\calendar-conf-events.js",
       "PackagePath": "staticwebassets\\admin\\js\\calendar-conf-events.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\chart-master\\Chart.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\chart-master\\Chart.js",
       "PackagePath": "staticwebassets\\admin\\js\\chart-master\\Chart.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\chartjs-conf.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\chartjs-conf.js",
       "PackagePath": "staticwebassets\\admin\\js\\chartjs-conf.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\common-scripts.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\common-scripts.js",
       "PackagePath": "staticwebassets\\admin\\js\\common-scripts.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\easy-pie-chart.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\easy-pie-chart.js",
       "PackagePath": "staticwebassets\\admin\\js\\easy-pie-chart.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fancybox\\jquery.fancybox.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fancybox\\jquery.fancybox.css",
       "PackagePath": "staticwebassets\\admin\\js\\fancybox\\jquery.fancybox.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fancybox\\jquery.fancybox.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fancybox\\jquery.fancybox.js",
       "PackagePath": "staticwebassets\\admin\\js\\fancybox\\jquery.fancybox.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\form-component.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\form-component.js",
       "PackagePath": "staticwebassets\\admin\\js\\form-component.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fullcalendar\\bootstrap-fullcalendar.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fullcalendar\\bootstrap-fullcalendar.css",
       "PackagePath": "staticwebassets\\admin\\js\\fullcalendar\\bootstrap-fullcalendar.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fullcalendar\\fullcalendar.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\fullcalendar\\fullcalendar.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\fullcalendar\\fullcalendar.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter-conf.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter-conf.js",
       "PackagePath": "staticwebassets\\admin\\js\\gritter-conf.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\css\\jquery.gritter.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\css\\jquery.gritter.css",
       "PackagePath": "staticwebassets\\admin\\js\\gritter\\css\\jquery.gritter.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\css\\jquery.gritter0.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\css\\jquery.gritter0.css",
       "PackagePath": "staticwebassets\\admin\\js\\gritter\\css\\jquery.gritter0.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter-light.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter-light.png",
       "PackagePath": "staticwebassets\\admin\\js\\gritter\\images\\gritter-light.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter-long.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter-long.png",
       "PackagePath": "staticwebassets\\admin\\js\\gritter\\images\\gritter-long.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\gritter.png",
       "PackagePath": "staticwebassets\\admin\\js\\gritter\\images\\gritter.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\ie-spacer.gif",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\images\\ie-spacer.gif",
       "PackagePath": "staticwebassets\\admin\\js\\gritter\\images\\ie-spacer.gif"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\js\\jquery.gritter.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\gritter\\js\\jquery.gritter.js",
       "PackagePath": "staticwebassets\\admin\\js\\gritter\\js\\jquery.gritter.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-1.8.3.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-1.8.3.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery-1.8.3.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.css",
       "PackagePath": "staticwebassets\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery-easy-pie-chart\\jquery.easy-pie-chart.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-ui-1.9.2.custom.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery-ui-1.9.2.custom.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery-ui-1.9.2.custom.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.backstretch.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.backstretch.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.backstretch.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.dcjqaccordion.2.7.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.dcjqaccordion.2.7.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.dcjqaccordion.2.7.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.nicescroll.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.nicescroll.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.nicescroll.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.scrollTo.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.scrollTo.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.scrollTo.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.sparkline.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.sparkline.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.sparkline.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.tagsinput.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.tagsinput.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.tagsinput.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.ui.touch-punch.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\jquery.ui.touch-punch.min.js",
       "PackagePath": "staticwebassets\\admin\\js\\jquery.ui.touch-punch.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\morris-conf.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\morris-conf.js",
       "PackagePath": "staticwebassets\\admin\\js\\morris-conf.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\sparkline-chart.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\sparkline-chart.js",
       "PackagePath": "staticwebassets\\admin\\js\\sparkline-chart.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\tasks.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\tasks.js",
       "PackagePath": "staticwebassets\\admin\\js\\tasks.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\zabuto_calendar.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\js\\zabuto_calendar.js",
       "PackagePath": "staticwebassets\\admin\\js\\zabuto_calendar.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.eot",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.eot",
       "PackagePath": "staticwebassets\\admin\\lineicons\\fonts\\linecons.eot"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.svg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.svg",
       "PackagePath": "staticwebassets\\admin\\lineicons\\fonts\\linecons.svg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.ttf",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.ttf",
       "PackagePath": "staticwebassets\\admin\\lineicons\\fonts\\linecons.ttf"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.woff",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\fonts\\linecons.woff",
       "PackagePath": "staticwebassets\\admin\\lineicons\\fonts\\linecons.woff"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\index.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\index.html",
       "PackagePath": "staticwebassets\\admin\\lineicons\\index.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\lte-ie7.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\lte-ie7.js",
       "PackagePath": "staticwebassets\\admin\\lineicons\\lte-ie7.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\style.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\admin\\lineicons\\style.css",
       "PackagePath": "staticwebassets\\admin\\lineicons\\style.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\Boots-02.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\Boots-02.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\Boots-02.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\Boots.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\Boots.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\Boots.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b1.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b10.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b11.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b12.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b2.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b3.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b4.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b5.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b6.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b7.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b8.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Boots\\single-product-b9.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Boots\\single-product-b9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\Runn1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\Runn1.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\Runn1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\Runn2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\Runn2.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\Runn2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r1.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r10.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r11.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r12.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r2.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r3.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r4.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r5.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r6.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r7.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r8.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\RunningShoes\\single-product-r9.html",
       "PackagePath": "staticwebassets\\category\\Nam\\RunningShoes\\single-product-r9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\Sandal-02.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\Sandal-02.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\Sandal-02.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\Sandal.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\Sandal.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\Sandal.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s1.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s10.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s11.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s12.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s2.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s3.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s4.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s5.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s6.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s7.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s8.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\Sandal\\single-product-s9.html",
       "PackagePath": "staticwebassets\\category\\Nam\\Sandal\\single-product-s9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\Socc1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\Socc1.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\Socc1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\Socc2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\Socc2.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\Socc2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-1.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-10.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-11.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-12.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-2.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-3.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-4.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-5.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-6.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-7.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-8.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SoccerShoes\\single-product-9.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SoccerShoes\\single-product-9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\SportShoe-02.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\SportShoe-02.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\SportShoe-02.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\SportShoe.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\SportShoe.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\SportShoe.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp1.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp10.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp11.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp12.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp2.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp3.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp4.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp5.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp6.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp7.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp8.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nam\\SportShoe\\single-product-sp9.html",
       "PackagePath": "staticwebassets\\category\\Nam\\SportShoe\\single-product-sp9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\Boots1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\Boots1.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\Boots1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\Boots2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\Boots2.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\Boots2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b1.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b10.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b11.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b12.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b2.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b3.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b4.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b5.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b6.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b7.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b8.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Boots\\single-product-b9.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Boots\\single-product-b9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\RunningShoes-01.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\RunningShoes-01.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\RunningShoes-01.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\RunningShoes-02.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\RunningShoes-02.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\RunningShoes-02.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs1.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs10.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs11.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs12.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs2.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs3.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs4.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs5.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs6.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs7.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs8.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\RunningShoes\\single-product-rs9.html",
       "PackagePath": "staticwebassets\\category\\Nu\\RunningShoes\\single-product-rs9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\Sandal-01.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\Sandal-01.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\Sandal-01.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\Sandal-02.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\Sandal-02.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\Sandal-02.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s1.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s10.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s11.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s12.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s2.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s3.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s4.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s5.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s6.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s7.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s8.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\Sandal\\single-product-s9.html",
       "PackagePath": "staticwebassets\\category\\Nu\\Sandal\\single-product-s9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\SportShoe-01.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\SportShoe-01.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\SportShoe-01.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\SportShoe-02.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\SportShoe-02.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\SportShoe-02.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp1.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp1.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp1.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp10.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp10.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp10.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp11.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp11.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp11.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp12.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp12.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp12.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp2.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp2.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp2.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp3.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp3.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp3.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp4.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp4.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp4.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp5.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp5.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp5.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp6.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp6.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp6.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp7.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp7.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp7.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp8.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp8.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp8.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp9.html",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\category\\Nu\\SportShoes\\single-product-sp9.html",
       "PackagePath": "staticwebassets\\category\\Nu\\SportShoes\\single-product-sp9.html"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\availability-calendar.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\availability-calendar.css",
       "PackagePath": "staticwebassets\\css\\availability-calendar.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\bootstrap.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\bootstrap.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\bootstrap.map",
       "PackagePath": "staticwebassets\\css\\bootstrap.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\font-awesome.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\font-awesome.min.css",
       "PackagePath": "staticwebassets\\css\\font-awesome.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\ion.rangeSlider.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\ion.rangeSlider.css",
       "PackagePath": "staticwebassets\\css\\ion.rangeSlider.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\ion.rangeSlider.skinFlat.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\ion.rangeSlider.skinFlat.css",
       "PackagePath": "staticwebassets\\css\\ion.rangeSlider.skinFlat.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\jquerysctipttop.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\jquerysctipttop.css",
       "PackagePath": "staticwebassets\\css\\jquerysctipttop.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\linearicons.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\linearicons.css",
       "PackagePath": "staticwebassets\\css\\linearicons.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\magnific-popup.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\magnific-popup.css",
       "PackagePath": "staticwebassets\\css\\magnific-popup.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.css",
       "PackagePath": "staticwebassets\\css\\main.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.css.map",
       "PackagePath": "staticwebassets\\css\\main.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\main.map",
       "PackagePath": "staticwebassets\\css\\main.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\nice-select.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\nice-select.css",
       "PackagePath": "staticwebassets\\css\\nice-select.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\nouislider.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\nouislider.min.css",
       "PackagePath": "staticwebassets\\css\\nouislider.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\owl.carousel.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\owl.carousel.css",
       "PackagePath": "staticwebassets\\css\\owl.carousel.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\site.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\themify-icons.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\css\\themify-icons.css",
       "PackagePath": "staticwebassets\\css\\themify-icons.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\favicon.ico",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\FontAwesome.otf",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\FontAwesome.otf",
       "PackagePath": "staticwebassets\\fonts\\FontAwesome.otf"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.eot",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.eot",
       "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.eot"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.svg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.svg",
       "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.svg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.ttf",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.ttf",
       "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.ttf"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.woff",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.woff",
       "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.woff"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.woff2",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\Linearicons-Free.woff2",
       "PackagePath": "staticwebassets\\fonts\\Linearicons-Free.woff2"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.eot",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.eot",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.eot"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.svg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.svg",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.svg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.ttf",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.ttf",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.ttf"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.woff",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.woff",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.woff2",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\fontawesome-webfont.woff2",
       "PackagePath": "staticwebassets\\fonts\\fontawesome-webfont.woff2"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\themify.eot",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\themify.eot",
       "PackagePath": "staticwebassets\\fonts\\themify.eot"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\themify.svg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\themify.svg",
       "PackagePath": "staticwebassets\\fonts\\themify.svg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\themify.ttf",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\themify.ttf",
       "PackagePath": "staticwebassets\\fonts\\themify.ttf"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\themify.woff",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\fonts\\themify.woff",
       "PackagePath": "staticwebassets\\fonts\\themify.woff"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\banner-bg.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\banner-bg.jpg",
       "PackagePath": "staticwebassets\\img\\banner\\banner-bg.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\banner-img.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\banner-img.png",
       "PackagePath": "staticwebassets\\img\\banner\\banner-img.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\common-banner.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\common-banner.jpg",
       "PackagePath": "staticwebassets\\img\\banner\\common-banner.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\hypercar-collection.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\hypercar-collection.jpg",
       "PackagePath": "staticwebassets\\img\\banner\\hypercar-collection.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\next.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\next.png",
       "PackagePath": "staticwebassets\\img\\banner\\next.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\prev.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\banner\\prev.png",
       "PackagePath": "staticwebassets\\img\\banner\\prev.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\Adidas.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\Adidas.png",
       "PackagePath": "staticwebassets\\img\\brand\\Adidas.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\Gucci.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\Gucci.png",
       "PackagePath": "staticwebassets\\img\\brand\\Gucci.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\Louis-Vuitton.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\Louis-Vuitton.png",
       "PackagePath": "staticwebassets\\img\\brand\\Louis-Vuitton.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\Nike.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\Nike.png",
       "PackagePath": "staticwebassets\\img\\brand\\Nike.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\puma.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\brand\\puma.png",
       "PackagePath": "staticwebassets\\img\\brand\\puma.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\LV-Archlight.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\LV-Archlight.jpg",
       "PackagePath": "staticwebassets\\img\\categories\\LV-Archlight.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\Nike.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\Nike.jpg",
       "PackagePath": "staticwebassets\\img\\categories\\Nike.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\adidas.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\adidas.jpg",
       "PackagePath": "staticwebassets\\img\\categories\\adidas.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\c5.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\c5.jpg",
       "PackagePath": "staticwebassets\\img\\categories\\c5.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\gucci.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\gucci.jpg",
       "PackagePath": "staticwebassets\\img\\categories\\gucci.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\puma.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\categories\\puma.jpg",
       "PackagePath": "staticwebassets\\img\\categories\\puma.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\disabled-check.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\disabled-check.png",
       "PackagePath": "staticwebassets\\img\\elements\\disabled-check.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\disabled-radio.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\disabled-radio.png",
       "PackagePath": "staticwebassets\\img\\elements\\disabled-radio.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\primary-check.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\primary-check.png",
       "PackagePath": "staticwebassets\\img\\elements\\primary-check.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\primary-radio.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\primary-radio.png",
       "PackagePath": "staticwebassets\\img\\elements\\primary-radio.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\success-check.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\success-check.png",
       "PackagePath": "staticwebassets\\img\\elements\\success-check.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\success-radio.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\elements\\success-radio.png",
       "PackagePath": "staticwebassets\\img\\elements\\success-radio.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\exclusive.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\exclusive.jpg",
       "PackagePath": "staticwebassets\\img\\exclusive.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\fav.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\fav.png",
       "PackagePath": "staticwebassets\\img\\fav.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\features\\f-icon1.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\features\\f-icon1.png",
       "PackagePath": "staticwebassets\\img\\features\\f-icon1.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\features\\f-icon2.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\features\\f-icon2.png",
       "PackagePath": "staticwebassets\\img\\features\\f-icon2.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\features\\f-icon3.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\features\\f-icon3.png",
       "PackagePath": "staticwebassets\\img\\features\\f-icon3.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\features\\f-icon4.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\features\\f-icon4.png",
       "PackagePath": "staticwebassets\\img\\features\\f-icon4.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\login.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\login.jpg",
       "PackagePath": "staticwebassets\\img\\login.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo_team.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\logo_team.png",
       "PackagePath": "staticwebassets\\img\\logo_team.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\next.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\next.png",
       "PackagePath": "staticwebassets\\img\\product\\next.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\prev.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\product\\prev.png",
       "PackagePath": "staticwebassets\\img\\product\\prev.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-3__97565.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-3__97565.jpg",
       "PackagePath": "staticwebassets\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-3__97565.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-5__85317.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-5__85317.jpg",
       "PackagePath": "staticwebassets\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-5__85317.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-6-det.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-6-det.jpg",
       "PackagePath": "staticwebassets\\img\\products\\10\\11045R-MAI-Bburago-Bugatti-Divo-118-6-det.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\11\\138286_2.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\11\\138286_2.jpg",
       "PackagePath": "staticwebassets\\img\\products\\11\\138286_2.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\11\\138286_3.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\11\\138286_3.jpg",
       "PackagePath": "staticwebassets\\img\\products\\11\\138286_3.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\11\\138286_6.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\11\\138286_6.jpg",
       "PackagePath": "staticwebassets\\img\\products\\11\\138286_6.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\128\\OIP (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\128\\OIP (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\128\\OIP (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\128\\OIP.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\128\\OIP.jpg",
       "PackagePath": "staticwebassets\\img\\products\\128\\OIP.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\128\\p18223c-pagani-utopia-pearl-white-bbr-9.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\128\\p18223c-pagani-utopia-pearl-white-bbr-9.webp",
       "PackagePath": "staticwebassets\\img\\products\\128\\p18223c-pagani-utopia-pearl-white-bbr-9.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\129\\OIP.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\129\\OIP.jpg",
       "PackagePath": "staticwebassets\\img\\products\\129\\OIP.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\129\\Pagani-Zonda-F-red-1-64-PosterCars-licensed-karz-scale-model-car-collectible-1_grande.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\129\\Pagani-Zonda-F-red-1-64-PosterCars-licensed-karz-scale-model-car-collectible-1_grande.webp",
       "PackagePath": "staticwebassets\\img\\products\\129\\Pagani-Zonda-F-red-1-64-PosterCars-licensed-karz-scale-model-car-collectible-1_grande.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\129\\truescale-miniatures-pagani-zonda-f-metallic-rot-carbon-2006-1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\129\\truescale-miniatures-pagani-zonda-f-metallic-rot-carbon-2006-1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\129\\truescale-miniatures-pagani-zonda-f-metallic-rot-carbon-2006-1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18 (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18 (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18 (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18 (2).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18 (2).jpg",
       "PackagePath": "staticwebassets\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18 (2).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18.jpg",
       "PackagePath": "staticwebassets\\img\\products\\12\\bugatti-veyron-grand-sport-red-minichamps-1-18.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\13\\OIP (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\13\\OIP (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\13\\OIP (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\13\\OIP.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\13\\OIP.jpg",
       "PackagePath": "staticwebassets\\img\\products\\13\\OIP.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\13\\bugatti-veyron-edition-centenaire-chrome-green-minichamps-1-18.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\13\\bugatti-veyron-edition-centenaire-chrome-green-minichamps-1-18.jpg",
       "PackagePath": "staticwebassets\\img\\products\\13\\bugatti-veyron-edition-centenaire-chrome-green-minichamps-1-18.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (2).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (2).jpg",
       "PackagePath": "staticwebassets\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18 (2).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18.jpg",
       "PackagePath": "staticwebassets\\img\\products\\14\\koenigsegg-agera-rsr-blue-gt-spirit-1-18.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\15\\Koenigsegg-Aera-RS-White-and-Carbon-Black-118-Diecast-Car-8.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\15\\Koenigsegg-Aera-RS-White-and-Carbon-Black-118-Diecast-Car-8.jpg",
       "PackagePath": "staticwebassets\\img\\products\\15\\Koenigsegg-Aera-RS-White-and-Carbon-Black-118-Diecast-Car-8.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\15\\Koenigsegg-Agera-RS-White-and-Carbon-Black-118-Diecast-Car-6.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\15\\Koenigsegg-Agera-RS-White-and-Carbon-Black-118-Diecast-Car-6.jpg",
       "PackagePath": "staticwebassets\\img\\products\\15\\Koenigsegg-Agera-RS-White-and-Carbon-Black-118-Diecast-Car-6.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\15\\Koenigsegg-Agera-RS-White-and-Carbon-Black-118-Diecast-Car.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\15\\Koenigsegg-Agera-RS-White-and-Carbon-Black-118-Diecast-Car.jpg",
       "PackagePath": "staticwebassets\\img\\products\\15\\Koenigsegg-Agera-RS-White-and-Carbon-Black-118-Diecast-Car.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\16\\OIP (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\16\\OIP (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\16\\OIP (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\16\\OIP (2).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\16\\OIP (2).jpg",
       "PackagePath": "staticwebassets\\img\\products\\16\\OIP (2).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\16\\OIP.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\16\\OIP.jpg",
       "PackagePath": "staticwebassets\\img\\products\\16\\OIP.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12 (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12 (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12 (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12 (2).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12 (2).jpg",
       "PackagePath": "staticwebassets\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12 (2).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12.jpg",
       "PackagePath": "staticwebassets\\img\\products\\17\\koenigsegg-jesko-attack-crystal-white-pearl-gt-spirit-1-12.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\18\\OIP (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\18\\OIP (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\18\\OIP (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\18\\OIP.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\18\\OIP.jpg",
       "PackagePath": "staticwebassets\\img\\products\\18\\OIP.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\18\\ab326464-d396-48f7-8eec-b4d980a8cc21.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\18\\ab326464-d396-48f7-8eec-b4d980a8cc21.jpg",
       "PackagePath": "staticwebassets\\img\\products\\18\\ab326464-d396-48f7-8eec-b4d980a8cc21.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\19\\SD03H068.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\19\\SD03H068.jpg",
       "PackagePath": "staticwebassets\\img\\products\\19\\SD03H068.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\19\\koenigsegg-regera-white-1-gt-spirit-1-18 (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\19\\koenigsegg-regera-white-1-gt-spirit-1-18 (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\19\\koenigsegg-regera-white-1-gt-spirit-1-18 (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\19\\koenigsegg-regera-white-1-gt-spirit-1-18.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\19\\koenigsegg-regera-white-1-gt-spirit-1-18.jpg",
       "PackagePath": "staticwebassets\\img\\products\\19\\koenigsegg-regera-white-1-gt-spirit-1-18.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\1\\179589.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\1\\179589.jpg",
       "PackagePath": "staticwebassets\\img\\products\\1\\179589.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\1\\OIP.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\1\\OIP.jpg",
       "PackagePath": "staticwebassets\\img\\products\\1\\OIP.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\1\\peako_Apollo-Project-EVO-FC6-650x320.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\1\\peako_Apollo-Project-EVO-FC6-650x320.jpg",
       "PackagePath": "staticwebassets\\img\\products\\1\\peako_Apollo-Project-EVO-FC6-650x320.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\20\\1659421525_494722__24474.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\20\\1659421525_494722__24474.jpg",
       "PackagePath": "staticwebassets\\img\\products\\20\\1659421525_494722__24474.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\20\\38522-thickbox_default.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\20\\38522-thickbox_default.jpg",
       "PackagePath": "staticwebassets\\img\\products\\20\\38522-thickbox_default.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\20\\MGT00417_2.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\20\\MGT00417_2.jpg",
       "PackagePath": "staticwebassets\\img\\products\\20\\MGT00417_2.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\21\\189956.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\21\\189956.jpg",
       "PackagePath": "staticwebassets\\img\\products\\21\\189956.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\21\\189956_2.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\21\\189956_2.jpg",
       "PackagePath": "staticwebassets\\img\\products\\21\\189956_2.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\21\\189956_3.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\21\\189956_3.jpg",
       "PackagePath": "staticwebassets\\img\\products\\21\\189956_3.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (2).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (2).jpg",
       "PackagePath": "staticwebassets\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (2).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg",
       "PackagePath": "staticwebassets\\img\\products\\23\\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18 (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18 (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18 (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18 (2).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18 (2).jpg",
       "PackagePath": "staticwebassets\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18 (2).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18.jpg",
       "PackagePath": "staticwebassets\\img\\products\\24\\rimac-nevera-blue-gt-spirit-1-18.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (2).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (2).jpg",
       "PackagePath": "staticwebassets\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18 (2).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg",
       "PackagePath": "staticwebassets\\img\\products\\25\\rimac-nevera-record-monochrome-black-gt-spirit-1-18.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\26\\IMG_2310__35693.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\26\\IMG_2310__35693.jpg",
       "PackagePath": "staticwebassets\\img\\products\\26\\IMG_2310__35693.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\26\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\26\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg",
       "PackagePath": "staticwebassets\\img\\products\\26\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\26\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\26\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg",
       "PackagePath": "staticwebassets\\img\\products\\26\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\28\\IMG_2310__35693.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\28\\IMG_2310__35693.jpg",
       "PackagePath": "staticwebassets\\img\\products\\28\\IMG_2310__35693.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\28\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\28\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg",
       "PackagePath": "staticwebassets\\img\\products\\28\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\28\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\28\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg",
       "PackagePath": "staticwebassets\\img\\products\\28\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\29\\OIP.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\29\\OIP.jpg",
       "PackagePath": "staticwebassets\\img\\products\\29\\OIP.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\29\\kyosho-mr-03-mini-z-audi-r8-lms-p1-720x380.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\29\\kyosho-mr-03-mini-z-audi-r8-lms-p1-720x380.jpg",
       "PackagePath": "staticwebassets\\img\\products\\29\\kyosho-mr-03-mini-z-audi-r8-lms-p1-720x380.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\29\\maisto-maisto-audi-r8-v10-plus-rouge-clair-1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\29\\maisto-maisto-audi-r8-v10-plus-rouge-clair-1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\29\\maisto-maisto-audi-r8-v10-plus-rouge-clair-1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\2\\OM_20D03d.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\2\\OM_20D03d.jpg",
       "PackagePath": "staticwebassets\\img\\products\\2\\OM_20D03d.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\2\\OM_20D03e-350x239.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\2\\OM_20D03e-350x239.jpg",
       "PackagePath": "staticwebassets\\img\\products\\2\\OM_20D03e-350x239.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\2\\QQ20230516203346__67648.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\2\\QQ20230516203346__67648.webp",
       "PackagePath": "staticwebassets\\img\\products\\2\\QQ20230516203346__67648.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\30\\IMG_3907__95758.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\30\\IMG_3907__95758.jpg",
       "PackagePath": "staticwebassets\\img\\products\\30\\IMG_3907__95758.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\30\\pol_pl_Mini-Z-RWD-Audi-R8-LMS-2015-Bialy-RTR-13_2.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\30\\pol_pl_Mini-Z-RWD-Audi-R8-LMS-2015-Bialy-RTR-13_2.jpg",
       "PackagePath": "staticwebassets\\img\\products\\30\\pol_pl_Mini-Z-RWD-Audi-R8-LMS-2015-Bialy-RTR-13_2.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\30\\welly-audi-r8-weiss-1-24-1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\30\\welly-audi-r8-weiss-1-24-1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\30\\welly-audi-r8-weiss-1-24-1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\31\\IMG_2310__35693.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\31\\IMG_2310__35693.jpg",
       "PackagePath": "staticwebassets\\img\\products\\31\\IMG_2310__35693.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\31\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\31\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg",
       "PackagePath": "staticwebassets\\img\\products\\31\\O1CN0144gVgP1xVgmDXRH3M_15876449__96034.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\31\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\31\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg",
       "PackagePath": "staticwebassets\\img\\products\\31\\O1CN01WJuJYZ1xVgmDfA5nC_15876449__33153.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\32\\1409e145-adf6-4c44-927b-3f948efb3f87.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\32\\1409e145-adf6-4c44-927b-3f948efb3f87.jpg",
       "PackagePath": "staticwebassets\\img\\products\\32\\1409e145-adf6-4c44-927b-3f948efb3f87.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\32\\147346-1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\32\\147346-1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\32\\147346-1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\32\\audi-rs7-c8-sportback-red-kengfai-1-18.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\32\\audi-rs7-c8-sportback-red-kengfai-1-18.jpg",
       "PackagePath": "staticwebassets\\img\\products\\32\\audi-rs7-c8-sportback-red-kengfai-1-18.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\33\\Ferrari F8 Black 164 main model.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\33\\Ferrari F8 Black 164 main model.webp",
       "PackagePath": "staticwebassets\\img\\products\\33\\Ferrari F8 Black 164 main model.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\33\\Ferrari F8 Black 164_0.1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\33\\Ferrari F8 Black 164_0.1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\33\\Ferrari F8 Black 164_0.1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\33\\Ferrari F8 Black 164_0.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\33\\Ferrari F8 Black 164_0.webp",
       "PackagePath": "staticwebassets\\img\\products\\33\\Ferrari F8 Black 164_0.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\34\\Ferrari F8 Blue-143-0.1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\34\\Ferrari F8 Blue-143-0.1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\34\\Ferrari F8 Blue-143-0.1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\34\\Ferrari F8 Blue-143-0.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\34\\Ferrari F8 Blue-143-0.jpg",
       "PackagePath": "staticwebassets\\img\\products\\34\\Ferrari F8 Blue-143-0.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\34\\Ferrari F8 Blue-143-main.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\34\\Ferrari F8 Blue-143-main.jpg",
       "PackagePath": "staticwebassets\\img\\products\\34\\Ferrari F8 Blue-143-main.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\35\\Ferrari F8 Blue-143-0.1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\35\\Ferrari F8 Blue-143-0.1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\35\\Ferrari F8 Blue-143-0.1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\35\\Ferrari F8 Blue-143-0.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\35\\Ferrari F8 Blue-143-0.jpg",
       "PackagePath": "staticwebassets\\img\\products\\35\\Ferrari F8 Blue-143-0.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\35\\Ferrari F8 Blue-143-main.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\35\\Ferrari F8 Blue-143-main.jpg",
       "PackagePath": "staticwebassets\\img\\products\\35\\Ferrari F8 Blue-143-main.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\36\\Ferrari F8 Green 1-32-0.1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\36\\Ferrari F8 Green 1-32-0.1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\36\\Ferrari F8 Green 1-32-0.1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\36\\Ferrari F8 Green 1-32-0.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\36\\Ferrari F8 Green 1-32-0.webp",
       "PackagePath": "staticwebassets\\img\\products\\36\\Ferrari F8 Green 1-32-0.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\36\\Ferrari F8 Green 1-32-main.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\36\\Ferrari F8 Green 1-32-main.webp",
       "PackagePath": "staticwebassets\\img\\products\\36\\Ferrari F8 Green 1-32-main.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\37\\Ferrari F8 Red-143-0.1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\37\\Ferrari F8 Red-143-0.1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\37\\Ferrari F8 Red-143-0.1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\37\\Ferrari F8 Red-143-0.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\37\\Ferrari F8 Red-143-0.jpg",
       "PackagePath": "staticwebassets\\img\\products\\37\\Ferrari F8 Red-143-0.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\37\\Ferrari F8 Red-143-main.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\37\\Ferrari F8 Red-143-main.webp",
       "PackagePath": "staticwebassets\\img\\products\\37\\Ferrari F8 Red-143-main.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\38\\Ferrari F8 Red-143-0.1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\38\\Ferrari F8 Red-143-0.1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\38\\Ferrari F8 Red-143-0.1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\38\\Ferrari F8 Red-143-0.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\38\\Ferrari F8 Red-143-0.jpg",
       "PackagePath": "staticwebassets\\img\\products\\38\\Ferrari F8 Red-143-0.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\38\\Ferrari F8 Red-143-main.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\38\\Ferrari F8 Red-143-main.webp",
       "PackagePath": "staticwebassets\\img\\products\\38\\Ferrari F8 Red-143-main.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\39\\Ferrari F8 White164_0.2.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\39\\Ferrari F8 White164_0.2.webp",
       "PackagePath": "staticwebassets\\img\\products\\39\\Ferrari F8 White164_0.2.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\39\\Ferrari F8 White164_0.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\39\\Ferrari F8 White164_0.jpg",
       "PackagePath": "staticwebassets\\img\\products\\39\\Ferrari F8 White164_0.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\39\\Ferrari F8 White164_main.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\39\\Ferrari F8 White164_main.webp",
       "PackagePath": "staticwebassets\\img\\products\\39\\Ferrari F8 White164_main.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\3\\58AAE75A-A779-4BED-AAF1-EF6D516781B6.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\3\\58AAE75A-A779-4BED-AAF1-EF6D516781B6.webp",
       "PackagePath": "staticwebassets\\img\\products\\3\\58AAE75A-A779-4BED-AAF1-EF6D516781B6.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\3\\OQVV0402.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\3\\OQVV0402.webp",
       "PackagePath": "staticwebassets\\img\\products\\3\\OQVV0402.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\3\\pk_aplloRED-1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\3\\pk_aplloRED-1.jpg",
       "PackagePath": "staticwebassets\\img\\products\\3\\pk_aplloRED-1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\40\\Ferrari F8 Yellow 132-0.2.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\40\\Ferrari F8 Yellow 132-0.2.webp",
       "PackagePath": "staticwebassets\\img\\products\\40\\Ferrari F8 Yellow 132-0.2.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\40\\Ferrari F8 Yellow 132-0.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\40\\Ferrari F8 Yellow 132-0.webp",
       "PackagePath": "staticwebassets\\img\\products\\40\\Ferrari F8 Yellow 132-0.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\40\\Ferrari F8 Yellow 132-main.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\40\\Ferrari F8 Yellow 132-main.jpg",
       "PackagePath": "staticwebassets\\img\\products\\40\\Ferrari F8 Yellow 132-main.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\4\\2KJe6WeAc4sTtg-TZWltAan-1AdIgnZm3u3uqLwmrhx.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\4\\2KJe6WeAc4sTtg-TZWltAan-1AdIgnZm3u3uqLwmrhx.webp",
       "PackagePath": "staticwebassets\\img\\products\\4\\2KJe6WeAc4sTtg-TZWltAan-1AdIgnZm3u3uqLwmrhx.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\4\\B2BepSYStBeb2yekcH8HuDU4OYO1MPRhcLCbs0JlfnJ.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\4\\B2BepSYStBeb2yekcH8HuDU4OYO1MPRhcLCbs0JlfnJ.webp",
       "PackagePath": "staticwebassets\\img\\products\\4\\B2BepSYStBeb2yekcH8HuDU4OYO1MPRhcLCbs0JlfnJ.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\4\\MaydVyX9W5rI0oNn1ee9vrHaO6f3ZhmGkMavtXgGsYd.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\4\\MaydVyX9W5rI0oNn1ee9vrHaO6f3ZhmGkMavtXgGsYd.webp",
       "PackagePath": "staticwebassets\\img\\products\\4\\MaydVyX9W5rI0oNn1ee9vrHaO6f3ZhmGkMavtXgGsYd.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\5\\O1CN01ChrImE2GL8HWzAmRS_283888998__95506.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\5\\O1CN01ChrImE2GL8HWzAmRS_283888998__95506.jpg",
       "PackagePath": "staticwebassets\\img\\products\\5\\O1CN01ChrImE2GL8HWzAmRS_283888998__95506.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\5\\peako_Apollo-IE-Chameleon-Purple-with-Gold-wheel.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\5\\peako_Apollo-IE-Chameleon-Purple-with-Gold-wheel.jpg",
       "PackagePath": "staticwebassets\\img\\products\\5\\peako_Apollo-IE-Chameleon-Purple-with-Gold-wheel.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\5\\peako_Apollo-IE-Chameleon-Purple-with-Gold-wheel7.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\5\\peako_Apollo-IE-Chameleon-Purple-with-Gold-wheel7.jpg",
       "PackagePath": "staticwebassets\\img\\products\\5\\peako_Apollo-IE-Chameleon-Purple-with-Gold-wheel7.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\6\\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-3__22390.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\6\\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-3__22390.jpg",
       "PackagePath": "staticwebassets\\img\\products\\6\\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-3__22390.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\6\\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-5__14482.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\6\\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-5__14482.jpg",
       "PackagePath": "staticwebassets\\img\\products\\6\\11040BK-MAI-Bburago-2016-Bugatti-Chiron-118-5__14482.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\6\\61sXrIMoHUL._AC_SL1500_.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\6\\61sXrIMoHUL._AC_SL1500_.jpg",
       "PackagePath": "staticwebassets\\img\\products\\6\\61sXrIMoHUL._AC_SL1500_.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\7\\OIP (1).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\7\\OIP (1).jpg",
       "PackagePath": "staticwebassets\\img\\products\\7\\OIP (1).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\7\\OIP (2).jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\7\\OIP (2).jpg",
       "PackagePath": "staticwebassets\\img\\products\\7\\OIP (2).jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\7\\OIP.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\7\\OIP.jpg",
       "PackagePath": "staticwebassets\\img\\products\\7\\OIP.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\8\\36984-thickbox_default.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\8\\36984-thickbox_default.jpg",
       "PackagePath": "staticwebassets\\img\\products\\8\\36984-thickbox_default.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\8\\4951-Mini-GT-BUGATTI-DIVO-PRESENTATION-MINI-GT-474.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\8\\4951-Mini-GT-BUGATTI-DIVO-PRESENTATION-MINI-GT-474.jpg",
       "PackagePath": "staticwebassets\\img\\products\\8\\4951-Mini-GT-BUGATTI-DIVO-PRESENTATION-MINI-GT-474.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\8\\bugatti-divo-1-24-p24586-10502_image.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\8\\bugatti-divo-1-24-p24586-10502_image.jpg",
       "PackagePath": "staticwebassets\\img\\products\\8\\bugatti-divo-1-24-p24586-10502_image.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\9\\51SbOqFf0L._SL1080_-1.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\9\\51SbOqFf0L._SL1080_-1.webp",
       "PackagePath": "staticwebassets\\img\\products\\9\\51SbOqFf0L._SL1080_-1.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\9\\MGT00601_2.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\9\\MGT00601_2.jpg",
       "PackagePath": "staticwebassets\\img\\products\\9\\MGT00601_2.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\9\\Mini-GT-Bugatti-Divo-Blu-Bugatti-Image-03_1800x1800.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\products\\9\\Mini-GT-Bugatti-Divo-Blu-Bugatti-Image-03_1800x1800.webp",
       "PackagePath": "staticwebassets\\img\\products\\9\\Mini-GT-Bugatti-Divo-Blu-Bugatti-Image-03_1800x1800.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c1.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c1.jpg",
       "PackagePath": "staticwebassets\\img\\sd\\c1.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c2.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c2.jpg",
       "PackagePath": "staticwebassets\\img\\sd\\c2.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c3.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c3.jpg",
       "PackagePath": "staticwebassets\\img\\sd\\c3.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c4.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c4.jpg",
       "PackagePath": "staticwebassets\\img\\sd\\c4.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c5.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\img\\sd\\c5.jpg",
       "PackagePath": "staticwebassets\\img\\sd\\c5.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\countdown.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\countdown.js",
       "PackagePath": "staticwebassets\\js\\countdown.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\gmaps.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\gmaps.min.js",
       "PackagePath": "staticwebassets\\js\\gmaps.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\ion.rangeSlider.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\ion.rangeSlider.js",
       "PackagePath": "staticwebassets\\js\\ion.rangeSlider.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\jquery.ajaxchimp.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\jquery.ajaxchimp.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.ajaxchimp.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\jquery.magnific-popup.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\jquery.magnific-popup.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.magnific-popup.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\jquery.nice-select.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\jquery.nice-select.min.js",
       "PackagePath": "staticwebassets\\js\\jquery.nice-select.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\jquery.sticky.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\jquery.sticky.js",
       "PackagePath": "staticwebassets\\js\\jquery.sticky.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\main.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\main.js",
       "PackagePath": "staticwebassets\\js\\main.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\nouislider.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\nouislider.min.js",
       "PackagePath": "staticwebassets\\js\\nouislider.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\owl.carousel.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\owl.carousel.min.js",
       "PackagePath": "staticwebassets\\js\\owl.carousel.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\parallax.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\parallax.min.js",
       "PackagePath": "staticwebassets\\js\\parallax.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\site.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\vendor\\bootstrap.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\vendor\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\js\\vendor\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\vendor\\jquery-2.2.4.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\vendor\\jquery-2.2.4.min.js",
       "PackagePath": "staticwebassets\\js\\vendor\\jquery-2.2.4.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\vendor\\popper.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\js\\vendor\\popper.js",
       "PackagePath": "staticwebassets\\js\\vendor\\popper.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\main.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\main.scss",
       "PackagePath": "staticwebassets\\scss\\main.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_banner.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_banner.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_banner.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_blog.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_blog.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_blog.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_common.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_common.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_common.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_contact.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_contact.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_contact.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_elements.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_elements.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_elements.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_footer.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_footer.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_footer.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_header.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_header.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_header.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_home.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_home.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_home.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_mixins.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_mixins.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_mixins.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_predefine.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_predefine.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_predefine.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_product.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_product.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_product.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_reset.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_reset.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_reset.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_variables.scss",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\scss\\theme\\_variables.scss",
       "PackagePath": "staticwebassets\\scss\\theme\\_variables.scss"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\bao-quan.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\20240202_134624.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\20240202_134624.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\548b56aa-ed45-4008-8a3c-54dee91bba98.png",
+      "PackagePath": "staticwebassets\\uploads\\blog\\548b56aa-ed45-4008-8a3c-54dee91bba98.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\62448afa-0a60-481a-8711-1c38e5c8429e.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\62448afa-0a60-481a-8711-1c38e5c8429e.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\6a6d8b79-11d9-4a4c-81d0-4d4360a41b5d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\6a6d8b79-11d9-4a4c-81d0-4d4360a41b5d.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\bao-quan.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\bao-quan.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\hotwheels.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\f50b6b14-adf7-4c07-aec8-8baa232c06d6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\blog\\f50b6b14-adf7-4c07-aec8-8baa232c06d6.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\hotwheels.png",
       "PackagePath": "staticwebassets\\uploads\\blog\\hotwheels.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\kim-loai-vs-nhua.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\kim-loai-vs-nhua.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\kim-loai-vs-nhua.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\scale.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\scale.jpg",
       "PackagePath": "staticwebassets\\uploads\\blog\\scale.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\xu-huong-2026.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\blog\\xu-huong-2026.png",
       "PackagePath": "staticwebassets\\uploads\\blog\\xu-huong-2026.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\change.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\24ebe89a-135a-4965-b783-d43127f936be.jpg",
+      "PackagePath": "staticwebassets\\uploads\\policy\\24ebe89a-135a-4965-b783-d43127f936be.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\7a5c705c-cb0b-4880-8dc0-d35f8d08f8f2.jpg",
+      "PackagePath": "staticwebassets\\uploads\\policy\\7a5c705c-cb0b-4880-8dc0-d35f8d08f8f2.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\cbfe52c2-eb50-4252-a14f-feeeb1ab8a9f.png",
+      "PackagePath": "staticwebassets\\uploads\\policy\\cbfe52c2-eb50-4252-a14f-feeeb1ab8a9f.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\change.png",
       "PackagePath": "staticwebassets\\uploads\\policy\\change.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\dich-vu.png",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\dich-vu.png",
       "PackagePath": "staticwebassets\\uploads\\policy\\dich-vu.png"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\payment.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\fc48f9da-8ff8-40e4-b2df-b663191abd6a.png",
+      "PackagePath": "staticwebassets\\uploads\\policy\\fc48f9da-8ff8-40e4-b2df-b663191abd6a.png"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\payment.jpg",
       "PackagePath": "staticwebassets\\uploads\\policy\\payment.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\shipping.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\shipping.jpg",
       "PackagePath": "staticwebassets\\uploads\\policy\\shipping.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\warranty.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\policy\\warranty.jpg",
       "PackagePath": "staticwebassets\\uploads\\policy\\warranty.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\apollo-evo-black.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\product-post\\3c914de1-8023-4601-97c6-83dfe45dadd6.jpg",
+      "PackagePath": "staticwebassets\\uploads\\product-post\\3c914de1-8023-4601-97c6-83dfe45dadd6.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\4520ad32-4b4e-4669-96cc-92b00881a1de.webp",
+      "PackagePath": "staticwebassets\\uploads\\products\\4520ad32-4b4e-4669-96cc-92b00881a1de.webp"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\45281eb5-4f74-4d35-8419-23d4d0e2d39d.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\45281eb5-4f74-4d35-8419-23d4d0e2d39d.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\apollo-evo-black.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\apollo-evo-black.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\apollo-evo-green.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\apollo-evo-green.webp",
       "PackagePath": "staticwebassets\\uploads\\products\\apollo-evo-green.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\bugatti.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\bugatti.webp",
       "PackagePath": "staticwebassets\\uploads\\products\\bugatti.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\lamborghini-red-118.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\lamborghini-red-118.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\lamborghini-red-118.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\lamborghini-yellow-118.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\lamborghini-yellow-118.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\lamborghini-yellow-118.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\nissan-black-164.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\mini-cooper-s-2024.jpg",
+      "PackagePath": "staticwebassets\\uploads\\products\\mini-cooper-s-2024.jpg"
+    },
+    {
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\nissan-black-164.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\nissan-black-164.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\nissan-sliver-164.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\nissan-sliver-164.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\nissan-sliver-164.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\porsche-sliver-118.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\porsche-sliver-118.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\porsche-sliver-118.jpg"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\porscher-red-118.webp",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\porscher-red-118.webp",
       "PackagePath": "staticwebassets\\uploads\\products\\porscher-red-118.webp"
     },
     {
-      "Id": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\toyota.jpg",
+      "Id": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\wwwroot\\uploads\\products\\toyota.jpg",
       "PackagePath": "staticwebassets\\uploads\\products\\toyota.jpg"
     },
     {
