@@ -166,7 +166,18 @@
 <section class="about-blog section_gap bg-light">
 	<div class="container">
 		<h3 class="text-center mb-5">Sản phẩm mới</h3>
-
+		<div class="row mb-4">
+			<div class="col-md-6 mx-auto">
+				<input type="text"
+							 id="productSearch"
+							 class="form-control form-control-lg"
+							 placeholder="Nhập: Tên xe + size + màu (VD: Toyota 1/18 trắng)"
+							 autocomplete="off">
+				<small class="text-muted d-block mt-1">
+					Bạn có thể tìm theo tên xe, kích thước hoặc màu sắc
+				</small>
+			</div>
+		</div>
 		<div id="product-container">
 			@await Html.PartialAsync("_ProductList", Model)
 		</div>
@@ -219,4 +230,18 @@
 		);
 	});
 </script>
+<script>
+	const searchInput = document.getElementById('productSearch');
+
+	searchInput.addEventListener('input', function () {
+		const keyword = this.value.toLowerCase().trim();
+		const items = document.querySelectorAll('.product-item');
+
+		items.forEach(item => {
+			const text = item.dataset.search;
+			item.style.display = text.includes(keyword) ? '' : 'none';
+		});
+	});
+</script>
+
 

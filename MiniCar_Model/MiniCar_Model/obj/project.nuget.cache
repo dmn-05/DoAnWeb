@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mTO7R4aFRD4=",
+  "dgSpecHash": "bcjrHK54IvU=",
   "success": true,
-  "projectFilePath": "D:\\DoAn\\DoAnWeb_Nhat\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
+  "projectFilePath": "D:\\DoAn\\DoAnWeb_Nhat_The\\MiniCar_Model\\MiniCar_Model\\MiniCar_Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Peter\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Peter\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

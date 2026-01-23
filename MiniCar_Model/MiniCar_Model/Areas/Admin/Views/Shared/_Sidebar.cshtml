@@ -116,6 +116,38 @@
 							Bài viết blog
 						</a>
 					</li>
+					<li>
+						<a asp-area="Admin"
+							 asp-controller="ProductPost"
+							 asp-action="Index">
+							Bài viết sản phẩm
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li class="sub-menu">
+				<a href="javascript:;">
+					<i class="fa fa-bar-chart-o"></i>
+					<span>Thống kê</span>
+					<span class="menu-arrow"></span>
+				</a>
+
+				<ul class="sub">
+					<li>
+						<a asp-area="Admin"
+							 asp-controller="Statistic"
+							 asp-action="RevenueByDay">
+							Doanh thu
+						</a>
+					</li>
+
+					<li>
+						<a asp-area="Admin"
+							 asp-controller="Statistic"
+							 asp-action="OrderCountByDay">
+							Lượt mua
+						</a>
+					</li>
 				</ul>
 			</li>
 		</ul>

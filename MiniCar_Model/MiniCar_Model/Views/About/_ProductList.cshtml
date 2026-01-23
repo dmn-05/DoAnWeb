@@ -3,9 +3,11 @@
 <div class="row">
 	@foreach (var item in Model.ProductPosts)
 	{
-		<div class="col-lg-4 col-md-6 mb-4">
+		<div class="col-lg-4 col-md-6 mb-4 product-item"
+				 data-search="@($"{item.Title} {item.Summary}".ToLower())">
+
 			<div class="card h-100 shadow-sm border-0">
-				<img src="@item.Thumbnail"
+				<img src="@Url.Content(item.Thumbnail)"
 						 class="card-img-top"
 						 style="height:220px; object-fit:cover;">
 

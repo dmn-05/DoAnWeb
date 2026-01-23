@@ -1,0 +1,65 @@
+﻿@using MiniCar_Model.Models.ViewModels
+@model DashboardViewModel
+
+@{
+  ViewData["Title"] = "Quản lý thống kê số lượng";
+}
+
+<section id="main-content">
+  <section class="wrapper">
+
+    <h3 class="mb-4">
+      <i class="fa fa-angle-right"></i>
+      Dashboard
+    </h3>
+
+  </section>
+</section>
+
+@section Scripts {
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <script>
+    const ctx = document.getElementById('dashboardChart').getContext('2d');
+
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: [
+          'Tài khoản',
+          'Sản phẩm',
+          'Đơn hàng',
+          'Doanh thu'
+        ],
+        datasets: [{
+          label: 'Thống kê tổng',
+          data: [
+    @Model.TotalAccounts,
+    @Model.TotalProducts,
+    @Model.TotalBills,
+    @Model.TotalSuppliers
+                        ],
+          backgroundColor: [
+            '#3f4d67',
+            '#4ecdc4',
+            '#f7b731',
+            '#ff6b6b'
+          ]
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: {
+            display: false
+          }
+        },
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+}
