@@ -4,6 +4,8 @@ using MiniCar_Model.Models;
 using Microsoft.EntityFrameworkCore;
 using MiniCar_Model.Models.ViewModels;
 using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
+using Microsoft.Identity.Client;
+using System.Collections.Generic;
 
 namespace MiniCar_Model.Controllers {
   public class ProductController : Controller {
@@ -67,56 +69,98 @@ namespace MiniCar_Model.Controllers {
       return View(model);
     }
 
-
-
-
-    // GET: /Product/Detail/:id
     [HttpGet]
-    public async Task<IActionResult> Detail(int id) {
+    public async Task<IActionResult> Detail(int? id, int? variantId) {
+
+
       var accountId = HttpContext.Session.GetInt32("AccountId");
 
+      // 1️⃣ Nếu chỉ có variantId → suy ra ProductId
+      if (id == null && variantId != null) {
+        id = await _context.ProductVariants
+            .Where(v => v.VariantId == variantId)
+            .Select(v => v.ProductId)
+            .FirstOrDefaultAsync();
+
+        if (id == 0)
+          return NotFound();
+      }
+
+      // 2️⃣ Load sản phẩm + variants (GIỮ NGUYÊN LOGIC CŨ)
       var vm = await _context.Products
-        .Where(p => p.ProductId == id)
-        .Include(p => p.Category)
-        .Include(p => p.ProductVariants).ThenInclude(v => v.Size)
-        .Include(p => p.ProductVariants).ThenInclude(v => v.Color)
-        .Include(p => p.ProductVariants).ThenInclude(v => v.ProductImages)
-        .Include(p => p.ProductVariants)
-            .ThenInclude(v => v.Comments)
-                .ThenInclude(c => c.Account)
-        .AsSplitQuery()
-        .Select(p => new ProductDetailVM {
-          Product = p,
-          Variants = p.ProductVariants.ToList(),
-          Images = new List<ProductImage>(),
-          Comments = p.ProductVariants.SelectMany(v => v.Comments).ToList()
-        })
-        .FirstOrDefaultAsync();
+          .Where(p => p.ProductId == id && p.ProductVariants.Any())
+          .Include(p => p.Category)
+          .Include(p => p.ProductVariants).ThenInclude(v => v.Size)
+          .Include(p => p.ProductVariants).ThenInclude(v => v.Color)
+          .Include(p => p.ProductVariants).ThenInclude(v => v.ProductImages)
+          .Include(p => p.ProductVariants)
+              .ThenInclude(v => v.Comments)
+                  .ThenInclude(c => c.Account)
+          .AsSplitQuery()
+          .Select(p => new ProductDetailVM {
+            Product = p,
+            Variants = p.ProductVariants.ToList(),
+            Comments = p.ProductVariants
+                          .SelectMany(v => v.Comments)
+                          .OrderByDescending(c => c.CreateAt)
+                          .ToList(),
+            AvgRating = p.ProductVariants
+                          .SelectMany(v => v.Comments)
+                          .Any()
+                  ? p.ProductVariants.SelectMany(v => v.Comments).Average(c => c.Rating) ?? 0
+                  : 0,
+            IsLoggedIn = accountId != null
+          })
+          .FirstOrDefaultAsync();
 
       if (vm == null)
         return NotFound();
 
-      var first = vm.Variants.FirstOrDefault();
+      // 3️⃣ Chọn variant
+      // - Ưu tiên variantId trên URL
+      // - Không có → chọn variant còn hàng
+      var selectedVariant = variantId != null
+          ? vm.Variants.FirstOrDefault(v => v.VariantId == variantId)
+          : null;
 
-      vm.SelectedVariantId = first?.VariantId ?? 0;
-      vm.Price = first?.Price ?? 0;
-      vm.Quanlity = first?.Quantity ?? 0;
-      vm.Images = first?.ProductImages.ToList() ?? new List<ProductImage>();
-      vm.AvgRating = vm.Comments.Any()
-        ? vm.Comments.Average(c => c.Rating).GetValueOrDefault()
-        : 0;
+      selectedVariant ??= vm.Variants
+          .OrderByDescending(v => v.Quantity > 0)
+          .First();
 
+      // 4️⃣ Gán dữ liệu variant cho View
+      vm.SelectedVariantId = selectedVariant.VariantId;
+      vm.SelectedVariantPrice = selectedVariant.Price;
+      vm.SelectedVariantStock = selectedVariant.Quantity;
+
+      vm.VariantImages = selectedVariant.ProductImages
+          .OrderByDescending(i => i.IsMain)
+          .Select(i => {
+            i.UrlImage = i.UrlImage!.Replace("~/", "/");
+            return i;
+          })
+          .ToList();
+
+      //vm.MinPrice = vm.Variants.Min(v => v.Price);
+      //vm.MaxPrice = vm.Variants.Max(v => v.Price);
+
+      // 5️⃣ Wishlist
+      if (accountId != null) {
+        vm.IsFavorite = await _context.Wishlists.AnyAsync(w =>
+            w.AccountId == accountId &&
+            w.ProductVariantId == vm.SelectedVariantId);
+      }
+
+      // 6️⃣ Sản phẩm liên quan
       vm.RelatedProducts = await _context.Products
-        .Where(p => p.CategoryId == vm.Product.CategoryId
-                 && p.ProductId != id
-                 && p.ProductVariants.Any())
-        .Include(p => p.ProductVariants)
-            .ThenInclude(v => v.ProductImages)
-        .OrderByDescending(p => p.ProductId)
-        .Take(9)
-        .ToListAsync();
+          .Where(p => p.CategoryId == vm.Product.CategoryId
+                   && p.ProductId != id
+                   && p.ProductVariants.Any())
+          .Include(p => p.ProductVariants)
+              .ThenInclude(v => v.ProductImages)
+          .OrderByDescending(p => p.ProductId)
+          .Take(9)
+          .ToListAsync();
 
-      vm.IsLoggedIn = accountId != null;
       //thuong code
       // 1. Lấy danh sách ID của tất cả biến thể thuộc sản phẩm này
       var variantIds = vm.Variants.Select(v => v.VariantId).ToList();
@@ -129,7 +173,7 @@ namespace MiniCar_Model.Controllers {
       // Lưu ý: Kiểm tra tên cột trong bảng Wishlist của bạn là ProductVariantId hay VariantId
       vm.TotalWishlist = await _context.Wishlists
           .CountAsync(w => variantIds.Contains(w.ProductVariantId));
-
+      var first = vm.Variants.FirstOrDefault();
       // 4. Ghi nhận 1 lượt xem mới cho biến thể mặc định (Khi user vừa nhấn vào xem)
       if (first != null) {
         var newView = new ProductView { VariantId = first.VariantId, ViewDate = DateTime.Now };
@@ -181,29 +225,74 @@ namespace MiniCar_Model.Controllers {
       }
       //thuong end code
 
-
-      //vm.WishlistProducts = accountId != null
-      //  ? await _context.Wishlists
-      //      .Where(w => w.AccountId == accountId)
-      //      .Include(w => w.Product)
-      //          .ThenInclude(p => p.ProductVariants)
-      //      .Select(w => w.Product)
-      //      .ToListAsync()
-      //  : new List<Product>();
-
       return View(vm);
     }
 
     [HttpGet]
+    public async Task<IActionResult> GetVariantInfo(int variantId) {
+      var variant = await _context.ProductVariants
+      .Where(v => v.VariantId == variantId)
+      .Select(v => new {
+        v.Price,
+        v.Quantity,
+        Status = v.Quantity > 0 ? "Còn hàng" : "Hết hàng",
+        Images = v.ProductImages
+              .OrderByDescending(i => i.IsMain)
+              .Select(i => i.UrlImage!.Replace("~/", "/"))
+              .ToList()
+      })
+      .FirstOrDefaultAsync();
+
+      if (variant == null)
+        return NotFound();
+
+      return Json(variant);
+    }
+
+
+    [HttpPost]
+    public async Task<IActionResult> ToggleWishlist(int variantId, int productId)
+    {
+      var accountId = HttpContext.Session.GetInt32("AccountId");
+      if (accountId == null)
+        return RedirectToAction("Login", "Account");
+
+      var wishlist = await _context.Wishlists.FirstOrDefaultAsync(w =>
+          w.AccountId == accountId &&
+          w.ProductVariantId == variantId);
+
+      if (wishlist == null)
+      {
+        _context.Wishlists.Add(new Wishlist
+        {
+          AccountId = accountId.Value,
+          ProductVariantId = variantId,
+          CreatedAt = DateTime.Now
+        });
+      }
+      else
+      {
+        _context.Wishlists.Remove(wishlist);
+      }
+
+      await _context.SaveChangesAsync();
+
+      // quay lại trang chi tiết
+      return RedirectToAction("Detail", new { id = productId, variantId });
+    }
+
+
+    [HttpGet]
     public async Task<IActionResult> Filter(
-    string keyword,
-    int? trademarkId,
-    int? sizeId,
-    int? colorId,
-    decimal? minPrice,
-    decimal? maxPrice,
-    int? page
-) {
+   string keyword,
+   int? trademarkId,
+   int? sizeId,
+   int? colorId,
+   decimal? minPrice,
+   decimal? maxPrice,
+   int? page
+)
+    {
 
       int pageSize = 15;
       int currentPage = page ?? 1;
@@ -213,16 +302,19 @@ namespace MiniCar_Model.Controllers {
           .AsQueryable();
 
       // 1. Lọc theo các thuộc tính của Product
-      if (!string.IsNullOrWhiteSpace(keyword)) {
+      if (!string.IsNullOrWhiteSpace(keyword))
+      {
         query = query.Where(p => p.NameProduct.Contains(keyword));
       }
 
-      if (trademarkId.HasValue) {
+      if (trademarkId.HasValue)
+      {
         query = query.Where(p => p.TrademarkId == trademarkId);
       }
 
       // 2. Lọc theo các thuộc tính của Variant (nếu có chọn lọc)
-      if (sizeId.HasValue || colorId.HasValue || minPrice.HasValue || maxPrice.HasValue) {
+      if (sizeId.HasValue || colorId.HasValue || minPrice.HasValue || maxPrice.HasValue)
+      {
         query = query.Where(p => p.ProductVariants.Any(v =>
             (!sizeId.HasValue || v.SizeId == sizeId) &&
             (!colorId.HasValue || v.ColorId == colorId) &&
@@ -236,7 +328,8 @@ namespace MiniCar_Model.Controllers {
           .OrderBy(p => p.ProductId)
           .Skip((currentPage - 1) * pageSize)
           .Take(pageSize)
-          .Select(p => new ProductCardVM {
+          .Select(p => new ProductCardVM
+          {
             ProductId = p.ProductId,
             NameProduct = p.NameProduct,
 
@@ -268,7 +361,7 @@ namespace MiniCar_Model.Controllers {
                   .SelectMany(v => v.ProductImages)
                   .OrderByDescending(i => i.IsMain)
                   .Select(i => i.UrlImage)
-                  .FirstOrDefault() ??  ""
+                  .FirstOrDefault() ?? ""
           })
           .ToListAsync();
 

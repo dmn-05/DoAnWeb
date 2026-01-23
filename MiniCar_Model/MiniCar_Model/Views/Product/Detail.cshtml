@@ -1,11 +1,8 @@
 ﻿@{
 	ViewData["Title"] = "Chi Tiết Sản Phẩm";
-	var allReviews = (List<Comment>)ViewBag.Reviews;
 }
 @model ProductDetailVM
-@if (TempData["Error"] != null) {
-	<div class="alert alert-danger">@TempData["Error"]</div>
-}
+
 <!-- back to top button-->
 <a href="#" class="cd-top">Back To Top</a>
 <!--End Back to top button-->
@@ -30,24 +27,15 @@
 	<div class="container">
 		<div class="row s_product_inner">
 			<div class="col-lg-6">
-				@* <div class="single-prd-item">
-					<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.1.png" alt="">
-				</div>
-				<div class="single-prd-item">
-					<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.2.png" alt="">
-				</div>
-				<div class="single-prd-item">
-					<img class="img-fluid" src="../../../img/product/Nam/Boots/b1.3.png" alt="">
-				</div> *@
 				<div class="s_Product_carousel owl-carousel">
 
-					@foreach (var img in Model.Images) {
+					@foreach (var img in Model.VariantImages) {
 						<div class="single-prd-item
 	                d-flex
 	                align-items-center
 	                justify-content-center">
 
-							<img src="/@img.UrlImage"
+							<img src="@img.UrlImage"
 									 class="img-fluid product-img"
 									 alt="@Model.Product.NameProduct" />
 						</div>
@@ -59,15 +47,17 @@
 			<div class="col-lg-5 offset-lg-1">
 				<div class="s_product_text">
 					<h3>@Model.Product.NameProduct</h3>
-					<h2 id="price">@Model.Price.ToString("N0") đ</h2>
+					<h2 id="price">
+						@Model.SelectedVariantPrice?.ToString("N0") đ
+					</h2>
 					<ul class="list">
-						<li><a><span>Thương hiệu</span> : @Model.Product.Trademark?.NameTrademark</a></li>
 						<li><a class="active" asp-controller="Category" asp-action="Index"><span>Phân loại</span> : @Model.Product.Category?.NameCategory</a></li>
 						<li>
 							<a>
 								<span>Số lượng tồn</span> :
-								<span id="stock-count" class="ml-2 text-success">
-									@Model.Quanlity
+								<span id="stock-count"
+											class="@(Model.SelectedVariantStock > 0 ? "text-success" : "text-danger")">
+									@Model.SelectedVariantStock
 								</span>
 							</a>
 						</li>
@@ -75,8 +65,8 @@
 							<a>
 								<span>Tình trạng</span> :
 								<span id="stock-status"
-											class="@(Model.Quanlity > 0 ? "text-success" : "text-danger")">
-									@(Model.Quanlity > 0 ? "Còn hàng" : "Hết hàng")
+											class="@(Model.SelectedVariantStock > 0 ? "text-success" : "text-danger")">
+									@(Model.SelectedVariantStock > 0 ? "Còn hàng" : "Hết hàng")
 								</span>
 
 							</a>
@@ -88,27 +78,29 @@
 					<div class="noname align-items-center">
 						<div class="pb-2"><label>Chọn phiên bản:</label></div>
 						<div class="default-select pb-2">
-							<select id="variantSelect">
+							<select id="variantSelectUI">
 								@foreach (var v in Model.Variants) {
-									<option value="@v.VariantId">
+									<option value="@v.VariantId"
+													selected="@(v.VariantId == Model.SelectedVariantId)">
 										@v.Size.Scale - @v.Color.ColorName
 									</option>
 								}
 							</select>
+
+
 						</div>
 
 
 
 						<div class="pb-1 pt-2"><label for="qty">Số lượng:</label></div>
 						<div class="product_count">
-							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
 
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; var stock = parseInt($('#stock-count').text()); if(!isNaN(sst) && sst < stock) result.value++; updateHiddenQty(); return false;"
+							<input type="text" name="qty" id="sst" maxlength="12" value="1" title="Quantity:" class="input-text qty">
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst )) result.value++;return false;"
 											class="increase items-count" type="button">
 								<i class="lnr lnr-chevron-up"></i>
 							</button>
-
-							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if(!isNaN(sst) && sst > 1) result.value--; updateHiddenQty(); return false;"
+							<button onclick="var result = document.getElementById('sst'); var sst = result.value; if( !isNaN( sst ) &amp;&amp; sst > 0 ) result.value--;return false;"
 											class="reduced items-count" type="button">
 								<i class="lnr lnr-chevron-down"></i>
 							</button>
@@ -123,6 +115,23 @@
 							<div class="card_area d-flex align-items-center">
 								<button type="submit" class="primary-btn" style="border:none;">Thêm vào giỏ hàng</button>
 
+								@if (Model.IsLoggedIn && Model.SelectedVariantId != null) {
+									<form asp-action="ToggleWishlist"
+												asp-controller="Product"
+												method="post"
+												style="display:inline">
+
+										<input type="hidden" name="variantId" value="@Model.SelectedVariantId" />
+										<input type="hidden" name="productId" value="@Model.Product.ProductId" />
+
+										<button type="submit"
+														class="btn btn-outline-secondary rounded-circle icon-heart
+			               @(Model.IsFavorite ? "active" : "")">
+											<i class="lnr lnr-heart"></i>
+										</button>
+
+									</form>
+								}
 								@* Các nút Wishlist và View giữ nguyên *@
 								<a class="icon_btn btn-wishlist" href="javascript:void(0);">
 									<i class="lnr lnr-heart"></i>
@@ -132,6 +141,8 @@
 									<i class="lnr lnr-eye"></i>
 									<span class="ml-1">@Model.TotalViews</span>
 								</a>
+
+
 							</div>
 						</form>
 
@@ -141,6 +152,7 @@
 		</div>
 	</div>
 </div>
+
 <!--================End Single Product Area =================-->
 <!--================Product Description Area =================-->
 <section class="product_description_area">
@@ -209,53 +221,74 @@
 					<p><i>* Lưu ý: Đối với các sản phẩm mô hình phiên bản giới hạn (Limited), việc đổi hàng sẽ tùy thuộc vào tình trạng tồn kho thực tế.</i></p>
 				</div>
 			</div>
-			<div class="tab-pane fade show active" id="review" role="tabpanel">
+			<div class="tab-pane fade show active" id="review" role="tabpanel" aria-labelledby="review-tab">
 				<div class="row">
 					<div class="col-lg-6">
 						<div class="row total_rate">
 							<div class="col-6">
-								<div class="box_total text-center">
-									<h5>Đánh giá chung</h5>
-									@* Tính trung bình sao từ danh sách reviews *@
-									<h4>@(allReviews.Any() ? ((double)allReviews.Average(r => r.Rating)).ToString("0.0") : "5.0")</h4>
-									<h6>(@allReviews.Count Nhận xét)</h6>
+								<div class="box_total">
+									<h5>Đánh giá sản phẩm</h5>
+									<h4>@Model.AvgRating.ToString("0.0")</h4>
+									<h6>(@Model.Comments.Count Nhận xét)</h6>
 								</div>
 							</div>
 							<div class="col-6">
 								<div class="rating_list">
+									<h3>Dựa trên 3 đánh giá</h3>
 									<ul class="list">
-										@for (int i = 5; i >= 1; i--) {
-											<li>
-												<a href="#">
-													@i sao <i class="fa fa-star"></i>
-													@allReviews.Count(r => r.Rating == i)
-												</a>
-											</li>
-										}
+										<li>
+											<a href="#">
+												5 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												4 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												3 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												2 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
+										<li>
+											<a href="#">
+												1 sao <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i> 01
+											</a>
+										</li>
 									</ul>
 								</div>
 							</div>
 						</div>
+						<div class="review_list">
+							@if (!Model.Comments.Any()) {
+								<p class="text-center">Chưa có bình luận nào</p>
+							} else {
+								foreach (var c in Model.Comments) {
+									<div class="review_item">
+										<div class="media">
+											<div class="d-flex">
+												<img src="~/img/logo_team.png" alt="">
+											</div>
+											<div class="media-body">
+												<h4>@c.Account?.UserName</h4>
 
-						<div class="review_list mt-4">
-							@foreach (var review in allReviews) {
-								<div class="review_item mb-3">
-									<div class="media">
-										<div class="media-body ml-3">
-											@* Lấy NameAccount từ bảng Account đã Include *@
-											<h4>@review.Account?.NameAccount</h4>
-											@for (int s = 1; s <= 5; s++) {
-												<i class="fa fa-star @(s <= review.Rating ? "text-warning" : "text-secondary")"></i>
-											}
-											<small class="text-muted ml-2">@review.CreateAt</small>
+												@for (int i = 1; i <= 5; i++) {
+													<i class="fa fa-star" style="color:@(i <= c.Rating ? "#ffcc00" : "#ccc")"></i>
+												}
+											</div>
 										</div>
+										<p>@c.Content</p>
 									</div>
-									<p class="mt-2">@review.Content</p>
-								</div>
+								}
 							}
 						</div>
 					</div>
-
 					<div class="col-lg-6">
 						<div class="review_box p-4 border rounded">
 							@if (ViewBag.CanReview == true) {
@@ -293,7 +326,69 @@
 				</div>
 			</div>
 		</div>
+	</div>
 </section>
+<!--================End Product Description Area =================-->
+<!-- Start related-product Area -->
+<section class="related-product-area section_gap py-2">
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-lg-6 text-center">
+				<div class="section-title">
+					<h1>Danh sách sản phẩm liên quan</h1>
+				</div>
+			</div>
+		</div>
+
+		@if (Model.RelatedProducts.Any()) {
+			<div class="row">
+				<div class="col-lg-9">
+					<div class="row">
+						@foreach (var p in Model.RelatedProducts) {
+							var mainImg = p.ProductVariants
+							.SelectMany(v => v.ProductImages)
+							.OrderByDescending(i => i.IsMain)
+							.FirstOrDefault();
+
+							var imgUrl = mainImg?.UrlImage?.Replace("~/", "/")
+							?? "/img/logo_team.png";
+
+							var minPrice = p.ProductVariants.Min(v => v.Price);
+
+							<div class="col-lg-4 col-md-4 col-sm-6 mb-20">
+								<div class="single-related-product d-flex">
+									<a href="/Product/Detail/@p.ProductId">
+										<img src="@imgUrl" alt="@p.NameProduct" />
+									</a>
+									<div class="desc">
+										<a href="/Product/Detail/@p.ProductId" class="title">
+											@p.NameProduct
+										</a>
+										<div class="price">
+											<h6>@minPrice.ToString("N0") đ</h6>
+										</div>
+									</div>
+								</div>
+							</div>
+						}
+					</div>
+				</div>
+				<div class="col-lg-3">
+					<div class="ctg-right">
+						<a href="#" target="_blank">
+							<img class="img-fluid d-block mx-auto" src="../../../img/categories/c5.jpg" alt="">
+						</a>
+					</div>
+				</div>
+			</div>
+		} else {
+			<p class="text-center">Không có sản phẩm liên quan</p>
+		}
+	</div>
+</section>
+
+<!-- End related-product Area -->
+<script src="~/js/variant_select.js"></script>
 <script>
 		$(document).ready(function () {
 			// Cập nhật giá trị vào form ẩn khi người dùng thay đổi lựa chọn
@@ -334,4 +429,6 @@
 				});
 		});
 </script>
-<script src="~/js/variant_select.js"></script>
+
+
+

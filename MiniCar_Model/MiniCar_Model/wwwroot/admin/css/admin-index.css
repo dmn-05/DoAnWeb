@@ -1,0 +1,47 @@
+﻿/* Flex hàng đầu trang (Tìm kiếm + Nút Thêm) */
+.search-area {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-bottom: 15px; /* Thêm khoảng cách với bảng bên dưới */
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  gap: 5px; /* Đã xóa chữ KEY POINT lỗi */
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* Bảng hiển thị */
+.table-responsive {
+  overflow-x: auto;
+  border: 1px solid #eee; /* Thêm viền nhẹ cho khung bảng */
+}
+
+.table {
+  width: 100% !important;
+  margin-bottom: 0;
+}
+
+.table td, .table th {
+  vertical-align: middle !important; /* Quan trọng để hết lệch dọc */
+  padding: 12px 8px !important;    /* Tăng khoảng cách cho thoáng */
+}
+
+/* Căn giữa cột # (1) và cột Mã sản phẩm (2) */
+.table th:nth-child(1), .table td:nth-child(1),
+.table th:nth-child(2), .table td:nth-child(2),
+.table th:last-child, .table td:last-child {
+  text-align: center;
+}
+
+/* Giới hạn độ rộng cột Tên sản phẩm nếu quá dài */
+.table td:nth-child(3) {
+  max-width: 250px;
+  font-weight: 600;
+}
